@@ -17,7 +17,7 @@ class AllDebridAPI:
 		self.token = get_setting('phagelite.ad.token', 'empty_setting')
 		self.break_auth_loop = False
 		self.base_url = 'https://api.alldebrid.com/v4/'
-		self.user_agent = 'Fen Light for Kodi'
+		self.user_agent = 'Phage Lite for Kodi'
 
 	def auth(self):
 		self.token = ''

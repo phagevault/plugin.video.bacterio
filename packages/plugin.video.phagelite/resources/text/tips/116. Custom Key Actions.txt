@@ -1,5 +1,5 @@
 
-With Fen Light, you can assign a button on your remote/keyboard, via Kodi's keymap, to enact a context menu item from Fen Light automatically.
+With Phage Lite, you can assign a button on your remote/keyboard, via Kodi's keymap, to enact a context menu item from Phage Lite automatically.
 
 Your choices for the mode parameter are:
 
