@@ -1,4 +1,4 @@
-<addon id="plugin.video.phagelite" name="PhageLite" provider-name="phage-zn" version="0.0.1">
+<addon id="plugin.video.phagelite" name="Phage Lite" provider-name="phage-zn" version="0.0.1">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.pil" version="1.1.7"/>
