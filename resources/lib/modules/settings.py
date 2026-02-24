@@ -4,23 +4,23 @@ from modules.kodi_utils import translate_path, get_property
 # from modules.kodi_utils import logger
 
 def tmdb_api_key():
-	return get_setting('phage-lite.tmdb_api', '')
+	return get_setting('bacterio.tmdb_api', '')
 
 def trakt_client():
-	return get_setting('phage-lite.trakt.client', '')
+	return get_setting('bacterio.trakt.client', '')
 
 def trakt_secret():
-	return get_setting('phage-lite.trakt.secret', '')
+	return get_setting('bacterio.trakt.secret', '')
 
 def trakt_user_active():
-	return get_setting('phage-lite.trakt.user', 'empty_setting') not in (None, 'empty_setting', '')
+	return get_setting('bacterio.trakt.user', 'empty_setting') not in (None, 'empty_setting', '')
 
 def tmdblist_user_active():
-	return get_setting('phage-lite.tmdb.account_id', 'empty_setting') not in (None, 'empty_setting', '')
+	return get_setting('bacterio.tmdb.account_id', 'empty_setting') not in (None, 'empty_setting', '')
 
 def results_format():
 	results_window_numbers_dict = {'List': 2000, 'Rows': 2001, 'WideList': 2002}
-	window_format = str(get_setting('phage-lite.results.list_format', 'List'))
+	window_format = str(get_setting('bacterio.results.list_format', 'List'))
 	if not window_format in results_window_numbers_dict:
 		window_format = 'List'
 		set_setting('results.list_format', window_format)
@@ -28,251 +28,251 @@ def results_format():
 	return window_format.lower(), window_number
 
 def store_resolved_to_cloud(debrid_service, pack):
-	setting_value = int(get_setting('phage-lite.store_resolved_to_cloud.%s' % debrid_service.lower(), '0'))
+	setting_value = int(get_setting('bacterio.store_resolved_to_cloud.%s' % debrid_service.lower(), '0'))
 	return setting_value in (1, 2) if pack else setting_value == 1
 
 def enabled_debrids_check(debrid_service):
-	if not get_setting('phage-lite.%s.enabled' % debrid_service) == 'true': return False
+	if not get_setting('bacterio.%s.enabled' % debrid_service) == 'true': return False
 	return authorized_debrid_check(debrid_service)
 
 def authorized_debrid_check(debrid_service):
-	if get_setting('phage-lite.%s.token' % debrid_service) in (None, '', 'empty_setting'): return False
+	if get_setting('bacterio.%s.token' % debrid_service) in (None, '', 'empty_setting'): return False
 	return True
 
 def playback_key():
-	return get_setting('phage-lite.playback_key', '0')
+	return get_setting('bacterio.playback_key', '0')
 
 def playback_settings():
-	return (int(get_setting('phage-lite.playback.watched_percent', '90')), int(get_setting('phage-lite.playback.resume_percent', '5')))
+	return (int(get_setting('bacterio.playback.watched_percent', '90')), int(get_setting('bacterio.playback.resume_percent', '5')))
 
 def limit_resolve():
-	return get_setting('phage-lite.playback.limit_resolve', 'false') == 'true'
+	return get_setting('bacterio.playback.limit_resolve', 'false') == 'true'
 
 def movies_directory():
-	return translate_path(get_setting('phage-lite.movies_directory'))
+	return translate_path(get_setting('bacterio.movies_directory'))
 	
 def tv_show_directory():
-	return translate_path(get_setting('phage-lite.tv_shows_directory'))
+	return translate_path(get_setting('bacterio.tv_shows_directory'))
 
 def download_directory(media_type):
-	download_directories_dict = {'movie': 'phage-lite.movie_download_directory', 'episode': 'phage-lite.tvshow_download_directory', 'thumb_url': 'phage-lite.image_download_directory',
-								'image_url': 'phage-lite.image_download_directory','image': 'phage-lite.image_download_directory', 'premium': 'phage-lite.premium_download_directory',
-								None: 'phage-lite.premium_download_directory', 'None': False}
+	download_directories_dict = {'movie': 'bacterio.movie_download_directory', 'episode': 'bacterio.tvshow_download_directory', 'thumb_url': 'bacterio.image_download_directory',
+								'image_url': 'bacterio.image_download_directory','image': 'bacterio.image_download_directory', 'premium': 'bacterio.premium_download_directory',
+								None: 'bacterio.premium_download_directory', 'None': False}
 	return translate_path(get_setting(download_directories_dict[media_type]))
 
 def ai_model_order():
-	return get_setting('phage-lite.ai_model.order', 'gemini-2.5-flash-lite,llama-3.3-70b-versatile,gemma-3-27b-it,llama-3.1-8b-instant').split(',')
+	return get_setting('bacterio.ai_model.order', 'gemini-2.5-flash-lite,llama-3.3-70b-versatile,gemma-3-27b-it,llama-3.1-8b-instant').split(',')
 
 def ai_model_limit():
-	return max(1, int(get_setting('phage-lite.ai_model.limit', '10')))
+	return max(1, int(get_setting('bacterio.ai_model.limit', '10')))
 
 def show_unaired_watchlist():
-	return get_setting('phage-lite.show_unaired_watchlist', 'true') == 'true'
+	return get_setting('bacterio.show_unaired_watchlist', 'true') == 'true'
 
 def lists_cache_duraton():
-	return int(get_setting('phage-lite.lists_cache_duraton', '48'))
+	return int(get_setting('bacterio.lists_cache_duraton', '48'))
 
-def auto_start_phage-lite():
-	return get_setting('phage-lite.auto_start_phage-lite', 'false') == 'true'
+def auto_start_bacterio():
+	return get_setting('bacterio.auto_start_bacterio', 'false') == 'true'
 
 def source_folders_directory(media_type, source):
-	setting = 'phage-lite.%s.movies_directory' % source if media_type == 'movie' else 'phage-lite.%s.tv_shows_directory' % source
+	setting = 'bacterio.%s.movies_directory' % source if media_type == 'movie' else 'bacterio.%s.tv_shows_directory' % source
 	if get_setting(setting) not in ('', 'None', None): return translate_path( get_setting(setting))
 	else: return False
 
 def avoid_episode_spoilers():
-	return get_setting('phage-lite.avoid_episode_spoilers', 'false') == 'true'
+	return get_setting('bacterio.avoid_episode_spoilers', 'false') == 'true'
 
 def paginate(is_home):
-	paginate_lists = int(get_setting('phage-lite.paginate.lists', '0'))
+	paginate_lists = int(get_setting('bacterio.paginate.lists', '0'))
 	if is_home: return paginate_lists in (2, 3)
 	else: return paginate_lists in (1, 3)
 
 def page_limit(is_home):	
-	return int(get_setting({True: 'phage-lite.paginate.limit_widgets', False: 'phage-lite.paginate.limit_addon'}[is_home], '20'))
+	return int(get_setting({True: 'bacterio.paginate.limit_widgets', False: 'bacterio.paginate.limit_addon'}[is_home], '20'))
 
 def quality_filter(setting):
-	return get_setting('phage-lite.%s' % setting).split(', ')
+	return get_setting('bacterio.%s' % setting).split(', ')
 
 def sort_to_top_filter(autoplay):
-	return {0: False, 1: False if autoplay else True, 2: True if autoplay else False, 3: True}[int(get_setting('phage-lite.filter.sort_to_top', '0'))]
+	return {0: False, 1: False if autoplay else True, 2: True if autoplay else False, 3: True}[int(get_setting('bacterio.filter.sort_to_top', '0'))]
 
 def audio_filters():
-	setting = get_setting('phage-lite.filter_audio')
+	setting = get_setting('bacterio.filter_audio')
 	if setting in ('empty_setting', ''): return []
 	return setting.split(', ')
 
 def preferred_filters():
-	setting = get_setting('phage-lite.filter.preferred_filters')
+	setting = get_setting('bacterio.filter.preferred_filters')
 	if setting in ('empty_setting', ''): return []
 	return setting.split(', ')
 
 def include_prerelease_results():
-	return int(get_setting('phage-lite.filter.include_prerelease', '0')) == 0
+	return int(get_setting('bacterio.filter.include_prerelease', '0')) == 0
 
 def auto_enable_subs():
-	return get_setting('phage-lite.playback.auto_enable_subs', 'false') == 'true'
+	return get_setting('bacterio.playback.auto_enable_subs', 'false') == 'true'
 
 def stingers_show():
-	return get_setting('phage-lite.stinger_alert.show', 'false') == 'true'
+	return get_setting('bacterio.stinger_alert.show', 'false') == 'true'
 
 def stingers_use_chapters():
-	return get_setting('phage-lite.stinger_alert.use_chapters', 'false') == 'true'
+	return get_setting('bacterio.stinger_alert.use_chapters', 'false') == 'true'
 
 def stingers_percentage():
-	return int(get_setting('phage-lite.stinger_alert.window_percentage', '90'))
+	return int(get_setting('bacterio.stinger_alert.window_percentage', '90'))
 
 def include_anime_tvshow():
-	return get_setting('phage-lite.include_anime_tvshow', 'false') == 'true'
+	return get_setting('bacterio.include_anime_tvshow', 'false') == 'true'
 
 def auto_play(media_type):
-	return get_setting('phage-lite.auto_play_%s' % media_type, 'false') == 'true'
+	return get_setting('bacterio.auto_play_%s' % media_type, 'false') == 'true'
 
 def autoplay_next_episode():
-	if auto_play('episode') and get_setting('phage-lite.autoplay_next_episode', 'false') == 'true': return True
+	if auto_play('episode') and get_setting('bacterio.autoplay_next_episode', 'false') == 'true': return True
 	else: return False
 
 def autoscrape_next_episode():
-	if not auto_play('episode') and get_setting('phage-lite.autoscrape_next_episode', 'false') == 'true': return True
+	if not auto_play('episode') and get_setting('bacterio.autoscrape_next_episode', 'false') == 'true': return True
 	else: return False
 
 def auto_rescrape_cache_ignored():
-	return int(get_setting('phage-lite.results.auto_rescrape_cache_ignored', '1'))
+	return int(get_setting('bacterio.results.auto_rescrape_cache_ignored', '1'))
 
 def auto_rescrape_imdb_year():
-	return int(get_setting('phage-lite.results.auto_rescrape_imdb_year', '0'))
+	return int(get_setting('bacterio.results.auto_rescrape_imdb_year', '0'))
 
 def auto_rescrape_with_all():
-	return int(get_setting('phage-lite.results.auto_rescrape_with_all', '0'))
+	return int(get_setting('bacterio.results.auto_rescrape_with_all', '0'))
 
 def autoplay_prescrape(scrape_provider):
-	return get_setting('phage-lite.autoplay.%s' % scrape_provider, 'false') == 'true'
+	return get_setting('bacterio.autoplay.%s' % scrape_provider, 'false') == 'true'
 
 def auto_episode_group():
-	return int(get_setting('phage-lite.results.auto_episode_group', '0'))
+	return int(get_setting('bacterio.results.auto_episode_group', '0'))
 
 def auto_nextep_settings(play_type):
 	play_type = 'autoplay' if play_type == 'autoplay_nextep' else 'autoscrape'
-	window_percentage = 100 - int(get_setting('phage-lite.%s_next_window_percentage' % play_type, '95'))
-	use_chapters = get_setting('phage-lite.%s_use_chapters' % play_type, 'true') == 'true'
-	watching_check = int(get_setting('phage-lite.autoplay_watching_check', '3'))
-	scraper_time = int(get_setting('phage-lite.results.timeout', '60')) + 20
+	window_percentage = 100 - int(get_setting('bacterio.%s_next_window_percentage' % play_type, '95'))
+	use_chapters = get_setting('bacterio.%s_use_chapters' % play_type, 'true') == 'true'
+	watching_check = int(get_setting('bacterio.autoplay_watching_check', '3'))
+	scraper_time = int(get_setting('bacterio.results.timeout', '60')) + 20
 	if play_type == 'autoplay':
-		alert_method = int(get_setting('phage-lite.autoplay_alert_method', '0'))
-		default_action = {'0': 'play', '1': 'cancel', '2': 'pause'}[get_setting('phage-lite.autoplay_default_action', '1')]
+		alert_method = int(get_setting('bacterio.autoplay_alert_method', '0'))
+		default_action = {'0': 'play', '1': 'cancel', '2': 'pause'}[get_setting('bacterio.autoplay_default_action', '1')]
 	else: alert_method, default_action = '', ''
 	return {'scraper_time': scraper_time, 'window_percentage': window_percentage, 'alert_method': alert_method,
 			'default_action': default_action, 'use_chapters': use_chapters, 'watching_check': watching_check}
 
 def filter_status(filter_type):
-	return int(get_setting('phage-lite.filter.%s' % filter_type, '0'))
+	return int(get_setting('bacterio.filter.%s' % filter_type, '0'))
 
 def limit_number_quality():
-	return int(get_setting('phage-lite.results.limit_number_quality', '0'))
+	return int(get_setting('bacterio.results.limit_number_quality', '0'))
 
 def limit_number_total():
-	return int(get_setting('phage-lite.results.limit_number_total', '0'))
+	return int(get_setting('bacterio.results.limit_number_total', '0'))
 
 def ignore_results_filter():
-	return int(get_setting('phage-lite.results.ignore_filter', '0'))
+	return int(get_setting('bacterio.results.ignore_filter', '0'))
 
 def trakt_sync_interval():
-	setting = get_setting('phage-lite.trakt.sync_interval', '60')
+	setting = get_setting('bacterio.trakt.sync_interval', '60')
 	interval = int(setting) * 60
 	return setting, interval
 
 def lists_sort_order(setting):
-	return int(get_setting('phage-lite.sort.%s' % setting, '0'))
+	return int(get_setting('bacterio.sort.%s' % setting, '0'))
 
 def personal_lists_sort_unseen_to_top():
-	return get_setting('phage-lite.personal_list.sort_unseen_to_top') == 'true'
+	return get_setting('bacterio.personal_list.sort_unseen_to_top') == 'true'
 
 def personal_lists_unseen_highlight():
-	if get_setting('phage-lite.personal_list.highlight_unseen', 'false') == 'false': return None
-	return get_setting('phage-lite.personal_list.unseen_highlight', 'FF4DDBFF')
+	if get_setting('bacterio.personal_list.highlight_unseen', 'false') == 'false': return None
+	return get_setting('bacterio.personal_list.unseen_highlight', 'FF4DDBFF')
 
 def personal_lists_show_author():
-	return get_setting('phage-lite.personal_list.show_author', 'true') == 'true'
+	return get_setting('bacterio.personal_list.show_author', 'true') == 'true'
 
 def show_specials():
-	return get_setting('phage-lite.show_specials', 'false') == 'true'
+	return get_setting('bacterio.show_specials', 'false') == 'true'
 
 def single_ep_unwatched_episodes():
-	return get_setting('phage-lite.single_ep_unwatched_episodes', 'false') == 'true'
+	return get_setting('bacterio.single_ep_unwatched_episodes', 'false') == 'true'
 
 def single_ep_display_format(is_external):
-	if is_external: setting, default = 'phage-lite.single_ep_display_widget', '1'
-	else: setting, default = 'phage-lite.single_ep_display', ''
+	if is_external: setting, default = 'bacterio.single_ep_display_widget', '1'
+	else: setting, default = 'bacterio.single_ep_display', ''
 	return int(get_setting(setting, default))
 
 def easynews_active():
-	if get_setting('phage-lite.provider.easynews', 'false') == 'true': easynews_status = easynews_authorized()
+	if get_setting('bacterio.provider.easynews', 'false') == 'true': easynews_status = easynews_authorized()
 	else: easynews_status = False
 	return easynews_status
 
 def easynews_playback_method(query):
-	method = int(get_setting('phage-lite.easynews.playback_method', '0'))
+	method = int(get_setting('bacterio.easynews.playback_method', '0'))
 	queries = {'retry': lambda: method in (1, 3), 'non_seek': lambda: method in (2, 3),
-				'direct_play': lambda: method in (2, 3) and get_setting('phage-lite.easynews.playback_method_limited', 'false') != 'true'}
+				'direct_play': lambda: method in (2, 3) and get_setting('bacterio.easynews.playback_method_limited', 'false') != 'true'}
 	setting = queries[query]()
 	return setting
 
 def easynews_authorized():
-	easynews_user = get_setting('phage-lite.easynews_user', 'empty_setting')
-	easynews_password = get_setting('phage-lite.easynews_password', 'empty_setting')
+	easynews_user = get_setting('bacterio.easynews_user', 'empty_setting')
+	easynews_password = get_setting('bacterio.easynews_password', 'empty_setting')
 	if easynews_user in ('empty_setting', '') or easynews_password in ('empty_setting', ''): easynews_status = False
 	else: easynews_status = True
 	return easynews_status
 
 def extras_enable_extra_ratings():
-	return get_setting('phage-lite.extras.enable_extra_ratings', 'true') == 'true'
+	return get_setting('bacterio.extras.enable_extra_ratings', 'true') == 'true'
 
 def extras_enable_scrollbars():
-	return get_setting('phage-lite.extras.enable_scrollbars', 'true')
+	return get_setting('bacterio.extras.enable_scrollbars', 'true')
 
 def extras_enabled_menus():
-	setting = get_setting('phage-lite.extras.enabled', '2000,2050,2051,2052,2053,2054,2055,2056,2057,2058,2059,2060,2061,2062')
+	setting = get_setting('bacterio.extras.enabled', '2000,2050,2051,2052,2053,2054,2055,2056,2057,2058,2059,2060,2061,2062')
 	if setting in ('', None, 'noop', []): return []
 	split_setting = setting.split(',')
 	return [int(i) for i in split_setting]
 
 def recommend_service():
-	return int(get_setting('phage-lite.recommend_service', '0'))
+	return int(get_setting('bacterio.recommend_service', '0'))
 
 def recommend_seed():
-	return int(get_setting('phage-lite.recommend_seed', '5'))
+	return int(get_setting('bacterio.recommend_seed', '5'))
 
 def tv_progress_location():
-	return int(get_setting('phage-lite.tv_progress_location', '0'))
+	return int(get_setting('bacterio.tv_progress_location', '0'))
 
 def check_prescrape_sources(scraper, media_type):
-	if scraper in ('easynews', 'rd_cloud', 'pm_cloud', 'ad_cloud', 'tb_cloud', 'folders'): return get_setting('phage-lite.check.%s' % scraper) == 'true'
-	if get_setting('phage-lite.check.%s' % scraper) == 'true' and auto_play(media_type): return True
+	if scraper in ('easynews', 'rd_cloud', 'pm_cloud', 'ad_cloud', 'tb_cloud', 'folders'): return get_setting('bacterio.check.%s' % scraper) == 'true'
+	if get_setting('bacterio.check.%s' % scraper) == 'true' and auto_play(media_type): return True
 	else: return False
 
 def external_scraper_info():
-	module = get_setting('phage-lite.external_scraper.module')
+	module = get_setting('bacterio.external_scraper.module')
 	if module in ('empty_setting', ''): return None, ''
 	return module, module.split('.')[-1]
 
 def external_filter_sources():
-	return get_setting('phage-lite.external.filter_sources', 'true') == 'true'
+	return get_setting('bacterio.external.filter_sources', 'true') == 'true'
 
 def filter_by_name(scraper):
 	if get_property('fs_filterless_search') == 'true': return False
-	return get_setting('phage-lite.%s.title_filter' % scraper, 'false') == 'true'
+	return get_setting('bacterio.%s.title_filter' % scraper, 'false') == 'true'
 
 def easynews_language_filter():
-	enabled = get_setting('phage-lite.easynews.filter_lang') == 'true'
-	if enabled: filters = get_setting('phage-lite.easynews.lang_filters').split(', ')
+	enabled = get_setting('bacterio.easynews.filter_lang') == 'true'
+	if enabled: filters = get_setting('bacterio.easynews.lang_filters').split(', ')
 	else: filters = []
 	return enabled, filters
 
 def size_sort_weighted():
-	return get_setting('phage-lite.results.size_sort_weighted', 'false') == 'true'
+	return get_setting('bacterio.results.size_sort_weighted', 'false') == 'true'
 
 def results_sort_order():
-	sort_direction = -1 if get_setting('phage-lite.results.size_sort_direction') == '0' else 1
+	sort_direction = -1 if get_setting('bacterio.results.size_sort_direction') == '0' else 1
 	return (
 			lambda k: (k['quality_rank'], k['provider_rank'], sort_direction*k['size_rank']), #Quality, Provider, Size
 			lambda k: (k['quality_rank'], sort_direction*k['size_rank'], k['provider_rank']), #Quality, Size, Provider
@@ -280,154 +280,154 @@ def results_sort_order():
 			lambda k: (k['provider_rank'], sort_direction*k['size_rank'], k['quality_rank']), #Provider, Size, Quality
 			lambda k: (sort_direction*k['size_rank'], k['quality_rank'], k['provider_rank']), #Size, Quality, Provider
 			lambda k: (sort_direction*k['size_rank'], k['provider_rank'], k['quality_rank'])  #Size, Provider, Quality
-			)[int(get_setting('phage-lite.results.sort_order', '1'))]
+			)[int(get_setting('bacterio.results.sort_order', '1'))]
 
 def active_internal_scrapers():
 	settings = ['provider.external', 'provider.easynews', 'provider.folders']
 	settings_append = settings.append
 	for item in [('rd', 'provider.rd_cloud'), ('pm', 'provider.pm_cloud'), ('ad', 'provider.ad_cloud'), ('tb', 'provider.tb_cloud')]:
 		if enabled_debrids_check(item[0]): settings_append(item[1])
-	active = [i.split('.')[1] for i in settings if get_setting('phage-lite.%s' % i) == 'true']
+	active = [i.split('.')[1] for i in settings if get_setting('bacterio.%s' % i) == 'true']
 	return active
 
 def provider_sort_ranks():
-	fo_priority = int(get_setting('phage-lite.folders.priority', '6'))
-	en_priority = int(get_setting('phage-lite.en.priority', '7'))
-	rd_priority = int(get_setting('phage-lite.rd.priority', '8'))
-	ad_priority = int(get_setting('phage-lite.ad.priority', '9'))
-	pm_priority = int(get_setting('phage-lite.pm.priority', '10'))
-	ed_priority = int(get_setting('phage-lite.ed.priority', '10'))
-	tb_priority = int(get_setting('phage-lite.tb.priority', '10'))
+	fo_priority = int(get_setting('bacterio.folders.priority', '6'))
+	en_priority = int(get_setting('bacterio.en.priority', '7'))
+	rd_priority = int(get_setting('bacterio.rd.priority', '8'))
+	ad_priority = int(get_setting('bacterio.ad.priority', '9'))
+	pm_priority = int(get_setting('bacterio.pm.priority', '10'))
+	ed_priority = int(get_setting('bacterio.ed.priority', '10'))
+	tb_priority = int(get_setting('bacterio.tb.priority', '10'))
 	return {'easynews': en_priority, 'real-debrid': rd_priority, 'premiumize.me': pm_priority, 'alldebrid': ad_priority, 'easydebrid': ed_priority,
 	'torbox': tb_priority, 'rd_cloud': rd_priority, 'pm_cloud': pm_priority, 'ad_cloud': ad_priority, 'tb_cloud': tb_priority, 'folders': fo_priority}
 
 def sort_to_top(provider):
-	sort_to_top_dict = {'folders': 'phage-lite.results.sort_folders_first', 'rd_cloud': 'phage-lite.results.sort_rdcloud_first', 'pm_cloud': 'phage-lite.results.sort_pmcloud_first',
-						'ad_cloud': 'phage-lite.results.sort_adcloud_first', 'tb_cloud': 'phage-lite.results.sort_tbcloud_first'}
+	sort_to_top_dict = {'folders': 'bacterio.results.sort_folders_first', 'rd_cloud': 'bacterio.results.sort_rdcloud_first', 'pm_cloud': 'bacterio.results.sort_pmcloud_first',
+						'ad_cloud': 'bacterio.results.sort_adcloud_first', 'tb_cloud': 'bacterio.results.sort_tbcloud_first'}
 	return get_setting(sort_to_top_dict[provider]) == 'true'
 
 def auto_resume(media_type, autoplay_status):
-	return {0: False, 1: True, 2: autoplay_status}[int(get_setting('phage-lite.auto_resume_%s' % media_type))]
+	return {0: False, 1: True, 2: autoplay_status}[int(get_setting('bacterio.auto_resume_%s' % media_type))]
 
 def scraping_settings():
-	highlight_type = int(get_setting('phage-lite.highlight.type', '0'))
+	highlight_type = int(get_setting('bacterio.highlight.type', '0'))
 	if highlight_type == 2:
-		highlight = get_setting('phage-lite.scraper_single_highlight', 'FF008EB2')
+		highlight = get_setting('bacterio.scraper_single_highlight', 'FF008EB2')
 		return {'highlight_type': 1, '4k': highlight, '1080p': highlight, '720p': highlight, 'sd': highlight}
 	easynews_highlight, debrid_cloud_highlight, folders_highlight = '', '', ''
 	rd_highlight, pm_highlight, ad_highlight, ed_highlight, tb_highlight = '', '', '', '', ''
 	highlight_4K, highlight_1080P, highlight_720P, highlight_SD = '', '', '', ''
 	if highlight_type == 0:
-		easynews_highlight = get_setting('phage-lite.provider.easynews_highlight', 'FF00B3B2')
-		debrid_cloud_highlight = get_setting('phage-lite.provider.debrid_cloud_highlight', 'FF7A01CC')
-		folders_highlight = get_setting('phage-lite.provider.folders_highlight', 'FFB36B00')
-		rd_highlight = get_setting('phage-lite.provider.rd_highlight', 'FF3C9900')
-		pm_highlight = get_setting('phage-lite.provider.pm_highlight', 'FFFF3300')
-		ad_highlight = get_setting('phage-lite.provider.ad_highlight', 'FFE6B800')
-		ed_highlight = get_setting('phage-lite.provider.ed_highlight', 'FF3233FF')
-		tb_highlight = get_setting('phage-lite.provider.tb_highlight', 'FF01662A')
+		easynews_highlight = get_setting('bacterio.provider.easynews_highlight', 'FF00B3B2')
+		debrid_cloud_highlight = get_setting('bacterio.provider.debrid_cloud_highlight', 'FF7A01CC')
+		folders_highlight = get_setting('bacterio.provider.folders_highlight', 'FFB36B00')
+		rd_highlight = get_setting('bacterio.provider.rd_highlight', 'FF3C9900')
+		pm_highlight = get_setting('bacterio.provider.pm_highlight', 'FFFF3300')
+		ad_highlight = get_setting('bacterio.provider.ad_highlight', 'FFE6B800')
+		ed_highlight = get_setting('bacterio.provider.ed_highlight', 'FF3233FF')
+		tb_highlight = get_setting('bacterio.provider.tb_highlight', 'FF01662A')
 	else:
-		highlight_4K = get_setting('phage-lite.scraper_4k_highlight', 'FFFF00FE')
-		highlight_1080P = get_setting('phage-lite.scraper_1080p_highlight', 'FFE6B800')
-		highlight_720P = get_setting('phage-lite.scraper_720p_highlight', 'FF3C9900')
-		highlight_SD = get_setting('phage-lite.scraper_SD_highlight', 'FF0166FF')
+		highlight_4K = get_setting('bacterio.scraper_4k_highlight', 'FFFF00FE')
+		highlight_1080P = get_setting('bacterio.scraper_1080p_highlight', 'FFE6B800')
+		highlight_720P = get_setting('bacterio.scraper_720p_highlight', 'FF3C9900')
+		highlight_SD = get_setting('bacterio.scraper_SD_highlight', 'FF0166FF')
 	return {'highlight_type': highlight_type, 'real-debrid': rd_highlight, 'premiumize': pm_highlight, 'alldebrid': ad_highlight,
 			'easydebrid': ed_highlight, 'torbox': tb_highlight, 'rd_cloud': debrid_cloud_highlight, 'pm_cloud': debrid_cloud_highlight, 'ad_cloud': debrid_cloud_highlight,
 			'tb_cloud': debrid_cloud_highlight, 'easynews': easynews_highlight, 'folders': folders_highlight,
 			'4k': highlight_4K, '1080p': highlight_1080P, '720p': highlight_720P, 'sd': highlight_SD}
 
 def external_cache_check():
-	return get_setting('phage-lite.external.cache_check') == 'true'
+	return get_setting('bacterio.external.cache_check') == 'true'
 
 def omdb_api_key():
-	return get_setting('phage-lite.omdb_api', 'empty_setting')
+	return get_setting('bacterio.omdb_api', 'empty_setting')
 
 def default_all_episodes():
-	return int(get_setting('phage-lite.default_all_episodes', '0'))
+	return int(get_setting('bacterio.default_all_episodes', '0'))
 
 def max_threads():
-	if not get_setting('phage-lite.limit_concurrent_threads', 'false') == 'true': return 60
-	return int(get_setting('phage-lite.max_threads', '60'))
+	if not get_setting('bacterio.limit_concurrent_threads', 'false') == 'true': return 60
+	return int(get_setting('bacterio.max_threads', '60'))
 
 def get_meta_filter():
-	return get_setting('phage-lite.meta_filter', 'true')
+	return get_setting('bacterio.meta_filter', 'true')
 
 def mpaa_region():
-	return get_setting('phage-lite.mpaa_region', 'US')
+	return get_setting('bacterio.mpaa_region', 'US')
 
 def widget_hide_next_page():
-	return get_setting('phage-lite.widget_hide_next_page', 'false') == 'true'
+	return get_setting('bacterio.widget_hide_next_page', 'false') == 'true'
 
 def widget_hide_watched():
-	return get_setting('phage-lite.widget_hide_watched', 'false') == 'true'
+	return get_setting('bacterio.widget_hide_watched', 'false') == 'true'
 
 def calendar_sort_order():
-	return int(get_setting('phage-lite.trakt.calendar_sort_order', '0'))
+	return int(get_setting('bacterio.trakt.calendar_sort_order', '0'))
 
 def ignore_articles():
-	return get_setting('phage-lite.ignore_articles', 'false') == 'true'
+	return get_setting('bacterio.ignore_articles', 'false') == 'true'
 
 def jump_to_enabled():
-	return get_setting('phage-lite.paginate.jump_to', 'true') == 'true'
+	return get_setting('bacterio.paginate.jump_to', 'true') == 'true'
 
 def date_offset():
-	return int(get_setting('phage-lite.datetime.offset', '0')) + 5
+	return int(get_setting('bacterio.datetime.offset', '0')) + 5
 
 def media_open_action(media_type):
-	return int(get_setting('phage-lite.media_open_action_%s' % media_type, '0'))
+	return int(get_setting('bacterio.media_open_action_%s' % media_type, '0'))
 
 def watched_indicators():
 	if not trakt_user_active(): return 0
-	return int(get_setting('phage-lite.watched_indicators', '0'))
+	return int(get_setting('bacterio.watched_indicators', '0'))
 
 def flatten_episodes():
-	return get_setting('phage-lite.trakt.flatten_episodes', 'false') == 'true'
+	return get_setting('bacterio.trakt.flatten_episodes', 'false') == 'true'
 
 def nextep_method():
-	return int(get_setting('phage-lite.nextep.method', '0'))
+	return int(get_setting('bacterio.nextep.method', '0'))
 
 def nextep_limit_history():
-	return get_setting('phage-lite.nextep.limit_history', 'false') == 'true'
+	return get_setting('bacterio.nextep.limit_history', 'false') == 'true'
 
 def nextep_limit():
-	return int(get_setting('phage-lite.nextep.limit', '20'))
+	return int(get_setting('bacterio.nextep.limit', '20'))
 
 def nextep_include_unwatched():
-	return int(get_setting('phage-lite.nextep.include_unwatched', '0'))
+	return int(get_setting('bacterio.nextep.include_unwatched', '0'))
 
 def nextep_include_airdate():
-	return get_setting('phage-lite.nextep.include_airdate', 'false') == 'true'
+	return get_setting('bacterio.nextep.include_airdate', 'false') == 'true'
 
 def nextep_airing_today():
-	return get_setting('phage-lite.nextep.airing_today', 'false') == 'true'
+	return get_setting('bacterio.nextep.airing_today', 'false') == 'true'
 
 def nextep_include_unaired():
-	return get_setting('phage-lite.nextep.include_unaired', 'false') == 'true'
+	return get_setting('bacterio.nextep.include_unaired', 'false') == 'true'
 
 def nextep_sort_key():
-	return {0: 'last_played', 1: 'first_aired', 2: 'name'}[int(get_setting('phage-lite.nextep.sort_type', '0'))]
+	return {0: 'last_played', 1: 'first_aired', 2: 'name'}[int(get_setting('bacterio.nextep.sort_type', '0'))]
 
 def nextep_sort_direction():
-	return int(get_setting('phage-lite.nextep.sort_order', '0')) == 0
+	return int(get_setting('bacterio.nextep.sort_order', '0')) == 0
 
 def update_delay():
-	return int(get_setting('phage-lite.update.delay', '45'))
+	return int(get_setting('bacterio.update.delay', '45'))
 
 def update_action():
-	return int(get_setting('phage-lite.update.action', '2'))
+	return int(get_setting('bacterio.update.action', '2'))
 
 def cm_sort_order():
-	try: return {i: c for c, i in enumerate(get_setting('phage-lite.context_menu.order').split(','))}
+	try: return {i: c for c, i in enumerate(get_setting('bacterio.context_menu.order').split(','))}
 	except: return {i: c for c, i in enumerate(default_setting_values('context_menu.order')['setting_default'].split(','))}
 
 def cm_default_order():
 	return {i: c for c, i in enumerate(default_setting_values('context_menu.order')['setting_default'].split(','))}
 
 def rpdb_api_key(media_type):
-	if int(get_setting('phage-lite.rpdb_enabled', '0')) not in {'movie': (1, 3), 'tvshow': (2, 3)}[media_type]: return None
-	return get_setting('phage-lite.rpdb_api')
+	if int(get_setting('bacterio.rpdb_enabled', '0')) not in {'movie': (1, 3), 'tvshow': (2, 3)}[media_type]: return None
+	return get_setting('bacterio.rpdb_api')
 
 def use_season_name():
-	return get_setting('phage-lite.use_season_name', 'false') == 'true'
+	return get_setting('bacterio.use_season_name', 'false') == 'true'
 
 

@@ -6,7 +6,7 @@
             <top>0</top>
             <width>1920</width>
             <height>1080</height>
-            <texture colordiffuse="FF000000">phage-lite_common/white.png</texture>
+            <texture colordiffuse="FF000000">bacterio_common/white.png</texture>
             <animation effect="fade" end="80" time="120">WindowOpen</animation>
         </control>
         <control type="group">
@@ -18,12 +18,12 @@
                 <top>-2</top>
                 <height>812</height>
                 <width>1722</width>
-                <texture colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texture>
+                <texture colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texture>
             </control>
             <control type="image">
                 <height>808</height>
                 <width>1718</width>
-                <texture colordiffuse="FF1F2020" border="30">phage-lite_common/circle.png</texture>
+                <texture colordiffuse="FF1F2020" border="30">bacterio_common/circle.png</texture>
             </control>
             <control type="group">
                 <control type="image">
@@ -34,7 +34,7 @@
                     <align>center</align>
                     <aligny>center</aligny>
                     <aspectratio>keep</aspectratio>
-                    <texture diffuse="phage-lite_diffuse/poster_w217_h320.png">$INFO[Window.Property(poster)]</texture>
+                    <texture diffuse="bacterio_diffuse/poster_w217_h320.png">$INFO[Window.Property(poster)]</texture>
                 </control>
                 <control type="image">
                     <left>7</left>
@@ -44,14 +44,14 @@
                     <align>right</align>
                     <aligny>top</aligny>
                     <aspectratio aligny="top">keep</aspectratio>
-                    <texture colordiffuse="FFCCCCCC">$INFO[Window(10000).Property(phage-lite.addon_icon_mini)]</texture>
+                    <texture colordiffuse="FFCCCCCC">$INFO[Window(10000).Property(bacterio.addon_icon_mini)]</texture>
                 </control>
                 <control type="textbox" id="2001">
                     <top>50</top>
                     <left>20</left>
                     <width>1100</width>
                     <height>690</height>
-                    <font>font14</font> <!-- PHAGELITE_33 -->
+                    <font>font14</font> <!-- BACTERIO_33 -->
                     <align>center</align>
                     <aligny>center</aligny>
                     <textcolor>FFCCCCCC</textcolor>
@@ -63,9 +63,9 @@
                     <top>35</top>
                     <width>10</width>
                     <height>740</height>
-                    <texturesliderbackground colordiffuse="FF1F2020">phage-lite_common/white.png</texturesliderbackground>
-                    <texturesliderbar colordiffuse="FF555556">phage-lite_common/white.png</texturesliderbar>
-                    <texturesliderbarfocus colordiffuse="FFCCCCCC">phage-lite_common/white.png</texturesliderbarfocus>
+                    <texturesliderbackground colordiffuse="FF1F2020">bacterio_common/white.png</texturesliderbackground>
+                    <texturesliderbar colordiffuse="FF555556">bacterio_common/white.png</texturesliderbar>
+                    <texturesliderbarfocus colordiffuse="FFCCCCCC">bacterio_common/white.png</texturesliderbarfocus>
                     <onleft>2099</onleft>
                     <onright>2099</onright>
                     <showonepage>false</showonepage>
@@ -78,7 +78,7 @@
                     <left>-70</left>
                     <width>50</width>
                     <height>50</height>
-                    <texture colordiffuse="FFCCCCCC" background="true">phage-lite_common/arrow_left.png</texture>
+                    <texture colordiffuse="FFCCCCCC" background="true">bacterio_common/arrow_left.png</texture>
                     <visible>String.IsEqual(Window.Property(previous_display),true)</visible>
                 </control>
                 <control type="image">
@@ -86,7 +86,7 @@
                     <left>1740</left>
                     <width>50</width>
                     <height>50</height>
-                    <texture colordiffuse="FFCCCCCC" background="true" flipx="true">phage-lite_common/arrow_left.png</texture>
+                    <texture colordiffuse="FFCCCCCC" background="true" flipx="true">bacterio_common/arrow_left.png</texture>
                     <visible>String.IsEqual(Window.Property(next_display),true)</visible>
                 </control>
             </control>

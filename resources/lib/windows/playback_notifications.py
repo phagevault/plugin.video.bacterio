@@ -153,10 +153,10 @@ class StingersNotification(BaseDialog):
 		for k, v in self.stinger_dict.items():
 			if k in self.stingers:
 				self.setProperty(v['property'], 'green')
-				self.set_image(v['id'], 'phage-lite_common/overlay_selected.png')
+				self.set_image(v['id'], 'bacterio_common/overlay_selected.png')
 			else:
 				self.setProperty(v['property'], 'red')
-				self.set_image(v['id'], 'phage-lite_common/cross.png')
+				self.set_image(v['id'], 'bacterio_common/cross.png')
 
 	def set_properties(self):
 		self.setProperty('mode', 'stinger')

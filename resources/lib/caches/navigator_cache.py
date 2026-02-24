@@ -167,7 +167,7 @@ class NavigatorCache:
 		for list_name, list_contents in main_items: self.set_list(list_name, 'default', list_contents)
 
 	def _get_list_prop(self, list_type):
-		return {'default': 'phage-lite_%s_default', 'edited': 'phage-lite_%s_edited', 'shortcut_folder': 'phage-lite_%s_shortcut_folder'}[list_type]
+		return {'default': 'bacterio_%s_default', 'edited': 'bacterio_%s_edited', 'shortcut_folder': 'bacterio_%s_shortcut_folder'}[list_type]
 	
 	def random_movie_lists(self):
 		m_list = NavigatorCache.movie_list

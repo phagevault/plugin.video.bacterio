@@ -6,7 +6,7 @@
             <top>0</top>
             <width>1920</width>
             <height>1080</height>
-            <texture colordiffuse="FF000000">phage-lite_common/white.png</texture>
+            <texture colordiffuse="FF000000">bacterio_common/white.png</texture>
             <animation effect="fade" end="80" time="120">WindowOpen</animation>
         </control>
         <control type="group">
@@ -21,12 +21,12 @@
                         <top>-2</top>
                         <width>952</width>
                         <height>807</height>
-                        <texture colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texture>
+                        <texture colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texture>
                     </control>
                     <control type="image">
                         <width>948</width>
                         <height>803</height>
-                        <texture colordiffuse="FF1F2020" border="30">phage-lite_common/circle.png</texture>
+                        <texture colordiffuse="FF1F2020" border="30">bacterio_common/circle.png</texture>
                     </control>
                 </control>
                 <control type="image">
@@ -37,14 +37,14 @@
                     <align>left</align>
                     <aligny>top</aligny>
                     <aspectratio aligny="top">keep</aspectratio>
-                    <texture colordiffuse="FFCCCCCC">$INFO[Window(10000).Property(phage-lite.addon_icon_mini)]</texture>
+                    <texture colordiffuse="FFCCCCCC">$INFO[Window(10000).Property(bacterio.addon_icon_mini)]</texture>
                 </control>
                 <control type="label">
                     <width max="728">auto</width>
                     <top>30</top>
                     <left>110</left>
                     <height>20</height>
-                    <font>font12</font> <!-- PHAGELITE_26 -->
+                    <font>font12</font> <!-- BACTERIO_26 -->
                     <textcolor>FFCCCCCC</textcolor>
                     <shadowcolor>FF000000</shadowcolor>
                     <align>center</align>
@@ -56,7 +56,7 @@
                     <top>70</top>
                     <left>110</left>
                     <height>20</height>
-                    <font>font12</font> <!-- PHAGELITE_26 -->
+                    <font>font12</font> <!-- BACTERIO_26 -->
                     <textcolor>FFCCCCCC</textcolor>
                     <shadowcolor>FF000000</shadowcolor>
                     <align>center</align>
@@ -80,7 +80,7 @@
                         <width max="820">auto</width>
                         <top>25</top>
                         <height>5</height>
-                        <font>font12</font> <!-- PHAGELITE_26 -->
+                        <font>font12</font> <!-- BACTERIO_26 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <aligny>center</aligny>
                         <scroll>false</scroll>
@@ -91,7 +91,7 @@
                         <top>60</top>
                         <width>60</width>
                         <height>5</height>
-                        <font>font12</font> <!-- PHAGELITE_26 -->
+                        <font>font12</font> <!-- BACTERIO_26 -->
                         <textcolor>FFB40025</textcolor>
                         <aligny>center</aligny>
                         <label>[B]$INFO[ListItem.Property(percent),,%][/B]</label>
@@ -102,7 +102,7 @@
                         <top>60</top>
                         <width max="820">auto</width>
                         <height>5</height>
-                        <font>font12</font> <!-- PHAGELITE_26 -->
+                        <font>font12</font> <!-- BACTERIO_26 -->
                         <textcolor>FFB40025</textcolor>
                         <aligny>center</aligny>
                         <align>left</align>
@@ -114,7 +114,7 @@
                         <top>60</top>
                         <width max="820">auto</width>
                         <height>5</height>
-                        <font>font12</font> <!-- PHAGELITE_26 -->
+                        <font>font12</font> <!-- BACTERIO_26 -->
                         <textcolor>FFB40025</textcolor>
                         <aligny>center</aligny>
                         <align>left</align>
@@ -129,147 +129,147 @@
                             <left>0</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),1)</visible>
                         </control>
                         <control type="image">
                             <left>35</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),5)</visible>
                         </control>
                         <control type="image">
                             <left>70</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),10)</visible>
                         </control>
                         <control type="image">
                             <left>105</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),15)</visible>
                         </control>
                         <control type="image">
                             <left>140</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),20)</visible>
                         </control>
                         <control type="image">
                             <left>175</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),25)</visible>
                         </control>
                         <control type="image">
                             <left>210</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),30)</visible>
                         </control>
                         <control type="image">
                             <left>245</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),35)</visible>
                         </control>
                         <control type="image">
                             <left>280</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),40)</visible>
                         </control>
                         <control type="image">
                             <left>315</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),45)</visible>
                         </control>
                         <control type="image">
                             <left>350</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),50)</visible>
                         </control>
                         <control type="image">
                             <left>385</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),55)</visible>
                         </control>
                         <control type="image">
                             <left>420</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),60)</visible>
                         </control>
                         <control type="image">
                             <left>455</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),65)</visible>
                         </control>
                         <control type="image">
                             <left>490</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),70)</visible>
                         </control>
                         <control type="image">
                             <left>525</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),75)</visible>
                         </control>
                         <control type="image">
                             <left>560</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),80)</visible>
                         </control>
                         <control type="image">
                             <left>595</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),85)</visible>
                         </control>
                         <control type="image">
                             <left>630</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),90)</visible>
                         </control>
                         <control type="image">
                             <left>665</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),95)</visible>
                         </control>
                         <control type="image">
                             <left>700</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),99)</visible>
                         </control>
                     </control>
@@ -281,147 +281,147 @@
                             <left>0</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),1)</visible>
                         </control>
                         <control type="image">
                             <left>35</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),5)</visible>
                         </control>
                         <control type="image">
                             <left>70</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),10)</visible>
                         </control>
                         <control type="image">
                             <left>105</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),15)</visible>
                         </control>
                         <control type="image">
                             <left>140</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),20)</visible>
                         </control>
                         <control type="image">
                             <left>175</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),25)</visible>
                         </control>
                         <control type="image">
                             <left>210</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),30)</visible>
                         </control>
                         <control type="image">
                             <left>245</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),35)</visible>
                         </control>
                         <control type="image">
                             <left>280</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),40)</visible>
                         </control>
                         <control type="image">
                             <left>315</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),45)</visible>
                         </control>
                         <control type="image">
                             <left>350</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),50)</visible>
                         </control>
                         <control type="image">
                             <left>385</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),55)</visible>
                         </control>
                         <control type="image">
                             <left>420</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),60)</visible>
                         </control>
                         <control type="image">
                             <left>455</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),65)</visible>
                         </control>
                         <control type="image">
                             <left>490</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),70)</visible>
                         </control>
                         <control type="image">
                             <left>525</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),75)</visible>
                         </control>
                         <control type="image">
                             <left>560</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),80)</visible>
                         </control>
                         <control type="image">
                             <left>595</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),85)</visible>
                         </control>
                         <control type="image">
                             <left>630</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),90)</visible>
                         </control>
                         <control type="image">
                             <left>665</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),95)</visible>
                         </control>
                         <control type="image">
                             <left>700</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),99)</visible>
                         </control>
                     </control>
@@ -430,14 +430,14 @@
                     <control type="image">
                         <animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(2500)">Conditional</animation>
                         <width>890</width>
-                        <texture colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texture>
+                        <texture colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texture>
                     </control>
                     <control type="label">
                         <width max="820">auto</width>
                         <left>35</left>
                         <top>25</top>
                         <height>5</height>
-                        <font>font12</font> <!-- phage-lite_26 -->
+                        <font>font12</font> <!-- bacterio_26 -->
                         <textcolor>FF1F2020</textcolor>
                         <aligny>center</aligny>
                         <scroll>false</scroll>
@@ -448,7 +448,7 @@
                         <top>60</top>
                         <width>60</width>
                         <height>5</height>
-                        <font>font12</font> <!-- PHAGELITE_26 -->
+                        <font>font12</font> <!-- BACTERIO_26 -->
                         <textcolor>FFB40025</textcolor>
                         <aligny>center</aligny>
                         <label>[B]$INFO[ListItem.Property(percent),,%][/B]</label>
@@ -459,7 +459,7 @@
                         <top>60</top>
                         <width max="820">auto</width>
                         <height>5</height>
-                        <font>font12</font> <!-- PHAGELITE_26 -->
+                        <font>font12</font> <!-- BACTERIO_26 -->
                         <textcolor>FFB40025</textcolor>
                         <aligny>center</aligny>
                         <align>left</align>
@@ -471,7 +471,7 @@
                         <top>60</top>
                         <width max="820">auto</width>
                         <height>5</height>
-                        <font>font12</font> <!-- PHAGELITE_26 -->
+                        <font>font12</font> <!-- BACTERIO_26 -->
                         <textcolor>FFB40025</textcolor>
                         <aligny>center</aligny>
                         <align>left</align>
@@ -486,147 +486,147 @@
                             <left>0</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),1)</visible>
                         </control>
                         <control type="image">
                             <left>35</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),5)</visible>
                         </control>
                         <control type="image">
                             <left>70</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),10)</visible>
                         </control>
                         <control type="image">
                             <left>105</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),15)</visible>
                         </control>
                         <control type="image">
                             <left>140</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),20)</visible>
                         </control>
                         <control type="image">
                             <left>175</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),25)</visible>
                         </control>
                         <control type="image">
                             <left>210</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),30)</visible>
                         </control>
                         <control type="image">
                             <left>245</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),35)</visible>
                         </control>
                         <control type="image">
                             <left>280</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),40)</visible>
                         </control>
                         <control type="image">
                             <left>315</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),45)</visible>
                         </control>
                         <control type="image">
                             <left>350</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),50)</visible>
                         </control>
                         <control type="image">
                             <left>385</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),55)</visible>
                         </control>
                         <control type="image">
                             <left>420</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),60)</visible>
                         </control>
                         <control type="image">
                             <left>455</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),65)</visible>
                         </control>
                         <control type="image">
                             <left>490</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),70)</visible>
                         </control>
                         <control type="image">
                             <left>525</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),75)</visible>
                         </control>
                         <control type="image">
                             <left>560</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),80)</visible>
                         </control>
                         <control type="image">
                             <left>595</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),85)</visible>
                         </control>
                         <control type="image">
                             <left>630</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),90)</visible>
                         </control>
                         <control type="image">
                             <left>665</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),95)</visible>
                         </control>
                         <control type="image">
                             <left>700</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FF7C7C7C">bacterio_common/white.png</texture>
                             <visible>Integer.IsLess(ListItem.Property(percent),99)</visible>
                         </control>
                     </control>
@@ -638,147 +638,147 @@
                             <left>0</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),1)</visible>
                         </control>
                         <control type="image">
                             <left>35</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),5)</visible>
                         </control>
                         <control type="image">
                             <left>70</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),10)</visible>
                         </control>
                         <control type="image">
                             <left>105</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),15)</visible>
                         </control>
                         <control type="image">
                             <left>140</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),20)</visible>
                         </control>
                         <control type="image">
                             <left>175</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),25)</visible>
                         </control>
                         <control type="image">
                             <left>210</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),30)</visible>
                         </control>
                         <control type="image">
                             <left>245</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),35)</visible>
                         </control>
                         <control type="image">
                             <left>280</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),40)</visible>
                         </control>
                         <control type="image">
                             <left>315</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),45)</visible>
                         </control>
                         <control type="image">
                             <left>350</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),50)</visible>
                         </control>
                         <control type="image">
                             <left>385</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),55)</visible>
                         </control>
                         <control type="image">
                             <left>420</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),60)</visible>
                         </control>
                         <control type="image">
                             <left>455</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),65)</visible>
                         </control>
                         <control type="image">
                             <left>490</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),70)</visible>
                         </control>
                         <control type="image">
                             <left>525</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),75)</visible>
                         </control>
                         <control type="image">
                             <left>560</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),80)</visible>
                         </control>
                         <control type="image">
                             <left>595</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),85)</visible>
                         </control>
                         <control type="image">
                             <left>630</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),90)</visible>
                         </control>
                         <control type="image">
                             <left>665</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),95)</visible>
                         </control>
                         <control type="image">
                             <left>700</left>
                             <width>30</width>
                             <height>15</height>
-                            <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
+                            <texture colordiffuse="FFB40025">bacterio_common/white.png</texture>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(percent),99)</visible>
                         </control>
                     </control>

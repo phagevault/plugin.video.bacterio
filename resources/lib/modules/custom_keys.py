@@ -64,6 +64,6 @@ def favorites_manager():
 	if params: dialogs.favorites_manager_choice(params)
 
 def get_params(param_name):
-	try: params = dict(parse_qsl(get_infolabel('ListItem.Property(phage-lite.%s)' % param_name).split('plugin://plugin.video.phage-lite/?')[1], keep_blank_values=True))
+	try: params = dict(parse_qsl(get_infolabel('ListItem.Property(bacterio.%s)' % param_name).split('plugin://plugin.video.bacterio/?')[1], keep_blank_values=True))
 	except: params = None
 	return params

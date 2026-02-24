@@ -46,7 +46,7 @@ class Movies:
 			else: var_module, import_function = 'apis.%s_api' % self.action.split('_')[0], self.action
 			try: function = manual_function_import(var_module, import_function)
 			except: pass
-			if page_no == 1 and not self.is_external: kodi_utils.set_property('phage-lite.exit_params', kodi_utils.folder_path())
+			if page_no == 1 and not self.is_external: kodi_utils.set_property('bacterio.exit_params', kodi_utils.folder_path())
 			if self.action in self.main:
 				data = function(page_no)
 				results = data['results']
@@ -234,19 +234,19 @@ class Movies:
 			listitem.setArt({'poster': poster, 'fanart': fanart, 'icon': poster, 'clearlogo': clearlogo, 'landscape': landscape, 'thumb': thumb})
 			set_properties({
 				'belongs_to_collection': belongs_to_movieset,
-				'phage-lite.extras_params': extras_params,
-				'phage-lite.options_params': options_params,
-				'phage-lite.playback_options_params': playback_options_params,
-				'phage-lite.browse_movie_set_params': browse_movie_set_params,
-				'phage-lite.browse_recommended_params': browse_recommended_params,
-				'phage-lite.browse_related_params': browse_related_params,
-				'phage-lite.browse_more_like_this_params': browse_more_like_this_params,
-				'phage-lite.browse_similar_params': browse_similar_params,
-				'phage-lite.browse_in_trakt_list_params': browse_in_trakt_list_params,
-				'phage-lite.trakt_manager_params': trakt_manager_params,
-				'phage-lite.personal_manager_params': personal_manager_params,
-				'phage-lite.tmdb_manager_params': tmdb_manager_params,
-				'phage-lite.favorites_manager_params': favorites_manager_params
+				'bacterio.extras_params': extras_params,
+				'bacterio.options_params': options_params,
+				'bacterio.playback_options_params': playback_options_params,
+				'bacterio.browse_movie_set_params': browse_movie_set_params,
+				'bacterio.browse_recommended_params': browse_recommended_params,
+				'bacterio.browse_related_params': browse_related_params,
+				'bacterio.browse_more_like_this_params': browse_more_like_this_params,
+				'bacterio.browse_similar_params': browse_similar_params,
+				'bacterio.browse_in_trakt_list_params': browse_in_trakt_list_params,
+				'bacterio.trakt_manager_params': trakt_manager_params,
+				'bacterio.personal_manager_params': personal_manager_params,
+				'bacterio.tmdb_manager_params': tmdb_manager_params,
+				'bacterio.favorites_manager_params': favorites_manager_params
 				})
 			self.append(((url_params, listitem, False), _position))
 		except: pass

@@ -53,7 +53,7 @@ class TVShows:
 			except: page_no = self.params_get('new_page')
 			if page_no == 1 and not self.is_external:
 				folder_path = kodi_utils.folder_path()
-				if not any([x in folder_path for x in ('build_season_list', 'build_episode_list')]): kodi_utils.set_property('phage-lite.exit_params', folder_path)
+				if not any([x in folder_path for x in ('build_season_list', 'build_episode_list')]): kodi_utils.set_property('bacterio.exit_params', folder_path)
 			if self.action in self.personal: var_module, import_function = self.personal[self.action]
 			else: var_module, import_function = 'apis.%s_api' % self.action.split('_')[0], self.action
 			try: function = manual_function_import(var_module, import_function)
@@ -246,17 +246,17 @@ class TVShows:
 			cast = meta_get('short_cast', []) or meta_get('cast', []) or []
 			info_tag.setCast([self.kodi_actor(name=item['name'], role=item['role'], thumbnail=item['thumbnail']) for item in cast])
 			set_properties({
-				'phage-lite.extras_params': extras_params,
-				'phage-lite.options_params': options_params,
-				'phage-lite.browse_recommended_params': browse_recommended_params,
-				'phage-lite.browse_related_params': browse_related_params,
-				'phage-lite.browse_more_like_this_params': browse_more_like_this_params,
-				'phage-lite.browse_similar_params': browse_similar_params,
-				'phage-lite.browse_in_trakt_list_params': browse_in_trakt_list_params,
-				'phage-lite.trakt_manager_params': trakt_manager_params,
-				'phage-lite.personal_manager_params': personal_manager_params,
-				'phage-lite.tmdb_manager_params': tmdb_manager_params,
-				'phage-lite.favorites_manager_params': favorites_manager_params
+				'bacterio.extras_params': extras_params,
+				'bacterio.options_params': options_params,
+				'bacterio.browse_recommended_params': browse_recommended_params,
+				'bacterio.browse_related_params': browse_related_params,
+				'bacterio.browse_more_like_this_params': browse_more_like_this_params,
+				'bacterio.browse_similar_params': browse_similar_params,
+				'bacterio.browse_in_trakt_list_params': browse_in_trakt_list_params,
+				'bacterio.trakt_manager_params': trakt_manager_params,
+				'bacterio.personal_manager_params': personal_manager_params,
+				'bacterio.tmdb_manager_params': tmdb_manager_params,
+				'bacterio.favorites_manager_params': favorites_manager_params
 				})
 			self.append(((url_params, listitem, self.is_folder), _position))
 		except: pass

@@ -14,7 +14,7 @@ from modules.kodi_utils import sleep, ok_dialog, progress_dialog, notification
 
 class PremiumizeAPI:
 	def __init__(self):
-		self.token = get_setting('phage-lite.pm.token', 'empty_setting')
+		self.token = get_setting('bacterio.pm.token', 'empty_setting')
 
 	def auth(self):
 		self.token = ''
@@ -190,7 +190,7 @@ class PremiumizeAPI:
 		return url + '|' + urlencode(self.headers())
 
 	def headers(self):
-		return {'User-Agent': 'Phage Lite for Kodi', 'Authorization': 'Bearer %s' % self.token}
+		return {'User-Agent': 'Bacterio for Kodi', 'Authorization': 'Bearer %s' % self.token}
 
 	def _get(self, url, data={}):
 		if self.token in ('empty_setting', ''): return None

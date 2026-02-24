@@ -6,7 +6,7 @@
             <top>0</top>
             <width>1920</width>
             <height>1080</height>
-            <texture colordiffuse="FF000000">phage-lite_common/white.png</texture>
+            <texture colordiffuse="FF000000">bacterio_common/white.png</texture>
             <animation effect="fade" end="80" time="120">WindowOpen</animation>
         </control>
         <control type="group">
@@ -23,12 +23,12 @@
                         <top>-2</top>
                         <width>1302</width>
                         <height>807</height>
-                        <texture colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texture>
+                        <texture colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texture>
                     </control>
                     <control type="image">
                         <width>1298</width>
                         <height>803</height>
-                        <texture colordiffuse="FF1F2020" border="30">phage-lite_common/circle.png</texture>
+                        <texture colordiffuse="FF1F2020" border="30">bacterio_common/circle.png</texture>
                     </control>
                 </control>
                 <control type="group">
@@ -38,12 +38,12 @@
                         <top>-2</top>
                         <width>782</width>
                         <height>807</height>
-                        <texture colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texture>
+                        <texture colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texture>
                     </control>
                     <control type="image">
                         <width>778</width>
                         <height>803</height>
-                        <texture colordiffuse="FF1F2020" border="30">phage-lite_common/circle.png</texture>
+                        <texture colordiffuse="FF1F2020" border="30">bacterio_common/circle.png</texture>
                     </control>
                 </control>
                 <control type="image">
@@ -54,7 +54,7 @@
                     <align>left</align>
                     <aligny>top</aligny>
                     <aspectratio aligny="top">keep</aspectratio>
-                    <texture colordiffuse="FFCCCCCC">$INFO[Window(10000).Property(phage-lite.addon_icon_mini)]</texture>
+                    <texture colordiffuse="FFCCCCCC">$INFO[Window(10000).Property(bacterio.addon_icon_mini)]</texture>
                 </control>
                 <control type="label">
                     <visible>!String.IsEqual(Window().Property(narrow_window),true)</visible>
@@ -62,7 +62,7 @@
                     <top>10</top>
                     <left>110</left>
                     <height>20</height>
-                    <font>font12</font> <!-- PHAGELITE_26 -->
+                    <font>font12</font> <!-- BACTERIO_26 -->
                     <textcolor>FFCCCCCC</textcolor>
                     <shadowcolor>FF000000</shadowcolor>
                     <align>center</align>
@@ -74,7 +74,7 @@
                     <top>10</top>
                     <left>110</left>
                     <height>20</height>
-                    <font>font12</font> <!-- PHAGELITE_26 -->
+                    <font>font12</font> <!-- BACTERIO_26 -->
                     <textcolor>FFCCCCCC</textcolor>
                     <shadowcolor>FF000000</shadowcolor>
                     <align>center</align>
@@ -87,7 +87,7 @@
                         <height>720</height>
                         <width>500</width>
                         <aspectratio aligny="bottom">keep</aspectratio>
-                        <texture diffuse="phage-lite_diffuse/poster_w217_h320.png">$INFO[Container(2025).ListItem.Property(icon)]</texture>
+                        <texture diffuse="bacterio_diffuse/poster_w217_h320.png">$INFO[Container(2025).ListItem.Property(icon)]</texture>
                         <fadetime>100</fadetime>
                         <visible>String.IsEqual(Window().Property(multi_choice),false)</visible>
                     </control>
@@ -97,7 +97,7 @@
                         <height>400</height>
                         <width>400</width>
                         <aspectratio aligny="bottom">keep</aspectratio>
-                        <texture diffuse="phage-lite_diffuse/poster_w217_h320.png">$INFO[Container(2025).ListItem.Property(icon)]</texture>
+                        <texture diffuse="bacterio_diffuse/poster_w217_h320.png">$INFO[Container(2025).ListItem.Property(icon)]</texture>
                         <fadetime>100</fadetime>
                         <visible>String.IsEqual(Window().Property(multi_choice),true)</visible>
                     </control>
@@ -127,7 +127,7 @@
                         <left>34</left>
                         <top>45</top>
                         <height>5</height>
-                        <font>font12</font> <!-- PHAGELITE_26 -->
+                        <font>font12</font> <!-- BACTERIO_26 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <aligny>center</aligny>
                         <label>[UPPERCASE]$INFO[ListItem.Property(line1)][/UPPERCASE]</label>
@@ -141,7 +141,7 @@
                         <control type="label">
                             <top>25</top>
                             <height>5</height>
-                            <font>font12</font> <!-- PHAGELITE_26 -->
+                            <font>font12</font> <!-- BACTERIO_26 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <aligny>center</aligny>
                             <label>[UPPERCASE][B]$INFO[ListItem.Property(line1)][/B][/UPPERCASE]</label>
@@ -150,7 +150,7 @@
                         <control type="label">
                             <top>60</top>
                             <height>5</height>
-                            <font>font12</font> <!-- PHAGELITE_26 -->
+                            <font>font12</font> <!-- BACTERIO_26 -->
                             <textcolor>FFA9A8A8</textcolor>
                             <aligny>center</aligny>
                             <label>[UPPERCASE][I]$INFO[ListItem.Property(line2)][/I][/UPPERCASE]</label>
@@ -164,7 +164,7 @@
                         <align>left</align>
                         <aligny>center</aligny>
                         <aspectratio>keep</aspectratio>
-                        <texture colordiffuse="red">phage-lite_common/overlay_selected.png</texture>
+                        <texture colordiffuse="red">bacterio_common/overlay_selected.png</texture>
                         <visible>!String.IsEmpty(ListItem.Property(check_status))</visible>
                     </control>
                 </itemlayout>
@@ -172,7 +172,7 @@
                     <control type="image">
                         <animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(2025)">Conditional</animation>
                         <width>700</width>
-                        <texture colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texture>
+                        <texture colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texture>
                     </control>
                     <control type="label">
                         <description>Only Line1</description>
@@ -181,7 +181,7 @@
                         <top>45</top>
                         <height>5</height>
                         <width max="632">auto</width>
-                        <font>font12</font> <!-- PHAGELITE_26 -->
+                        <font>font12</font> <!-- BACTERIO_26 -->
                         <textcolor>FF1F2020</textcolor>
                         <aligny>center</aligny>
                         <label>[UPPERCASE]$INFO[ListItem.Property(line1)][/UPPERCASE]</label>
@@ -195,7 +195,7 @@
                         <control type="label">
                             <top>25</top>
                             <height>5</height>
-                            <font>font12</font> <!-- PHAGELITE_26 -->
+                            <font>font12</font> <!-- BACTERIO_26 -->
                             <textcolor>FF1F2020</textcolor>
                             <aligny>center</aligny>
                             <label>[UPPERCASE][B]$INFO[ListItem.Property(line1)][/B][/UPPERCASE]</label>
@@ -204,7 +204,7 @@
                         <control type="label">
                             <top>60</top>
                             <height>5</height>
-                            <font>font12</font> <!-- PHAGELITE_26 -->
+                            <font>font12</font> <!-- BACTERIO_26 -->
                             <textcolor>FF4a4347</textcolor>
                             <aligny>center</aligny>
                             <label>[UPPERCASE][I]$INFO[ListItem.Property(line2)][/I][/UPPERCASE]</label>
@@ -218,7 +218,7 @@
                         <align>left</align>
                         <aligny>center</aligny>
                         <aspectratio>keep</aspectratio>
-                        <texture colordiffuse="red">phage-lite_common/overlay_selected.png</texture>
+                        <texture colordiffuse="red">bacterio_common/overlay_selected.png</texture>
                         <visible>!String.IsEmpty(ListItem.Property(check_status))</visible>
                     </control>
                 </focusedlayout>
@@ -236,11 +236,11 @@
                     <onleft>2025</onleft>
                     <onright>2025</onright>
                     <label>OK</label>
-                    <font>font12</font> <!-- PHAGELITE_26 -->
+                    <font>font12</font> <!-- BACTERIO_26 -->
                     <textcolor>FFCCCCCC</textcolor>
                     <focusedcolor>FF1F2020</focusedcolor>
-                    <texturefocus colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texturefocus>
-                    <texturenofocus colordiffuse="FF4a4347" border="30">phage-lite_common/circle.png</texturenofocus>
+                    <texturefocus colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texturefocus>
+                    <texturenofocus colordiffuse="FF4a4347" border="30">bacterio_common/circle.png</texturenofocus>
                     <align>center</align>
                     <aligny>center</aligny>
                 </control>
@@ -254,11 +254,11 @@
                     <onleft>2025</onleft>
                     <onright>2025</onright>
                     <label>Cancel</label>
-                    <font>font12</font> <!-- PHAGELITE_26 -->
+                    <font>font12</font> <!-- BACTERIO_26 -->
                     <textcolor>FFCCCCCC</textcolor>
                     <focusedcolor>FF1F2020</focusedcolor>
-                    <texturefocus colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texturefocus>
-                    <texturenofocus colordiffuse="FF4a4347" border="30">phage-lite_common/circle.png</texturenofocus>
+                    <texturefocus colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texturefocus>
+                    <texturenofocus colordiffuse="FF4a4347" border="30">bacterio_common/circle.png</texturenofocus>
                     <align>center</align>
                     <aligny>center</aligny>
                 </control>
@@ -272,11 +272,11 @@
                     <onleft>2025</onleft>
                     <onright>2025</onright>
                     <label>Select All</label>
-                    <font>font12</font> <!-- PHAGELITE_26 -->
+                    <font>font12</font> <!-- BACTERIO_26 -->
                     <textcolor>FFCCCCCC</textcolor>
                     <focusedcolor>FF1F2020</focusedcolor>
-                    <texturefocus colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texturefocus>
-                    <texturenofocus colordiffuse="FF4a4347" border="30">phage-lite_common/circle.png</texturenofocus>
+                    <texturefocus colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texturefocus>
+                    <texturenofocus colordiffuse="FF4a4347" border="30">bacterio_common/circle.png</texturenofocus>
                     <align>center</align>
                     <aligny>center</aligny>
                     <visible>String.IsEqual(Window().Property(select_button),select_all)</visible>
@@ -291,11 +291,11 @@
                     <onleft>2025</onleft>
                     <onright>2025</onright>
                     <label>Deselect All</label>
-                    <font>font12</font> <!-- PHAGELITE_26 -->
+                    <font>font12</font> <!-- BACTERIO_26 -->
                     <textcolor>FFCCCCCC</textcolor>
                     <focusedcolor>FF1F2020</focusedcolor>
-                    <texturefocus colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texturefocus>
-                    <texturenofocus colordiffuse="FF4a4347" border="30">phage-lite_common/circle.png</texturenofocus>
+                    <texturefocus colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texturefocus>
+                    <texturenofocus colordiffuse="FF4a4347" border="30">bacterio_common/circle.png</texturenofocus>
                     <align>center</align>
                     <aligny>center</aligny>
                     <visible>String.IsEqual(Window().Property(select_button),deselect_all)</visible>
@@ -306,9 +306,9 @@
                 <left>740</left>
                 <width>10</width>
                 <height>720</height>
-                <texturesliderbackground colordiffuse="FF1F2020">phage-lite_common/white.png</texturesliderbackground>
-                <texturesliderbar colordiffuse="FF555556">phage-lite_common/white.png</texturesliderbar>
-                <texturesliderbarfocus colordiffuse="FFCCCCCC">phage-lite_common/white.png</texturesliderbarfocus>
+                <texturesliderbackground colordiffuse="FF1F2020">bacterio_common/white.png</texturesliderbackground>
+                <texturesliderbar colordiffuse="FF555556">bacterio_common/white.png</texturesliderbar>
+                <texturesliderbarfocus colordiffuse="FFCCCCCC">bacterio_common/white.png</texturesliderbarfocus>
                 <onleft>2025</onleft>
                 <onright>10</onright>
                 <showonepage>false</showonepage>

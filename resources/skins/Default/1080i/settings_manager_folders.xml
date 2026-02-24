@@ -8,7 +8,7 @@
             <top>0</top>
             <width>1920</width>
             <height>1080</height>
-            <texture colordiffuse="FF000000">phage-lite_common/white.png</texture>
+            <texture colordiffuse="FF000000">bacterio_common/white.png</texture>
             <animation effect="fade" end="80" time="120">WindowOpen</animation>
         </control>
         <control type="group">
@@ -22,12 +22,12 @@
                     <top>-2</top>
                     <width>1544</width>
                     <height>574</height>
-                    <texture colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texture>
+                    <texture colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texture>
                 </control>
                 <control type="image">
                     <width>1540</width>
                     <height>570</height>
-                    <texture colordiffuse="FF1F2020" border="30">phage-lite_common/circle.png</texture>
+                    <texture colordiffuse="FF1F2020" border="30">bacterio_common/circle.png</texture>
                 </control>
                 <control type="image">
                     <left>12</left>
@@ -37,14 +37,14 @@
                     <align>left</align>
                     <aligny>top</aligny>
                     <aspectratio aligny="top">keep</aspectratio>
-                    <texture colordiffuse="FFCCCCCC">$INFO[Window(10000).Property(phage-lite.addon_icon_mini)]</texture>
+                    <texture colordiffuse="FFCCCCCC">$INFO[Window(10000).Property(bacterio.addon_icon_mini)]</texture>
                 </control>
                 <control type="label">
                     <width max="1700">auto</width>
                     <top>22</top>
                     <left>0</left>
                     <height>20</height>
-                    <font>font12</font> <!-- PHAGELITE_26 -->
+                    <font>font12</font> <!-- BACTERIO_26 -->
                     <textcolor>FFCCCCCC</textcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -68,7 +68,7 @@
                         <width>220</width>
                         <height>85</height>
                         <label>[UPPERCASE]$INFO[ListItem.Property(setting_label)][/UPPERCASE]</label>
-                        <font>font12</font> <!-- PHAGELITE_26 -->
+                        <font>font12</font> <!-- BACTERIO_26 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <aligny>center</aligny>
                         <align>center</align>
@@ -80,7 +80,7 @@
                         <height>85</height>
                         <control type="image">
                             <width>300</width>
-                            <texture colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texture>
+                            <texture colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texture>
                         </control>
                     </control>
                     <control type="label">
@@ -88,7 +88,7 @@
                         <width>220</width>
                         <height>85</height>
                         <label>[UPPERCASE]$INFO[ListItem.Property(setting_label)][/UPPERCASE]</label>
-                        <font>font12</font> <!-- PHAGELITE_26 -->
+                        <font>font12</font> <!-- BACTERIO_26 -->
                         <textcolor>FF1F2020</textcolor>
                         <aligny>center</aligny>
                         <scroll>Control.HasFocus(2001)</scroll>
@@ -129,7 +129,7 @@
                         <width>330</width>
                         <height>85</height>
                         <label>[UPPERCASE]$INFO[ListItem.Property(setting_label)][/UPPERCASE]</label>
-                        <font>font12</font> <!-- PHAGELITE_26 -->
+                        <font>font12</font> <!-- BACTERIO_26 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <aligny>center</aligny>
                         <scroll>false</scroll>
@@ -140,7 +140,7 @@
                         <width>725</width>
                         <height>85</height>
                         <label>[UPPERCASE][B]$INFO[ListItem.Property(setting_value)][/B][/UPPERCASE]</label>
-                        <font>font12</font> <!-- PHAGELITE_26 -->
+                        <font>font12</font> <!-- BACTERIO_26 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <align>right</align>
                         <aligny>center</aligny>
@@ -153,7 +153,7 @@
                         <visible>Control.HasFocus(2101)</visible>
                         <height>85</height>
                         <width>1160</width>
-                        <texture colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texture>
+                        <texture colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texture>
                     </control>
                     <!-- LABEL -->
                     <control type="group">
@@ -163,7 +163,7 @@
                             <width>330</width>
                             <height>85</height>
                             <label>[UPPERCASE]$INFO[ListItem.Property(setting_label)][/UPPERCASE]</label>
-                            <font>font12</font> <!-- PHAGELITE_26 -->
+                            <font>font12</font> <!-- BACTERIO_26 -->
                             <textcolor>FF1F2020</textcolor>
                             <aligny>center</aligny>
                             <scroll>Control.HasFocus(2101)</scroll>
@@ -174,7 +174,7 @@
                             <width>330</width>
                             <height>85</height>
                             <label>[UPPERCASE]$INFO[ListItem.Property(setting_label)][/UPPERCASE]</label>
-                            <font>font12</font> <!-- PHAGELITE_26 -->
+                            <font>font12</font> <!-- BACTERIO_26 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <aligny>center</aligny>
                             <scroll>false</scroll>
@@ -188,7 +188,7 @@
                             <width>725</width>
                             <height>85</height>
                             <label>[UPPERCASE][B]$INFO[ListItem.Property(setting_value)][/B][/UPPERCASE]</label>
-                            <font>font12</font> <!-- PHAGELITE_26 -->
+                            <font>font12</font> <!-- BACTERIO_26 -->
                             <textcolor>FF1F2020</textcolor>
                             <align>right</align>
                             <aligny>center</aligny>
@@ -200,7 +200,7 @@
                             <width>725</width>
                             <height>85</height>
                             <label>[UPPERCASE][B]$INFO[ListItem.Property(setting_value)][/B][/UPPERCASE]</label>
-                            <font>font12</font> <!-- PHAGELITE_26 -->
+                            <font>font12</font> <!-- BACTERIO_26 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <align>right</align>
                             <aligny>center</aligny>
@@ -212,122 +212,122 @@
                     <item>
                         <visible>Container(2001).HasFocus(10)</visible>
                         <property name="setting_label">Display Name</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(phage-lite.folder1.display_name)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.phage-lite/?mode=settings_manager.set_string&amp;setting_id=folder1.display_name)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(bacterio.folder1.display_name)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.bacterio/?mode=settings_manager.set_string&amp;setting_id=folder1.display_name)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(10)</visible>
                         <property name="setting_label">Movies Directory</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(phage-lite.folder1.movies_directory)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.phage-lite/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder1.movies_directory)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(bacterio.folder1.movies_directory)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.bacterio/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder1.movies_directory)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(10)</visible>
                         <property name="setting_label">TV Shows Directory</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(phage-lite.folder1.tv_shows_directory)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.phage-lite/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder1.tv_shows_directory)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(bacterio.folder1.tv_shows_directory)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.bacterio/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder1.tv_shows_directory)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(10)</visible>
                         <property name="setting_label">Restore Default</property>
                         <property name="setting_value">...</property>
-                        <onclick>RunPlugin(plugin://plugin.video.phage-lite/?mode=clear_sources_folder_choice&amp;setting_id=folder1)</onclick>
+                        <onclick>RunPlugin(plugin://plugin.video.bacterio/?mode=clear_sources_folder_choice&amp;setting_id=folder1)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(20)</visible>
                         <property name="setting_label">Display Name</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(phage-lite.folder2.display_name)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.phage-lite/?mode=settings_manager.set_string&amp;setting_id=folder2.display_name)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(bacterio.folder2.display_name)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.bacterio/?mode=settings_manager.set_string&amp;setting_id=folder2.display_name)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(20)</visible>
                         <property name="setting_label">Movies Directory</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(phage-lite.folder2.movies_directory)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.phage-lite/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder2.movies_directory)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(bacterio.folder2.movies_directory)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.bacterio/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder2.movies_directory)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(20)</visible>
                         <property name="setting_label">TV Shows Directory</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(phage-lite.folder2.tv_shows_directory)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.phage-lite/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder2.tv_shows_directory)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(bacterio.folder2.tv_shows_directory)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.bacterio/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder2.tv_shows_directory)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(20)</visible>
                         <property name="setting_label">Restore Default</property>
                         <property name="setting_value">...</property>
-                        <onclick>RunPlugin(plugin://plugin.video.phage-lite/?mode=clear_sources_folder_choice&amp;setting_id=folder2)</onclick>
+                        <onclick>RunPlugin(plugin://plugin.video.bacterio/?mode=clear_sources_folder_choice&amp;setting_id=folder2)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(30)</visible>
                         <property name="setting_label">Display Name</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(phage-lite.folder3.display_name)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.phage-lite/?mode=settings_manager.set_string&amp;setting_id=folder3.display_name)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(bacterio.folder3.display_name)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.bacterio/?mode=settings_manager.set_string&amp;setting_id=folder3.display_name)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(30)</visible>
                         <property name="setting_label">Movies Directory</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(phage-lite.folder3.movies_directory)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.phage-lite/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder3.movies_directory)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(bacterio.folder3.movies_directory)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.bacterio/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder3.movies_directory)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(30)</visible>
                         <property name="setting_label">TV Shows Directory</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(phage-lite.folder3.tv_shows_directory)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.phage-lite/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder3.tv_shows_directory)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(bacterio.folder3.tv_shows_directory)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.bacterio/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder3.tv_shows_directory)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(30)</visible>
                         <property name="setting_label">Restore Default</property>
                         <property name="setting_value">...</property>
-                        <onclick>RunPlugin(plugin://plugin.video.phage-lite/?mode=clear_sources_folder_choice&amp;setting_id=folder3)</onclick>
+                        <onclick>RunPlugin(plugin://plugin.video.bacterio/?mode=clear_sources_folder_choice&amp;setting_id=folder3)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(40)</visible>
                         <property name="setting_label">Display Name</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(phage-lite.folder4.display_name)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.phage-lite/?mode=settings_manager.set_string&amp;setting_id=folder4.display_name)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(bacterio.folder4.display_name)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.bacterio/?mode=settings_manager.set_string&amp;setting_id=folder4.display_name)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(40)</visible>
                         <property name="setting_label">Movies Directory</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(phage-lite.folder4.movies_directory)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.phage-lite/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder4.movies_directory)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(bacterio.folder4.movies_directory)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.bacterio/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder4.movies_directory)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(40)</visible>
                         <property name="setting_label">TV Shows Directory</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(phage-lite.folder4.tv_shows_directory)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.phage-lite/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder4.tv_shows_directory)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(bacterio.folder4.tv_shows_directory)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.bacterio/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder4.tv_shows_directory)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(40)</visible>
                         <property name="setting_label">Restore Default</property>
                         <property name="setting_value">...</property>
-                        <onclick>RunPlugin(plugin://plugin.video.phage-lite/?mode=clear_sources_folder_choice&amp;setting_id=folder4)</onclick>
+                        <onclick>RunPlugin(plugin://plugin.video.bacterio/?mode=clear_sources_folder_choice&amp;setting_id=folder4)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(50)</visible>
                         <property name="setting_label">Display Name</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(phage-lite.folder5.display_name)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.phage-lite/?mode=settings_manager.set_string&amp;setting_id=folder5.display_name)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(bacterio.folder5.display_name)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.bacterio/?mode=settings_manager.set_string&amp;setting_id=folder5.display_name)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(50)</visible>
                         <property name="setting_label">Movies Directory</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(phage-lite.folder5.movies_directory)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.phage-lite/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder5.movies_directory)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(bacterio.folder5.movies_directory)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.bacterio/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder5.movies_directory)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(50)</visible>
                         <property name="setting_label">TV Shows Directory</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(phage-lite.folder5.tv_shows_directory)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.phage-lite/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder5.tv_shows_directory)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(bacterio.folder5.tv_shows_directory)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.bacterio/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder5.tv_shows_directory)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(50)</visible>
                         <property name="setting_label">Restore Default</property>
                         <property name="setting_value">...</property>
-                        <onclick>RunPlugin(plugin://plugin.video.phage-lite/?mode=clear_sources_folder_choice&amp;setting_id=folder5)</onclick>
+                        <onclick>RunPlugin(plugin://plugin.video.bacterio/?mode=clear_sources_folder_choice&amp;setting_id=folder5)</onclick>
                     </item>
                 </content>
             </control>

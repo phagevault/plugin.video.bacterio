@@ -6,7 +6,7 @@
     <controls>
         <control type="image">
             <height>550</height>
-            <texture>phage-lite_common/dim-top.png</texture>
+            <texture>bacterio_common/dim-top.png</texture>
         </control>
         <control type="group">
             <left>20</left>
@@ -17,16 +17,16 @@
                 <top>-1</top>
                 <width>286</width>
                 <height>162</height>
-                <texture border="16" colordiffuse="FFCCCCCC">phage-lite_common/dialog.png</texture>
+                <texture border="16" colordiffuse="FFCCCCCC">bacterio_common/dialog.png</texture>
             </control>
             <control type="image">
                 <width>284</width>
-                <texture colordiffuse="FF000000" diffuse="phage-lite_diffuse/landscape_w284_h160.png">phage-lite_common/white.png</texture>
+                <texture colordiffuse="FF000000" diffuse="bacterio_diffuse/landscape_w284_h160.png">bacterio_common/white.png</texture>
             </control>
             <control type="image">
                 <width>284</width>
                 <aspectratio>scale</aspectratio>
-                <texture diffuse="phage-lite_diffuse/landscape_w284_h160.png">$INFO[Window.Property(thumb)]</texture>
+                <texture diffuse="bacterio_diffuse/landscape_w284_h160.png">$INFO[Window.Property(thumb)]</texture>
                 <animation effect="fade" end="65">WindowOpen</animation>
             </control>
             <control type="image">
@@ -46,7 +46,7 @@
                     <left>0</left>
                     <width>284</width>
                     <height>35</height>
-                    <texture colordiffuse="Window.Property(episode_status.highlight)">phage-lite_common/white.png</texture>
+                    <texture colordiffuse="Window.Property(episode_status.highlight)">bacterio_common/white.png</texture>
                 </control>
                 <control type="label">
                     <top>8</top>
@@ -54,7 +54,7 @@
                     <width>284</width>
                     <height>35</height>
                     <align>center</align>
-                    <font>font10</font> <!-- PHAGELITE_21 -->
+                    <font>font10</font> <!-- BACTERIO_21 -->
                     <textcolor>FFFFFFFF</textcolor>
                     <label>[B]$INFO[Window.Property(episode_status.label)][/B]</label>
                 </control>
@@ -68,7 +68,7 @@
                 <align>left</align>
                 <aligny>top</aligny>
                 <aspectratio aligny="top">keep</aspectratio>
-                <texture colordiffuse="FFB7B4BB">$INFO[Window(10000).Property(phage-lite.addon_icon_mini)]</texture>
+                <texture colordiffuse="FFB7B4BB">$INFO[Window(10000).Property(bacterio.addon_icon_mini)]</texture>
             </control>
             <!-- HEADING - NEXT EPISODE -->
             <control type="group">
@@ -81,7 +81,7 @@
                     <aligny>center</aligny>
                     <height>40</height>
                     <label>[B]Next Episode In $INFO[Player.TimeRemaining()][/B]</label>
-                    <font>font14</font> <!-- PHAGELITE_33 -->
+                    <font>font14</font> <!-- BACTERIO_33 -->
                     <textcolor>FFB7B4BB</textcolor>
                 </control>
                 <!-- Waiting For Input -->
@@ -91,7 +91,7 @@
                     <aligny>center</aligny>
                     <height>40</height>
                     <label>[B]Waiting for Input $INFO[Window.Property(pause_timer)][/B]</label>
-                    <font>font14</font> <!-- PHAGELITE_33 -->
+                    <font>font14</font> <!-- BACTERIO_33 -->
                     <textcolor>FFB7B4BB</textcolor>
                 </control>
             </control>
@@ -105,7 +105,7 @@
                     <aligny>center</aligny>
                     <height>40</height>
                     <label>[B]Still Watching?...$INFO[Window.Property(pause_timer)][/B]</label>
-                    <font>font14</font> <!-- PHAGELITE_33 -->
+                    <font>font14</font> <!-- BACTERIO_33 -->
                     <textcolor>FFB7B4BB</textcolor>
                 </control>
             </control>
@@ -119,7 +119,7 @@
                     <aligny>center</aligny>
                     <height>40</height>
                     <label>[B]Keep Watching During Credits....[/B]</label>
-                    <font>font14</font> <!-- PHAGELITE_33 -->
+                    <font>font14</font> <!-- BACTERIO_33 -->
                     <textcolor>FFB7B4BB</textcolor>
                 </control>
             </control>
@@ -136,7 +136,7 @@
                     <align>center</align>
                     <aligny>center</aligny>
                     <label>$INFO[Window.Property(episode_label)]</label>
-                    <font>font10</font> <!-- PHAGELITE_21 -->
+                    <font>font10</font> <!-- BACTERIO_21 -->
                     <textcolor>FFB7B4BB</textcolor>
                 </control>
                 <!-- Buttons -->
@@ -154,11 +154,11 @@
                         <onleft>12</onleft>
                         <onright>11</onright>
                         <label>Close</label>
-                        <font>font10</font> <!-- PHAGELITE_21 -->
+                        <font>font10</font> <!-- BACTERIO_21 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <focusedcolor>FF1F2020</focusedcolor>
-                        <texturefocus colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texturefocus>
-                        <texturenofocus colordiffuse="FF4a4347" border="30">phage-lite_common/circle.png</texturenofocus>
+                        <texturefocus colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texturefocus>
+                        <texturenofocus colordiffuse="FF4a4347" border="30">bacterio_common/circle.png</texturenofocus>
                         <align>center</align>
                         <aligny>center</aligny>
                     </control>
@@ -169,11 +169,11 @@
                         <onleft>10</onleft>
                         <onright>12</onright>
                         <label>Play</label>
-                        <font>font10</font> <!-- PHAGELITE_21 -->
+                        <font>font10</font> <!-- BACTERIO_21 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <focusedcolor>FF1F2020</focusedcolor>
-                        <texturefocus colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texturefocus>
-                        <texturenofocus colordiffuse="FF4a4347" border="30">phage-lite_common/circle.png</texturenofocus>
+                        <texturefocus colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texturefocus>
+                        <texturenofocus colordiffuse="FF4a4347" border="30">bacterio_common/circle.png</texturenofocus>
                         <align>center</align>
                         <aligny>center</aligny>
                     </control>
@@ -184,11 +184,11 @@
                         <onleft>11</onleft>
                         <onright>10</onright>
                         <label>Cancel</label>
-                        <font>font10</font> <!-- PHAGELITE_21 -->
+                        <font>font10</font> <!-- BACTERIO_21 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <focusedcolor>FF1F2020</focusedcolor>
-                        <texturefocus colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texturefocus>
-                        <texturenofocus colordiffuse="FF4a4347" border="30">phage-lite_common/circle.png</texturenofocus>
+                        <texturefocus colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texturefocus>
+                        <texturenofocus colordiffuse="FF4a4347" border="30">bacterio_common/circle.png</texturenofocus>
                         <align>center</align>
                         <aligny>center</aligny>
                     </control>
@@ -207,7 +207,7 @@
                     <align>center</align>
                     <aligny>center</aligny>
                     <label>$INFO[Window.Property(episode_label)]</label>
-                    <font>font10</font> <!-- PHAGELITE_21 -->
+                    <font>font10</font> <!-- BACTERIO_21 -->
                     <textcolor>FFB7B4BB</textcolor>
                 </control>
                 <!-- Buttons -->
@@ -225,11 +225,11 @@
                         <onleft>12</onleft>
                         <onright>11</onright>
                         <label>Yes</label>
-                        <font>font10</font> <!-- PHAGELITE_21 -->
+                        <font>font10</font> <!-- BACTERIO_21 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <focusedcolor>FF1F2020</focusedcolor>
-                        <texturefocus colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texturefocus>
-                        <texturenofocus colordiffuse="FF4a4347" border="30">phage-lite_common/circle.png</texturenofocus>
+                        <texturefocus colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texturefocus>
+                        <texturenofocus colordiffuse="FF4a4347" border="30">bacterio_common/circle.png</texturenofocus>
                         <align>center</align>
                         <aligny>center</aligny>
                     </control>
@@ -240,11 +240,11 @@
                         <onleft>10</onleft>
                         <onright>12</onright>
                         <label>No</label>
-                        <font>font10</font> <!-- PHAGELITE_21 -->
+                        <font>font10</font> <!-- BACTERIO_21 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <focusedcolor>FF1F2020</focusedcolor>
-                        <texturefocus colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texturefocus>
-                        <texturenofocus colordiffuse="FF4a4347" border="30">phage-lite_common/circle.png</texturenofocus>
+                        <texturefocus colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texturefocus>
+                        <texturenofocus colordiffuse="FF4a4347" border="30">bacterio_common/circle.png</texturenofocus>
                         <align>center</align>
                         <aligny>center</aligny>
                     </control>
@@ -274,7 +274,7 @@
                         <align>left</align>
                         <aligny>center</aligny>
                         <label>During Credits Stinger</label>
-                        <font>font14</font> <!-- PHAGELITE_33 -->
+                        <font>font14</font> <!-- BACTERIO_33 -->
                         <textcolor>FFB7B4BB</textcolor>
                     </control>
                     <control type="image" id="201">
@@ -295,7 +295,7 @@
                         <align>left</align>
                         <aligny>center</aligny>
                         <label>After Credits Stinger</label>
-                        <font>font14</font> <!-- PHAGELITE_33 -->
+                        <font>font14</font> <!-- BACTERIO_33 -->
                         <textcolor>FFB7B4BB</textcolor>
                     </control>
                 </control>

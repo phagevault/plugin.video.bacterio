@@ -14,10 +14,10 @@ from modules.kodi_utils import progress_dialog, notification, hide_busy_dialog, 
 
 class AllDebridAPI:
 	def __init__(self):
-		self.token = get_setting('phage-lite.ad.token', 'empty_setting')
+		self.token = get_setting('bacterio.ad.token', 'empty_setting')
 		self.break_auth_loop = False
 		self.base_url = 'https://api.alldebrid.com/v4/'
-		self.user_agent = 'Phage Lite for Kodi'
+		self.user_agent = 'Bacterio for Kodi'
 
 	def auth(self):
 		self.token = ''

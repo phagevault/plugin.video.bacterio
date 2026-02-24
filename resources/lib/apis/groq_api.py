@@ -64,4 +64,4 @@ def model_present(model_id):
 	return model_id in models()
 
 def get_api():
-	return get_setting('phage-lite.groq_api')
+	return get_setting('bacterio.groq_api')

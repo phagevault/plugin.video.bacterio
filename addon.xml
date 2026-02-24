@@ -1,10 +1,10 @@
-<addon id="plugin.video.phage-lite" name="Phage Lite" provider-name="phage-zn" version="0.0.1">
+<addon id="plugin.video.bacterio" name="Bacterio" provider-name="phage-zn" version="0.0.1">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.pil" version="1.1.7"/>
         <import addon="script.module.requests" version="2.19.1"/>
     </requires>
-    <extension point="xbmc.python.pluginsource" library="resources/lib/phage-lite.py">
+    <extension point="xbmc.python.pluginsource" library="resources/lib/bacterio.py">
         <provides>video</provides>
     </extension>
     <extension point="xbmc.service" library="resources/lib/service.py"/>
@@ -17,8 +17,8 @@
 		<disclaimer lang="en">The author of this addon does not host any of the content which is found and has no affiliation with any of the content providers.</disclaimer>
         <license/>
         <assets>
-            <icon>resources/media/addon_icons/phage-lite_icon.png</icon>
-            <fanart>resources/media/phage-lite_fanart_01.jpg</fanart>
+            <icon>resources/media/addon_icons/bacterio_icon.png</icon>
+            <fanart>resources/media/bacterio_fanart_01.jpg</fanart>
         </assets>
         <news>INFO: For latest changes see Changelog within Tools of add-on.</news>
     </extension>

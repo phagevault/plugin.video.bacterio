@@ -12,7 +12,7 @@ session = make_session('https://easydebrid.com/api/v1/')
 
 class EasyDebridAPI:
 	def __init__(self):
-		self.token = get_setting('phage-lite.ed.token')
+		self.token = get_setting('bacterio.ed.token')
 		self.base_url = 'https://easydebrid.com/api/v1/'
 
 	def _get(self, url, data={}):
@@ -80,7 +80,7 @@ class EasyDebridAPI:
 		return url + '|' + urlencode(self.headers())
 
 	def headers(self):
-		return {'User-Agent': 'Phage Lite for Kodi', 'Authorization': 'Bearer %s' % self.token}
+		return {'User-Agent': 'Bacterio for Kodi', 'Authorization': 'Bearer %s' % self.token}
 
 	def _m2ts_check(self, folder_items):
 		for item in folder_items:

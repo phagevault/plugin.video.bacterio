@@ -71,36 +71,36 @@ def kodi_dialog():
 	return xbmcgui.Dialog()
 
 def addon_info(info):
-	return xbmcaddon.Addon('plugin.video.phage-lite').getAddonInfo(info)
+	return xbmcaddon.Addon('plugin.video.bacterio').getAddonInfo(info)
 
 def addon_version():
-	return get_property('phage-lite.addon_version') or addon_info('version')
+	return get_property('bacterio.addon_version') or addon_info('version')
 
 def addon_path():
-	return get_property('phage-lite.addon_path') or addon_info('path')
+	return get_property('bacterio.addon_path') or addon_info('path')
 
 def addon_profile():
-	return get_property('phage-lite.addon_profile') or translate_path(addon_info('profile'))
+	return get_property('bacterio.addon_profile') or translate_path(addon_info('profile'))
 
 def addon_icon():
-	return get_property('phage-lite.addon_icon') or translate_path(addon_info('icon'))
+	return get_property('bacterio.addon_icon') or translate_path(addon_info('icon'))
 
 def addon_icon_mini():
-	return get_property('phage-lite.addon_icon_mini') or os.path.join(addon_info('path'), 'resources', 'media', 'addon_icons', 'minis',
+	return get_property('bacterio.addon_icon_mini') or os.path.join(addon_info('path'), 'resources', 'media', 'addon_icons', 'minis',
 														os.path.basename(translate_path(addon_info('icon'))))
 
 def addon_fanart():
-	return get_property('phage-lite.addon_fanart') or translate_path(addon_info('fanart'))
+	return get_property('bacterio.addon_fanart') or translate_path(addon_info('fanart'))
 
 def get_icon(image_name, image_folder='icons'):
 	return 'https://raw.githubusercontent.com/%s/%s/main/packages/media/%s/%s.png' \
-			% (get_property('phage-lite.update.username'), get_property('phage-lite.update.location'), image_folder, image_name)
+			% (get_property('bacterio.update.username'), get_property('bacterio.update.location'), image_folder, image_name)
 
 def get_addon_fanart():
-	return get_property('phage-lite.default_addon_fanart') or addon_fanart()
+	return get_property('bacterio.default_addon_fanart') or addon_fanart()
 
 def build_url(url_params):
-	return 'plugin://plugin.video.phage-lite/?%s' % urlencode(url_params)
+	return 'plugin://plugin.video.bacterio/?%s' % urlencode(url_params)
 
 def add_dir(handle, url_params, list_name, icon_image='folder', fanart_image=None, isFolder=True):
 	fanart = fanart_image or get_addon_fanart()
@@ -132,10 +132,10 @@ def end_directory(handle, cacheToDisc=True):
 	xbmcplugin.endOfDirectory(handle, cacheToDisc=cacheToDisc)
 
 def set_view_mode(view_type, content='files', is_external=None):
-	if not get_property('phage-lite.use_viewtypes') == 'true': return
+	if not get_property('bacterio.use_viewtypes') == 'true': return
 	if is_external == None: is_external = external()
 	if is_external: return
-	view_id = get_property('phage-lite.%s' % view_type) or None
+	view_id = get_property('bacterio.%s' % view_type) or None
 	if not view_id: return
 	try:
 		hold = 0
@@ -177,7 +177,7 @@ def clear_property(prop):
 def clear_all_properties():
 	return kodi_window().clearProperties()
 
-def addon(addon_id='plugin.video.phage-lite'):
+def addon(addon_id='plugin.video.bacterio'):
 	return xbmcaddon.Addon(id=addon_id)
 
 def addon_installed(addon_id):
@@ -265,11 +265,11 @@ def close_dialog(dialog, block=False):
 def close_all_dialog():
 	execute_builtin('Dialog.Close(all,true)')
 
-def run_addon(addon='plugin.video.phage-lite', block=False):
+def run_addon(addon='plugin.video.bacterio', block=False):
 	return execute_builtin('RunAddon(%s)' % addon, block)
 
 def external():
-	return 'phage-lite' not in get_infolabel('Container.PluginName')
+	return 'bacterio' not in get_infolabel('Container.PluginName')
 
 def home():
 	return xbmcgui.getCurrentWindowId() == 10000
@@ -291,7 +291,7 @@ def refresh_widgets():
 	from caches.random_widgets_cache import RandomWidgets
 	RandomWidgets().delete_like('random_list.%')
 	kodi_refresh()
-	if get_setting('phage-lite.widget_refresh_notification', 'true') == 'true': notification('Widgets Refreshed', 2500)
+	if get_setting('bacterio.widget_refresh_notification', 'true') == 'true': notification('Widgets Refreshed', 2500)
 
 def run_plugin(params, block=False):
 	if isinstance(params, dict): params = build_url(params)
@@ -316,7 +316,7 @@ def replace_window(params, block=False):
 	if isinstance(params, dict): params = build_url(params)
 	return execute_builtin('ReplaceWindow(Videos,%s)' % params, block)
 
-def disable_enable_addon(addon_name='plugin.video.phage-lite'):
+def disable_enable_addon(addon_name='plugin.video.bacterio'):
 	import json
 	try:
 		xbmc.executeJSONRPC(json.dumps({'jsonrpc': '2.0', 'id': 1, 'method': 'Addons.SetAddonEnabled', 'params': {'addonid': addon_name, 'enabled': False}}))
@@ -327,7 +327,7 @@ def update_local_addons():
 	execute_builtin('UpdateLocalAddons', True)
 	sleep(2500)
  
-def update_kodi_addons_db(addon_name='plugin.video.phage-lite'):
+def update_kodi_addons_db(addon_name='plugin.video.bacterio'):
 	import time
 	import sqlite3 as database
 	try:
@@ -368,7 +368,7 @@ def open_settings():
 
 def external_scraper_settings():
 	try:
-		external = get_property('phage-lite.external_scraper.module')
+		external = get_property('bacterio.external_scraper.module')
 		if external in ('empty_setting', ''): return
 		execute_builtin('Addon.OpenSettings(%s)' % external)
 	except: pass
@@ -410,7 +410,7 @@ def show_text(heading, text=None, file=None, font_size='small', kodi_log=False):
 	return open_window(('windows.textviewer', 'TextViewer'), 'textviewer.xml', heading=heading, text=text, font_size=font_size)
 
 def notification(line1, time=5000, icon=None):
-	kodi_dialog().notification('Phage Lite', line1, icon or addon_icon(), time)
+	kodi_dialog().notification('Bacterio', line1, icon or addon_icon(), time)
 
 def player_check(mode, params):
 	from modules.settings import playback_key
@@ -418,8 +418,8 @@ def player_check(mode, params):
 		from modules.sources import Sources
 		Sources().playback_prep(params)
 	elif mode == 'playback.video':
-		from modules.player import PhageLitePlayer
-		PhageLitePlayer().run(params.get('url', None), params.get('obj', None))
+		from modules.player import BacterioPlayer
+		BacterioPlayer().run(params.get('url', None), params.get('obj', None))
 	else: ok_dialog('External Playback Detected', 'Playback through external addons is not supported')
 
 def external_playback_check(params):
@@ -443,9 +443,9 @@ def timeIt(func):
 def volume_checker():
 	# 0% == -60db, 100% == 0db
 	try:
-		if get_property('phage-lite.playback.volumecheck_enabled') == 'false' or get_visibility('Player.Muted'): return
+		if get_property('bacterio.playback.volumecheck_enabled') == 'false' or get_visibility('Player.Muted'): return
 		from modules.utils import string_alphanum_to_num
-		max_volume = min(int(get_property('phage-lite.playback.volumecheck_percent') or '50'), 100)
+		max_volume = min(int(get_property('bacterio.playback.volumecheck_percent') or '50'), 100)
 		if int(100 - (float(string_alphanum_to_num(get_infolabel('Player.Volume').split('.')[0]))/60)*100) > max_volume: execute_builtin('SetVolume(%d)' % max_volume)
 	except: pass
 
@@ -464,7 +464,7 @@ def get_all_icons():
 			results = [i['name'].replace('.png', '') for i in results.json()]
 			return results
 		except: return ['folder.png']
-	username, location = get_property('phage-lite.update.username'), get_property('phage-lite.update.location')
+	username, location = get_property('bacterio.update.username'), get_property('bacterio.update.location')
 	return cache_object(_process, 'all_icons', 'foo', False, 168)
 
 def get_all_addon_icons():
@@ -475,7 +475,7 @@ def get_all_addon_icons():
 			results = requests.get('https://api.github.com/repos/%s/%s/contents/packages/addon_icons' % (username, location))
 			return results
 		except: return []
-	username, location = get_property('phage-lite.update.username'), get_property('phage-lite.update.location')
+	username, location = get_property('bacterio.update.username'), get_property('bacterio.update.location')
 	return cache_object(_process, 'all_addon_icons', 'foo', True, 168)
 
 def upload_logfile(params):

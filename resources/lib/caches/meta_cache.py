@@ -76,7 +76,7 @@ class MetaCache:
 
 	def get_memory_cache(self, media_type, id_type, media_id, current_time):
 		try:
-			prop_string = 'phage-lite.%s_%s_%s' % (media_type, id_type, media_id)
+			prop_string = 'bacterio.%s_%s_%s' % (media_type, id_type, media_id)
 			cachedata = eval(get_property(prop_string))
 			if cachedata[0] > current_time: result = cachedata[1]
 		except: result = None
@@ -84,29 +84,29 @@ class MetaCache:
 
 	def get_memory_cache_season(self, prop_string, current_time):
 		try:
-			cachedata = eval(get_property('phage-lite.meta_season_%s' % prop_string))
+			cachedata = eval(get_property('bacterio.meta_season_%s' % prop_string))
 			if cachedata[0] > current_time: result = cachedata[1]
 		except: result = None
 		return result
 
 	def set_memory_cache(self, media_type, id_type, meta, expires, media_id):
 		try:
-			cachedata, prop_string = (expires, meta), 'phage-lite.%s_%s_%s' % (media_type, id_type, media_id)
+			cachedata, prop_string = (expires, meta), 'bacterio.%s_%s_%s' % (media_type, id_type, media_id)
 			set_property(prop_string, repr(cachedata))
 		except: pass
 
 	def set_memory_cache_season(self, prop_string, meta, expires):
 		try:
 			cachedata = (expires, meta)
-			set_property('phage-lite.meta_season_%s' % prop_string, repr(cachedata))
+			set_property('bacterio.meta_season_%s' % prop_string, repr(cachedata))
 		except: pass
 
 	def delete_memory_cache(self, media_type, id_type, media_id):
-		try: clear_property('phage-lite.%s_%s_%s' % (media_type, id_type, media_id))
+		try: clear_property('bacterio.%s_%s_%s' % (media_type, id_type, media_id))
 		except: pass
 
 	def delete_memory_cache_season(self, prop_string):
-		try: clear_property('phage-lite.meta_season_%s' % prop_string)
+		try: clear_property('bacterio.meta_season_%s' % prop_string)
 		except: pass
 
 	def get_function(self, prop_string):

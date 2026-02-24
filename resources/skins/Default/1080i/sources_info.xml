@@ -6,7 +6,7 @@
             <top>0</top>
             <width>1920</width>
             <height>1080</height>
-            <texture colordiffuse="FF000000">phage-lite_common/white.png</texture>
+            <texture colordiffuse="FF000000">bacterio_common/white.png</texture>
             <animation effect="fade" end="80" time="120">WindowOpen</animation>
         </control>
         <control type="group">
@@ -19,12 +19,12 @@
                     <top>-2</top>
                     <width>1337</width>
                     <height>947</height>
-                    <texture colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texture>
+                    <texture colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texture>
                 </control>
                 <control type="image">
                     <width>1333</width>
                     <height>943</height>
-                    <texture colordiffuse="FF1F2020" border="30">phage-lite_common/circle.png</texture>
+                    <texture colordiffuse="FF1F2020" border="30">bacterio_common/circle.png</texture>
                 </control>
                 <control type="image">
                     <left>15</left>
@@ -34,7 +34,7 @@
                     <align>left</align>
                     <aligny>top</aligny>
                     <aspectratio aligny="top">keep</aspectratio>
-                    <texture colordiffuse="FFCCCCCC">$INFO[Window(10000).Property(phage-lite.addon_icon_mini)]</texture>
+                    <texture colordiffuse="FFCCCCCC">$INFO[Window(10000).Property(bacterio.addon_icon_mini)]</texture>
                 </control>
             </control>
             <control type="image">
@@ -63,7 +63,7 @@
                 <control type="label">
                     <width max="1275">auto</width>
                     <height>20</height>
-                    <font>font14</font> <!-- PHAGELITE_33 -->
+                    <font>font14</font> <!-- BACTERIO_33 -->
                     <textcolor>FFCCCCCC</textcolor>
                     <align>left</align>
                     <aligny>center</aligny>
@@ -73,7 +73,7 @@
                     <top>50</top>
                     <width max="1275">auto</width>
                     <height>20</height>
-                    <font>font14</font> <!-- PHAGELITE_33 -->
+                    <font>font14</font> <!-- BACTERIO_33 -->
                     <textcolor>FFCCCCCC</textcolor>
                     <align>left</align>
                     <aligny>center</aligny>
@@ -83,7 +83,7 @@
                     <top>100</top>
                     <width max="1275">auto</width>
                     <height>20</height>
-                    <font>font14</font> <!-- PHAGELITE_33 -->
+                    <font>font14</font> <!-- BACTERIO_33 -->
                     <textcolor>FFCCCCCC</textcolor>
                     <align>left</align>
                     <aligny>center</aligny>
@@ -93,7 +93,7 @@
                     <top>150</top>
                     <width max="1275">auto</width>
                     <height>20</height>
-                    <font>font14</font> <!-- PHAGELITE_33 -->
+                    <font>font14</font> <!-- BACTERIO_33 -->
                     <textcolor>FFCCCCCC</textcolor>
                     <align>left</align>
                     <aligny>center</aligny>
@@ -103,7 +103,7 @@
                     <top>200</top>
                     <width max="1275">auto</width>
                     <height>20</height>
-                    <font>font14</font> <!-- PHAGELITE_33 -->
+                    <font>font14</font> <!-- BACTERIO_33 -->
                     <textcolor>FFCCCCCC</textcolor>
                     <align>left</align>
                     <aligny>center</aligny>
@@ -113,7 +113,7 @@
                     <top>250</top>
                     <width max="1275">auto</width>
                     <height>20</height>
-                    <font>font14</font> <!-- PHAGELITE_33 -->
+                    <font>font14</font> <!-- BACTERIO_33 -->
                     <textcolor>FFCCCCCC</textcolor>
                     <align>left</align>
                     <aligny>center</aligny>
@@ -123,7 +123,7 @@
                     <top>300</top>
                     <width max="1275">auto</width>
                     <height>20</height>
-                    <font>font14</font> <!-- PHAGELITE_33 -->
+                    <font>font14</font> <!-- BACTERIO_33 -->
                     <textcolor>FFCCCCCC</textcolor>
                     <align>left</align>
                     <aligny>center</aligny>
@@ -134,7 +134,7 @@
                     <left>0</left>
                     <width max="1275">auto</width>
                     <height>140</height>
-                    <font>font14</font> <!-- PHAGELITE_33 -->
+                    <font>font14</font> <!-- BACTERIO_33 -->
                     <textcolor>FFCCCCCC</textcolor>
                     <align>left</align>
                     <aligny>top</aligny>

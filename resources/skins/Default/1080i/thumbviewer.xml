@@ -7,7 +7,7 @@
             <top>0</top>
             <width>1920</width>
             <height>1080</height>
-            <texture colordiffuse="FF000000">phage-lite_common/white.png</texture>
+            <texture colordiffuse="FF000000">bacterio_common/white.png</texture>
         </control>
         <control type="image">
             <left>0</left>
@@ -27,14 +27,14 @@
                     <width>60</width>
                     <height>60</height>
                     <aspectratio aligny="top">keep</aspectratio>
-                    <texture>$INFO[Window(10000).Property(phage-lite.addon_icon_mini)]</texture>
+                    <texture>$INFO[Window(10000).Property(bacterio.addon_icon_mini)]</texture>
                 </control>
                 <control type="label">
                     <top>20</top>
                     <left>1590</left>
                     <width max="300">auto</width>
                     <height>20</height>
-                    <font>font37</font> <!-- PHAGELITE_38 -->
+                    <font>font37</font> <!-- BACTERIO_38 -->
                     <textcolor>FFCCCCCC</textcolor>
                     <align>right</align>
                     <aligny>center</aligny>
@@ -45,7 +45,7 @@
                     <left>1540</left>
                     <width max="350">auto</width>
                     <height>20</height>
-                    <font>font10</font> <!-- PHAGELITE_21 -->
+                    <font>font10</font> <!-- BACTERIO_21 -->
                     <textcolor>FFCCCCCC</textcolor>
                     <align>right</align>
                     <aligny>center</aligny>
@@ -56,7 +56,7 @@
                     <top>25</top>
                     <width>1520</width>
                     <height>20</height>
-                    <font>font10</font> <!-- PHAGELITE_21 -->
+                    <font>font10</font> <!-- BACTERIO_21 -->
                     <textcolor>FFFFFFFF</textcolor>
                     <align>left</align>
                     <aligny>center</aligny>
@@ -78,7 +78,7 @@
                         <top>0</top>
                         <width>320</width>
                         <height>320</height>
-                        <texture colordiffuse="FF1F2020" border="12">phage-lite_common/panel-256-box.png</texture>
+                        <texture colordiffuse="FF1F2020" border="12">bacterio_common/panel-256-box.png</texture>
                     </control>
                     <control type="image">
                         <left>10</left>
@@ -101,7 +101,7 @@
                             <top>0</top>
                             <width>320</width>
                             <height>320</height>
-                            <texture colordiffuse="FFCCCCCC" border="12">phage-lite_common/panel-256-box.png</texture>
+                            <texture colordiffuse="FFCCCCCC" border="12">bacterio_common/panel-256-box.png</texture>
                         </control>
                         <control type="image">
                             <left>10</left>
@@ -121,9 +121,9 @@
                 <height>940</height>
                 <onleft>2000</onleft>
                 <onright>2000</onright>
-                <texturesliderbackground colordiffuse="FF1F2020">phage-lite_common/white.png</texturesliderbackground>
-                <texturesliderbar colordiffuse="FF555556">phage-lite_common/white.png</texturesliderbar>
-                <texturesliderbarfocus colordiffuse="FFCCCCCC">phage-lite_common/white.png</texturesliderbarfocus>
+                <texturesliderbackground colordiffuse="FF1F2020">bacterio_common/white.png</texturesliderbackground>
+                <texturesliderbar colordiffuse="FF555556">bacterio_common/white.png</texturesliderbar>
+                <texturesliderbarfocus colordiffuse="FFCCCCCC">bacterio_common/white.png</texturesliderbarfocus>
                 <showonepage>false</showonepage>
                 <orientation>vertical</orientation>
                 <visible>Control.IsVisible(2000)</visible>

@@ -7,7 +7,7 @@
             <width>1920</width>
             <height>1080</height>
             <control type="image">
-                <texture colordiffuse="FF000000">phage-lite_common/white.png</texture>
+                <texture colordiffuse="FF000000">bacterio_common/white.png</texture>
             </control>
             <control type="image" id="202">
                 <aspectratio>scale</aspectratio>
@@ -16,7 +16,7 @@
         </control>
         <control type="group">
             <animation effect="fade" end="100" time="200" delay="400">WindowOpen</animation>
-            <!-- Phage Lite Logo and Tips/Clock & Date --> 
+            <!-- Bacterio Logo and Tips/Clock & Date --> 
             <control type="group">
                 <left>5</left>
                 <control type="image">
@@ -24,7 +24,7 @@
                     <width>60</width>
                     <height>60</height>
                     <aspectratio aligny="top">keep</aspectratio>
-                    <texture>$INFO[Window(10000).Property(phage-lite.addon_icon_mini)]</texture>
+                    <texture>$INFO[Window(10000).Property(bacterio.addon_icon_mini)]</texture>
                 </control>
                 <control type="group">
                     <visible>![Control.HasFocus(2050) | Control.HasFocus(2051) | Control.HasFocus(2052) | Control.HasFocus(2058) | Control.HasFocus(2060) | Control.HasFocus(2061) | Control.HasFocus(2062) | Control.HasFocus(2063)]</visible>
@@ -33,7 +33,7 @@
                         <left>1590</left>
                         <width max="300">auto</width>
                         <height>20</height>
-                        <font>font37</font> <!-- PHAGELITE_38 -->
+                        <font>font37</font> <!-- BACTERIO_38 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <align>right</align>
                         <aligny>center</aligny>
@@ -44,7 +44,7 @@
                         <left>1540</left>
                         <width max="350">auto</width>
                         <height>20</height>
-                        <font>font10</font> <!-- PHAGELITE_21 -->
+                        <font>font10</font> <!-- BACTERIO_21 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <align>right</align>
                         <aligny>center</aligny>
@@ -60,13 +60,13 @@
                         <width>35</width>
                         <height>35</height>
                         <aspectratio>keep</aspectratio>
-                        <texture>phage-lite_common/info.png</texture>
+                        <texture>bacterio_common/info.png</texture>
                         <visible>Control.HasFocus(2050) | Control.HasFocus(2051) | Control.HasFocus(2052) | Control.HasFocus(2058) | Control.HasFocus(2060) | Control.HasFocus(2061) | Control.HasFocus(2062) | Control.HasFocus(2063)</visible>
                     </control>
                     <control type="label">
                         <width max="600">auto</width>
                         <height>20</height>
-                        <font>font10</font> <!-- PHAGELITE_21 -->
+                        <font>font10</font> <!-- BACTERIO_21 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <align>right</align>
                         <aligny>bottom</aligny>
@@ -76,7 +76,7 @@
                     <control type="label">
                         <width max="600">auto</width>
                         <height>20</height>
-                        <font>font10</font> <!-- PHAGELITE_21 -->
+                        <font>font10</font> <!-- BACTERIO_21 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <align>right</align>
                         <aligny>bottom</aligny>
@@ -86,7 +86,7 @@
                     <control type="label">
                         <width max="600">auto</width>
                         <height>20</height>
-                        <font>font10</font> <!-- PHAGELITE_21 -->
+                        <font>font10</font> <!-- BACTERIO_21 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <align>right</align>
                         <aligny>bottom</aligny>
@@ -97,7 +97,7 @@
                     <control type="label">
                         <width max="600">auto</width>
                         <height>20</height>
-                        <font>font10</font> <!-- PHAGELITE_21 -->
+                        <font>font10</font> <!-- BACTERIO_21 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <align>right</align>
                         <aligny>bottom</aligny>
@@ -115,7 +115,7 @@
                     <width>650</width>
                     <height>1000</height>
                     <aspectratio aligny="top">stretch</aspectratio>
-                    <texture diffuse="phage-lite_diffuse/poster_w217_h320.png" />
+                    <texture diffuse="bacterio_diffuse/poster_w217_h320.png" />
                 </control>
                 <control type="group">
                     <control type="image" id="201">
@@ -132,7 +132,7 @@
                         <left>70</left>
                         <width max="1130">auto</width>
                         <height>30</height>
-                        <font>font60</font> <!-- PHAGELITE_60_BOLD -->
+                        <font>font60</font> <!-- BACTERIO_60_BOLD -->
                         <textcolor>FFCCCCCC</textcolor>
                         <align>center</align>
                         <aligny>bottom</aligny>
@@ -152,7 +152,7 @@
                     <control type="label">
                         <width max="1150">auto</width>
                         <height>25</height>
-                        <font>font14</font> <!-- PHAGELITE_33 -->
+                        <font>font14</font> <!-- BACTERIO_33 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <align>center</align>
                         <label>[I]$INFO[Window.Property(genre)][/I]</label>
@@ -162,7 +162,7 @@
                         <top>55</top>
                         <width max="1150">auto</width>
                         <height>25</height>
-                        <font>font14</font> <!-- PHAGELITE_33 -->
+                        <font>font14</font> <!-- BACTERIO_33 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <align>center</align>
                     </control>
@@ -171,7 +171,7 @@
                         <top>105</top>
                         <width max="1150">auto</width>
                         <height>25</height>
-                        <font>font14</font> <!-- PHAGELITE_33 -->
+                        <font>font14</font> <!-- BACTERIO_33 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <align>center</align>
                     </control>
@@ -198,7 +198,7 @@
                         <control type="label" id="4001">
                             <width max="75">auto</width>
                             <height>32</height>
-                            <font>font13</font> <!-- PHAGELITE_30 -->
+                            <font>font13</font> <!-- BACTERIO_30 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
@@ -220,7 +220,7 @@
                         <control type="label" id="4002">
                             <width max="75">auto</width>
                             <height>32</height>
-                            <font>font13</font> <!-- PHAGELITE_30 -->
+                            <font>font13</font> <!-- BACTERIO_30 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
@@ -242,7 +242,7 @@
                         <control type="label" id="4003">
                             <width max="75">auto</width>
                             <height>32</height>
-                            <font>font13</font> <!-- PHAGELITE_30 -->
+                            <font>font13</font> <!-- BACTERIO_30 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
@@ -264,7 +264,7 @@
                         <control type="label" id="4004">
                             <width max="75">auto</width>
                             <height>32</height>
-                            <font>font13</font> <!-- PHAGELITE_30 -->
+                            <font>font13</font> <!-- BACTERIO_30 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
@@ -286,7 +286,7 @@
                         <control type="label" id="4005">
                             <width max="75">auto</width>
                             <height>32</height>
-                            <font>font13</font> <!-- PHAGELITE_30 -->
+                            <font>font13</font> <!-- BACTERIO_30 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
@@ -319,11 +319,11 @@
                             <onup>2066</onup>
                             <ondown>14</ondown>
                             <label>$INFO[Window.Property(button10.label)]</label>
-                            <font>font13</font> <!-- PHAGELITE_30 -->
+                            <font>font13</font> <!-- BACTERIO_30 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <focusedcolor>FF1F2020</focusedcolor>
-                            <texturefocus colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texturefocus>
-                            <texturenofocus colordiffuse="FF1F2020" border="30">phage-lite_common/circle.png</texturenofocus>
+                            <texturefocus colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texturefocus>
+                            <texturenofocus colordiffuse="FF1F2020" border="30">bacterio_common/circle.png</texturenofocus>
                             <align>center</align>
                             <aligny>center</aligny>
                         </control>
@@ -336,11 +336,11 @@
                             <onup>2066</onup>
                             <ondown>15</ondown>
                             <label>$INFO[Window.Property(button11.label)]</label>
-                            <font>font13</font> <!-- PHAGELITE_30 -->
+                            <font>font13</font> <!-- BACTERIO_30 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <focusedcolor>FF1F2020</focusedcolor>
-                            <texturefocus colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texturefocus>
-                            <texturenofocus colordiffuse="FF1F2020" border="30">phage-lite_common/circle.png</texturenofocus>
+                            <texturefocus colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texturefocus>
+                            <texturenofocus colordiffuse="FF1F2020" border="30">bacterio_common/circle.png</texturenofocus>
                             <align>center</align>
                             <aligny>center</aligny>
                         </control>
@@ -353,11 +353,11 @@
                             <onup>2066</onup>
                             <ondown>16</ondown>
                             <label>$INFO[Window.Property(button12.label)]</label>
-                            <font>font13</font> <!-- PHAGELITE_30 -->
+                            <font>font13</font> <!-- BACTERIO_30 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <focusedcolor>FF1F2020</focusedcolor>
-                            <texturefocus colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texturefocus>
-                            <texturenofocus colordiffuse="FF1F2020" border="30">phage-lite_common/circle.png</texturenofocus>
+                            <texturefocus colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texturefocus>
+                            <texturenofocus colordiffuse="FF1F2020" border="30">bacterio_common/circle.png</texturenofocus>
                             <align>center</align>
                             <aligny>center</aligny>
                         </control>
@@ -370,11 +370,11 @@
                             <onup>2066</onup>
                             <ondown>17</ondown>
                             <label>$INFO[Window.Property(button13.label)]</label>
-                            <font>font13</font> <!-- PHAGELITE_30 -->
+                            <font>font13</font> <!-- BACTERIO_30 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <focusedcolor>FF1F2020</focusedcolor>
-                            <texturefocus colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texturefocus>
-                            <texturenofocus colordiffuse="FF1F2020" border="30">phage-lite_common/circle.png</texturenofocus>
+                            <texturefocus colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texturefocus>
+                            <texturenofocus colordiffuse="FF1F2020" border="30">bacterio_common/circle.png</texturenofocus>
                             <align>center</align>
                             <aligny>center</aligny>
                         </control>
@@ -390,11 +390,11 @@
                             <onup>10</onup>
                             <ondown>2050</ondown>
                             <label>$INFO[Window.Property(button14.label)]</label>
-                            <font>font13</font> <!-- PHAGELITE_30 -->
+                            <font>font13</font> <!-- BACTERIO_30 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <focusedcolor>FF1F2020</focusedcolor>
-                            <texturefocus colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texturefocus>
-                            <texturenofocus colordiffuse="FF1F2020" border="30">phage-lite_common/circle.png</texturenofocus>
+                            <texturefocus colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texturefocus>
+                            <texturenofocus colordiffuse="FF1F2020" border="30">bacterio_common/circle.png</texturenofocus>
                             <align>center</align>
                             <aligny>center</aligny>
                         </control>
@@ -407,11 +407,11 @@
                             <onup>11</onup>
                             <ondown>2050</ondown>
                             <label>$INFO[Window.Property(button15.label)]</label>
-                            <font>font13</font> <!-- PHAGELITE_30 -->
+                            <font>font13</font> <!-- BACTERIO_30 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <focusedcolor>FF1F2020</focusedcolor>
-                            <texturefocus colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texturefocus>
-                            <texturenofocus colordiffuse="FF1F2020" border="30">phage-lite_common/circle.png</texturenofocus>
+                            <texturefocus colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texturefocus>
+                            <texturenofocus colordiffuse="FF1F2020" border="30">bacterio_common/circle.png</texturenofocus>
                             <align>center</align>
                             <aligny>center</aligny>
                         </control>
@@ -424,11 +424,11 @@
                             <onup>12</onup>
                             <ondown>2050</ondown>
                             <label>$INFO[Window.Property(button16.label)]</label>
-                            <font>font13</font> <!-- PHAGELITE_30 -->
+                            <font>font13</font> <!-- BACTERIO_30 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <focusedcolor>FF1F2020</focusedcolor>
-                            <texturefocus colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texturefocus>
-                            <texturenofocus colordiffuse="FF1F2020" border="30">phage-lite_common/circle.png</texturenofocus>
+                            <texturefocus colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texturefocus>
+                            <texturenofocus colordiffuse="FF1F2020" border="30">bacterio_common/circle.png</texturenofocus>
                             <align>center</align>
                             <aligny>center</aligny>
                         </control>
@@ -441,11 +441,11 @@
                             <onright>14</onright>
                             <ondown>2050</ondown>
                             <label>$INFO[Window.Property(button17.label)]</label>
-                            <font>font13</font> <!-- PHAGELITE_30 -->
+                            <font>font13</font> <!-- BACTERIO_30 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <focusedcolor>FF1F2020</focusedcolor>
-                            <texturefocus colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texturefocus>
-                            <texturenofocus colordiffuse="FF1F2020" border="30">phage-lite_common/circle.png</texturenofocus>
+                            <texturefocus colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texturefocus>
+                            <texturenofocus colordiffuse="FF1F2020" border="30">bacterio_common/circle.png</texturenofocus>
                             <align>center</align>
                             <aligny>center</aligny>
                         </control>
@@ -459,7 +459,7 @@
                         <control type="label">
                             <width max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <align>left</align>
                             <aligny>bottom</aligny>
@@ -471,15 +471,15 @@
                             <height>390</height>
                             <onup>14</onup>
                             <ondown>2051</ondown>
-                            <texturefocus colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texturefocus>
-                            <texturenofocus colordiffuse="FF1F2020" border="30">phage-lite_common/circle.png</texturenofocus>
+                            <texturefocus colordiffuse="FFCCCCCC" border="30">bacterio_common/circle.png</texturefocus>
+                            <texturenofocus colordiffuse="FF1F2020" border="30">bacterio_common/circle.png</texturenofocus>
                         </control>
                         <control type="textbox">
                             <top>65</top>
                             <left>15</left>
                             <width>1150</width>
                             <height>340</height>
-                            <font>font13</font> <!-- PHAGELITE_30 -->
+                            <font>font13</font> <!-- BACTERIO_30 -->
                             <align>center</align>
                             <aligny>center</aligny>
                             <textcolor>FFCCCCCC</textcolor>
@@ -492,7 +492,7 @@
                             <left>15</left>
                             <width>1150</width>
                             <height>340</height>
-                            <font>font13</font> <!-- PHAGELITE_30 -->
+                            <font>font13</font> <!-- BACTERIO_30 -->
                             <align>center</align>
                             <aligny>center</aligny>
                             <textcolor>FF1F2020</textcolor>
@@ -510,7 +510,7 @@
                         <control type="label">
                             <width min="30" max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <label>[B]Cast $INFO[Window.Property(cast.number)][/B]</label>
                             <visible>!Control.HasFocus(2051)</visible>
@@ -518,7 +518,7 @@
                         <control type="label">
                             <width min="30" max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <label>[B]Cast | [/B]$INFO[Container(2051).ListItem.Property(name)]$INFO[Container(2051).ListItem.Property(role), • ]</label>
                             <visible>Control.HasFocus(2051)</visible>
@@ -543,7 +543,7 @@
                                     <height max="344">auto</height>
                                     <width max="220">auto</width>
                                     <aspectratio>scale</aspectratio>
-                                    <texture diffuse="phage-lite_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
+                                    <texture diffuse="bacterio_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
                                 </control>
                             </itemlayout>
                             <focusedlayout height="360" width="236">
@@ -557,7 +557,7 @@
                                     <top>0</top>
                                     <height>360</height>
                                     <width>236</width>
-                                    <texture colordiffuse="FFCCCCCC" border="12">phage-lite_common/panel-256-box.png</texture>
+                                    <texture colordiffuse="FFCCCCCC" border="12">bacterio_common/panel-256-box.png</texture>
                                     <visible>Control.HasFocus(2051) | Control.HasFocus(4051)</visible>
                                 </control>
                                 <control type="image">
@@ -566,7 +566,7 @@
                                     <height max="344">auto</height>
                                     <width max="220">auto</width>
                                     <aspectratio>scale</aspectratio>
-                                    <texture diffuse="phage-lite_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
+                                    <texture diffuse="bacterio_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
                                 </control>
                             </focusedlayout>
                         </control>
@@ -577,9 +577,9 @@
                             <height>15</height>
                             <onup>2051</onup>
                             <ondown>2052</ondown>
-                            <texturesliderbackground colordiffuse="FF1F2020">phage-lite_common/white.png</texturesliderbackground>
-                            <texturesliderbar colordiffuse="FF555556">phage-lite_common/white.png</texturesliderbar>
-                            <texturesliderbarfocus colordiffuse="FFCCCCCC">phage-lite_common/white.png</texturesliderbarfocus>
+                            <texturesliderbackground colordiffuse="FF1F2020">bacterio_common/white.png</texturesliderbackground>
+                            <texturesliderbar colordiffuse="FF555556">bacterio_common/white.png</texturesliderbar>
+                            <texturesliderbarfocus colordiffuse="FFCCCCCC">bacterio_common/white.png</texturesliderbarfocus>
                             <showonepage>false</showonepage>
                             <orientation>Horizontal</orientation>
                             <visible>String.IsEqual(Window.Property(enable_scrollbars),true) + [Control.HasFocus(2051) | Control.HasFocus(4051)]</visible>
@@ -589,7 +589,7 @@
                             <left>20</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2051) | Control.HasFocus(4051)] + Container(2051).HasPrevious</visible>
                         </control>
                         <control type="image">
@@ -597,7 +597,7 @@
                             <left>1135</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2051) | Control.HasFocus(4051)] + Container(2051).HasNext</visible>
                         </control>
                     </control>
@@ -610,7 +610,7 @@
                         <control type="label">
                             <width min="30" max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <label>[B]Recommended $INFO[Window.Property(recommended.number)][/B]</label>
                             <visible>!Control.HasFocus(2052)</visible>
@@ -618,7 +618,7 @@
                         <control type="label">
                             <width min="30" max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <label>[B]Recommended | [/B]$INFO[Container(2052).ListItem.Property(name)]$INFO[Container(2052).ListItem.Property(release_date), • ]$INFO[Container(2052).ListItem.Property(vote_average), • ]</label>
                             <visible>Control.HasFocus(2052)</visible>
@@ -643,7 +643,7 @@
                                     <height max="344">auto</height>
                                     <width max="220">auto</width>
                                     <aspectratio>scale</aspectratio>
-                                    <texture diffuse="phage-lite_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
+                                    <texture diffuse="bacterio_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
                                 </control>
                             </itemlayout>
                             <focusedlayout height="360" width="236">
@@ -657,7 +657,7 @@
                                     <top>0</top>
                                     <height>360</height>
                                     <width>236</width>
-                                    <texture colordiffuse="FFCCCCCC" border="12">phage-lite_common/panel-256-box.png</texture>
+                                    <texture colordiffuse="FFCCCCCC" border="12">bacterio_common/panel-256-box.png</texture>
                                     <visible>Control.HasFocus(2052) | Control.HasFocus(4052)</visible>
                                 </control>
                                 <control type="image">
@@ -666,7 +666,7 @@
                                     <height max="344">auto</height>
                                     <width max="220">auto</width>
                                     <aspectratio>scale</aspectratio>
-                                    <texture diffuse="phage-lite_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
+                                    <texture diffuse="bacterio_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
                                 </control>
                             </focusedlayout>
                         </control>
@@ -677,9 +677,9 @@
                             <height>15</height>
                             <onup>2052</onup>
                             <ondown>2053</ondown>
-                            <texturesliderbackground colordiffuse="FF1F2020">phage-lite_common/white.png</texturesliderbackground>
-                            <texturesliderbar colordiffuse="FF555556">phage-lite_common/white.png</texturesliderbar>
-                            <texturesliderbarfocus colordiffuse="FFCCCCCC">phage-lite_common/white.png</texturesliderbarfocus>
+                            <texturesliderbackground colordiffuse="FF1F2020">bacterio_common/white.png</texturesliderbackground>
+                            <texturesliderbar colordiffuse="FF555556">bacterio_common/white.png</texturesliderbar>
+                            <texturesliderbarfocus colordiffuse="FFCCCCCC">bacterio_common/white.png</texturesliderbarfocus>
                             <showonepage>false</showonepage>
                             <orientation>Horizontal</orientation>
                             <visible>String.IsEqual(Window.Property(enable_scrollbars),true) + [Control.HasFocus(2052) | Control.HasFocus(4052)]</visible>
@@ -689,7 +689,7 @@
                             <left>20</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2052) | Control.HasFocus(4052)] + Container(2052).HasPrevious</visible>
                         </control>
                         <control type="image">
@@ -697,7 +697,7 @@
                             <left>1135</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2052) | Control.HasFocus(4052)] + Container(2052).HasNext</visible>
                         </control>
                     </control>
@@ -710,7 +710,7 @@
                         <control type="label">
                             <width min="30" max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <label>[B]Related $INFO[Window.Property(related.number)][/B]</label>
                             <visible>!Control.HasFocus(2053)</visible>
@@ -718,7 +718,7 @@
                         <control type="label">
                             <width min="30" max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <label>[B]Related | [/B]$INFO[Container(2053).ListItem.Property(name)]$INFO[Container(2053).ListItem.Property(release_date), • ]$INFO[Container(2053).ListItem.Property(vote_average), • ]</label>
                             <visible>Control.HasFocus(2053)</visible>
@@ -743,7 +743,7 @@
                                     <height max="344">auto</height>
                                     <width max="220">auto</width>
                                     <aspectratio>scale</aspectratio>
-                                    <texture diffuse="phage-lite_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
+                                    <texture diffuse="bacterio_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
                                 </control>
                             </itemlayout>
                             <focusedlayout height="360" width="236">
@@ -757,7 +757,7 @@
                                     <top>0</top>
                                     <height>360</height>
                                     <width>236</width>
-                                    <texture colordiffuse="FFCCCCCC" border="12">phage-lite_common/panel-256-box.png</texture>
+                                    <texture colordiffuse="FFCCCCCC" border="12">bacterio_common/panel-256-box.png</texture>
                                     <visible>Control.HasFocus(2053) | Control.HasFocus(4053)</visible>
                                 </control>
                                 <control type="image">
@@ -766,7 +766,7 @@
                                     <height max="344">auto</height>
                                     <width max="220">auto</width>
                                     <aspectratio>scale</aspectratio>
-                                    <texture diffuse="phage-lite_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
+                                    <texture diffuse="bacterio_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
                                 </control>
                             </focusedlayout>
                         </control>
@@ -777,9 +777,9 @@
                             <height>15</height>
                             <onup>2053</onup>
                             <ondown>2054</ondown>
-                            <texturesliderbackground colordiffuse="FF1F2020">phage-lite_common/white.png</texturesliderbackground>
-                            <texturesliderbar colordiffuse="FF555556">phage-lite_common/white.png</texturesliderbar>
-                            <texturesliderbarfocus colordiffuse="FFCCCCCC">phage-lite_common/white.png</texturesliderbarfocus>
+                            <texturesliderbackground colordiffuse="FF1F2020">bacterio_common/white.png</texturesliderbackground>
+                            <texturesliderbar colordiffuse="FF555556">bacterio_common/white.png</texturesliderbar>
+                            <texturesliderbarfocus colordiffuse="FFCCCCCC">bacterio_common/white.png</texturesliderbarfocus>
                             <showonepage>false</showonepage>
                             <orientation>Horizontal</orientation>
                             <visible>String.IsEqual(Window.Property(enable_scrollbars),true) + [Control.HasFocus(2053) | Control.HasFocus(4053)]</visible>
@@ -789,7 +789,7 @@
                             <left>20</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2053) | Control.HasFocus(4053)] + Container(2053).HasPrevious</visible>
                         </control>
                         <control type="image">
@@ -797,7 +797,7 @@
                             <left>1135</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2053) | Control.HasFocus(4053)] + Container(2053).HasNext</visible>
                         </control>
                     </control>
@@ -810,7 +810,7 @@
                         <control type="label">
                             <width min="30" max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <label>[B]More Like This $INFO[Window.Property(more_like_this.number)][/B]</label>
                             <visible>!Control.HasFocus(2054)</visible>
@@ -818,7 +818,7 @@
                         <control type="label">
                             <width min="30" max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <label>[B]More Like This | [/B]$INFO[Container(2054).ListItem.Property(name)]$INFO[Container(2054).ListItem.Property(release_date), • ]$INFO[Container(2054).ListItem.Property(vote_average), • ]</label>
                             <visible>Control.HasFocus(2054)</visible>
@@ -843,7 +843,7 @@
                                     <height max="344">auto</height>
                                     <width max="220">auto</width>
                                     <aspectratio>scale</aspectratio>
-                                    <texture diffuse="phage-lite_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
+                                    <texture diffuse="bacterio_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
                                 </control>
                             </itemlayout>
                             <focusedlayout height="360" width="236">
@@ -857,7 +857,7 @@
                                     <top>0</top>
                                     <height>360</height>
                                     <width>236</width>
-                                    <texture colordiffuse="FFCCCCCC" border="12">phage-lite_common/panel-256-box.png</texture>
+                                    <texture colordiffuse="FFCCCCCC" border="12">bacterio_common/panel-256-box.png</texture>
                                     <visible>Control.HasFocus(2054) | Control.HasFocus(4054)</visible>
                                 </control>
                                 <control type="image">
@@ -866,7 +866,7 @@
                                     <height max="344">auto</height>
                                     <width max="220">auto</width>
                                     <aspectratio>scale</aspectratio>
-                                    <texture diffuse="phage-lite_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
+                                    <texture diffuse="bacterio_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
                                 </control>
                             </focusedlayout>
                         </control>
@@ -877,9 +877,9 @@
                             <height>15</height>
                             <onup>2054</onup>
                             <ondown>2055</ondown>
-                            <texturesliderbackground colordiffuse="FF1F2020">phage-lite_common/white.png</texturesliderbackground>
-                            <texturesliderbar colordiffuse="FF555556">phage-lite_common/white.png</texturesliderbar>
-                            <texturesliderbarfocus colordiffuse="FFCCCCCC">phage-lite_common/white.png</texturesliderbarfocus>
+                            <texturesliderbackground colordiffuse="FF1F2020">bacterio_common/white.png</texturesliderbackground>
+                            <texturesliderbar colordiffuse="FF555556">bacterio_common/white.png</texturesliderbar>
+                            <texturesliderbarfocus colordiffuse="FFCCCCCC">bacterio_common/white.png</texturesliderbarfocus>
                             <showonepage>false</showonepage>
                             <orientation>Horizontal</orientation>
                             <visible>String.IsEqual(Window.Property(enable_scrollbars),true) + [Control.HasFocus(2054) | Control.HasFocus(4054)]</visible>
@@ -889,7 +889,7 @@
                             <left>20</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2054) | Control.HasFocus(4054)] + Container(2054).HasPrevious</visible>
                         </control>
                         <control type="image">
@@ -897,7 +897,7 @@
                             <left>1135</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2054) | Control.HasFocus(4054)] + Container(2054).HasNext</visible>
                         </control>
                     </control>
@@ -910,7 +910,7 @@
                         <control type="label">
                             <width min="30" max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <label>[B]Similar $INFO[Window.Property(ai_similar.number)][/B]</label>
                             <visible>!Control.HasFocus(2055)</visible>
@@ -918,7 +918,7 @@
                         <control type="label">
                             <width min="30" max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <label>[B]Similar | [/B]$INFO[Container(2055).ListItem.Property(name)]$INFO[Container(2055).ListItem.Property(release_date), • ]$INFO[Container(2055).ListItem.Property(vote_average), • ]</label>
                             <visible>Control.HasFocus(2055)</visible>
@@ -943,7 +943,7 @@
                                     <height max="344">auto</height>
                                     <width max="220">auto</width>
                                     <aspectratio>scale</aspectratio>
-                                    <texture diffuse="phage-lite_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
+                                    <texture diffuse="bacterio_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
                                 </control>
                             </itemlayout>
                             <focusedlayout height="360" width="236">
@@ -957,7 +957,7 @@
                                     <top>0</top>
                                     <height>360</height>
                                     <width>236</width>
-                                    <texture colordiffuse="FFCCCCCC" border="12">phage-lite_common/panel-256-box.png</texture>
+                                    <texture colordiffuse="FFCCCCCC" border="12">bacterio_common/panel-256-box.png</texture>
                                     <visible>Control.HasFocus(2055) | Control.HasFocus(4055)</visible>
                                 </control>
                                 <control type="image">
@@ -966,7 +966,7 @@
                                     <height max="344">auto</height>
                                     <width max="220">auto</width>
                                     <aspectratio>scale</aspectratio>
-                                    <texture diffuse="phage-lite_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
+                                    <texture diffuse="bacterio_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
                                 </control>
                             </focusedlayout>
                         </control>
@@ -977,9 +977,9 @@
                             <height>15</height>
                             <onup>2055</onup>
                             <ondown>2056</ondown>
-                            <texturesliderbackground colordiffuse="FF1F2020">phage-lite_common/white.png</texturesliderbackground>
-                            <texturesliderbar colordiffuse="FF555556">phage-lite_common/white.png</texturesliderbar>
-                            <texturesliderbarfocus colordiffuse="FFCCCCCC">phage-lite_common/white.png</texturesliderbarfocus>
+                            <texturesliderbackground colordiffuse="FF1F2020">bacterio_common/white.png</texturesliderbackground>
+                            <texturesliderbar colordiffuse="FF555556">bacterio_common/white.png</texturesliderbar>
+                            <texturesliderbarfocus colordiffuse="FFCCCCCC">bacterio_common/white.png</texturesliderbarfocus>
                             <showonepage>false</showonepage>
                             <orientation>Horizontal</orientation>
                             <visible>String.IsEqual(Window.Property(enable_scrollbars),true) + [Control.HasFocus(2055) | Control.HasFocus(4055)]</visible>
@@ -989,7 +989,7 @@
                             <left>20</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2055) | Control.HasFocus(4055)] + Container(2055).HasPrevious</visible>
                         </control>
                         <control type="image">
@@ -997,7 +997,7 @@
                             <left>1135</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2055) | Control.HasFocus(4055)] + Container(2055).HasNext</visible>
                         </control>
                     </control>
@@ -1010,7 +1010,7 @@
                         <control type="label">
                             <width max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <align>left</align>
                             <aligny>bottom</aligny>
@@ -1029,14 +1029,14 @@
                                 <control type="image">
                                     <height>360</height>
                                     <width>580</width>
-                                    <texture colordiffuse="FF1F2020" border="30">phage-lite_common/circle.png</texture>
+                                    <texture colordiffuse="FF1F2020" border="30">bacterio_common/circle.png</texture>
                                 </control>
                                 <control type="textbox">
                                     <top>15</top>
                                     <left>20</left>
                                     <width>540</width>
                                     <height>308</height>
-                                    <font>font12</font> <!-- PHAGELITE_26 -->
+                                    <font>font12</font> <!-- BACTERIO_26 -->
                                     <align>center</align>
                                     <aligny>top</aligny>
                                     <textcolor>FFCCCCCC</textcolor>
@@ -1048,14 +1048,14 @@
                                 <control type="image">
                                     <height>360</height>
                                     <width>580</width>
-                                    <texture colordiffuse="FFB7B4BB" border="30">phage-lite_common/circle.png</texture>
+                                    <texture colordiffuse="FFB7B4BB" border="30">bacterio_common/circle.png</texture>
                                 </control>
                                 <control type="textbox">
                                     <top>15</top>
                                     <left>20</left>
                                     <width>540</width>
                                     <height>308</height>
-                                    <font>font12</font> <!-- PHAGELITE_26 -->
+                                    <font>font12</font> <!-- BACTERIO_26 -->
                                     <align>center</align>
                                     <aligny>top</aligny>
                                     <textcolor>FF1F2020</textcolor>
@@ -1070,9 +1070,9 @@
                             <height>15</height>
                             <onup>2056</onup>
                             <ondown>2057</ondown>
-                            <texturesliderbackground colordiffuse="FF1F2020">phage-lite_common/white.png</texturesliderbackground>
-                            <texturesliderbar colordiffuse="FF555556">phage-lite_common/white.png</texturesliderbar>
-                            <texturesliderbarfocus colordiffuse="FFCCCCCC">phage-lite_common/white.png</texturesliderbarfocus>
+                            <texturesliderbackground colordiffuse="FF1F2020">bacterio_common/white.png</texturesliderbackground>
+                            <texturesliderbar colordiffuse="FF555556">bacterio_common/white.png</texturesliderbar>
+                            <texturesliderbarfocus colordiffuse="FFCCCCCC">bacterio_common/white.png</texturesliderbarfocus>
                             <showonepage>false</showonepage>
                             <orientation>Horizontal</orientation>
                             <visible>String.IsEqual(Window.Property(enable_scrollbars),true) + [Control.HasFocus(2056) | Control.HasFocus(4056)]</visible>
@@ -1082,7 +1082,7 @@
                             <left>20</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2056) | Control.HasFocus(4056)] + Container(2056).HasPrevious</visible>
                         </control>
                         <control type="image">
@@ -1090,7 +1090,7 @@
                             <left>1125</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2056) | Control.HasFocus(4056)] + Container(2056).HasNext</visible>
                         </control>
                     </control>
@@ -1103,7 +1103,7 @@
                         <control type="label">
                             <width max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <align>left</align>
                             <aligny>bottom</aligny>
@@ -1122,14 +1122,14 @@
                                 <control type="image">
                                     <height>360</height>
                                     <width>580</width>
-                                    <texture colordiffuse="FF1F2020" border="30">phage-lite_common/circle.png</texture>
+                                    <texture colordiffuse="FF1F2020" border="30">bacterio_common/circle.png</texture>
                                 </control>
                                 <control type="textbox">
                                     <top>15</top>
                                     <left>20</left>
                                     <width>540</width>
                                     <height>308</height>
-                                    <font>font12</font> <!-- PHAGELITE_26 -->
+                                    <font>font12</font> <!-- BACTERIO_26 -->
                                     <align>center</align>
                                     <aligny>top</aligny>
                                     <textcolor>FFCCCCCC</textcolor>
@@ -1141,14 +1141,14 @@
                                 <control type="image">
                                     <height>360</height>
                                     <width>580</width>
-                                    <texture colordiffuse="FFB7B4BB" border="30">phage-lite_common/circle.png</texture>
+                                    <texture colordiffuse="FFB7B4BB" border="30">bacterio_common/circle.png</texture>
                                 </control>
                                 <control type="textbox">
                                     <top>15</top>
                                     <left>20</left>
                                     <width>540</width>
                                     <height>308</height>
-                                    <font>font12</font> <!-- PHAGELITE_26 -->
+                                    <font>font12</font> <!-- BACTERIO_26 -->
                                     <align>center</align>
                                     <aligny>top</aligny>
                                     <textcolor>FF1F2020</textcolor>
@@ -1163,9 +1163,9 @@
                             <height>15</height>
                             <onup>2057</onup>
                             <ondown>2058</ondown>
-                            <texturesliderbackground colordiffuse="FF1F2020">phage-lite_common/white.png</texturesliderbackground>
-                            <texturesliderbar colordiffuse="FF555556">phage-lite_common/white.png</texturesliderbar>
-                            <texturesliderbarfocus colordiffuse="FFCCCCCC">phage-lite_common/white.png</texturesliderbarfocus>
+                            <texturesliderbackground colordiffuse="FF1F2020">bacterio_common/white.png</texturesliderbackground>
+                            <texturesliderbar colordiffuse="FF555556">bacterio_common/white.png</texturesliderbar>
+                            <texturesliderbarfocus colordiffuse="FFCCCCCC">bacterio_common/white.png</texturesliderbarfocus>
                             <showonepage>false</showonepage>
                             <orientation>Horizontal</orientation>
                             <visible>String.IsEqual(Window.Property(enable_scrollbars),true) + [Control.HasFocus(2057) | Control.HasFocus(4057)]</visible>
@@ -1175,7 +1175,7 @@
                             <left>20</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2057) | Control.HasFocus(4057)] + Container(2057).HasPrevious</visible>
                         </control>
                         <control type="image">
@@ -1183,7 +1183,7 @@
                             <left>1125</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2057) | Control.HasFocus(4057)] + Container(2057).HasNext</visible>
                         </control>
                     </control>
@@ -1196,7 +1196,7 @@
                         <control type="label">
                             <width max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <align>left</align>
                             <aligny>bottom</aligny>
@@ -1215,14 +1215,14 @@
                                 <control type="image">
                                     <height>360</height>
                                     <width>580</width>
-                                    <texture colordiffuse="FF1F2020" border="30">phage-lite_common/circle.png</texture>
+                                    <texture colordiffuse="FF1F2020" border="30">bacterio_common/circle.png</texture>
                                 </control>
                                 <control type="textbox">
                                     <top>15</top>
                                     <left>20</left>
                                     <width>540</width>
                                     <height>308</height>
-                                    <font>font12</font> <!-- PHAGELITE_26 -->
+                                    <font>font12</font> <!-- BACTERIO_26 -->
                                     <align>center</align>
                                     <aligny>top</aligny>
                                     <textcolor>FFCCCCCC</textcolor>
@@ -1234,14 +1234,14 @@
                                 <control type="image">
                                     <height>360</height>
                                     <width>580</width>
-                                    <texture colordiffuse="FFB7B4BB" border="30">phage-lite_common/circle.png</texture>
+                                    <texture colordiffuse="FFB7B4BB" border="30">bacterio_common/circle.png</texture>
                                 </control>
                                 <control type="textbox">
                                     <top>15</top>
                                     <left>20</left>
                                     <width>540</width>
                                     <height>308</height>
-                                    <font>font12</font> <!-- PHAGELITE_26 -->
+                                    <font>font12</font> <!-- BACTERIO_26 -->
                                     <align>center</align>
                                     <aligny>top</aligny>
                                     <textcolor>FF1F2020</textcolor>
@@ -1256,9 +1256,9 @@
                             <height>15</height>
                             <onup>2058</onup>
                             <ondown>2059</ondown>
-                            <texturesliderbackground colordiffuse="FF1F2020">phage-lite_common/white.png</texturesliderbackground>
-                            <texturesliderbar colordiffuse="FF555556">phage-lite_common/white.png</texturesliderbar>
-                            <texturesliderbarfocus colordiffuse="FFCCCCCC">phage-lite_common/white.png</texturesliderbarfocus>
+                            <texturesliderbackground colordiffuse="FF1F2020">bacterio_common/white.png</texturesliderbackground>
+                            <texturesliderbar colordiffuse="FF555556">bacterio_common/white.png</texturesliderbar>
+                            <texturesliderbarfocus colordiffuse="FFCCCCCC">bacterio_common/white.png</texturesliderbarfocus>
                             <showonepage>false</showonepage>
                             <orientation>Horizontal</orientation>
                             <visible>String.IsEqual(Window.Property(enable_scrollbars),true) + [Control.HasFocus(2058) | Control.HasFocus(4058)]</visible>
@@ -1268,7 +1268,7 @@
                             <left>20</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2058) | Control.HasFocus(4058)] + Container(2058).HasPrevious</visible>
                         </control>
                         <control type="image">
@@ -1276,7 +1276,7 @@
                             <left>1125</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2058) | Control.HasFocus(4058)] + Container(2058).HasNext</visible>
                         </control>
                     </control>
@@ -1289,7 +1289,7 @@
                         <control type="label">
                             <width max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <align>left</align>
                             <aligny>bottom</aligny>
@@ -1308,14 +1308,14 @@
                                 <control type="image">
                                     <height>360</height>
                                     <width>580</width>
-                                    <texture colordiffuse="FF1F2020" border="30">phage-lite_common/circle.png</texture>
+                                    <texture colordiffuse="FF1F2020" border="30">bacterio_common/circle.png</texture>
                                 </control>
                                 <control type="textbox">
                                     <top>15</top>
                                     <left>20</left>
                                     <width>540</width>
                                     <height>308</height>
-                                    <font>font12</font> <!-- PHAGELITE_26 -->
+                                    <font>font12</font> <!-- BACTERIO_26 -->
                                     <align>center</align>
                                     <aligny>top</aligny>
                                     <textcolor>FFCCCCCC</textcolor>
@@ -1327,14 +1327,14 @@
                                 <control type="image">
                                     <height>360</height>
                                     <width>580</width>
-                                    <texture colordiffuse="FFB7B4BB" border="30">phage-lite_common/circle.png</texture>
+                                    <texture colordiffuse="FFB7B4BB" border="30">bacterio_common/circle.png</texture>
                                 </control>
                                 <control type="textbox">
                                     <top>15</top>
                                     <left>20</left>
                                     <width>540</width>
                                     <height>308</height>
-                                    <font>font12</font> <!-- PHAGELITE_26 -->
+                                    <font>font12</font> <!-- BACTERIO_26 -->
                                     <align>center</align>
                                     <aligny>top</aligny>
                                     <textcolor>FF1F2020</textcolor>
@@ -1349,9 +1349,9 @@
                             <height>15</height>
                             <onup>2059</onup>
                             <ondown>2060</ondown>
-                            <texturesliderbackground colordiffuse="FF1F2020">phage-lite_common/white.png</texturesliderbackground>
-                            <texturesliderbar colordiffuse="FF555556">phage-lite_common/white.png</texturesliderbar>
-                            <texturesliderbarfocus colordiffuse="FFCCCCCC">phage-lite_common/white.png</texturesliderbarfocus>
+                            <texturesliderbackground colordiffuse="FF1F2020">bacterio_common/white.png</texturesliderbackground>
+                            <texturesliderbar colordiffuse="FF555556">bacterio_common/white.png</texturesliderbar>
+                            <texturesliderbarfocus colordiffuse="FFCCCCCC">bacterio_common/white.png</texturesliderbarfocus>
                             <showonepage>false</showonepage>
                             <orientation>Horizontal</orientation>
                             <visible>String.IsEqual(Window.Property(enable_scrollbars),true) + [Control.HasFocus(2059) | Control.HasFocus(4059)]</visible>
@@ -1361,7 +1361,7 @@
                             <left>20</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2059) | Control.HasFocus(4059)] + Container(2059).HasPrevious</visible>
                         </control>
                         <control type="image">
@@ -1369,7 +1369,7 @@
                             <left>1125</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2059) | Control.HasFocus(4057)] + Container(2059).HasNext</visible>
                         </control>
                     </control>
@@ -1382,7 +1382,7 @@
                         <control type="label">
                             <width max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <align>left</align>
                             <aligny>bottom</aligny>
@@ -1400,7 +1400,7 @@
                                 <control type="image">
                                     <height>360</height>
                                     <width>230</width>
-                                    <texture colordiffuse="FF1F2020" border="30">phage-lite_common/circle.png</texture>
+                                    <texture colordiffuse="FF1F2020" border="30">bacterio_common/circle.png</texture>
                                 </control>
                                 <control type="image">
                                     <left>6</left>
@@ -1415,7 +1415,7 @@
                                     <top>6</top>
                                     <width>224</width>
                                     <height>75</height>
-                                    <font>font12</font> <!-- PHAGELITE_26 -->
+                                    <font>font12</font> <!-- BACTERIO_26 -->
                                     <align>center</align>
                                     <aligny>center</aligny>
                                     <textcolor>FFCCCCCC</textcolor>
@@ -1427,7 +1427,7 @@
                                     <top>280</top>
                                     <width>224</width>
                                     <height>75</height>
-                                    <font>font12</font> <!-- PHAGELITE_26 -->
+                                    <font>font12</font> <!-- BACTERIO_26 -->
                                     <align>center</align>
                                     <aligny>center</aligny>
                                     <textcolor>FFCCCCCC</textcolor>
@@ -1439,7 +1439,7 @@
                                 <control type="image">
                                     <width>230</width>
                                     <height>360</height>
-                                    <texture colordiffuse="FFB7B4BB" border="30">phage-lite_common/circle.png</texture>
+                                    <texture colordiffuse="FFB7B4BB" border="30">bacterio_common/circle.png</texture>
                                 </control>
                                 <control type="image">
                                     <left>6</left>
@@ -1454,7 +1454,7 @@
                                     <top>6</top>
                                     <width>224</width>
                                     <height>75</height>
-                                    <font>font12</font> <!-- PHAGELITE_26 -->
+                                    <font>font12</font> <!-- BACTERIO_26 -->
                                     <align>center</align>
                                     <aligny>center</aligny>
                                     <textcolor>FF1F2020</textcolor>
@@ -1466,7 +1466,7 @@
                                     <top>280</top>
                                     <width>224</width>
                                     <height>75</height>
-                                    <font>font12</font> <!-- PHAGELITE_26 -->
+                                    <font>font12</font> <!-- BACTERIO_26 -->
                                     <align>center</align>
                                     <aligny>center</aligny>
                                     <textcolor>FF1F2020</textcolor>
@@ -1485,7 +1485,7 @@
                         <control type="label">
                             <width max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <align>left</align>
                             <aligny>bottom</aligny>
@@ -1508,7 +1508,7 @@
                                 <control type="image">
                                     <height>360</height>
                                     <width>230</width>
-                                    <texture colordiffuse="FF1F2020" border="30">phage-lite_common/circle.png</texture>
+                                    <texture colordiffuse="FF1F2020" border="30">bacterio_common/circle.png</texture>
                                 </control>
                                 <control type="image">
                                     <left>-100</left>
@@ -1523,7 +1523,7 @@
                                     <top>10</top>
                                     <width>220</width>
                                     <height>340</height>
-                                    <font>font12</font> <!-- PHAGELITE_26 -->
+                                    <font>font12</font> <!-- BACTERIO_26 -->
                                     <align>center</align>
                                     <aligny>center</aligny>
                                     <textcolor>FFCCCCCC</textcolor>
@@ -1535,7 +1535,7 @@
                                     <left>90</left>
                                     <width>50</width>
                                     <aspectratio>keep</aspectratio>
-                                    <texture colordiffuse="red">phage-lite_common/overlay_selected.png</texture>
+                                    <texture colordiffuse="red">bacterio_common/overlay_selected.png</texture>
                                     <visible>String.IsEqual(ListItem.Property(liked_status),true)</visible>
                                 </control>
                             </itemlayout>
@@ -1543,14 +1543,14 @@
                                 <control type="image">
                                     <width>230</width>
                                     <height>360</height>
-                                    <texture colordiffuse="FFB7B4BB" border="30">phage-lite_common/circle.png</texture>
+                                    <texture colordiffuse="FFB7B4BB" border="30">bacterio_common/circle.png</texture>
                                     <visible>Control.HasFocus(2061) | Control.HasFocus(4061)</visible>
                                     <animation effect="fade" start="100" end="60" condition="Control.HasFocus(4061)">Conditional</animation>
                                 </control>
                                 <control type="image">
                                     <height>360</height>
                                     <width>230</width>
-                                    <texture colordiffuse="FF1F2020" border="30">phage-lite_common/circle.png</texture>
+                                    <texture colordiffuse="FF1F2020" border="30">bacterio_common/circle.png</texture>
                                     <visible>![Control.HasFocus(2061) | Control.HasFocus(4061)]</visible>
                                 </control>
                                 <control type="textbox">
@@ -1558,7 +1558,7 @@
                                     <top>10</top>
                                     <width>220</width>
                                     <height>340</height>
-                                    <font>font12</font> <!-- PHAGELITE_26 -->
+                                    <font>font12</font> <!-- BACTERIO_26 -->
                                     <align>center</align>
                                     <aligny>center</aligny>
                                     <textcolor>FF1F2020</textcolor>
@@ -1571,7 +1571,7 @@
                                     <top>10</top>
                                     <width>220</width>
                                     <height>340</height>
-                                    <font>font12</font> <!-- PHAGELITE_26 -->
+                                    <font>font12</font> <!-- BACTERIO_26 -->
                                     <align>center</align>
                                     <aligny>center</aligny>
                                     <textcolor>FFCCCCCC</textcolor>
@@ -1584,7 +1584,7 @@
                                     <left>90</left>
                                     <width>50</width>
                                     <aspectratio>keep</aspectratio>
-                                    <texture colordiffuse="red">phage-lite_common/overlay_selected.png</texture>
+                                    <texture colordiffuse="red">bacterio_common/overlay_selected.png</texture>
                                     <visible>String.IsEqual(ListItem.Property(liked_status),true)</visible>
                                 </control>
                             </focusedlayout>
@@ -1596,9 +1596,9 @@
                             <height>15</height>
                             <onup>2061</onup>
                             <ondown>2062</ondown>
-                            <texturesliderbackground colordiffuse="FF1F2020">phage-lite_common/white.png</texturesliderbackground>
-                            <texturesliderbar colordiffuse="FF555556">phage-lite_common/white.png</texturesliderbar>
-                            <texturesliderbarfocus colordiffuse="FFCCCCCC">phage-lite_common/white.png</texturesliderbarfocus>
+                            <texturesliderbackground colordiffuse="FF1F2020">bacterio_common/white.png</texturesliderbackground>
+                            <texturesliderbar colordiffuse="FF555556">bacterio_common/white.png</texturesliderbar>
+                            <texturesliderbarfocus colordiffuse="FFCCCCCC">bacterio_common/white.png</texturesliderbarfocus>
                             <showonepage>false</showonepage>
                             <orientation>Horizontal</orientation>
                             <visible>String.IsEqual(Window.Property(enable_scrollbars),true) + [Control.HasFocus(2061) | Control.HasFocus(4061)]</visible>
@@ -1608,7 +1608,7 @@
                             <left>20</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2061) | Control.HasFocus(4061)] + Container(2061).HasPrevious</visible>
                         </control>
                         <control type="image">
@@ -1616,7 +1616,7 @@
                             <left>1135</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2061) | Control.HasFocus(4061)] + Container(2061).HasNext</visible>
                         </control>
                     </control>
@@ -1629,7 +1629,7 @@
                         <control type="label">
                             <width min="30" max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <label>[B]Videos $INFO[Window.Property(youtube_videos.number)][/B]</label>
                             <visible>!Control.HasFocus(2062)</visible>
@@ -1637,7 +1637,7 @@
                         <control type="label">
                             <width min="30" max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <label>[B]Videos | [/B]$INFO[Container(2062).ListItem.Property(name)]</label>
                             <visible>Control.HasFocus(2062)</visible>
@@ -1661,7 +1661,7 @@
                                     <height max="344">auto</height>
                                     <width max="376">auto</width>
                                     <aspectratio>scale</aspectratio>
-                                    <texture border="12" diffuse="phage-lite_diffuse/panel-256-box.png">$INFO[ListItem.Property(thumbnail)]</texture>
+                                    <texture border="12" diffuse="bacterio_diffuse/panel-256-box.png">$INFO[ListItem.Property(thumbnail)]</texture>
                                 </control>
                             </itemlayout>
                             <focusedlayout height="360" width="392">
@@ -1675,7 +1675,7 @@
                                     <top>0</top>
                                     <height>360</height>
                                     <width>390</width>
-                                    <texture colordiffuse="FFCCCCCC" border="12">phage-lite_common/panel-256-box.png</texture>
+                                    <texture colordiffuse="FFCCCCCC" border="12">bacterio_common/panel-256-box.png</texture>
                                     <visible>Control.HasFocus(2062) | Control.HasFocus(4062)</visible>
                                 </control>
                                 <control type="image">
@@ -1684,7 +1684,7 @@
                                     <height max="344">auto</height>
                                     <width max="376">auto</width>
                                     <aspectratio>scale</aspectratio>
-                                    <texture border="12" diffuse="phage-lite_diffuse/panel-256-box.png">$INFO[ListItem.Property(thumbnail)]</texture>
+                                    <texture border="12" diffuse="bacterio_diffuse/panel-256-box.png">$INFO[ListItem.Property(thumbnail)]</texture>
                                 </control>
                             </focusedlayout>
                         </control>
@@ -1695,9 +1695,9 @@
                             <height>15</height>
                             <onup>2062</onup>
                             <ondown>2063</ondown>
-                            <texturesliderbackground colordiffuse="FF1F2020">phage-lite_common/white.png</texturesliderbackground>
-                            <texturesliderbar colordiffuse="FF555556">phage-lite_common/white.png</texturesliderbar>
-                            <texturesliderbarfocus colordiffuse="FFCCCCCC">phage-lite_common/white.png</texturesliderbarfocus>
+                            <texturesliderbackground colordiffuse="FF1F2020">bacterio_common/white.png</texturesliderbackground>
+                            <texturesliderbar colordiffuse="FF555556">bacterio_common/white.png</texturesliderbar>
+                            <texturesliderbarfocus colordiffuse="FFCCCCCC">bacterio_common/white.png</texturesliderbarfocus>
                             <showonepage>false</showonepage>
                             <orientation>Horizontal</orientation>
                             <visible>String.IsEqual(Window.Property(enable_scrollbars),true) + [Control.HasFocus(2062) | Control.HasFocus(4062)]</visible>
@@ -1707,7 +1707,7 @@
                             <left>20</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2062) | Control.HasFocus(4062)] + Container(2062).HasPrevious</visible>
                         </control>
                         <control type="image">
@@ -1715,7 +1715,7 @@
                             <left>1125</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2062) | Control.HasFocus(4062)] + Container(2062).HasNext</visible>
                         </control>
                     </control>
@@ -1728,7 +1728,7 @@
                         <control type="label">
                             <width min="30" max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <label>[B]More from Year $INFO[Window.Property(more_from_year.number)][/B]</label>
                             <visible>!Control.HasFocus(2063)</visible>
@@ -1736,7 +1736,7 @@
                         <control type="label">
                             <width min="30" max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <label>[B]More from Year | [/B]$INFO[Container(2063).ListItem.Property(name)]$INFO[Container(2063).ListItem.Property(release_date), • ]$INFO[Container(2063).ListItem.Property(vote_average), • ]</label>
                             <visible>Control.HasFocus(2063)</visible>
@@ -1761,7 +1761,7 @@
                                     <height max="344">auto</height>
                                     <width max="220">auto</width>
                                     <aspectratio>scale</aspectratio>
-                                    <texture diffuse="phage-lite_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
+                                    <texture diffuse="bacterio_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
                                 </control>
                             </itemlayout>
                             <focusedlayout height="360" width="236">
@@ -1775,7 +1775,7 @@
                                     <top>0</top>
                                     <height>360</height>
                                     <width>236</width>
-                                    <texture colordiffuse="FFCCCCCC" border="12">phage-lite_common/panel-256-box.png</texture>
+                                    <texture colordiffuse="FFCCCCCC" border="12">bacterio_common/panel-256-box.png</texture>
                                     <visible>Control.HasFocus(2063) | Control.HasFocus(4063)</visible>
                                 </control>
                                 <control type="image">
@@ -1784,7 +1784,7 @@
                                     <height max="344">auto</height>
                                     <width max="220">auto</width>
                                     <aspectratio>scale</aspectratio>
-                                    <texture diffuse="phage-lite_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
+                                    <texture diffuse="bacterio_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
                                 </control>
                             </focusedlayout>
                         </control>
@@ -1795,9 +1795,9 @@
                             <height>15</height>
                             <onup>2063</onup>
                             <ondown>2064</ondown>
-                            <texturesliderbackground colordiffuse="FF1F2020">phage-lite_common/white.png</texturesliderbackground>
-                            <texturesliderbar colordiffuse="FF555556">phage-lite_common/white.png</texturesliderbar>
-                            <texturesliderbarfocus colordiffuse="FFCCCCCC">phage-lite_common/white.png</texturesliderbarfocus>
+                            <texturesliderbackground colordiffuse="FF1F2020">bacterio_common/white.png</texturesliderbackground>
+                            <texturesliderbar colordiffuse="FF555556">bacterio_common/white.png</texturesliderbar>
+                            <texturesliderbarfocus colordiffuse="FFCCCCCC">bacterio_common/white.png</texturesliderbarfocus>
                             <showonepage>false</showonepage>
                             <orientation>Horizontal</orientation>
                             <visible>String.IsEqual(Window.Property(enable_scrollbars),true) + [Control.HasFocus(2063) | Control.HasFocus(4063)]</visible>
@@ -1807,7 +1807,7 @@
                             <left>20</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2063) | Control.HasFocus(4063)] + Container(2063).HasPrevious</visible>
                         </control>
                         <control type="image">
@@ -1815,7 +1815,7 @@
                             <left>1135</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2063) | Control.HasFocus(4063)] + Container(2063).HasNext</visible>
                         </control>
                     </control>
@@ -1828,7 +1828,7 @@
                         <control type="label">
                             <width min="30" max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <label>[B]More from Genres $INFO[Window.Property(more_from_genres.number)][/B]</label>
                             <visible>!Control.HasFocus(2064)</visible>
@@ -1836,7 +1836,7 @@
                         <control type="label">
                             <width min="30" max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <label>[B]More from Genres | [/B]$INFO[Container(2064).ListItem.Property(name)]$INFO[Container(2064).ListItem.Property(release_date), • ]$INFO[Container(2064).ListItem.Property(vote_average), • ]</label>
                             <visible>Control.HasFocus(2064)</visible>
@@ -1861,7 +1861,7 @@
                                     <height max="344">auto</height>
                                     <width max="220">auto</width>
                                     <aspectratio>scale</aspectratio>
-                                    <texture diffuse="phage-lite_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
+                                    <texture diffuse="bacterio_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
                                 </control>
                             </itemlayout>
                             <focusedlayout height="360" width="236">
@@ -1875,7 +1875,7 @@
                                     <top>0</top>
                                     <height>360</height>
                                     <width>236</width>
-                                    <texture colordiffuse="FFCCCCCC" border="12">phage-lite_common/panel-256-box.png</texture>
+                                    <texture colordiffuse="FFCCCCCC" border="12">bacterio_common/panel-256-box.png</texture>
                                     <visible>Control.HasFocus(2064) | Control.HasFocus(4064)</visible>
                                 </control>
                                 <control type="image">
@@ -1884,7 +1884,7 @@
                                     <height max="344">auto</height>
                                     <width max="220">auto</width>
                                     <aspectratio>scale</aspectratio>
-                                    <texture diffuse="phage-lite_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
+                                    <texture diffuse="bacterio_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
                                 </control>
                             </focusedlayout>
                         </control>
@@ -1895,9 +1895,9 @@
                             <height>15</height>
                             <onup>2064</onup>
                             <ondown>2065</ondown>
-                            <texturesliderbackground colordiffuse="FF1F2020">phage-lite_common/white.png</texturesliderbackground>
-                            <texturesliderbar colordiffuse="FF555556">phage-lite_common/white.png</texturesliderbar>
-                            <texturesliderbarfocus colordiffuse="FFB7B4BB">phage-lite_common/white.png</texturesliderbarfocus>
+                            <texturesliderbackground colordiffuse="FF1F2020">bacterio_common/white.png</texturesliderbackground>
+                            <texturesliderbar colordiffuse="FF555556">bacterio_common/white.png</texturesliderbar>
+                            <texturesliderbarfocus colordiffuse="FFB7B4BB">bacterio_common/white.png</texturesliderbarfocus>
                             <showonepage>false</showonepage>
                             <orientation>Horizontal</orientation>
                             <visible>String.IsEqual(Window.Property(enable_scrollbars),true) + [Control.HasFocus(2064) | Control.HasFocus(4064)]</visible>
@@ -1907,7 +1907,7 @@
                             <left>20</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2064) | Control.HasFocus(4064)] + Container(2064).HasPrevious</visible>
                         </control>
                         <control type="image">
@@ -1915,7 +1915,7 @@
                             <left>1135</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2064) | Control.HasFocus(4064)] + Container(2064).HasNext</visible>
                         </control>
                     </control>
@@ -1928,7 +1928,7 @@
                         <control type="label">
                             <width min="30" max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <label>[B]More from Networks $INFO[Window.Property(more_from_networks.number)][/B]</label>
                             <visible>!Control.HasFocus(2065)</visible>
@@ -1936,7 +1936,7 @@
                         <control type="label">
                             <width min="30" max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <label>[B]More from Networks | [/B]$INFO[Container(2065).ListItem.Property(name)]$INFO[Container(2065).ListItem.Property(release_date), • ]$INFO[Container(2065).ListItem.Property(vote_average), • ]</label>
                             <visible>Control.HasFocus(2065)</visible>
@@ -1961,7 +1961,7 @@
                                     <height max="344">auto</height>
                                     <width max="220">auto</width>
                                     <aspectratio>scale</aspectratio>
-                                    <texture diffuse="phage-lite_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
+                                    <texture diffuse="bacterio_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
                                 </control>
                             </itemlayout>
                             <focusedlayout height="360" width="236">
@@ -1975,7 +1975,7 @@
                                     <top>0</top>
                                     <height>360</height>
                                     <width>236</width>
-                                    <texture colordiffuse="FFCCCCCC" border="12">phage-lite_common/panel-256-box.png</texture>
+                                    <texture colordiffuse="FFCCCCCC" border="12">bacterio_common/panel-256-box.png</texture>
                                     <visible>Control.HasFocus(2065) | Control.HasFocus(4065)</visible>
                                 </control>
                                 <control type="image">
@@ -1984,7 +1984,7 @@
                                     <height max="344">auto</height>
                                     <width max="220">auto</width>
                                     <aspectratio>scale</aspectratio>
-                                    <texture diffuse="phage-lite_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
+                                    <texture diffuse="bacterio_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
                                 </control>
                             </focusedlayout>
                         </control>
@@ -1995,9 +1995,9 @@
                             <height>15</height>
                             <onup>2065</onup>
                             <ondown>2066</ondown>
-                            <texturesliderbackground colordiffuse="FF1F2020">phage-lite_common/white.png</texturesliderbackground>
-                            <texturesliderbar colordiffuse="FF555556">phage-lite_common/white.png</texturesliderbar>
-                            <texturesliderbarfocus colordiffuse="FFCCCCCC">phage-lite_common/white.png</texturesliderbarfocus>
+                            <texturesliderbackground colordiffuse="FF1F2020">bacterio_common/white.png</texturesliderbackground>
+                            <texturesliderbar colordiffuse="FF555556">bacterio_common/white.png</texturesliderbar>
+                            <texturesliderbarfocus colordiffuse="FFCCCCCC">bacterio_common/white.png</texturesliderbarfocus>
                             <showonepage>false</showonepage>
                             <orientation>Horizontal</orientation>
                             <visible>String.IsEqual(Window.Property(enable_scrollbars),true) + [Control.HasFocus(2065) | Control.HasFocus(4065)]</visible>
@@ -2007,7 +2007,7 @@
                             <left>20</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2065) | Control.HasFocus(4065)] + Container(2065).HasPrevious</visible>
                         </control>
                         <control type="image">
@@ -2015,7 +2015,7 @@
                             <left>1135</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2065) | Control.HasFocus(4065)] + Container(2065).HasNext</visible>
                         </control>
                     </control>
@@ -2028,7 +2028,7 @@
                         <control type="label">
                             <width min="30" max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <label>[B]$INFO[Window.Property(more_from_collection.name)] $INFO[Window.Property(more_from_collection.number)][/B]</label>
                             <visible>!Control.HasFocus(2066)</visible>
@@ -2036,7 +2036,7 @@
                         <control type="label">
                             <width min="30" max="1160">auto</width>
                             <height>20</height>
-                            <font>font14</font> <!-- PHAGELITE_33 -->
+                            <font>font14</font> <!-- BACTERIO_33 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <label>[B]$INFO[Window.Property(more_from_collection.name)] | [/B]$INFO[Container(2066).ListItem.Property(name)]$INFO[Container(2066).ListItem.Property(release_date), • ]$INFO[Container(2066).ListItem.Property(vote_average), • ]</label>
                             <visible>Control.HasFocus(2066)</visible>
@@ -2046,13 +2046,13 @@
                             <control type="image">
                                 <height>360</height>
                                 <width>933</width>
-                                <texture colordiffuse="FF1F2020">phage-lite_common/white.png</texture>
+                                <texture colordiffuse="FF1F2020">bacterio_common/white.png</texture>
                                 <visible>Integer.IsGreater(Container(2066).NumItems,1)</visible>
                             </control>
                             <control type="image">
                                 <height>360</height>
                                 <width>1169</width>
-                                <texture colordiffuse="FF1F2020">phage-lite_common/white.png</texture>
+                                <texture colordiffuse="FF1F2020">bacterio_common/white.png</texture>
                                 <visible>Integer.IsGreater(Container(2066).NumItems,2)</visible>
                             </control>
                             <control type="image">
@@ -2061,14 +2061,14 @@
                                 <width>224</width>
                                 <height>348</height>
                                 <aspectratio>scale</aspectratio>
-                                <texture diffuse="phage-lite_diffuse/poster_w217_h320.png">$INFO[Window.Property(more_from_collection.poster)]</texture>
+                                <texture diffuse="bacterio_diffuse/poster_w217_h320.png">$INFO[Window.Property(more_from_collection.poster)]</texture>
                             </control>
                             <control type="textbox">
                                 <left>235</left>
                                 <top>6</top>
                                 <width>218</width>
                                 <height>348</height>
-                                <font>font12</font> <!-- PHAGELITE_26 -->
+                                <font>font12</font> <!-- BACTERIO_26 -->
                                 <align>center</align>
                                 <aligny>center</aligny>
                                 <textcolor>FFCCCCCC</textcolor>
@@ -2096,7 +2096,7 @@
                                     <height max="344">auto</height>
                                     <width max="220">auto</width>
                                     <aspectratio>scale</aspectratio>
-                                    <texture diffuse="phage-lite_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
+                                    <texture diffuse="bacterio_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
                                 </control>
                             </itemlayout>
                             <focusedlayout height="360" width="236">
@@ -2110,7 +2110,7 @@
                                     <top>0</top>
                                     <height>360</height>
                                     <width>236</width>
-                                    <texture colordiffuse="FFCCCCCC" border="12">phage-lite_common/panel-256-box.png</texture>
+                                    <texture colordiffuse="FFCCCCCC" border="12">bacterio_common/panel-256-box.png</texture>
                                     <visible>Control.HasFocus(2066) | Control.HasFocus(4066)</visible>
                                 </control>
                                 <control type="image">
@@ -2119,7 +2119,7 @@
                                     <height max="344">auto</height>
                                     <width max="220">auto</width>
                                     <aspectratio>scale</aspectratio>
-                                    <texture diffuse="phage-lite_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
+                                    <texture diffuse="bacterio_diffuse/poster_w217_h320.png">$INFO[ListItem.Property(thumbnail)]</texture>
                                 </control>
                             </focusedlayout>
                         </control>
@@ -2129,9 +2129,9 @@
                             <height>15</height>
                             <onup>2066</onup>
                             <ondown>10</ondown>
-                            <texturesliderbackground colordiffuse="FF1F2020">phage-lite_common/white.png</texturesliderbackground>
-                            <texturesliderbar colordiffuse="FF555556">phage-lite_common/white.png</texturesliderbar>
-                            <texturesliderbarfocus colordiffuse="FFCCCCCC">phage-lite_common/white.png</texturesliderbarfocus>
+                            <texturesliderbackground colordiffuse="FF1F2020">bacterio_common/white.png</texturesliderbackground>
+                            <texturesliderbar colordiffuse="FF555556">bacterio_common/white.png</texturesliderbar>
+                            <texturesliderbarfocus colordiffuse="FFCCCCCC">bacterio_common/white.png</texturesliderbarfocus>
                             <showonepage>false</showonepage>
                             <orientation>Horizontal</orientation>
                             <visible>String.IsEqual(Window.Property(enable_scrollbars),true) + [Control.HasFocus(2066) | Control.HasFocus(4066)]</visible>
@@ -2141,7 +2141,7 @@
                             <left>480</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2066) | Control.HasFocus(4066)] + Container(2066).HasPrevious</visible>
                         </control>
                         <control type="image">
@@ -2149,7 +2149,7 @@
                             <left>1120</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">phage-lite_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">bacterio_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2066) | Control.HasFocus(4066)] + Container(2066).HasNext</visible>
                         </control>
                     </control>
