@@ -3,6 +3,6 @@
 	<!-- General -->
 	<category label="General">
 		<setting label="Phage Lite uses its own settings window." type="text" enable="false" />
-		<setting label="Open Phage Lite Settings..." type="action" option="close" action="RunPlugin(plugin://plugin.video.phagelite/?mode=open_settings)" />
+		<setting label="Open Phage Lite Settings..." type="action" option="close" action="RunPlugin(plugin://plugin.video.phage-lite/?mode=open_settings)" />
 	</category>
 </settings>

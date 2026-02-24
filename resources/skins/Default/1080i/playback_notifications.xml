@@ -6,7 +6,7 @@
     <controls>
         <control type="image">
             <height>550</height>
-            <texture>phagelite_common/dim-top.png</texture>
+            <texture>phage-lite_common/dim-top.png</texture>
         </control>
         <control type="group">
             <left>20</left>
@@ -17,16 +17,16 @@
                 <top>-1</top>
                 <width>286</width>
                 <height>162</height>
-                <texture border="16" colordiffuse="FFCCCCCC">phagelite_common/dialog.png</texture>
+                <texture border="16" colordiffuse="FFCCCCCC">phage-lite_common/dialog.png</texture>
             </control>
             <control type="image">
                 <width>284</width>
-                <texture colordiffuse="FF000000" diffuse="phagelite_diffuse/landscape_w284_h160.png">phagelite_common/white.png</texture>
+                <texture colordiffuse="FF000000" diffuse="phage-lite_diffuse/landscape_w284_h160.png">phage-lite_common/white.png</texture>
             </control>
             <control type="image">
                 <width>284</width>
                 <aspectratio>scale</aspectratio>
-                <texture diffuse="phagelite_diffuse/landscape_w284_h160.png">$INFO[Window.Property(thumb)]</texture>
+                <texture diffuse="phage-lite_diffuse/landscape_w284_h160.png">$INFO[Window.Property(thumb)]</texture>
                 <animation effect="fade" end="65">WindowOpen</animation>
             </control>
             <control type="image">
@@ -46,7 +46,7 @@
                     <left>0</left>
                     <width>284</width>
                     <height>35</height>
-                    <texture colordiffuse="Window.Property(episode_status.highlight)">phagelite_common/white.png</texture>
+                    <texture colordiffuse="Window.Property(episode_status.highlight)">phage-lite_common/white.png</texture>
                 </control>
                 <control type="label">
                     <top>8</top>
@@ -68,7 +68,7 @@
                 <align>left</align>
                 <aligny>top</aligny>
                 <aspectratio aligny="top">keep</aspectratio>
-                <texture colordiffuse="FFB7B4BB">$INFO[Window(10000).Property(phagelite.addon_icon_mini)]</texture>
+                <texture colordiffuse="FFB7B4BB">$INFO[Window(10000).Property(phage-lite.addon_icon_mini)]</texture>
             </control>
             <!-- HEADING - NEXT EPISODE -->
             <control type="group">
@@ -157,8 +157,8 @@
                         <font>font10</font> <!-- PHAGELITE_21 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <focusedcolor>FF1F2020</focusedcolor>
-                        <texturefocus colordiffuse="FFCCCCCC" border="30">phagelite_common/circle.png</texturefocus>
-                        <texturenofocus colordiffuse="FF4a4347" border="30">phagelite_common/circle.png</texturenofocus>
+                        <texturefocus colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texturefocus>
+                        <texturenofocus colordiffuse="FF4a4347" border="30">phage-lite_common/circle.png</texturenofocus>
                         <align>center</align>
                         <aligny>center</aligny>
                     </control>
@@ -172,8 +172,8 @@
                         <font>font10</font> <!-- PHAGELITE_21 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <focusedcolor>FF1F2020</focusedcolor>
-                        <texturefocus colordiffuse="FFCCCCCC" border="30">phagelite_common/circle.png</texturefocus>
-                        <texturenofocus colordiffuse="FF4a4347" border="30">phagelite_common/circle.png</texturenofocus>
+                        <texturefocus colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texturefocus>
+                        <texturenofocus colordiffuse="FF4a4347" border="30">phage-lite_common/circle.png</texturenofocus>
                         <align>center</align>
                         <aligny>center</aligny>
                     </control>
@@ -187,8 +187,8 @@
                         <font>font10</font> <!-- PHAGELITE_21 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <focusedcolor>FF1F2020</focusedcolor>
-                        <texturefocus colordiffuse="FFCCCCCC" border="30">phagelite_common/circle.png</texturefocus>
-                        <texturenofocus colordiffuse="FF4a4347" border="30">phagelite_common/circle.png</texturenofocus>
+                        <texturefocus colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texturefocus>
+                        <texturenofocus colordiffuse="FF4a4347" border="30">phage-lite_common/circle.png</texturenofocus>
                         <align>center</align>
                         <aligny>center</aligny>
                     </control>
@@ -228,8 +228,8 @@
                         <font>font10</font> <!-- PHAGELITE_21 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <focusedcolor>FF1F2020</focusedcolor>
-                        <texturefocus colordiffuse="FFCCCCCC" border="30">phagelite_common/circle.png</texturefocus>
-                        <texturenofocus colordiffuse="FF4a4347" border="30">phagelite_common/circle.png</texturenofocus>
+                        <texturefocus colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texturefocus>
+                        <texturenofocus colordiffuse="FF4a4347" border="30">phage-lite_common/circle.png</texturenofocus>
                         <align>center</align>
                         <aligny>center</aligny>
                     </control>
@@ -243,8 +243,8 @@
                         <font>font10</font> <!-- PHAGELITE_21 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <focusedcolor>FF1F2020</focusedcolor>
-                        <texturefocus colordiffuse="FFCCCCCC" border="30">phagelite_common/circle.png</texturefocus>
-                        <texturenofocus colordiffuse="FF4a4347" border="30">phagelite_common/circle.png</texturenofocus>
+                        <texturefocus colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texturefocus>
+                        <texturenofocus colordiffuse="FF4a4347" border="30">phage-lite_common/circle.png</texturenofocus>
                         <align>center</align>
                         <aligny>center</aligny>
                     </control>

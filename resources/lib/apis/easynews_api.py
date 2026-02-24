@@ -19,8 +19,8 @@ class EasyNewsAPI:
 		self.search_link = '/2.0/search/solr-search/advanced'
 		self.account_link = 'https://account.easynews.com/editinfo.php'
 		self.usage_link = 'https://account.easynews.com/usageview.php'
-		self.username = get_setting('phagelite.easynews_user', 'empty_setting')
-		self.password = get_setting('phagelite.easynews_password', 'empty_setting')
+		self.username = get_setting('phage-lite.easynews_user', 'empty_setting')
+		self.password = get_setting('phage-lite.easynews_password', 'empty_setting')
 		self.auth = self._get_auth()
 		self.auth_quoted = quote(self.auth)
 		self.base_process = self._process_files

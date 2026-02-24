@@ -74,18 +74,18 @@ def get_tmdb_lists(params):
 	random, shuffle_lists = params.get('random', 'false') == 'true', params.get('shuffle', 'false') == 'true'
 	returning_to_list = False
 	try:
-		data = get_all_tmdb_lists(get_setting('phagelite.tmdblist.list_sort', '0'))
+		data = get_all_tmdb_lists(get_setting('phage-lite.tmdblist.list_sort', '0'))
 		if data:
 			if shuffle_lists:
 				returning_to_list = 'build_tmdb_lists_contents' in kodi_utils.folder_path()
 				if returning_to_list:
-					try: data = json.loads(kodi_utils.get_property('phagelite.tmdb.lists.order'))
+					try: data = json.loads(kodi_utils.get_property('phage-lite.tmdb.lists.order'))
 					except: pass
 				else:
 					shuffle(data)
-					kodi_utils.set_property('phagelite.tmdb.lists.order', json.dumps(data))
+					kodi_utils.set_property('phage-lite.tmdb.lists.order', json.dumps(data))
 			else:
-				kodi_utils.clear_property('phagelite.tmdb.lists.order')
+				kodi_utils.clear_property('phage-lite.tmdb.lists.order')
 			result = list(_process())
 		else: result = list(_new_process())
 		kodi_utils.add_items(handle, result)
@@ -119,7 +119,7 @@ def build_tmdb_list(params):
 		list_name, list_id, sort_order, updated_at = params.get('list_name'), params.get('list_id'), params.get('sort_order'), params.get('updated_at')
 		page_no, paginate_start = int(params.get('new_page', '1')), int(params.get('paginate_start', '0'))
 		new_params = {'mode': 'tmdblist.build_tmdb_list', 'list_id': list_id, 'paginate_start': paginate_start}
-		if page_no == 1 and not is_external: kodi_utils.set_property('phagelite.exit_params', kodi_utils.folder_path())
+		if page_no == 1 and not is_external: kodi_utils.set_property('phage-lite.exit_params', kodi_utils.folder_path())
 		if use_result: result = params.get('result', [])
 		else: result = get_tmdb_list(params)
 		result, total_pages, paginate_start = _paginate_list(result, page_no, paginate_start)

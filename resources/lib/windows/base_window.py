@@ -37,17 +37,17 @@ def create_window(import_info, skin_xml, **kwargs):
 def window_manager(obj):
 	def close():
 		obj.close()
-		kodi_utils.clear_property('phagelite.window_loaded')
-		kodi_utils.clear_property('phagelite.window_stack')
+		kodi_utils.clear_property('phage-lite.window_loaded')
+		kodi_utils.clear_property('phage-lite.window_stack')
 
 	def monitor():
 		timer = 0
-		while not kodi_utils.get_property('phagelite.window_loaded') == 'true' and timer <= 5:
+		while not kodi_utils.get_property('phage-lite.window_loaded') == 'true' and timer <= 5:
 			kodi_utils.sleep(50)
 			timer += 0.05
 		kodi_utils.hide_busy_dialog()
 		obj.close()
-		kodi_utils.clear_property('phagelite.window_loaded')
+		kodi_utils.clear_property('phage-lite.window_loaded')
 
 	def runner(params):
 		try:
@@ -62,21 +62,21 @@ def window_manager(obj):
 		except: close()
 
 	def get_stack():
-		try: window_stack = json.loads(kodi_utils.get_property('phagelite.window_stack'))
+		try: window_stack = json.loads(kodi_utils.get_property('phage-lite.window_stack'))
 		except: window_stack = []
 		return window_stack
 
 	def add_to_stack(params):
 		window_stack.append(params)
-		kodi_utils.set_property('phagelite.window_stack', json.dumps(window_stack))
+		kodi_utils.set_property('phage-lite.window_stack', json.dumps(window_stack))
 
 	def remove_from_stack():
 		previous_params = window_stack.pop()
-		kodi_utils.set_property('phagelite.window_stack', json.dumps(window_stack))
+		kodi_utils.set_property('phage-lite.window_stack', json.dumps(window_stack))
 		return previous_params
 	kodi_utils.show_busy_dialog()
 	try:
-		kodi_utils.clear_property('phagelite.window_loaded')
+		kodi_utils.clear_property('phage-lite.window_loaded')
 		current_params = obj.current_params
 		new_params = obj.new_params
 		window_stack = get_stack()
@@ -96,12 +96,12 @@ def window_manager(obj):
 def window_player(obj):
 	def monitor():
 		timer = 0
-		while not kodi_utils.get_property('phagelite.window_loaded') == 'true' and timer <= 5:
+		while not kodi_utils.get_property('phage-lite.window_loaded') == 'true' and timer <= 5:
 			kodi_utils.sleep(50)
 			timer += 0.05
 		kodi_utils.hide_busy_dialog()
 		obj.close()
-		kodi_utils.clear_property('phagelite.window_loaded')
+		kodi_utils.clear_property('phage-lite.window_loaded')
 
 	def runner(params):
 		try:
@@ -117,7 +117,7 @@ def window_player(obj):
 		window_player_url = obj.window_player_url
 		if 'plugin.video.youtube' in window_player_url:
 			if not kodi_utils.addon_installed('plugin.video.youtube') or not kodi_utils.addon_enabled('plugin.video.youtube'): return
-		kodi_utils.clear_property('phagelite.window_loaded')
+		kodi_utils.clear_property('phage-lite.window_loaded')
 		current_params = obj.current_params
 		player = kodi_utils.kodi_player()
 		player.play(window_player_url)
@@ -224,13 +224,13 @@ class BaseDialog(xbmcgui.WindowXMLDialog):
 		return kodi_utils.translate_path(path)
 
 	def set_home_property(self, prop, value):
-		kodi_utils.set_property('phagelite.%s' % prop, value)
+		kodi_utils.set_property('phage-lite.%s' % prop, value)
 
 	def get_home_property(self, prop):
-		return kodi_utils.get_property('phagelite.%s' % prop)
+		return kodi_utils.get_property('phage-lite.%s' % prop)
 
 	def clear_home_property(self, prop):
-		return kodi_utils.clear_property('phagelite.%s' % prop)
+		return kodi_utils.clear_property('phage-lite.%s' % prop)
 
 	def get_attribute(self, obj, attribute):
 		return getattr(obj, attribute)
@@ -263,11 +263,11 @@ class FontUtils:
 		else: self.skin_font_info = self.default_font_info()
 		for item in ((21, False, 'font10'), (26, False, 'font12'), (30, False, 'font13'), (33, False, 'font14'), (38, False, 'font16'), (60, True, 'font60')):
 			replacement_values_append(self.match_font(*item))
-		skin_files = kodi_utils.list_dirs(kodi_utils.translate_path('special://home/addons/plugin.video.phagelite/resources/skins/Default/1080i/'))[1]
+		skin_files = kodi_utils.list_dirs(kodi_utils.translate_path('special://home/addons/plugin.video.phage-lite/resources/skins/Default/1080i/'))[1]
 		for item in skin_files:
 			self.replace_font(item, replacement_values)
-		kodi_utils.set_property('phagelite.current_skin', self.current_skin)
-		kodi_utils.set_property('phagelite.current_font', self.current_font)
+		kodi_utils.set_property('phage-lite.current_skin', self.current_skin)
+		kodi_utils.set_property('phage-lite.current_font', self.current_font)
 
 	def get_skin_folder(self):
 		folder_options = ('xml', '1080', '720', '1080p', '720p', '1080i', '720i', '16x9')
@@ -282,7 +282,7 @@ class FontUtils:
 
 	def skin_change_check(self):
 		self.current_skin, self.current_font = kodi_utils.current_skin(), kodi_utils.jsonrpc_get_system_setting('lookandfeel.font', 'Default')
-		if self.current_skin != kodi_utils.get_property('phagelite.current_skin') or self.current_font != kodi_utils.get_property('phagelite.current_font'): return True
+		if self.current_skin != kodi_utils.get_property('phage-lite.current_skin') or self.current_font != kodi_utils.get_property('phage-lite.current_font'): return True
 		return False
 
 	def match_font(self, size, bold, fallback):
@@ -323,7 +323,7 @@ class FontUtils:
 		return results
 
 	def replace_font(self, window, replacement_values):
-		file = kodi_utils.translate_path('special://home/addons/plugin.video.phagelite/resources/skins/Default/1080i/' + window)
+		file = kodi_utils.translate_path('special://home/addons/plugin.video.phage-lite/resources/skins/Default/1080i/' + window)
 		with kodi_utils.open_file(file) as f: content = f.read()
 		for item in replacement_values:
 			try: content = re.sub(r'<font>(.*?)</font> <\!-- %s -->' % item[0], '<font>%s</font> <!-- %s -->' % (item[1], item[0]), content)

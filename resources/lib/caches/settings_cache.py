@@ -8,7 +8,7 @@ class SettingsCache:
 	def get(self, setting_id):
 		try:
 			dbcon = connect_database('settings_db')
-			setting_id = setting_id.replace('phagelite.', '')
+			setting_id = setting_id.replace('phage-lite.', '')
 			setting_value = dbcon.execute('SELECT setting_value from settings WHERE setting_id = ?', (setting_id,)).fetchone()[0]
 			self.set_memory_cache(setting_id, setting_value)
 		except: setting_value = None
@@ -52,10 +52,10 @@ class SettingsCache:
 		for item in settings_list: self.set_memory_cache(item[0], item[3] or item[2])
 
 	def set_memory_cache(self, setting_id, setting_value):
-		kodi_utils.set_property('phagelite.%s' % setting_id, setting_value)
+		kodi_utils.set_property('phage-lite.%s' % setting_id, setting_value)
 
 	def delete_memory_cache(self, setting_id):
-		clear_property('phagelite.%s' % setting_id)
+		clear_property('phage-lite.%s' % setting_id)
 
 	def setting_info(self, setting_id):
 		d_settings = default_settings()
@@ -120,10 +120,10 @@ def set_default(setting_ids):
 def set_boolean(params):
 	boolean_dict = {'true': 'false', 'false': 'true'}
 	setting = params['setting_id']
-	set_setting(setting, boolean_dict[get_setting('phagelite.%s' % setting)])
+	set_setting(setting, boolean_dict[get_setting('phage-lite.%s' % setting)])
 
 def set_string(params):
-	current_value = get_setting('phagelite.%s' % params['setting_id'])
+	current_value = get_setting('phage-lite.%s' % params['setting_id'])
 	current_value = current_value.replace('empty_setting', '')
 	new_value = kodi_utils.kodi_dialog().input('', defaultt=current_value)
 	if not new_value and not kodi_utils.confirm_dialog(text='Enter Blank Value?', ok_label='Yes', cancel_label='Re-Enter Value', default_control=11):
@@ -153,7 +153,7 @@ def set_numeric(params):
 def set_path(params):
 	setting_id = params['setting_id']
 	browse_mode = int(default_setting_values(setting_id)['browse_mode'])
-	new_value = kodi_utils.kodi_dialog().browse(browse_mode, '', '', defaultt=get_setting('phagelite.%s' % setting_id))
+	new_value = kodi_utils.kodi_dialog().browse(browse_mode, '', '', defaultt=get_setting('phage-lite.%s' % setting_id))
 	set_setting(setting_id, new_value)
 
 def set_from_list(params):
@@ -167,7 +167,7 @@ def set_from_list(params):
 
 def set_source_folder_path(params):
 	setting_id = params['setting_id']
-	current_setting = get_setting('phagelite.%s' % setting_id)
+	current_setting = get_setting('phage-lite.%s' % setting_id)
 	if current_setting not in (None, 'None', ''):
 		if kodi_utils.confirm_dialog(text='Enter Blank Value?', ok_label='Yes', cancel_label='Re-Enter Value', default_control=11):
 			return set_setting(setting_id, 'None')
@@ -184,7 +184,7 @@ def restore_setting_default(params):
 		if not silent: kodi_utils.ok_dialog(text='Error restoring default setting')
 
 def default_setting_values(setting_id):
-	if 'phagelite.' in setting_id: setting_id = setting_id.replace('phagelite.', '')
+	if 'phage-lite.' in setting_id: setting_id = setting_id.replace('phage-lite.', '')
 	d_settings = default_settings()
 	return next((i for i in d_settings if i['setting_id'] == setting_id), None)
 
@@ -194,8 +194,8 @@ def default_settings():
 #====================================GENERAL====================================#
 #===============================================================================#
 #==================== General
-{'setting_id': 'auto_start_phagelite', 'setting_type': 'boolean', 'setting_default': 'false'},
-{'setting_id': 'addon_icon_choice', 'setting_type': 'string', 'setting_default': 'resources/media/addon_icons/phagelite_icon.png'},
+{'setting_id': 'auto_start_phage-lite', 'setting_type': 'boolean', 'setting_default': 'false'},
+{'setting_id': 'addon_icon_choice', 'setting_type': 'string', 'setting_default': 'resources/media/addon_icons/phage-lite_icon.png'},
 {'setting_id': 'default_addon_fanart', 'setting_type': 'path', 'setting_default': kodi_utils.get_addon_fanart(), 'browse_mode': '2'},
 {'setting_id': 'limit_concurrent_threads', 'setting_type': 'boolean', 'setting_default': 'false'},
 {'setting_id': 'max_threads', 'setting_type': 'action', 'setting_default': '60', 'min_value': '10', 'max_value': '250'},
@@ -203,7 +203,7 @@ def default_settings():
 {'setting_id': 'update.action', 'setting_type': 'action', 'setting_default': '0', 'settings_options': {'0': 'Prompt', '1': 'Automatic', '2': 'Notification', '3': 'Off'}},
 {'setting_id': 'update.delay', 'setting_type': 'action', 'setting_default': '10', 'min_value': '10', 'max_value': '300'},
 {'setting_id': 'update.username', 'setting_type': 'string', 'setting_default': 'phage-zn'},
-{'setting_id': 'update.location', 'setting_type': 'string', 'setting_default': 'phagelite.github.io'},
+{'setting_id': 'update.location', 'setting_type': 'string', 'setting_default': 'phage-lite.github.io'},
 #==================== Watched Indicators
 {'setting_id': 'watched_indicators', 'setting_type': 'action', 'setting_default': '0', 'settings_options': {'0': 'Phage Lite', '1': 'Trakt'}},
 #======+============= Trakt Cache
@@ -212,10 +212,10 @@ def default_settings():
 #==================== UTC Time Offset
 {'setting_id': 'datetime.offset', 'setting_type': 'action', 'setting_default': '0', 'min_value': '-15', 'max_value': '15'},
 #==================== Downloads
-{'setting_id': 'movie_download_directory', 'setting_type': 'path', 'setting_default': 'special://profile/addon_data/plugin.video.phagelite/Movies Downloads/', 'browse_mode': '0'},
-{'setting_id': 'tvshow_download_directory', 'setting_type': 'path', 'setting_default': 'special://profile/addon_data/plugin.video.phagelite/TV Show Downloads/', 'browse_mode': '0'},
-{'setting_id': 'premium_download_directory', 'setting_type': 'path', 'setting_default': 'special://profile/addon_data/plugin.video.phagelite/Premium Downloads/', 'browse_mode': '0'},
-{'setting_id': 'image_download_directory', 'setting_type': 'path', 'setting_default': 'special://profile/addon_data/plugin.video.phagelite/Image Downloads/', 'browse_mode': '0'},
+{'setting_id': 'movie_download_directory', 'setting_type': 'path', 'setting_default': 'special://profile/addon_data/plugin.video.phage-lite/Movies Downloads/', 'browse_mode': '0'},
+{'setting_id': 'tvshow_download_directory', 'setting_type': 'path', 'setting_default': 'special://profile/addon_data/plugin.video.phage-lite/TV Show Downloads/', 'browse_mode': '0'},
+{'setting_id': 'premium_download_directory', 'setting_type': 'path', 'setting_default': 'special://profile/addon_data/plugin.video.phage-lite/Premium Downloads/', 'browse_mode': '0'},
+{'setting_id': 'image_download_directory', 'setting_type': 'path', 'setting_default': 'special://profile/addon_data/plugin.video.phage-lite/Image Downloads/', 'browse_mode': '0'},
 
 
 #================================================================================#
@@ -505,7 +505,7 @@ def default_settings():
 #======================================HIDDEN=============================================#
 #=========================================================================================#
 {'setting_id': 'reuse_language_invoker', 'setting_type': 'string', 'setting_default': 'true'},
-{'setting_id': 'addon_icon_choice_name', 'setting_type': 'string', 'setting_default': 'phagelite_icon.png'},
+{'setting_id': 'addon_icon_choice_name', 'setting_type': 'string', 'setting_default': 'phage-lite_icon.png'},
 {'setting_id': 'widget_refresh_timer_name', 'setting_type': 'string', 'setting_default': 'Off'},
 {'setting_id': 'mpaa_region_display_name', 'setting_type': 'string', 'setting_default': 'United States'},
 {'setting_id': 'lists_cache_duraton_display_name', 'setting_type': 'string', 'setting_default': '1 Day'},

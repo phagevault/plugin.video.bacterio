@@ -6,7 +6,7 @@
             <width>1920</width>
             <height>1080</height>
             <control type="image">
-                <texture colordiffuse="FF000000">phagelite_common/white.png</texture>
+                <texture colordiffuse="FF000000">phage-lite_common/white.png</texture>
             </control>
             <control type="image">
                 <texture>$INFO[Window.Property(fanart)]</texture>
@@ -24,7 +24,7 @@
                     <width>60</width>
                     <height>60</height>
                     <aspectratio aligny="top">keep</aspectratio>
-                    <texture>$INFO[Window(10000).Property(phagelite.addon_icon_mini)]</texture>
+                    <texture>$INFO[Window(10000).Property(phage-lite.addon_icon_mini)]</texture>
                 </control>
                 <control type="label">
                     <left>70</left>
@@ -94,7 +94,7 @@
                 <top>552</top>
                 <width>30</width>
                 <height>30</height>
-                <texture flipx="true" colordiffuse="FFFAFAFA">phagelite_common/spinner.png</texture>
+                <texture flipx="true" colordiffuse="FFFAFAFA">phage-lite_common/spinner.png</texture>
                 <animation effect="fade" time="320" delay="400">Visible</animation>
                 <animation effect="rotate" end="360" center="auto" time="1200" loop="true" reversible="false" condition="true">Conditional</animation>
                 <animation effect="fade" start="70" time="1200" condition="true" pulse="true">Conditional</animation>
@@ -108,147 +108,147 @@
                         <left>0</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF434343">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF434343">phage-lite_common/white.png</texture>
                         <visible>Integer.IsLess(Window().Property(percent),1)</visible>
                     </control>
                     <control type="image">
                         <left>20</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF434343">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF434343">phage-lite_common/white.png</texture>
                         <visible>Integer.IsLess(Window().Property(percent),5)</visible>
                     </control>
                     <control type="image">
                         <left>40</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF434343">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF434343">phage-lite_common/white.png</texture>
                         <visible>Integer.IsLess(Window().Property(percent),10)</visible>
                     </control>
                     <control type="image">
                         <left>60</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF434343">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF434343">phage-lite_common/white.png</texture>
                         <visible>Integer.IsLess(Window().Property(percent),15)</visible>
                     </control>
                     <control type="image">
                         <left>80</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF434343">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF434343">phage-lite_common/white.png</texture>
                         <visible>Integer.IsLess(Window().Property(percent),20)</visible>
                     </control>
                     <control type="image">
                         <left>100</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF434343">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF434343">phage-lite_common/white.png</texture>
                         <visible>Integer.IsLess(Window().Property(percent),25)</visible>
                     </control>
                     <control type="image">
                         <left>120</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF434343">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF434343">phage-lite_common/white.png</texture>
                         <visible>Integer.IsLess(Window().Property(percent),30)</visible>
                     </control>
                     <control type="image">
                         <left>140</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF434343">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF434343">phage-lite_common/white.png</texture>
                         <visible>Integer.IsLess(Window().Property(percent),35)</visible>
                     </control>
                     <control type="image">
                         <left>160</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF434343">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF434343">phage-lite_common/white.png</texture>
                         <visible>Integer.IsLess(Window().Property(percent),40)</visible>
                     </control>
                     <control type="image">
                         <left>180</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF434343">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF434343">phage-lite_common/white.png</texture>
                         <visible>Integer.IsLess(Window().Property(percent),45)</visible>
                     </control>
                     <control type="image">
                         <left>200</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF434343">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF434343">phage-lite_common/white.png</texture>
                         <visible>Integer.IsLess(Window().Property(percent),50)</visible>
                     </control>
                     <control type="image">
                         <left>220</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF434343">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF434343">phage-lite_common/white.png</texture>
                         <visible>Integer.IsLess(Window().Property(percent),55)</visible>
                     </control>
                     <control type="image">
                         <left>240</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF434343">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF434343">phage-lite_common/white.png</texture>
                         <visible>Integer.IsLess(Window().Property(percent),60)</visible>
                     </control>
                     <control type="image">
                         <left>260</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF434343">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF434343">phage-lite_common/white.png</texture>
                         <visible>Integer.IsLess(Window().Property(percent),65)</visible>
                     </control>
                     <control type="image">
                         <left>280</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF434343">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF434343">phage-lite_common/white.png</texture>
                         <visible>Integer.IsLess(Window().Property(percent),70)</visible>
                     </control>
                     <control type="image">
                         <left>300</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF434343">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF434343">phage-lite_common/white.png</texture>
                         <visible>Integer.IsLess(Window().Property(percent),75)</visible>
                     </control>
                     <control type="image">
                         <left>320</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF434343">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF434343">phage-lite_common/white.png</texture>
                         <visible>Integer.IsLess(Window().Property(percent),80)</visible>
                     </control>
                     <control type="image">
                         <left>340</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF434343">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF434343">phage-lite_common/white.png</texture>
                         <visible>Integer.IsLess(Window().Property(percent),85)</visible>
                     </control>
                     <control type="image">
                         <left>360</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF434343">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF434343">phage-lite_common/white.png</texture>
                         <visible>Integer.IsLess(Window().Property(percent),90)</visible>
                     </control>
                     <control type="image">
                         <left>380</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF434343">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF434343">phage-lite_common/white.png</texture>
                         <visible>Integer.IsLess(Window().Property(percent),95)</visible>
                     </control>
                     <control type="image">
                         <left>400</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF434343">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF434343">phage-lite_common/white.png</texture>
                         <visible>Integer.IsLess(Window().Property(percent),99)</visible>
                     </control>
                 </control>
@@ -257,147 +257,147 @@
                         <left>0</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF7C7C7C">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
                         <visible>Integer.IsGreaterOrEqual(Window().Property(percent),1)</visible>
                     </control>
                     <control type="image">
                         <left>20</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF7C7C7C">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
                         <visible>Integer.IsGreaterOrEqual(Window().Property(percent),5)</visible>
                     </control>
                     <control type="image">
                         <left>40</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF7C7C7C">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
                         <visible>Integer.IsGreaterOrEqual(Window().Property(percent),10)</visible>
                     </control>
                     <control type="image">
                         <left>60</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF7C7C7C">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
                         <visible>Integer.IsGreaterOrEqual(Window().Property(percent),15)</visible>
                     </control>
                     <control type="image">
                         <left>80</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF7C7C7C">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
                         <visible>Integer.IsGreaterOrEqual(Window().Property(percent),20)</visible>
                     </control>
                     <control type="image">
                         <left>100</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF7C7C7C">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
                         <visible>Integer.IsGreaterOrEqual(Window().Property(percent),25)</visible>
                     </control>
                     <control type="image">
                         <left>120</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF7C7C7C">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
                         <visible>Integer.IsGreaterOrEqual(Window().Property(percent),30)</visible>
                     </control>
                     <control type="image">
                         <left>140</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF7C7C7C">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
                         <visible>Integer.IsGreaterOrEqual(Window().Property(percent),35)</visible>
                     </control>
                     <control type="image">
                         <left>160</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF7C7C7C">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
                         <visible>Integer.IsGreaterOrEqual(Window().Property(percent),40)</visible>
                     </control>
                     <control type="image">
                         <left>180</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF7C7C7C">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
                         <visible>Integer.IsGreaterOrEqual(Window().Property(percent),45)</visible>
                     </control>
                     <control type="image">
                         <left>200</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF7C7C7C">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
                         <visible>Integer.IsGreaterOrEqual(Window().Property(percent),50)</visible>
                     </control>
                     <control type="image">
                         <left>220</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF7C7C7C">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
                         <visible>Integer.IsGreaterOrEqual(Window().Property(percent),55)</visible>
                     </control>
                     <control type="image">
                         <left>240</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF7C7C7C">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
                         <visible>Integer.IsGreaterOrEqual(Window().Property(percent),60)</visible>
                     </control>
                     <control type="image">
                         <left>260</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF7C7C7C">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
                         <visible>Integer.IsGreaterOrEqual(Window().Property(percent),65)</visible>
                     </control>
                     <control type="image">
                         <left>280</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FF7C7C7C">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FF7C7C7C">phage-lite_common/white.png</texture>
                         <visible>Integer.IsGreaterOrEqual(Window().Property(percent),70)</visible>
                     </control>
                     <control type="image">
                         <left>300</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FFB40025">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
                         <visible>Integer.IsGreaterOrEqual(Window().Property(percent),75)</visible>
                     </control>
                     <control type="image">
                         <left>320</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FFB40025">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
                         <visible>Integer.IsGreaterOrEqual(Window().Property(percent),80)</visible>
                     </control>
                     <control type="image">
                         <left>340</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FFB40025">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
                         <visible>Integer.IsGreaterOrEqual(Window().Property(percent),85)</visible>
                     </control>
                     <control type="image">
                         <left>360</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FFB40025">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
                         <visible>Integer.IsGreaterOrEqual(Window().Property(percent),90)</visible>
                     </control>
                     <control type="image">
                         <left>380</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FFB40025">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
                         <visible>Integer.IsGreaterOrEqual(Window().Property(percent),95)</visible>
                     </control>
                     <control type="image">
                         <left>400</left>
                         <width>15</width>
                         <height>15</height>
-                        <texture colordiffuse="FFB40025">phagelite_common/white.png</texture>
+                        <texture colordiffuse="FFB40025">phage-lite_common/white.png</texture>
                         <visible>Integer.IsGreaterOrEqual(Window().Property(percent),99)</visible>
                     </control>
                 </control>
@@ -577,8 +577,8 @@
                     <font>font12</font> <!-- PHAGELITE_26 -->
                     <textcolor>FFCCCCCC</textcolor>
                     <focusedcolor>FF1F2020</focusedcolor>
-                    <texturefocus colordiffuse="FFCCCCCC" border="30">phagelite_common/circle.png</texturefocus>
-                    <texturenofocus colordiffuse="FF4a4347" border="30">phagelite_common/circle.png</texturenofocus>
+                    <texturefocus colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texturefocus>
+                    <texturenofocus colordiffuse="FF4a4347" border="30">phage-lite_common/circle.png</texturenofocus>
                     <align>center</align>
                     <aligny>center</aligny>
                 </control>
@@ -592,8 +592,8 @@
                     <font>font12</font> <!-- PHAGELITE_26 -->
                     <textcolor>FFCCCCCC</textcolor>
                     <focusedcolor>FF1F2020</focusedcolor>
-                    <texturefocus colordiffuse="FFCCCCCC" border="30">phagelite_common/circle.png</texturefocus>
-                    <texturenofocus colordiffuse="FF4a4347" border="30">phagelite_common/circle.png</texturenofocus>
+                    <texturefocus colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texturefocus>
+                    <texturenofocus colordiffuse="FF4a4347" border="30">phage-lite_common/circle.png</texturenofocus>
                     <align>center</align>
                     <aligny>center</aligny>
                 </control>
@@ -607,8 +607,8 @@
                     <font>font12</font> <!-- PHAGELITE_26 -->
                     <textcolor>FFCCCCCC</textcolor>
                     <focusedcolor>FF1F2020</focusedcolor>
-                    <texturefocus colordiffuse="FFCCCCCC" border="30">phagelite_common/circle.png</texturefocus>
-                    <texturenofocus colordiffuse="FF4a4347" border="30">phagelite_common/circle.png</texturenofocus>
+                    <texturefocus colordiffuse="FFCCCCCC" border="30">phage-lite_common/circle.png</texturefocus>
+                    <texturenofocus colordiffuse="FF4a4347" border="30">phage-lite_common/circle.png</texturenofocus>
                     <align>center</align>
                     <aligny>center</aligny>
                 </control>

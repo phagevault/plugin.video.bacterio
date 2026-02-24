@@ -37,7 +37,7 @@ def list_display_order_choice(params):
 def language_invoker_choice(params):
 	from xml.dom.minidom import parse as mdParse
 	kodi_utils.close_all_dialog()
-	addon_xml = kodi_utils.translate_path('special://home/addons/plugin.video.phagelite/addon.xml')
+	addon_xml = kodi_utils.translate_path('special://home/addons/plugin.video.phage-lite/addon.xml')
 	root = mdParse(addon_xml)
 	invoker_instance = root.getElementsByTagName('reuselanguageinvoker')[0].firstChild
 	current_invoker_setting = invoker_instance.data
@@ -57,7 +57,7 @@ def addon_icon_choice(params):
 	import shutil
 	import urllib.request
 	from xml.dom.minidom import parse as mdParse
-	large_image_url = 'https://raw.githubusercontent.com/phage-zn/phagelite.github.io/main/packages/addon_icons/%s'
+	large_image_url = 'https://raw.githubusercontent.com/phage-zn/phage-lite.github.io/main/packages/addon_icons/%s'
 	small_image_url = large_image_url % '/minis/%s'
 	set_icon = params.get('set_icon')
 	if set_icon: new_name = set_icon
@@ -78,7 +78,7 @@ def addon_icon_choice(params):
 	for item in [(large_image_folder, large_image_url), (small_image_folder, small_image_url)]:
 		urllib.request.urlretrieve(item[1] % new_name, kodi_utils.translate_path(os.path.join(item[0], new_name)))
 	new_icon_path = 'resources/media/addon_icons/%s' % new_name
-	addon_xml = kodi_utils.translate_path('special://home/addons/plugin.video.phagelite/addon.xml')
+	addon_xml = kodi_utils.translate_path('special://home/addons/plugin.video.phage-lite/addon.xml')
 	root = mdParse(addon_xml)
 	icon_instance = root.getElementsByTagName('icon')[0].firstChild
 	icon_instance.data = new_icon_path
@@ -157,7 +157,7 @@ def personallists_manager_choice(params):
 	from indexers.personal_lists import get_all_personal_lists, make_new_personal_list, new_list_check
 	icon = params.get('icon', None) or kodi_utils.get_icon('lists')
 	list_type = params['list_type']
-	all_lists = get_all_personal_lists(get_setting('phagelite.personal_list.list_sort', '0'))
+	all_lists = get_all_personal_lists(get_setting('phage-lite.personal_list.list_sort', '0'))
 	choices = []
 	if not all_lists: action = 'add_new'
 	else:
@@ -644,7 +644,7 @@ def set_quality_choice(params):
 	icon = params.get('icon', None) or ''
 	dl = ['Include 4K', 'Include 1080p', 'Include 720p', 'Include SD']
 	fl = ['4K', '1080p', '720p', 'SD']
-	q_setting = get_setting('phagelite.%s' % quality_setting).split(', ')
+	q_setting = get_setting('phage-lite.%s' % quality_setting).split(', ')
 	try: preselect = [fl.index(i) for i in q_setting]
 	except: preselect = []
 	list_items = [{'line1': item, 'icon': icon} for item in dl]
@@ -665,11 +665,11 @@ def extras_buttons_choice(params):
 			for item in range(10, 18):
 				setting_id = 'extras.%s.button%s' % (_type, item)
 				try:
-					button_action = get_setting('phagelite.%s' % setting_id)
+					button_action = get_setting('phage-lite.%s' % setting_id)
 					button_label = extras_button_label_values[_type][button_action]
 				except:
-					set_setting(setting_id.replace('phagelite.', ''), default_setting_values(setting_id)['setting_default'])
-					button_action = get_setting('phagelite.%s' % setting_id)
+					set_setting(setting_id.replace('phage-lite.', ''), default_setting_values(setting_id)['setting_default'])
+					button_action = get_setting('phage-lite.%s' % setting_id)
 					button_label = extras_button_label_values[_type][button_action]
 				button_dict[setting_id] = {'button_action': button_action, 'button_label': button_label, 'button_name': 'Button %s' % str(item - 9)}
 				orig_button_dict[setting_id] = {'button_action': button_action, 'button_label': button_label, 'button_name': 'Button %s' % str(item - 9)}
@@ -731,7 +731,7 @@ def set_language_filter_choice(params):
 	lang_choices = language_choices()
 	if include_none == 'false': lang_choices.pop('None')
 	dl, fl = list(lang_choices.keys()), list(lang_choices.values())
-	set_filter = get_setting('phagelite.%s' % filter_setting_id).split(', ')
+	set_filter = get_setting('phage-lite.%s' % filter_setting_id).split(', ')
 	try: preselect = [fl.index(i) for i in set_filter]
 	except: preselect = []
 	list_items = [{'line1': item} for item in dl]
@@ -744,7 +744,7 @@ def set_language_filter_choice(params):
 	else: set_setting(filter_setting_id, choice)
 
 def enable_scrapers_choice(params={}):
-	icon = params.get('icon', None) or kodi_utils.get_icon('phagelite')
+	icon = params.get('icon', None) or kodi_utils.get_icon('phage-lite')
 	scrapers = ['external', 'easynews', 'rd_cloud', 'pm_cloud', 'ad_cloud', 'tb_cloud', 'folders']
 	cloud_scrapers = {'rd_cloud': 'rd.enabled', 'pm_cloud': 'pm.enabled', 'ad_cloud': 'ad.enabled', 'tb_cloud': 'tb.enabled'}
 	scraper_names = ['EXTERNAL SCRAPERS', 'EASYNEWS', 'RD CLOUD', 'PM CLOUD', 'AD CLOUD', 'TB CLOUD', 'FOLDERS 1-5']
@@ -791,7 +791,7 @@ def clear_favorites_choice(params={}):
 
 def scraper_color_choice(params):
 	setting = params.get('setting_id')
-	current_setting, original_highlight = get_setting('phagelite.%s' % setting), default_setting_values(setting)['setting_default']
+	current_setting, original_highlight = get_setting('phage-lite.%s' % setting), default_setting_values(setting)['setting_default']
 	if current_setting != original_highlight:
 		action = kodi_utils.confirm_dialog(text='Set new Highlight or Restore Default Highlight?', ok_label='Set New', cancel_label='Restore Default', default_control=10)
 		if action == None: return
@@ -801,7 +801,7 @@ def scraper_color_choice(params):
 
 def personal_list_unseen_color_choice(params):
 	setting = 'personal_list.unseen_highlight'
-	current_setting, original_highlight = get_setting('phagelite.%s' % setting), default_setting_values(setting)['setting_default']
+	current_setting, original_highlight = get_setting('phage-lite.%s' % setting), default_setting_values(setting)['setting_default']
 	if current_setting != original_highlight:
 		action = kodi_utils.confirm_dialog(text='Set new Highlight or Restore Default Highlight?', ok_label='Set New', cancel_label='Restore Default', default_control=10)
 		if action == None: return
@@ -845,7 +845,7 @@ def options_menu_choice(params, meta=None):
 	tmdb_id, content, poster = params_get('tmdb_id', None), params_get('content', None), params_get('poster', None)
 	is_external, from_extras = params_get('is_external') in (True, 'True', 'true'), params_get('from_extras', 'false') == 'true'
 	season, episode = params_get('season', ''), params_get('episode', '')
-	single_ep_list = ('episode.progress', 'episode.recently_watched', 'episode.next_trakt', 'episode.next_phagelite', 'episode.trakt_recently_aired', 'episode.trakt_calendar')
+	single_ep_list = ('episode.progress', 'episode.recently_watched', 'episode.next_trakt', 'episode.next_phage-lite', 'episode.trakt_recently_aired', 'episode.trakt_calendar')
 	if not content: content = kodi_utils.container_content()[:-1]
 	menu_type = content
 	if content.startswith('episode.'): content = 'episode'

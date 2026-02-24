@@ -61,7 +61,7 @@ def make_alias_dict(meta, title):
 	return aliases
 
 def internal_results(provider, sources):
-	set_property('phagelite.internal_results.%s' % provider, json.dumps(sources))
+	set_property('phage-lite.internal_results.%s' % provider, json.dumps(sources))
 
 def normalize(title):
 	import unicodedata
@@ -461,8 +461,8 @@ def get_external_cache_status(debrid, unchecked_hashes, data, active_debrid):
 	try:
 		results = []
 		imdb_id = data['imdb']
-		debrid_name, services, token = {'Real-Debrid': ('realdebrid', ['torrentio'], get_setting('phagelite.rd.token')),
-										'AllDebrid': ('alldebrid', ['mediafusion'], get_setting('phagelite.ad.token'))}[debrid]
+		debrid_name, services, token = {'Real-Debrid': ('realdebrid', ['torrentio'], get_setting('phage-lite.rd.token')),
+										'AllDebrid': ('alldebrid', ['mediafusion'], get_setting('phage-lite.ad.token'))}[debrid]
 		threads = [Thread(target=_process, args=(item, unchecked_hashes)) for item in services]
 		[i.start() for i in threads]
 		[i.join() for i in threads]
