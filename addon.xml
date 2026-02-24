@@ -1,4 +1,4 @@
-<addon id="plugin.video.bacterio" name="Bacterio" provider-name="phage-zn" version="0.0.1">
+<addon id="plugin.video.bacterio" name="Bacterio" provider-name="phage-zn" version="0.0.2">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.pil" version="1.1.7"/>
@@ -18,7 +18,7 @@
         <license/>
         <assets>
             <icon>resources/media/addon_icons/bacterio_icon.png</icon>
-            <fanart>resources/media/bacterio_fanart_01.jpg</fanart>
+            <fanart>resources/media/bacterio_fanart_01.png</fanart>
         </assets>
         <news>INFO: For latest changes see Changelog within Tools of add-on.</news>
     </extension>
