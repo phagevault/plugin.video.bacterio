@@ -13,7 +13,7 @@ def get_location(insert=''):
 
 def get_versions():
 	try:
-		result = requests.get(get_location('fen_light_version'))
+		result = requests.get(get_location('phage_lite_version'))
 		if result.status_code != 200: return None, None
 		online_version = result.text.replace('\n', '')
 		current_version = kodi_utils.addon_version()
