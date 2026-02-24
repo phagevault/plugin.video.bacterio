@@ -195,7 +195,7 @@ def default_settings():
 #===============================================================================#
 #==================== General
 {'setting_id': 'auto_start_phagelite', 'setting_type': 'boolean', 'setting_default': 'false'},
-{'setting_id': 'addon_icon_choice', 'setting_type': 'string', 'setting_default': 'resources/media/addon_icons/phagelite_icon_01.png'},
+{'setting_id': 'addon_icon_choice', 'setting_type': 'string', 'setting_default': 'resources/media/addon_icons/phagelite_icon.png'},
 {'setting_id': 'default_addon_fanart', 'setting_type': 'path', 'setting_default': kodi_utils.get_addon_fanart(), 'browse_mode': '2'},
 {'setting_id': 'limit_concurrent_threads', 'setting_type': 'boolean', 'setting_default': 'false'},
 {'setting_id': 'max_threads', 'setting_type': 'action', 'setting_default': '60', 'min_value': '10', 'max_value': '250'},
@@ -505,7 +505,7 @@ def default_settings():
 #======================================HIDDEN=============================================#
 #=========================================================================================#
 {'setting_id': 'reuse_language_invoker', 'setting_type': 'string', 'setting_default': 'true'},
-{'setting_id': 'addon_icon_choice_name', 'setting_type': 'string', 'setting_default': 'phagelite_icon_01.png'},
+{'setting_id': 'addon_icon_choice_name', 'setting_type': 'string', 'setting_default': 'phagelite_icon.png'},
 {'setting_id': 'widget_refresh_timer_name', 'setting_type': 'string', 'setting_default': 'Off'},
 {'setting_id': 'mpaa_region_display_name', 'setting_type': 'string', 'setting_default': 'United States'},
 {'setting_id': 'lists_cache_duraton_display_name', 'setting_type': 'string', 'setting_default': '1 Day'},

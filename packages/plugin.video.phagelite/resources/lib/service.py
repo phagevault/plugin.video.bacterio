@@ -218,7 +218,7 @@ class AddonXMLCheck:
 
 	def reassign_addon_icon(self):
 		from indexers.dialogs import addon_icon_choice
-		addon_icon_choice({'set_icon': get_setting('addon_icon_choice_name', 'phagelite_icon_01.png')})
+		addon_icon_choice({'set_icon': get_setting('addon_icon_choice_name', 'phagelite_icon.png')})
 
 class PhageLiteMonitor(Monitor):
 	def __init__ (self):
