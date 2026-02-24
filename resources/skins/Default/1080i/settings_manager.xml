@@ -425,7 +425,7 @@
                      </item>
                       <item>
                           <visible>Container(2000).HasFocus(10)</visible>
-                          <property name="setting_label">Autostart PhageLite When Kodi Starts</property>
+                          <property name="setting_label">Autostart Phage Lite When Kodi Starts</property>
                           <property name="setting_type">boolean</property>
                           <property name="setting_value">$INFO[Window(10000).Property(phage-lite.auto_start_phage-lite)]</property>
                           <property name="setting_description">Enable this and Phage Lite will autostart after running its services upon Kodi start</property>
