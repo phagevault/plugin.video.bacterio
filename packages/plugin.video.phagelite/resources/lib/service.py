@@ -220,7 +220,7 @@ class AddonXMLCheck:
 		from indexers.dialogs import addon_icon_choice
 		addon_icon_choice({'set_icon': get_setting('addon_icon_choice_name', 'phagelite_icon_01.png')})
 
-class FenLightMonitor(Monitor):
+class PhageLiteMonitor(Monitor):
 	def __init__ (self):
 		Monitor.__init__(self)
 		self.startServices()
@@ -246,5 +246,5 @@ class FenLightMonitor(Monitor):
 			kodi_utils.logger('OnNotificationActions', 'UNPAUSING Fen Light Services Due to Device Awake')
 
 kodi_utils.logger('Fen Light', 'Main Monitor Service Starting')
-FenLightMonitor().waitForAbort()
+PhageLiteMonitor().waitForAbort()
 kodi_utils.logger('Fen Light', 'Main Monitor Service Finished')
