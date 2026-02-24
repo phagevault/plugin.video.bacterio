@@ -1,0 +1,30 @@
+name: Build Package
+on:
+  workflow_call:
+    inputs:
+      version:
+        required: true
+        type: string
+
+env:
+  PLUGIN_NAME: plugin.video.phagelite
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Zip
+        run: |
+          (
+            cd ./packages
+            zip -r "../$PLUGIN_NAME-${{ inputs.version }}.zip" ./$PLUGIN_NAME
+          )
+        shell: bash
+      - name: "Upload Artifact"
+        uses: actions/upload-artifact@v4
+        with:
+          name: $PLUGIN_NAME
+          path: ./$PLUGIN_NAME-${{ inputs.version }}.zip
+          retention-days: 1
