@@ -5,6 +5,13 @@ on:
       version:
         required: true
         type: string
+      type:
+        required: true
+        type: choice
+        options:
+          - debug
+          - release
+          - beta
   workflow_call:
     inputs:
       version:
@@ -17,21 +24,33 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      suffix: ${{ steps.suffix.outputs.value }}
     steps:
+      - name: Set suffix
+        id: suffix
+        run: |
+          if [ "${{ inputs.type }}" != "release" ]; then
+            echo "value=-${{ inputs.type }}" >> $GITHUB_OUTPUT
+          else
+            echo "value=" >> $GITHUB_OUTPUT
+          fi
+
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Zip
         run: |
           (
             cd ./packages
-            zip -r "../$PLUGIN_NAME-${{ inputs.version }}.zip" ./$PLUGIN_NAME
+            zip -r "../$PLUGIN_NAME-${{ inputs.version }}${{ steps.suffix.outputs.value }}.zip" ./$PLUGIN_NAME
           )
         shell: bash
       - name: "Upload Artifact"
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.PLUGIN_NAME }}
-          path: ./${{ env.PLUGIN_NAME }}-${{ inputs.version }}.zip
+          path: ./${{ env.PLUGIN_NAME }}-${{ inputs.version }}${{ steps.suffix.outputs.value }}.zip
           retention-days: 1
 
   release:
@@ -49,8 +68,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "${{ inputs.version }}" ${{ steps.download.outputs.download-path }}/*/*.zip \
-              --title="${{ inputs.version }}" \
+          gh release create "${{ inputs.version }}${{ needs.build.outputs.suffix }}" ${{ steps.download.outputs.download-path }}/*/*.zip \
+              --title="${{ inputs.version }}${{ needs.build.outputs.suffix }}" \
               --generate-notes
         shell: bash
 
