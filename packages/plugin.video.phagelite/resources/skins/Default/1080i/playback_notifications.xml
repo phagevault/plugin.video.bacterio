@@ -54,7 +54,7 @@
                     <width>284</width>
                     <height>35</height>
                     <align>center</align>
-                    <font>font10</font> <!-- FENLIGHT_21 -->
+                    <font>font10</font> <!-- PHAGELITE_21 -->
                     <textcolor>FFFFFFFF</textcolor>
                     <label>[B]$INFO[Window.Property(episode_status.label)][/B]</label>
                 </control>
@@ -81,7 +81,7 @@
                     <aligny>center</aligny>
                     <height>40</height>
                     <label>[B]Next Episode In $INFO[Player.TimeRemaining()][/B]</label>
-                    <font>font14</font> <!-- FENLIGHT_33 -->
+                    <font>font14</font> <!-- PHAGELITE_33 -->
                     <textcolor>FFB7B4BB</textcolor>
                 </control>
                 <!-- Waiting For Input -->
@@ -91,7 +91,7 @@
                     <aligny>center</aligny>
                     <height>40</height>
                     <label>[B]Waiting for Input $INFO[Window.Property(pause_timer)][/B]</label>
-                    <font>font14</font> <!-- FENLIGHT_33 -->
+                    <font>font14</font> <!-- PHAGELITE_33 -->
                     <textcolor>FFB7B4BB</textcolor>
                 </control>
             </control>
@@ -105,7 +105,7 @@
                     <aligny>center</aligny>
                     <height>40</height>
                     <label>[B]Still Watching?...$INFO[Window.Property(pause_timer)][/B]</label>
-                    <font>font14</font> <!-- FENLIGHT_33 -->
+                    <font>font14</font> <!-- PHAGELITE_33 -->
                     <textcolor>FFB7B4BB</textcolor>
                 </control>
             </control>
@@ -119,7 +119,7 @@
                     <aligny>center</aligny>
                     <height>40</height>
                     <label>[B]Keep Watching During Credits....[/B]</label>
-                    <font>font14</font> <!-- FENLIGHT_33 -->
+                    <font>font14</font> <!-- PHAGELITE_33 -->
                     <textcolor>FFB7B4BB</textcolor>
                 </control>
             </control>
@@ -136,7 +136,7 @@
                     <align>center</align>
                     <aligny>center</aligny>
                     <label>$INFO[Window.Property(episode_label)]</label>
-                    <font>font10</font> <!-- FENLIGHT_21 -->
+                    <font>font10</font> <!-- PHAGELITE_21 -->
                     <textcolor>FFB7B4BB</textcolor>
                 </control>
                 <!-- Buttons -->
@@ -154,7 +154,7 @@
                         <onleft>12</onleft>
                         <onright>11</onright>
                         <label>Close</label>
-                        <font>font10</font> <!-- FENLIGHT_21 -->
+                        <font>font10</font> <!-- PHAGELITE_21 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <focusedcolor>FF1F2020</focusedcolor>
                         <texturefocus colordiffuse="FFCCCCCC" border="30">phagelite_common/circle.png</texturefocus>
@@ -169,7 +169,7 @@
                         <onleft>10</onleft>
                         <onright>12</onright>
                         <label>Play</label>
-                        <font>font10</font> <!-- FENLIGHT_21 -->
+                        <font>font10</font> <!-- PHAGELITE_21 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <focusedcolor>FF1F2020</focusedcolor>
                         <texturefocus colordiffuse="FFCCCCCC" border="30">phagelite_common/circle.png</texturefocus>
@@ -184,7 +184,7 @@
                         <onleft>11</onleft>
                         <onright>10</onright>
                         <label>Cancel</label>
-                        <font>font10</font> <!-- FENLIGHT_21 -->
+                        <font>font10</font> <!-- PHAGELITE_21 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <focusedcolor>FF1F2020</focusedcolor>
                         <texturefocus colordiffuse="FFCCCCCC" border="30">phagelite_common/circle.png</texturefocus>
@@ -207,7 +207,7 @@
                     <align>center</align>
                     <aligny>center</aligny>
                     <label>$INFO[Window.Property(episode_label)]</label>
-                    <font>font10</font> <!-- FENLIGHT_21 -->
+                    <font>font10</font> <!-- PHAGELITE_21 -->
                     <textcolor>FFB7B4BB</textcolor>
                 </control>
                 <!-- Buttons -->
@@ -225,7 +225,7 @@
                         <onleft>12</onleft>
                         <onright>11</onright>
                         <label>Yes</label>
-                        <font>font10</font> <!-- FENLIGHT_21 -->
+                        <font>font10</font> <!-- PHAGELITE_21 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <focusedcolor>FF1F2020</focusedcolor>
                         <texturefocus colordiffuse="FFCCCCCC" border="30">phagelite_common/circle.png</texturefocus>
@@ -240,7 +240,7 @@
                         <onleft>10</onleft>
                         <onright>12</onright>
                         <label>No</label>
-                        <font>font10</font> <!-- FENLIGHT_21 -->
+                        <font>font10</font> <!-- PHAGELITE_21 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <focusedcolor>FF1F2020</focusedcolor>
                         <texturefocus colordiffuse="FFCCCCCC" border="30">phagelite_common/circle.png</texturefocus>
@@ -274,7 +274,7 @@
                         <align>left</align>
                         <aligny>center</aligny>
                         <label>During Credits Stinger</label>
-                        <font>font14</font> <!-- FENLIGHT_33 -->
+                        <font>font14</font> <!-- PHAGELITE_33 -->
                         <textcolor>FFB7B4BB</textcolor>
                     </control>
                     <control type="image" id="201">
@@ -295,7 +295,7 @@
                         <align>left</align>
                         <aligny>center</aligny>
                         <label>After Credits Stinger</label>
-                        <font>font14</font> <!-- FENLIGHT_33 -->
+                        <font>font14</font> <!-- PHAGELITE_33 -->
                         <textcolor>FFB7B4BB</textcolor>
                     </control>
                 </control>
