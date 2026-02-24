@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-# TRUMP WON
 import xbmc, xbmcgui, xbmcplugin, xbmcvfs, xbmcaddon
 import os
 from urllib.parse import urlencode, unquote
