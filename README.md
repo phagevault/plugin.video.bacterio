@@ -1,4 +1,4 @@
-Site Link: <https://phagelite.github.io/>
+Site Link: <https://phage-lite.github.io/>
 
 
 ## Disclaimer
