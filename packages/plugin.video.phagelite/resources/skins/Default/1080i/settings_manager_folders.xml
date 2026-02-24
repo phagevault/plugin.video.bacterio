@@ -8,7 +8,7 @@
             <top>0</top>
             <width>1920</width>
             <height>1080</height>
-            <texture colordiffuse="FF000000">fenlight_common/white.png</texture>
+            <texture colordiffuse="FF000000">phagelite_common/white.png</texture>
             <animation effect="fade" end="80" time="120">WindowOpen</animation>
         </control>
         <control type="group">
@@ -22,12 +22,12 @@
                     <top>-2</top>
                     <width>1544</width>
                     <height>574</height>
-                    <texture colordiffuse="FFCCCCCC" border="30">fenlight_common/circle.png</texture>
+                    <texture colordiffuse="FFCCCCCC" border="30">phagelite_common/circle.png</texture>
                 </control>
                 <control type="image">
                     <width>1540</width>
                     <height>570</height>
-                    <texture colordiffuse="FF1F2020" border="30">fenlight_common/circle.png</texture>
+                    <texture colordiffuse="FF1F2020" border="30">phagelite_common/circle.png</texture>
                 </control>
                 <control type="image">
                     <left>12</left>
@@ -37,7 +37,7 @@
                     <align>left</align>
                     <aligny>top</aligny>
                     <aspectratio aligny="top">keep</aspectratio>
-                    <texture colordiffuse="FFCCCCCC">$INFO[Window(10000).Property(fenlight.addon_icon_mini)]</texture>
+                    <texture colordiffuse="FFCCCCCC">$INFO[Window(10000).Property(phagelite.addon_icon_mini)]</texture>
                 </control>
                 <control type="label">
                     <width max="1700">auto</width>
@@ -80,7 +80,7 @@
                         <height>85</height>
                         <control type="image">
                             <width>300</width>
-                            <texture colordiffuse="FFCCCCCC" border="30">fenlight_common/circle.png</texture>
+                            <texture colordiffuse="FFCCCCCC" border="30">phagelite_common/circle.png</texture>
                         </control>
                     </control>
                     <control type="label">
@@ -153,7 +153,7 @@
                         <visible>Control.HasFocus(2101)</visible>
                         <height>85</height>
                         <width>1160</width>
-                        <texture colordiffuse="FFCCCCCC" border="30">fenlight_common/circle.png</texture>
+                        <texture colordiffuse="FFCCCCCC" border="30">phagelite_common/circle.png</texture>
                     </control>
                     <!-- LABEL -->
                     <control type="group">
@@ -212,122 +212,122 @@
                     <item>
                         <visible>Container(2001).HasFocus(10)</visible>
                         <property name="setting_label">Display Name</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(fenlight.folder1.display_name)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.fenlight/?mode=settings_manager.set_string&amp;setting_id=folder1.display_name)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(phagelite.folder1.display_name)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.phagelite/?mode=settings_manager.set_string&amp;setting_id=folder1.display_name)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(10)</visible>
                         <property name="setting_label">Movies Directory</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(fenlight.folder1.movies_directory)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.fenlight/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder1.movies_directory)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(phagelite.folder1.movies_directory)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.phagelite/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder1.movies_directory)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(10)</visible>
                         <property name="setting_label">TV Shows Directory</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(fenlight.folder1.tv_shows_directory)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.fenlight/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder1.tv_shows_directory)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(phagelite.folder1.tv_shows_directory)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.phagelite/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder1.tv_shows_directory)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(10)</visible>
                         <property name="setting_label">Restore Default</property>
                         <property name="setting_value">...</property>
-                        <onclick>RunPlugin(plugin://plugin.video.fenlight/?mode=clear_sources_folder_choice&amp;setting_id=folder1)</onclick>
+                        <onclick>RunPlugin(plugin://plugin.video.phagelite/?mode=clear_sources_folder_choice&amp;setting_id=folder1)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(20)</visible>
                         <property name="setting_label">Display Name</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(fenlight.folder2.display_name)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.fenlight/?mode=settings_manager.set_string&amp;setting_id=folder2.display_name)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(phagelite.folder2.display_name)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.phagelite/?mode=settings_manager.set_string&amp;setting_id=folder2.display_name)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(20)</visible>
                         <property name="setting_label">Movies Directory</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(fenlight.folder2.movies_directory)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.fenlight/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder2.movies_directory)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(phagelite.folder2.movies_directory)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.phagelite/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder2.movies_directory)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(20)</visible>
                         <property name="setting_label">TV Shows Directory</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(fenlight.folder2.tv_shows_directory)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.fenlight/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder2.tv_shows_directory)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(phagelite.folder2.tv_shows_directory)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.phagelite/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder2.tv_shows_directory)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(20)</visible>
                         <property name="setting_label">Restore Default</property>
                         <property name="setting_value">...</property>
-                        <onclick>RunPlugin(plugin://plugin.video.fenlight/?mode=clear_sources_folder_choice&amp;setting_id=folder2)</onclick>
+                        <onclick>RunPlugin(plugin://plugin.video.phagelite/?mode=clear_sources_folder_choice&amp;setting_id=folder2)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(30)</visible>
                         <property name="setting_label">Display Name</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(fenlight.folder3.display_name)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.fenlight/?mode=settings_manager.set_string&amp;setting_id=folder3.display_name)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(phagelite.folder3.display_name)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.phagelite/?mode=settings_manager.set_string&amp;setting_id=folder3.display_name)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(30)</visible>
                         <property name="setting_label">Movies Directory</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(fenlight.folder3.movies_directory)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.fenlight/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder3.movies_directory)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(phagelite.folder3.movies_directory)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.phagelite/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder3.movies_directory)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(30)</visible>
                         <property name="setting_label">TV Shows Directory</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(fenlight.folder3.tv_shows_directory)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.fenlight/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder3.tv_shows_directory)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(phagelite.folder3.tv_shows_directory)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.phagelite/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder3.tv_shows_directory)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(30)</visible>
                         <property name="setting_label">Restore Default</property>
                         <property name="setting_value">...</property>
-                        <onclick>RunPlugin(plugin://plugin.video.fenlight/?mode=clear_sources_folder_choice&amp;setting_id=folder3)</onclick>
+                        <onclick>RunPlugin(plugin://plugin.video.phagelite/?mode=clear_sources_folder_choice&amp;setting_id=folder3)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(40)</visible>
                         <property name="setting_label">Display Name</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(fenlight.folder4.display_name)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.fenlight/?mode=settings_manager.set_string&amp;setting_id=folder4.display_name)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(phagelite.folder4.display_name)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.phagelite/?mode=settings_manager.set_string&amp;setting_id=folder4.display_name)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(40)</visible>
                         <property name="setting_label">Movies Directory</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(fenlight.folder4.movies_directory)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.fenlight/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder4.movies_directory)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(phagelite.folder4.movies_directory)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.phagelite/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder4.movies_directory)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(40)</visible>
                         <property name="setting_label">TV Shows Directory</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(fenlight.folder4.tv_shows_directory)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.fenlight/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder4.tv_shows_directory)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(phagelite.folder4.tv_shows_directory)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.phagelite/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder4.tv_shows_directory)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(40)</visible>
                         <property name="setting_label">Restore Default</property>
                         <property name="setting_value">...</property>
-                        <onclick>RunPlugin(plugin://plugin.video.fenlight/?mode=clear_sources_folder_choice&amp;setting_id=folder4)</onclick>
+                        <onclick>RunPlugin(plugin://plugin.video.phagelite/?mode=clear_sources_folder_choice&amp;setting_id=folder4)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(50)</visible>
                         <property name="setting_label">Display Name</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(fenlight.folder5.display_name)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.fenlight/?mode=settings_manager.set_string&amp;setting_id=folder5.display_name)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(phagelite.folder5.display_name)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.phagelite/?mode=settings_manager.set_string&amp;setting_id=folder5.display_name)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(50)</visible>
                         <property name="setting_label">Movies Directory</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(fenlight.folder5.movies_directory)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.fenlight/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder5.movies_directory)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(phagelite.folder5.movies_directory)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.phagelite/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder5.movies_directory)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(50)</visible>
                         <property name="setting_label">TV Shows Directory</property>
-                        <property name="setting_value">$INFO[Window(10000).Property(fenlight.folder5.tv_shows_directory)]</property>
-                        <onclick>RunPlugin(plugin://plugin.video.fenlight/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder5.tv_shows_directory)</onclick>
+                        <property name="setting_value">$INFO[Window(10000).Property(phagelite.folder5.tv_shows_directory)]</property>
+                        <onclick>RunPlugin(plugin://plugin.video.phagelite/?mode=settings_manager.set_source_folder_path&amp;setting_id=folder5.tv_shows_directory)</onclick>
                     </item>
                     <item>
                         <visible>Container(2001).HasFocus(50)</visible>
                         <property name="setting_label">Restore Default</property>
                         <property name="setting_value">...</property>
-                        <onclick>RunPlugin(plugin://plugin.video.fenlight/?mode=clear_sources_folder_choice&amp;setting_id=folder5)</onclick>
+                        <onclick>RunPlugin(plugin://plugin.video.phagelite/?mode=clear_sources_folder_choice&amp;setting_id=folder5)</onclick>
                     </item>
                 </content>
             </control>

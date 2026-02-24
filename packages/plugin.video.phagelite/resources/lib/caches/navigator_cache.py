@@ -167,7 +167,7 @@ class NavigatorCache:
 		for list_name, list_contents in main_items: self.set_list(list_name, 'default', list_contents)
 
 	def _get_list_prop(self, list_type):
-		return {'default': 'fenlight_%s_default', 'edited': 'fenlight_%s_edited', 'shortcut_folder': 'fenlight_%s_shortcut_folder'}[list_type]
+		return {'default': 'phagelite_%s_default', 'edited': 'phagelite_%s_edited', 'shortcut_folder': 'phagelite_%s_shortcut_folder'}[list_type]
 	
 	def random_movie_lists(self):
 		m_list = NavigatorCache.movie_list

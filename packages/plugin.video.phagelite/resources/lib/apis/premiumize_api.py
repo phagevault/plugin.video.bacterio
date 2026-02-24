@@ -14,7 +14,7 @@ from modules.kodi_utils import sleep, ok_dialog, progress_dialog, notification
 
 class PremiumizeAPI:
 	def __init__(self):
-		self.token = get_setting('fenlight.pm.token', 'empty_setting')
+		self.token = get_setting('phagelite.pm.token', 'empty_setting')
 
 	def auth(self):
 		self.token = ''

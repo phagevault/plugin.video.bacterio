@@ -80,8 +80,8 @@ def build_episode_list(params):
 				listitem.setArt({'poster': show_poster, 'fanart': show_fanart, 'thumb': thumb, 'icon':thumb, 'clearlogo': show_clearlogo, 'landscape': show_landscape,
 								'season.poster': season_poster, 'tvshow.poster': show_poster, 'tvshow.clearlogo': show_clearlogo})
 				set_properties({
-					'episode_type': episode_type, 'fenlight.extras_params': extras_params, 'fenlight.options_params': options_params,
-					'fenlight.playback_options_params': playback_options_params
+					'episode_type': episode_type, 'phagelite.extras_params': extras_params, 'phagelite.options_params': options_params,
+					'phagelite.playback_options_params': playback_options_params
 					})
 				yield (play_params, listitem, False)
 			except: pass
@@ -142,7 +142,7 @@ def build_single_episode(list_type, params={}):
 		try:
 			cat_name = {'episode.progress': 'In Progress Episodes',
 						'episode.recently_watched': 'Recently Watched Episodes',
-						'episode.next_trakt': 'Next Episodes', 'episode.next_fenlight': 'Next Episodes',
+						'episode.next_trakt': 'Next Episodes', 'episode.next_phagelite': 'Next Episodes',
 						'episode.trakt': {'true': 'Recently Aired Episodes', None: 'Trakt Calendar'}}[list_type]
 			if isinstance(cat_name, dict): cat_name = cat_name[params.get('recently_aired')]
 		except: cat_name = 'Episodes'
@@ -283,8 +283,8 @@ def build_single_episode(list_type, params={}):
 			listitem.setArt({'poster': show_poster, 'fanart': show_fanart, 'thumb': thumb, 'icon':thumb, 'clearlogo': show_clearlogo, 'landscape': show_landscape,
 							'season.poster': season_poster, 'tvshow.poster': show_poster, 'tvshow.clearlogo': show_clearlogo})
 			set_properties({
-				'episode_type': episode_type, 'fenlight.extras_params': extras_params, 'fenlight.options_params': options_params,
-				'fenlight.playback_options_params': playback_options_params
+				'episode_type': episode_type, 'phagelite.extras_params': extras_params, 'phagelite.options_params': options_params,
+				'phagelite.playback_options_params': playback_options_params
 				})
 			item_list_append({'list_items': (play_params, listitem, False), 'first_aired': premiered, 'name': '%s - %sx%s' % (title, str_season_zfill2, str_episode_zfill2),
 							'unaired': unaired, 'last_played': ep_data_get('last_played', resinsert), 'sort_order': _position, 'unwatched': ep_data_get('unwatched')})
@@ -319,7 +319,7 @@ def build_single_episode(list_type, params={}):
 		hidden_list = ws.get_hidden_progress_items(watched_indicators)
 		if hidden_list: data = [i for i in data if not i['media_ids']['tmdb'] in hidden_list]
 		if watched_indicators == 1: resformat, resinsert, list_type = '%Y-%m-%dT%H:%M:%S.%fZ', '2000-01-01T00:00:00.000Z', 'episode.next_trakt'
-		else: resformat, resinsert, list_type = '%Y-%m-%d %H:%M:%S', '2000-01-01 00:00:00', 'episode.next_fenlight'
+		else: resformat, resinsert, list_type = '%Y-%m-%d %H:%M:%S', '2000-01-01 00:00:00', 'episode.next_phagelite'
 		if include_unwatched != 0:
 			if include_unwatched in (1, 3):
 				from apis.trakt_api import trakt_watchlist

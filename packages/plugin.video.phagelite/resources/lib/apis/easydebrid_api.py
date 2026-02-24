@@ -12,7 +12,7 @@ session = make_session('https://easydebrid.com/api/v1/')
 
 class EasyDebridAPI:
 	def __init__(self):
-		self.token = get_setting('fenlight.ed.token')
+		self.token = get_setting('phagelite.ed.token')
 		self.base_url = 'https://easydebrid.com/api/v1/'
 
 	def _get(self, url, data={}):

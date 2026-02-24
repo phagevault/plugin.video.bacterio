@@ -5,7 +5,7 @@ from modules.kodi_utils import external, get_property
 # from modules.kodi_utils import logger
 
 def sys_exit_check():
-	if get_property('fenlight.reuse_language_invoker') == 'false': return False
+	if get_property('phagelite.reuse_language_invoker') == 'false': return False
 	return external()
 
 def routing(sys):

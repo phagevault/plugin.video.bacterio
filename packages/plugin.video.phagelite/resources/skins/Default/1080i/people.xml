@@ -7,7 +7,7 @@
             <width>1920</width>
             <height>1080</height>
             <control type="image">
-                <texture colordiffuse="FF000000">fenlight_common/white.png</texture>
+                <texture colordiffuse="FF000000">phagelite_common/white.png</texture>
             </control>
             <control type="image">
                 <texture>$INFO[Window.Property(fanart)]</texture>
@@ -25,7 +25,7 @@
                     <width>60</width>
                     <height>60</height>
                     <aspectratio aligny="top">keep</aspectratio>
-                    <texture>$INFO[Window(10000).Property(fenlight.addon_icon_mini)]</texture>
+                    <texture>$INFO[Window(10000).Property(phagelite.addon_icon_mini)]</texture>
                 </control>
                 <control type="group">
                     <visible>!Control.HasFocus(2050) + !Control.HasFocus(2051) + !Control.HasFocus(2053)</visible>
@@ -62,7 +62,7 @@
                         <width>35</width>
                         <height>35</height>
                         <aspectratio>keep</aspectratio>
-                        <texture>fenlight_common/info.png</texture>
+                        <texture>phagelite_common/info.png</texture>
                     </control>
                     <control type="label">
                         <width max="600">auto</width>
@@ -95,7 +95,7 @@
                     <width>650</width>
                     <height>1000</height>
                     <aspectratio aligny="top">stretch</aspectratio>
-                    <texture diffuse="fenlight_diffuse/poster_w217_h320.png" background="true">$INFO[Window.Property(image)]</texture>
+                    <texture diffuse="phagelite_diffuse/poster_w217_h320.png" background="true">$INFO[Window.Property(image)]</texture>
                 </control>
             </control>
             <!-- Top 2 Lines Info -->
@@ -150,8 +150,8 @@
                             <font>font13</font> <!-- FENLIGHT_30 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <focusedcolor>FF1F2020</focusedcolor>
-                            <texturefocus colordiffuse="FFCCCCCC" border="30">fenlight_common/circle.png</texturefocus>
-                            <texturenofocus colordiffuse="FF1F2020" border="30">fenlight_common/circle.png</texturenofocus>
+                            <texturefocus colordiffuse="FFCCCCCC" border="30">phagelite_common/circle.png</texturefocus>
+                            <texturenofocus colordiffuse="FF1F2020" border="30">phagelite_common/circle.png</texturenofocus>
                             <align>center</align>
                             <aligny>center</aligny>
                         </control>
@@ -167,8 +167,8 @@
                             <font>font13</font> <!-- FENLIGHT_30 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <focusedcolor>FF1F2020</focusedcolor>
-                            <texturefocus colordiffuse="FFCCCCCC" border="30">fenlight_common/circle.png</texturefocus>
-                            <texturenofocus colordiffuse="FF1F2020" border="30">fenlight_common/circle.png</texturenofocus>
+                            <texturefocus colordiffuse="FFCCCCCC" border="30">phagelite_common/circle.png</texturefocus>
+                            <texturenofocus colordiffuse="FF1F2020" border="30">phagelite_common/circle.png</texturenofocus>
                             <align>center</align>
                             <aligny>center</aligny>
                         </control>
@@ -184,8 +184,8 @@
                             <font>font13</font> <!-- FENLIGHT_30 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <focusedcolor>FF1F2020</focusedcolor>
-                            <texturefocus colordiffuse="FFCCCCCC" border="30">fenlight_common/circle.png</texturefocus>
-                            <texturenofocus colordiffuse="FF1F2020" border="30">fenlight_common/circle.png</texturenofocus>
+                            <texturefocus colordiffuse="FFCCCCCC" border="30">phagelite_common/circle.png</texturefocus>
+                            <texturenofocus colordiffuse="FF1F2020" border="30">phagelite_common/circle.png</texturenofocus>
                             <align>center</align>
                             <aligny>center</aligny>
                             <visible>String.IsEqual(Window.Property(easynews_authorized),true)</visible>
@@ -203,8 +203,8 @@
                             <font>font13</font> <!-- FENLIGHT_30 -->
                             <textcolor>FFCCCCCC</textcolor>
                             <focusedcolor>FF1F2020</focusedcolor>
-                            <texturefocus colordiffuse="FFCCCCCC" border="30">fenlight_common/circle.png</texturefocus>
-                            <texturenofocus colordiffuse="FF1F2020" border="30">fenlight_common/circle.png</texturenofocus>
+                            <texturefocus colordiffuse="FFCCCCCC" border="30">phagelite_common/circle.png</texturefocus>
+                            <texturenofocus colordiffuse="FF1F2020" border="30">phagelite_common/circle.png</texturenofocus>
                             <align>center</align>
                             <aligny>center</aligny>
                         </control>
@@ -230,8 +230,8 @@
                             <height>390</height>
                             <onup>10</onup>
                             <ondown>2050</ondown>
-                            <texturefocus colordiffuse="FFCCCCCC" border="30">fenlight_common/circle.png</texturefocus>
-                            <texturenofocus colordiffuse="FF1F2020" border="30">fenlight_common/circle.png</texturenofocus>
+                            <texturefocus colordiffuse="FFCCCCCC" border="30">phagelite_common/circle.png</texturefocus>
+                            <texturenofocus colordiffuse="FF1F2020" border="30">phagelite_common/circle.png</texturenofocus>
                         </control>
                         <control type="textbox">
                             <top>65</top>
@@ -302,7 +302,7 @@
                                     <height max="344">auto</height>
                                     <width max="220">auto</width>
                                     <aspectratio>scale</aspectratio>
-                                    <texture diffuse="fenlight_diffuse/poster_w217_h320.png" background="true">$INFO[ListItem.Property(thumbnail)]</texture>
+                                    <texture diffuse="phagelite_diffuse/poster_w217_h320.png" background="true">$INFO[ListItem.Property(thumbnail)]</texture>
                                 </control>
                             </itemlayout>
                             <focusedlayout height="360" width="236">
@@ -316,7 +316,7 @@
                                     <top>0</top>
                                     <height>360</height>
                                     <width>236</width>
-                                    <texture colordiffuse="FFCCCCCC" border="12" background="true">fenlight_common/panel-256-box.png</texture>
+                                    <texture colordiffuse="FFCCCCCC" border="12" background="true">phagelite_common/panel-256-box.png</texture>
                                     <visible>Control.HasFocus(2050) | Control.HasFocus(4050)</visible>
                                 </control>
                                 <control type="image">
@@ -325,7 +325,7 @@
                                     <height max="344">auto</height>
                                     <width max="220">auto</width>
                                     <aspectratio>scale</aspectratio>
-                                    <texture diffuse="fenlight_diffuse/poster_w217_h320.png" background="true">$INFO[ListItem.Property(thumbnail)]</texture>
+                                    <texture diffuse="phagelite_diffuse/poster_w217_h320.png" background="true">$INFO[ListItem.Property(thumbnail)]</texture>
                                 </control>
                             </focusedlayout>
                         </control>
@@ -336,9 +336,9 @@
                             <height>15</height>
                             <onup>2050</onup>
                             <ondown>2051</ondown>
-                            <texturesliderbackground colordiffuse="FF1F2020">fenlight_common/white.png</texturesliderbackground>
-                            <texturesliderbar colordiffuse="FF555556">fenlight_common/white.png</texturesliderbar>
-                            <texturesliderbarfocus colordiffuse="FFCCCCCC">fenlight_common/white.png</texturesliderbarfocus>
+                            <texturesliderbackground colordiffuse="FF1F2020">phagelite_common/white.png</texturesliderbackground>
+                            <texturesliderbar colordiffuse="FF555556">phagelite_common/white.png</texturesliderbar>
+                            <texturesliderbarfocus colordiffuse="FFCCCCCC">phagelite_common/white.png</texturesliderbarfocus>
                             <showonepage>false</showonepage>
                             <orientation>Horizontal</orientation>
                             <visible>String.IsEqual(Window.Property(enable_scrollbars),true) + Control.IsVisible(2050) + [Control.HasFocus(2050) | Control.HasFocus(4050)]</visible>
@@ -348,7 +348,7 @@
                             <left>20</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true">fenlight_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true">phagelite_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2050) | Control.HasFocus(4050)] + Container(2050).HasPrevious</visible>
                         </control>
                         <control type="image">
@@ -356,7 +356,7 @@
                             <left>1135</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">fenlight_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">phagelite_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2050) | Control.HasFocus(4050)] + Container(2050).HasNext</visible>
                         </control>
                     </control>
@@ -402,7 +402,7 @@
                                     <height max="344">auto</height>
                                     <width max="220">auto</width>
                                     <aspectratio>scale</aspectratio>
-                                    <texture diffuse="fenlight_diffuse/poster_w217_h320.png" background="true">$INFO[ListItem.Property(thumbnail)]</texture>
+                                    <texture diffuse="phagelite_diffuse/poster_w217_h320.png" background="true">$INFO[ListItem.Property(thumbnail)]</texture>
                                 </control>
                             </itemlayout>
                             <focusedlayout height="360" width="236">
@@ -416,7 +416,7 @@
                                     <top>0</top>
                                     <height>360</height>
                                     <width>236</width>
-                                    <texture colordiffuse="FFCCCCCC" border="12" background="true">fenlight_common/panel-256-box.png</texture>
+                                    <texture colordiffuse="FFCCCCCC" border="12" background="true">phagelite_common/panel-256-box.png</texture>
                                     <visible>Control.HasFocus(2051) | Control.HasFocus(4051)</visible>
                                 </control>
                                 <control type="image">
@@ -425,7 +425,7 @@
                                     <height max="344">auto</height>
                                     <width max="220">auto</width>
                                     <aspectratio>scale</aspectratio>
-                                    <texture diffuse="fenlight_diffuse/poster_w217_h320.png" background="true">$INFO[ListItem.Property(thumbnail)]</texture>
+                                    <texture diffuse="phagelite_diffuse/poster_w217_h320.png" background="true">$INFO[ListItem.Property(thumbnail)]</texture>
                                 </control>
                             </focusedlayout>
                         </control>
@@ -436,9 +436,9 @@
                             <height>15</height>
                             <onup>2051</onup>
                             <ondown>2052</ondown>
-                            <texturesliderbackground colordiffuse="FF1F2020">fenlight_common/white.png</texturesliderbackground>
-                            <texturesliderbar colordiffuse="FF555556">fenlight_common/white.png</texturesliderbar>
-                            <texturesliderbarfocus colordiffuse="FFCCCCCC">fenlight_common/white.png</texturesliderbarfocus>
+                            <texturesliderbackground colordiffuse="FF1F2020">phagelite_common/white.png</texturesliderbackground>
+                            <texturesliderbar colordiffuse="FF555556">phagelite_common/white.png</texturesliderbar>
+                            <texturesliderbarfocus colordiffuse="FFCCCCCC">phagelite_common/white.png</texturesliderbarfocus>
                             <showonepage>false</showonepage>
                             <orientation>Horizontal</orientation>
                             <visible>String.IsEqual(Window.Property(enable_scrollbars),true) + Control.IsVisible(2051) + [Control.HasFocus(2051) | Control.HasFocus(4051)]</visible>
@@ -448,7 +448,7 @@
                             <left>20</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true">fenlight_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true">phagelite_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2051) | Control.HasFocus(4050)] + Container(2051).HasPrevious</visible>
                         </control>
                         <control type="image">
@@ -456,7 +456,7 @@
                             <left>1135</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">fenlight_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">phagelite_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2051) | Control.HasFocus(4051)] + Container(2051).HasNext</visible>
                         </control>
                     </control>
@@ -488,7 +488,7 @@
                                 <control type="image">
                                     <height>360</height>
                                     <width>580</width>
-                                    <texture colordiffuse="FF1F2020" border="30" background="true">fenlight_common/circle.png</texture>
+                                    <texture colordiffuse="FF1F2020" border="30" background="true">phagelite_common/circle.png</texture>
                                 </control>
                                 <control type="textbox">
                                     <top>15</top>
@@ -507,7 +507,7 @@
                                 <control type="image">
                                     <height>360</height>
                                     <width>580</width>
-                                    <texture colordiffuse="FFCCCCCC" border="30" background="true">fenlight_common/circle.png</texture>
+                                    <texture colordiffuse="FFCCCCCC" border="30" background="true">phagelite_common/circle.png</texture>
                                 </control>
                                 <control type="textbox">
                                     <top>15</top>
@@ -529,9 +529,9 @@
                             <height>15</height>
                             <onup>2052</onup>
                             <ondown>2053</ondown>
-                            <texturesliderbackground colordiffuse="FF1F2020">fenlight_common/white.png</texturesliderbackground>
-                            <texturesliderbar colordiffuse="FF555556">fenlight_common/white.png</texturesliderbar>
-                            <texturesliderbarfocus colordiffuse="FFCCCCCC">fenlight_common/white.png</texturesliderbarfocus>
+                            <texturesliderbackground colordiffuse="FF1F2020">phagelite_common/white.png</texturesliderbackground>
+                            <texturesliderbar colordiffuse="FF555556">phagelite_common/white.png</texturesliderbar>
+                            <texturesliderbarfocus colordiffuse="FFCCCCCC">phagelite_common/white.png</texturesliderbarfocus>
                             <showonepage>false</showonepage>
                             <orientation>Horizontal</orientation>
                             <visible>String.IsEqual(Window.Property(enable_scrollbars),true) + Control.IsVisible(2052) + [Control.HasFocus(2052) | Control.HasFocus(4052)]</visible>
@@ -541,7 +541,7 @@
                             <left>20</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true">fenlight_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true">phagelite_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2052) | Control.HasFocus(4052)] + Container(2052).HasPrevious</visible>
                         </control>
                         <control type="image">
@@ -549,7 +549,7 @@
                             <left>1125</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">fenlight_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">phagelite_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2052) | Control.HasFocus(4052)] + Container(2052).HasNext</visible>
                         </control>
                     </control>
@@ -595,7 +595,7 @@
                                     <height max="344">auto</height>
                                     <width max="220">auto</width>
                                     <aspectratio>scale</aspectratio>
-                                    <texture diffuse="fenlight_diffuse/poster_w217_h320.png" background="true">$INFO[ListItem.Property(thumbnail)]</texture>
+                                    <texture diffuse="phagelite_diffuse/poster_w217_h320.png" background="true">$INFO[ListItem.Property(thumbnail)]</texture>
                                 </control>
                             </itemlayout>
                             <focusedlayout height="360" width="236">
@@ -609,7 +609,7 @@
                                     <top>0</top>
                                     <height>360</height>
                                     <width>236</width>
-                                    <texture colordiffuse="FFCCCCCC" border="12" background="true">fenlight_common/panel-256-box.png</texture>
+                                    <texture colordiffuse="FFCCCCCC" border="12" background="true">phagelite_common/panel-256-box.png</texture>
                                     <visible>Control.HasFocus(2053) | Control.HasFocus(4053)</visible>
                                 </control>
                                 <control type="image">
@@ -618,7 +618,7 @@
                                     <height max="344">auto</height>
                                     <width max="220">auto</width>
                                     <aspectratio>scale</aspectratio>
-                                    <texture diffuse="fenlight_diffuse/poster_w217_h320.png" background="true">$INFO[ListItem.Property(thumbnail)]</texture>
+                                    <texture diffuse="phagelite_diffuse/poster_w217_h320.png" background="true">$INFO[ListItem.Property(thumbnail)]</texture>
                                 </control>
                             </focusedlayout>
                         </control>
@@ -629,9 +629,9 @@
                             <height>15</height>
                             <onup>2053</onup>
                             <ondown>10</ondown>
-                            <texturesliderbackground colordiffuse="FF1F2020">fenlight_common/white.png</texturesliderbackground>
-                            <texturesliderbar colordiffuse="FF555556">fenlight_common/white.png</texturesliderbar>
-                            <texturesliderbarfocus colordiffuse="FFCCCCCC">fenlight_common/white.png</texturesliderbarfocus>
+                            <texturesliderbackground colordiffuse="FF1F2020">phagelite_common/white.png</texturesliderbackground>
+                            <texturesliderbar colordiffuse="FF555556">phagelite_common/white.png</texturesliderbar>
+                            <texturesliderbarfocus colordiffuse="FFCCCCCC">phagelite_common/white.png</texturesliderbarfocus>
                             <showonepage>false</showonepage>
                             <orientation>Horizontal</orientation>
                             <visible>String.IsEqual(Window.Property(enable_scrollbars),true) + Control.IsVisible(2053) + [Control.HasFocus(2053) | Control.HasFocus(4053)]</visible>
@@ -641,7 +641,7 @@
                             <left>20</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true">fenlight_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true">phagelite_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2053) | Control.HasFocus(4053)] + Container(2053).HasPrevious</visible>
                         </control>
                         <control type="image">
@@ -649,7 +649,7 @@
                             <left>1135</left>
                             <width>25</width>
                             <height>25</height>
-                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">fenlight_common/arrow_left.png</texture>
+                            <texture colordiffuse="FFCCCCCC" background="true" flipx="true">phagelite_common/arrow_left.png</texture>
                             <visible>[Control.HasFocus(2053) | Control.HasFocus(4053)] + Container(2053).HasNext</visible>
                         </control>
                     </control>

@@ -8,9 +8,9 @@ from threading import Thread
 from caches.settings_cache import get_setting, set_setting, sync_settings
 from modules import kodi_utils
 
-pause_services_prop = 'fenlight.pause_services'
-firstrun_update_prop = 'fenlight.firstrun_update'
-current_skin_prop = 'fenlight.current_skin'
+pause_services_prop = 'phagelite.pause_services'
+firstrun_update_prop = 'phagelite.firstrun_update'
+current_skin_prop = 'phagelite.current_skin'
 trakt_service_string = 'TraktMonitor Service Update %s - %s'
 trakt_success_line_dict = {'success': 'Trakt Update Performed', 'no account': '(Unauthorized) Trakt Update Performed'}
 update_string = 'Next Update in %s minutes...'
@@ -20,14 +20,14 @@ class SetAddonConstants:
 		kodi_utils.logger('Fen Light', 'SetAddonConstants Service Starting')
 		import random
 		addon_items = [
-			('fenlight.playback_key', str(random.randint(1000, 10000))),
-			('fenlight.addon_version', kodi_utils.addon_info('version')),
-			('fenlight.addon_path', kodi_utils.addon_info('path')),
-			('fenlight.addon_profile', kodi_utils.translate_path(kodi_utils.addon_info('profile'))),
-			('fenlight.addon_icon', kodi_utils.translate_path(kodi_utils.addon_info('icon'))),
-			('fenlight.addon_icon_mini', os.path.join(kodi_utils.addon_info('path'), 'resources', 'media', 'addon_icons', 'minis',
+			('phagelite.playback_key', str(random.randint(1000, 10000))),
+			('phagelite.addon_version', kodi_utils.addon_info('version')),
+			('phagelite.addon_path', kodi_utils.addon_info('path')),
+			('phagelite.addon_profile', kodi_utils.translate_path(kodi_utils.addon_info('profile'))),
+			('phagelite.addon_icon', kodi_utils.translate_path(kodi_utils.addon_info('icon'))),
+			('phagelite.addon_icon_mini', os.path.join(kodi_utils.addon_info('path'), 'resources', 'media', 'addon_icons', 'minis',
 			os.path.basename(kodi_utils.translate_path(kodi_utils.addon_info('icon'))))),
-			('fenlight.addon_fanart', kodi_utils.translate_path(kodi_utils.addon_info('fanart')))
+			('phagelite.addon_fanart', kodi_utils.translate_path(kodi_utils.addon_info('fanart')))
 					]
 		for item in addon_items: kodi_utils.set_property(*item)
 		return kodi_utils.logger('Fen Light', 'SetAddonConstants Service Finished')
@@ -50,7 +50,7 @@ class OnUpdateChanges:
 		kodi_utils.logger('Fen Light', 'OnUpdateChanges Service Starting')
 		try:
 			for method in list(filter(lambda x: x[0] != 'run', inspect.getmembers(OnUpdateChanges, predicate=inspect.isfunction))):
-				if not get_setting('fenlight.updatechecks.%s' % method[0], 'false') == 'true':
+				if not get_setting('phagelite.updatechecks.%s' % method[0], 'false') == 'true':
 					method[1](self)
 					set_setting('updatechecks.%s' % method[0], 'true')
 		except: pass
@@ -101,7 +101,7 @@ class TraktMonitor:
 				else:
 					if status in ('success', 'no account'): kodi_utils.logger('Fen Light', trakt_service_string % ('Success. %s' % trakt_success_line_dict[status], next_update_string))
 					else: kodi_utils.logger('Fen Light', trakt_service_string % ('Success. No Changes Needed', next_update_string))# 'not needed'
-					if status == 'success' and get_setting('fenlight.trakt.refresh_widgets', 'false') == 'true': kodi_utils.run_plugin({'mode': 'kodi_refresh'})
+					if status == 'success' and get_setting('phagelite.trakt.refresh_widgets', 'false') == 'true': kodi_utils.run_plugin({'mode': 'kodi_refresh'})
 			except Exception as e: kodi_utils.logger('Fen Light', trakt_service_string % ('Failed', 'The following Error Occured: %s' % str(e)))
 			wait_for_abort(wait_time)
 		try: del monitor
@@ -142,7 +142,7 @@ class WidgetRefresher:
 		while not monitor.abortRequested():
 			try:
 				wait_for_abort(10)
-				offset = int(get_setting('fenlight.widget_refresh_timer', '60'))
+				offset = int(get_setting('phagelite.widget_refresh_timer', '60'))
 				if offset != self.offset:
 					self.set_next_refresh(time())
 					continue
@@ -162,15 +162,15 @@ class WidgetRefresher:
 		if not self.external(): return True
 
 		if self.next_refresh == None or self.is_playing() or kodi_utils.get_property(pause_services_prop) == 'true': return True
-		if kodi_utils.get_property('fenlight.window_loaded') == 'true': return True 
+		if kodi_utils.get_property('phagelite.window_loaded') == 'true': return True 
 		try:
-			window_stack = json.loads(kodi_utils.get_property('fenlight.window_stack'))
+			window_stack = json.loads(kodi_utils.get_property('phagelite.window_stack'))
 			if window_stack or window_stack == []: return True
 		except: pass
 		return False
 
 	def set_next_refresh(self, _time):
-		self.offset = int(get_setting('fenlight.widget_refresh_timer', '60'))
+		self.offset = int(get_setting('phagelite.widget_refresh_timer', '60'))
 		if self.offset: self.next_refresh = _time + (self.offset*60)
 		else: self.next_refresh = None
 
@@ -180,15 +180,15 @@ class WidgetRefresher:
 class AutoStart:
 	def run(self):
 		kodi_utils.logger('Fen Light', 'AutoStart Service Starting')
-		from modules.settings import auto_start_fenlight
-		if auto_start_fenlight(): kodi_utils.run_addon()
+		from modules.settings import auto_start_phagelite
+		if auto_start_phagelite(): kodi_utils.run_addon()
 		return kodi_utils.logger('Fen Light', 'AutoStart Service Finished')
 
 class AddonXMLCheck:
 	def run(self):
 		kodi_utils.logger('Fen Light', 'AddonXMLCheck Service Starting')
 		from xml.dom.minidom import parse as mdParse
-		self.addon_xml = kodi_utils.translate_path('special://home/addons/plugin.video.fenlight/addon.xml')
+		self.addon_xml = kodi_utils.translate_path('special://home/addons/plugin.video.phagelite/addon.xml')
 		self.root = mdParse(self.addon_xml)
 		self.change_list = []
 		self.check_property('reuse_language_invoker', 'reuselanguageinvoker')
@@ -197,7 +197,7 @@ class AddonXMLCheck:
 		return kodi_utils.logger('Fen Light', 'AddonXMLCheck Service Finished')
 
 	def check_property(self, setting, tag_name):
-		current_addon_setting = get_setting('fenlight.%s' % setting, None)
+		current_addon_setting = get_setting('phagelite.%s' % setting, None)
 		if current_addon_setting is None: return
 		tag_instance = self.root.getElementsByTagName(tag_name)[0].firstChild
 		current_property = tag_instance.data
@@ -218,7 +218,7 @@ class AddonXMLCheck:
 
 	def reassign_addon_icon(self):
 		from indexers.dialogs import addon_icon_choice
-		addon_icon_choice({'set_icon': get_setting('addon_icon_choice_name', 'fenlight_icon_01.png')})
+		addon_icon_choice({'set_icon': get_setting('addon_icon_choice_name', 'phagelite_icon_01.png')})
 
 class FenLightMonitor(Monitor):
 	def __init__ (self):

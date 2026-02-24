@@ -73,36 +73,36 @@ def kodi_dialog():
 	return xbmcgui.Dialog()
 
 def addon_info(info):
-	return xbmcaddon.Addon('plugin.video.fenlight').getAddonInfo(info)
+	return xbmcaddon.Addon('plugin.video.phagelite').getAddonInfo(info)
 
 def addon_version():
-	return get_property('fenlight.addon_version') or addon_info('version')
+	return get_property('phagelite.addon_version') or addon_info('version')
 
 def addon_path():
-	return get_property('fenlight.addon_path') or addon_info('path')
+	return get_property('phagelite.addon_path') or addon_info('path')
 
 def addon_profile():
-	return get_property('fenlight.addon_profile') or translate_path(addon_info('profile'))
+	return get_property('phagelite.addon_profile') or translate_path(addon_info('profile'))
 
 def addon_icon():
-	return get_property('fenlight.addon_icon') or translate_path(addon_info('icon'))
+	return get_property('phagelite.addon_icon') or translate_path(addon_info('icon'))
 
 def addon_icon_mini():
-	return get_property('fenlight.addon_icon_mini') or os.path.join(addon_info('path'), 'resources', 'media', 'addon_icons', 'minis',
+	return get_property('phagelite.addon_icon_mini') or os.path.join(addon_info('path'), 'resources', 'media', 'addon_icons', 'minis',
 														os.path.basename(translate_path(addon_info('icon'))))
 
 def addon_fanart():
-	return get_property('fenlight.addon_fanart') or translate_path(addon_info('fanart'))
+	return get_property('phagelite.addon_fanart') or translate_path(addon_info('fanart'))
 
 def get_icon(image_name, image_folder='icons'):
 	return 'https://raw.githubusercontent.com/%s/%s/main/packages/media/%s/%s.png' \
-			% (get_property('fenlight.update.username'), get_property('fenlight.update.location'), image_folder, image_name)
+			% (get_property('phagelite.update.username'), get_property('phagelite.update.location'), image_folder, image_name)
 
 def get_addon_fanart():
-	return get_property('fenlight.default_addon_fanart') or addon_fanart()
+	return get_property('phagelite.default_addon_fanart') or addon_fanart()
 
 def build_url(url_params):
-	return 'plugin://plugin.video.fenlight/?%s' % urlencode(url_params)
+	return 'plugin://plugin.video.phagelite/?%s' % urlencode(url_params)
 
 def add_dir(handle, url_params, list_name, icon_image='folder', fanart_image=None, isFolder=True):
 	fanart = fanart_image or get_addon_fanart()
@@ -134,10 +134,10 @@ def end_directory(handle, cacheToDisc=True):
 	xbmcplugin.endOfDirectory(handle, cacheToDisc=cacheToDisc)
 
 def set_view_mode(view_type, content='files', is_external=None):
-	if not get_property('fenlight.use_viewtypes') == 'true': return
+	if not get_property('phagelite.use_viewtypes') == 'true': return
 	if is_external == None: is_external = external()
 	if is_external: return
-	view_id = get_property('fenlight.%s' % view_type) or None
+	view_id = get_property('phagelite.%s' % view_type) or None
 	if not view_id: return
 	try:
 		hold = 0
@@ -179,7 +179,7 @@ def clear_property(prop):
 def clear_all_properties():
 	return kodi_window().clearProperties()
 
-def addon(addon_id='plugin.video.fenlight'):
+def addon(addon_id='plugin.video.phagelite'):
 	return xbmcaddon.Addon(id=addon_id)
 
 def addon_installed(addon_id):
@@ -267,11 +267,11 @@ def close_dialog(dialog, block=False):
 def close_all_dialog():
 	execute_builtin('Dialog.Close(all,true)')
 
-def run_addon(addon='plugin.video.fenlight', block=False):
+def run_addon(addon='plugin.video.phagelite', block=False):
 	return execute_builtin('RunAddon(%s)' % addon, block)
 
 def external():
-	return 'fenlight' not in get_infolabel('Container.PluginName')
+	return 'phagelite' not in get_infolabel('Container.PluginName')
 
 def home():
 	return xbmcgui.getCurrentWindowId() == 10000
@@ -293,7 +293,7 @@ def refresh_widgets():
 	from caches.random_widgets_cache import RandomWidgets
 	RandomWidgets().delete_like('random_list.%')
 	kodi_refresh()
-	if get_setting('fenlight.widget_refresh_notification', 'true') == 'true': notification('Widgets Refreshed', 2500)
+	if get_setting('phagelite.widget_refresh_notification', 'true') == 'true': notification('Widgets Refreshed', 2500)
 
 def run_plugin(params, block=False):
 	if isinstance(params, dict): params = build_url(params)
@@ -318,7 +318,7 @@ def replace_window(params, block=False):
 	if isinstance(params, dict): params = build_url(params)
 	return execute_builtin('ReplaceWindow(Videos,%s)' % params, block)
 
-def disable_enable_addon(addon_name='plugin.video.fenlight'):
+def disable_enable_addon(addon_name='plugin.video.phagelite'):
 	import json
 	try:
 		xbmc.executeJSONRPC(json.dumps({'jsonrpc': '2.0', 'id': 1, 'method': 'Addons.SetAddonEnabled', 'params': {'addonid': addon_name, 'enabled': False}}))
@@ -329,7 +329,7 @@ def update_local_addons():
 	execute_builtin('UpdateLocalAddons', True)
 	sleep(2500)
  
-def update_kodi_addons_db(addon_name='plugin.video.fenlight'):
+def update_kodi_addons_db(addon_name='plugin.video.phagelite'):
 	import time
 	import sqlite3 as database
 	try:
@@ -370,7 +370,7 @@ def open_settings():
 
 def external_scraper_settings():
 	try:
-		external = get_property('fenlight.external_scraper.module')
+		external = get_property('phagelite.external_scraper.module')
 		if external in ('empty_setting', ''): return
 		execute_builtin('Addon.OpenSettings(%s)' % external)
 	except: pass
@@ -445,9 +445,9 @@ def timeIt(func):
 def volume_checker():
 	# 0% == -60db, 100% == 0db
 	try:
-		if get_property('fenlight.playback.volumecheck_enabled') == 'false' or get_visibility('Player.Muted'): return
+		if get_property('phagelite.playback.volumecheck_enabled') == 'false' or get_visibility('Player.Muted'): return
 		from modules.utils import string_alphanum_to_num
-		max_volume = min(int(get_property('fenlight.playback.volumecheck_percent') or '50'), 100)
+		max_volume = min(int(get_property('phagelite.playback.volumecheck_percent') or '50'), 100)
 		if int(100 - (float(string_alphanum_to_num(get_infolabel('Player.Volume').split('.')[0]))/60)*100) > max_volume: execute_builtin('SetVolume(%d)' % max_volume)
 	except: pass
 
@@ -466,7 +466,7 @@ def get_all_icons():
 			results = [i['name'].replace('.png', '') for i in results.json()]
 			return results
 		except: return ['folder.png']
-	username, location = get_property('fenlight.update.username'), get_property('fenlight.update.location')
+	username, location = get_property('phagelite.update.username'), get_property('phagelite.update.location')
 	return cache_object(_process, 'all_icons', 'foo', False, 168)
 
 def get_all_addon_icons():
@@ -477,7 +477,7 @@ def get_all_addon_icons():
 			results = requests.get('https://api.github.com/repos/%s/%s/contents/packages/addon_icons' % (username, location))
 			return results
 		except: return []
-	username, location = get_property('fenlight.update.username'), get_property('fenlight.update.location')
+	username, location = get_property('phagelite.update.username'), get_property('phagelite.update.location')
 	return cache_object(_process, 'all_addon_icons', 'foo', True, 168)
 
 def upload_logfile(params):

@@ -53,7 +53,7 @@ class TVShows:
 			except: page_no = self.params_get('new_page')
 			if page_no == 1 and not self.is_external:
 				folder_path = kodi_utils.folder_path()
-				if not any([x in folder_path for x in ('build_season_list', 'build_episode_list')]): kodi_utils.set_property('fenlight.exit_params', folder_path)
+				if not any([x in folder_path for x in ('build_season_list', 'build_episode_list')]): kodi_utils.set_property('phagelite.exit_params', folder_path)
 			if self.action in self.personal: var_module, import_function = self.personal[self.action]
 			else: var_module, import_function = 'apis.%s_api' % self.action.split('_')[0], self.action
 			try: function = manual_function_import(var_module, import_function)
@@ -246,17 +246,17 @@ class TVShows:
 			cast = meta_get('short_cast', []) or meta_get('cast', []) or []
 			info_tag.setCast([self.kodi_actor(name=item['name'], role=item['role'], thumbnail=item['thumbnail']) for item in cast])
 			set_properties({
-				'fenlight.extras_params': extras_params,
-				'fenlight.options_params': options_params,
-				'fenlight.browse_recommended_params': browse_recommended_params,
-				'fenlight.browse_related_params': browse_related_params,
-				'fenlight.browse_more_like_this_params': browse_more_like_this_params,
-				'fenlight.browse_similar_params': browse_similar_params,
-				'fenlight.browse_in_trakt_list_params': browse_in_trakt_list_params,
-				'fenlight.trakt_manager_params': trakt_manager_params,
-				'fenlight.personal_manager_params': personal_manager_params,
-				'fenlight.tmdb_manager_params': tmdb_manager_params,
-				'fenlight.favorites_manager_params': favorites_manager_params
+				'phagelite.extras_params': extras_params,
+				'phagelite.options_params': options_params,
+				'phagelite.browse_recommended_params': browse_recommended_params,
+				'phagelite.browse_related_params': browse_related_params,
+				'phagelite.browse_more_like_this_params': browse_more_like_this_params,
+				'phagelite.browse_similar_params': browse_similar_params,
+				'phagelite.browse_in_trakt_list_params': browse_in_trakt_list_params,
+				'phagelite.trakt_manager_params': trakt_manager_params,
+				'phagelite.personal_manager_params': personal_manager_params,
+				'phagelite.tmdb_manager_params': tmdb_manager_params,
+				'phagelite.favorites_manager_params': favorites_manager_params
 				})
 			self.append(((url_params, listitem, self.is_folder), _position))
 		except: pass
