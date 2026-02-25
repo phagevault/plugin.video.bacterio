@@ -246,9 +246,6 @@ def routing(sys):
 	elif 'downloader.' in mode:
 		from modules import downloader
 		exec('downloader.%s(params)' % mode.split('.')[1])
-	elif 'updater' in mode:
-		from modules import updater
-		exec('updater.%s()' % mode.split('.')[1])
 	##EXTRA modes##
 	elif mode == 'set_view':
 		from modules.kodi_utils import set_view
