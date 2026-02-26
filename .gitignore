@@ -2,3 +2,6 @@
 /resources/lib/indexers/__pycache__
 /resources/lib/modules/__pycache__
 /resources/lib/windows/__pycache__
+/resources/lib/apis/__pycache__
+/resources/lib/scrapers/__pycache__
+/resources/lib/segno/__pycache__
