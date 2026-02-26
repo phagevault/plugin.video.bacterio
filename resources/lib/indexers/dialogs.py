@@ -51,46 +51,6 @@ def language_invoker_choice(params):
 	kodi_utils.update_local_addons()
 	kodi_utils.disable_enable_addon()
 
-def addon_icon_choice(params):
-	import os
-	import requests
-	import shutil
-	import urllib.request
-	from xml.dom.minidom import parse as mdParse
-	large_image_url = 'https://raw.githubusercontent.com/phagevault/phagevault.github.io/master/packages/addon_icons/%s'
-	small_image_url = large_image_url % '/minis/%s'
-	set_icon = params.get('set_icon')
-	if set_icon: new_name = set_icon
-	else:
-		try:
-			results = kodi_utils.get_all_addon_icons()
-			all_icons = [{'line1': i['name'], 'icon': large_image_url % i['name']} for i in results if i['type'] == 'file']
-			if not all_icons: kodi_utils.ok_dialog(heading='Bacterio Icon Images', text='Error Fetching Icon Images')
-			all_icons.sort(key=lambda k: k['line1'])
-			kwargs = {'items': json.dumps(all_icons), 'heading': 'Choose New Icon Image'}
-			new_icon = kodi_utils.select_dialog(all_icons, **kwargs)
-			if new_icon == None: return
-			if not kodi_utils.confirm_dialog(text='Set New Icon?'): return
-			new_name = new_icon['line1']
-		except: return kodi_utils.ok_dialog(heading='Bacterio Icon Images', text='Error Fetching Addon Icon Images') 
-	large_image_folder = os.path.join(kodi_utils.addon_path(), 'resources', 'media', 'addon_icons')
-	small_image_folder = os.path.join(large_image_folder, 'minis')
-	for item in [(large_image_folder, large_image_url), (small_image_folder, small_image_url)]:
-		urllib.request.urlretrieve(item[1] % new_name, kodi_utils.translate_path(os.path.join(item[0], new_name)))
-	new_icon_path = 'resources/media/addon_icons/%s' % new_name
-	addon_xml = kodi_utils.translate_path('special://home/addons/plugin.video.bacterio/addon.xml')
-	root = mdParse(addon_xml)
-	icon_instance = root.getElementsByTagName('icon')[0].firstChild
-	icon_instance.data = new_icon_path
-	new_xml = str(root.toxml()).replace('<?xml version="1.0" ?>', '')
-	with open(addon_xml, 'w') as f: f.write(new_xml)
-	set_setting('addon_icon_choice', new_icon_path)
-	set_setting('addon_icon_choice_name', new_name)
-	if set_icon: return
-	kodi_utils.execute_builtin('ActivateWindow(Home)', True)
-	kodi_utils.update_local_addons()
-	kodi_utils.disable_enable_addon()
-
 def context_menu_order_choice(params):
 	options = kodi_utils.context_menu_items()
 	default_control = params.get('default_control') or 11

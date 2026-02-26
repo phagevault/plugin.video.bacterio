@@ -315,6 +315,10 @@ def get_addon_fanart():
     return get_property("bacterio.default_addon_fanart") or addon_fanart()
 
 
+def get_default_addon_fanart():
+    return translate_path(addon_info("fanart"))
+
+
 def build_url(url_params):
     return "plugin://plugin.video.bacterio/?%s" % urlencode(url_params)
 
