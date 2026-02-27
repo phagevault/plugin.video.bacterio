@@ -2,6 +2,7 @@
 # Addon Name: Bacterio
 # Addon id: plugin.video.bacterio
 # Addon Provider: phage-zn
+# Addon macro: ?msgctxt2kVGyGp2jjvi"
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC-Addons\n"
