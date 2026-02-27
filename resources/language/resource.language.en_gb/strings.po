@@ -1,0 +1,121 @@
+# XBMC Media Center language file
+# Addon Name: Bacterio
+# Addon id: plugin.video.bacterio
+# Addon Provider: phage-zn
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC-Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
+"POT-Creation-Date: 2014-10-26 17:05+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+msgctxt "#30000"
+msgid "English"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30001"
+msgid "General"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30002"
+msgid "Settings"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30003"
+msgid "Open Bacterio Settings..."
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30004"
+msgid "Features"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30005"
+msgid "Extras"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30006"
+msgid "Enable Content For Extras Lists"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30007"
+msgid "Set Actions for Extras Buttons"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30008"
+msgid "Enable Extra Ratings"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30009"
+msgid "Enable Scrollbars for Extras Lists"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30010"
+msgid "Special Open Actions"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30011"
+msgid "Movies"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30012"
+msgid "Content"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30013"
+msgid "Authentication"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30014"
+msgid "Authenticate Trakt"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30015"
+msgid "Allow Trakt Token Access"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30016"
+msgid "Revoke Trakt"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30017"
+msgid "Results"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30018"
+msgid "Playback"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30019"
+msgid "Accounts"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30020"
+msgid "Trakt"
+msgstr ""
