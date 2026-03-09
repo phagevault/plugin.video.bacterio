@@ -170,12 +170,13 @@ def quality_filter(setting):
 
 
 def sort_to_top_filter(autoplay):
+    value = get_setting("bacterio.filter.sort_to_top", "none")
     return {
-        0: False,
-        1: False if autoplay else True,
-        2: True if autoplay else False,
-        3: True,
-    }[int(get_setting("bacterio.filter.sort_to_top", "0"))]
+        "none": False,
+        "source": False if autoplay else True,
+        "autoplay": True if autoplay else False,
+        "both": True,
+    }.get(value, False)
 
 
 def audio_filters():
@@ -193,7 +194,23 @@ def preferred_filters():
 
 
 def include_prerelease_results():
-    return int(get_setting("bacterio.filter.include_prerelease", "0")) == 0
+    # True = include pre-releases (filter is OFF); False = exclude them (filter is ON)
+    return get_setting("bacterio.filter.include_prerelease", "false") != "true"
+
+
+def filter_excluded(filter_type):
+    """Returns True if the filter is active (content should be excluded).
+    Used for boolean filters: 3d, hdr, dv, av1, enhanced_upscaled, hevc.
+    """
+    return get_setting("bacterio.filter.%s" % filter_type, "false") == "true"
+
+
+def filter_hevc_max_quality():
+    return get_setting("bacterio.filter.hevc.max_quality", "4K")
+
+
+def filter_hevc_max_autoplay_quality():
+    return get_setting("bacterio.filter.hevc.max_autoplay_quality", "4K")
 
 
 def auto_enable_subs():
@@ -283,10 +300,6 @@ def auto_nextep_settings(play_type):
         "use_chapters": use_chapters,
         "watching_check": watching_check,
     }
-
-
-def filter_status(filter_type):
-    return int(get_setting("bacterio.filter.%s" % filter_type, "0"))
 
 
 def limit_number_quality():

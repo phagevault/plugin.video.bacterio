@@ -453,29 +453,28 @@ class Sources:
         return [i for i in results if not any(x in i["extraInfo"] for x in a_filters)]
 
     def special_filter(self, results, file_type):
-        enable_setting, key = (
-            settings.filter_status(file_type),
-            self.filter_keys[file_type],
-        )
-        if key == "HEVC" and enable_setting == 0:
-            hevc_max_quality = self._get_quality_rank(
-                get_setting(
-                    "bacterio.filter.hevc.%s"
-                    % ("max_autoplay_quality" if self.autoplay else "max_quality"),
-                    "4K",
+        key = self.filter_keys[file_type]
+        excluded = settings.filter_excluded(file_type)
+
+        if key == "HEVC":
+            if excluded:
+                hevc_max_quality = self._get_quality_rank(
+                    settings.filter_hevc_max_autoplay_quality()
+                    if self.autoplay
+                    else settings.filter_hevc_max_quality()
                 )
-            )
-            results = [
-                i
-                for i in results
-                if key not in i["extraInfo"] or i["quality_rank"] >= hevc_max_quality
-            ]
-        if enable_setting == 1:
+                results = [
+                    i
+                    for i in results
+                    if key not in i["extraInfo"]
+                    or i["quality_rank"] >= hevc_max_quality
+                ]
+            return results
+
+        if excluded:
             if key in ("D/VISION", "HDR"):
-                if (
-                    not settings.filter_status({"D/VISION": "hdr", "HDR": "dv"}[key])
-                    == 0
-                ):
+                paired_key = {"D/VISION": "hdr", "HDR": "dv"}[key]
+                if not settings.filter_excluded(paired_key):
                     results = [i for i in results if key not in i["extraInfo"]]
                 else:
                     results = [

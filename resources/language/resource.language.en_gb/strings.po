@@ -1979,3 +1979,58 @@ msgstr ""
 msgctxt "#30389"
 msgid "Enable this and Bacterio will automatically enable subtitles when available"
 msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30390"
+msgid "None"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30391"
+msgid "Source Select"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30392"
+msgid "Autoplay"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30393"
+msgid "Both"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30394"
+msgid "4K"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30395"
+msgid "1080p"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30396"
+msgid "720p"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30397"
+msgid "SD"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30398"
+msgid "SCR"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30399"
+msgid "CAM"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30400"
+msgid "TELE"
+msgstr ""
