@@ -10,6 +10,29 @@
           <control type="button" format="action" />
           <close>true</close>
         </setting>
+        <setting id="autostart" label="30022" type="boolean" help="30023">
+          <level>0</level>
+          <default>false</default>
+          <control type="toggle" />
+        </setting>
+        <setting id="background_image" label="30024" type="action" help="30025">
+          <level>0</level>
+          <!-- use file browser from kodi-->
+          <data>
+            RunPlugin(plugin://plugin.video.bacterio/?mode=settings_manager.set_path&amp;setting_id=addon_fanart)</data>
+          <control type="button" format="action" />
+        </setting>
+        <setting id="default_background" label="30026" type="action" help="30027">
+          <level>0</level>
+          <data>
+            RunPlugin(plugin://plugin.video.bacterio/?mode=settings_manager.restore_setting_default&amp;setting_id=addon_fanart)</data>
+          <control type="button" format="action" />
+        </setting>
+        <setting id="limit_threads" label="30028" type="boolean" help="30029">
+          <level>2</level>
+          <default>false</default>
+          <control type="toggle" />
+        </setting>
       </group>
     </category>
     <!-- Features -->

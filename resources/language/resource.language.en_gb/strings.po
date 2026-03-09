@@ -2,7 +2,7 @@
 # Addon Name: Bacterio
 # Addon id: plugin.video.bacterio
 # Addon Provider: phage-zn
-# Addon macro: ?msgctxt2kVGyGp2jjvi"
+# Addon macro: ?msgctxt2kVGyGp2jjvi"c
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC-Addons\n"
@@ -124,4 +124,44 @@ msgstr ""
 #: /resources/settings.xml
 msgctxt "#30021"
 msgid "TV Shows"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30022"
+msgid "Autostart"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30023"
+msgid "Enable this and Bacterio will autostart after running its services upon Kodi start"
+msgstr ""
+
+#: /resource/settings.xml
+msgctxt "#30024"
+msgid "Change Backgound Image"
+msgstr ""
+
+#: /resource/settings.xml
+msgctxt "#30025"
+msgid "Set a custom background to use within Bacterio"
+msgstr ""
+
+#: /resource/settings.xml
+msgctxt "#30026"
+msgid "Restore Default Backgound"
+msgstr ""
+
+#: /resource/settings.xml
+msgctxt "#30027"
+msgid "Revert background to Bacterio's default"
+msgstr ""
+
+#: /resource/settings.xml
+msgctxt "#30028"
+msgid "Limit Concurrent Threads"
+msgstr ""
+
+#: /resource/settings.xml
+msgctxt "#30029"
+msgid "Enable this and Bacterio will limit the threads enacted simultaneously. Best to leave this disabled unless you are having issues with your device not supporting high numbers of concurrent threads in python"
 msgstr ""
