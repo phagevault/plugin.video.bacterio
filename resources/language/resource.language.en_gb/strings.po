@@ -120,3 +120,8 @@ msgstr ""
 msgctxt "#30020"
 msgid "Trakt"
 msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30021"
+msgid "TV Shows"
+msgstr ""
