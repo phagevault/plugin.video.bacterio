@@ -1304,29 +1304,29 @@
           <default>0</default>
           <control type="spinner" format="integer" />
         </setting>
-        <setting id="filter.include_prerelease" type="integer" label="30301" help="30302">
-          <default>0</default>
-          <control type="spinner" format="integer" />
+        <setting id="filter.include_prerelease" type="boolean" label="30301" help="30302">
+          <default>false</default>
+          <control type="toggle" />
         </setting>
-        <setting id="filter.3d" type="integer" label="30303" help="30304">
-          <default>0</default>
-          <control type="spinner" format="integer" />
+        <setting id="filter.3d" type="boolean" label="30303" help="30304">
+          <default>false</default>
+          <control type="toggle" />
         </setting>
-        <setting id="filter.hdr" type="integer" label="30305" help="30306">
-          <default>0</default>
-          <control type="spinner" format="integer" />
+        <setting id="filter.hdr" type="boolean" label="30305" help="30306">
+          <default>false</default>
+          <control type="toggle" />
         </setting>
-        <setting id="filter.dv" type="integer" label="30307" help="30308">
-          <default>0</default>
-          <control type="spinner" format="integer" />
+        <setting id="filter.dv" type="boolean" label="30307" help="30308">
+          <default>false</default>
+          <control type="toggle" />
         </setting>
-        <setting id="filter.av1" type="integer" label="30309" help="30310">
-          <default>0</default>
-          <control type="spinner" format="integer" />
+        <setting id="filter.av1" type="boolean" label="30309" help="30310">
+          <default>false</default>
+          <control type="toggle" />
         </setting>
-        <setting id="filter.enhanced_upscaled" type="integer" label="30311" help="30312">
-          <default>0</default>
-          <control type="spinner" format="integer" />
+        <setting id="filter.enhanced_upscaled" type="boolean" label="30311" help="30312">
+          <default>false</default>
+          <control type="toggle" />
         </setting>
         <setting id="filter.hevc" type="boolean" label="30313" help="30314">
           <default>false</default>
