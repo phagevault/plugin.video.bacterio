@@ -73,18 +73,30 @@
       <group id="5" label="30043">
         <setting id="movie_download_directory" type="path" label="30044" help="30045">
           <default></default>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <control type="button" format="path" />
         </setting>
         <setting id="tvshow_download_directory" type="path" label="30046" help="30047">
           <default></default>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <control type="button" format="path" />
         </setting>
         <setting id="premium_download_directory" type="path" label="30048" help="30049">
           <default></default>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <control type="button" format="path" />
         </setting>
         <setting id="image_download_directory" type="path" label="30050" help="30051">
           <default></default>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <control type="button" format="path" />
         </setting>
       </group>
@@ -471,11 +483,17 @@
         <setting id="trakt.token" type="string" label="30020">
           <default></default>
           <level>3</level>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <control type="edit" format="string" />
         </setting>
         <setting id="trakt.user" type="string" label="30020">
           <default></default>
           <level>3</level>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <control type="edit" format="string" />
         </setting>
       </group>
@@ -488,11 +506,17 @@
         <setting id="tmdb.token" type="string" label="30184">
           <default></default>
           <level>3</level>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <control type="edit" format="string" />
         </setting>
         <setting id="tmdb.account_id" type="string" label="30184">
           <default></default>
           <level>3</level>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <control type="edit" format="string" />
         </setting>
       </group>
@@ -500,6 +524,9 @@
       <group id="3" label="30187">
         <setting id="omdb_api" type="string" label="30188" help="30189">
           <default></default>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <control type="edit" format="string" />
         </setting>
       </group>
@@ -507,6 +534,9 @@
       <group id="4" label="30190">
         <setting id="rpdb_api" type="string" label="30191" help="30192">
           <default></default>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <control type="edit" format="string" />
         </setting>
       </group>
@@ -514,6 +544,9 @@
       <group id="5" label="30193">
         <setting id="google_api" type="string" label="30194" help="30195">
           <default></default>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <control type="edit" format="string" />
         </setting>
       </group>
@@ -521,6 +554,9 @@
       <group id="6" label="30196">
         <setting id="groq_api" type="string" label="30197" help="30198">
           <default></default>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <control type="edit" format="string" />
         </setting>
       </group>
@@ -538,6 +574,9 @@
         <setting id="external_scraper.name" type="string" label="30203" help="30204"
           parent="provider.external">
           <default></default>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <dependencies>
             <dependency type="enable">
               <condition operator="is" setting="provider.external">true</condition>
@@ -571,11 +610,17 @@
         <setting id="rd.token" type="string" label="30209">
           <default></default>
           <level>3</level>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <control type="edit" format="string" />
         </setting>
         <setting id="rd.account_id" type="string" label="30209">
           <default></default>
           <level>3</level>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <control type="edit" format="string" />
         </setting>
         <setting id="rd.enabled" type="boolean" label="30210" help="30211">
@@ -671,11 +716,17 @@
         <setting id="pm.token" type="string" label="30228">
           <default></default>
           <level>3</level>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <control type="edit" format="string" />
         </setting>
         <setting id="pm.account_id" type="string" label="30228">
           <default></default>
           <level>3</level>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <control type="edit" format="string" />
         </setting>
         <setting id="pm.enabled" type="boolean" label="30229" help="30230">
@@ -761,11 +812,17 @@
         <setting id="ad.token" type="string" label="30231">
           <default></default>
           <level>3</level>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <control type="edit" format="string" />
         </setting>
         <setting id="ad.account_id" type="string" label="30231">
           <default></default>
           <level>3</level>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <control type="edit" format="string" />
         </setting>
         <setting id="ad.enabled" type="boolean" label="30232" help="30233">
@@ -851,6 +908,9 @@
         <setting id="ed.token" type="string" label="30234">
           <default></default>
           <level>3</level>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <control type="edit" format="string" />
         </setting>
         <setting id="ed.enabled" type="boolean" label="30235" help="30236">
@@ -876,6 +936,9 @@
         <setting id="tb.token" type="string" label="30237">
           <default></default>
           <level>3</level>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <control type="edit" format="string" />
         </setting>
         <setting id="tb.enabled" type="boolean" label="30238" help="30239">
@@ -965,6 +1028,9 @@
         <setting id="easynews_user" type="string" label="30243" help="30244"
           parent="provider.easynews">
           <default></default>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <dependencies>
             <dependency type="enable">
               <condition operator="is" setting="provider.easynews">true</condition>
@@ -975,6 +1041,9 @@
         <setting id="easynews_password" type="string" label="30245" help="30246"
           parent="provider.easynews">
           <default></default>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <dependencies>
             <dependency type="enable">
               <condition operator="is" setting="provider.easynews">true</condition>
@@ -1005,6 +1074,9 @@
         <setting id="easynews.lang_filters" type="string" label="30251" help="30252"
           parent="easynews.filter_lang">
           <default></default>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <dependencies>
             <dependency type="enable">
               <condition operator="is" setting="easynews.filter_lang">true</condition>
@@ -1277,10 +1349,16 @@
         <setting id="filter.preferred_filters" type="string" label="30321" help="30322"
           parent="filter.sort_to_top">
           <default></default>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <control type="edit" format="string" />
         </setting>
         <setting id="filter_audio" type="string" label="30323" help="30324">
           <default></default>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <control type="edit" format="string" />
         </setting>
       </group>
@@ -1363,11 +1441,17 @@
         <setting id="results_quality_movie" type="string" label="30344" help="30345"
           parent="auto_play_movie">
           <default></default>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <control type="edit" format="string" />
         </setting>
         <setting id="autoplay_quality_movie" type="string" label="30346" help="30347"
           parent="auto_play_movie">
           <default></default>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <control type="edit" format="string" />
         </setting>
         <setting id="auto_resume_movie" type="integer" label="30348" help="30349">
@@ -1412,11 +1496,17 @@
         <setting id="results_quality_episode" type="string" label="30344" help="30345"
           parent="auto_play_episode">
           <default></default>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <control type="edit" format="string" />
         </setting>
         <setting id="autoplay_quality_episode" type="string" label="30346" help="30347"
           parent="auto_play_episode">
           <default></default>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
           <control type="edit" format="string" />
         </setting>
         <setting id="autoplay_next_episode" type="boolean" label="30358" help="30359"
