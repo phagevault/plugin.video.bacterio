@@ -586,7 +586,7 @@ def kodi_refresh():
 
 
 def refresh_widgets():
-    from caches.settings_cache import get_setting
+    from modules.settings_manager import get_setting
     from caches.random_widgets_cache import RandomWidgets
 
     RandomWidgets().delete_like("random_list.%")
