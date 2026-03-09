@@ -1027,9 +1027,15 @@ class Sources:
             return item["size"]
 
     def _get_quality_rank(self, quality):
-        return {"4K": 1, "1080p": 2, "720p": 3, "SD": 4, "SCR": 5, "CAM": 5, "TELE": 5}[
-            quality
-        ]
+        return {
+            "4K": 1,
+            "1080p": 2,
+            "720p": 3,
+            "SD": 4,
+            "SCR": 5,
+            "CAM": 5,
+            "TELE": 5,
+        }.get(quality, 6)
 
     def _get_provider_rank(self, account_type):
         return self.provider_sort_ranks[account_type] or 11

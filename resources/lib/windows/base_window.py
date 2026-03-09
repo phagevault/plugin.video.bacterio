@@ -5,7 +5,7 @@ import json
 from threading import Thread
 from xml.dom.minidom import parse as mdParse
 from modules import kodi_utils
-from module.settings_manager import get_setting, set_setting, restore_setting_default
+from modules.settings_manager import get_setting, set_setting
 from modules.utils import manual_function_import
 # logger = kodi_utils.logger
 
@@ -190,9 +190,6 @@ class BaseDialog(xbmcgui.WindowXMLDialog):
 
     def set_setting(self, setting_id, value):
         set_setting(setting_id, value)
-
-    def restore_setting_default(self, params):
-        restore_setting_default(params)
 
     def make_listitem(self):
         return kodi_utils.make_listitem()
