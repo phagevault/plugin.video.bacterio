@@ -6,8 +6,9 @@
     <category id="general" label="30001">
 
       <group id="1" label="30001">
-        <setting id="auto_start_bacterio" type="bool" label="30022" help="30023">
+        <setting id="auto_start_bacterio" type="boolean" label="30022" help="30023">
           <default>false</default>
+          <control type="toggle" />
         </setting>
         <setting id="addon_fanart" type="path" label="30024" help="30025">
           <default></default>
@@ -16,8 +17,9 @@
           </constraints>
           <control type="button" format="file" />
         </setting>
-        <setting id="limit_concurrent_threads" type="bool" label="30028" help="30029">
+        <setting id="limit_concurrent_threads" type="boolean" label="30028" help="30029">
           <default>false</default>
+          <control type="toggle" />
         </setting>
         <setting id="max_threads" type="integer" label="30030" help="30031"
           parent="limit_concurrent_threads">
@@ -27,7 +29,9 @@
             <maximum>50</maximum>
           </constraints>
           <dependencies>
-            <dependency type="enable" operator="is" setting="limit_concurrent_threads">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="limit_concurrent_threads">true</condition>
+            </dependency>
           </dependencies>
           <control type="spinner" format="integer" />
         </setting>
@@ -49,8 +53,9 @@
           </constraints>
           <control type="spinner" format="integer" />
         </setting>
-        <setting id="trakt.refresh_widgets" type="bool" label="30038" help="30039">
+        <setting id="trakt.refresh_widgets" type="boolean" label="30038" help="30039">
           <default>false</default>
+          <control type="toggle" />
         </setting>
       </group>
 
@@ -68,19 +73,19 @@
       <group id="5" label="30043">
         <setting id="movie_download_directory" type="path" label="30044" help="30045">
           <default></default>
-          <control type="button" format="folder" />
+          <control type="button" format="path" />
         </setting>
         <setting id="tvshow_download_directory" type="path" label="30046" help="30047">
           <default></default>
-          <control type="button" format="folder" />
+          <control type="button" format="path" />
         </setting>
         <setting id="premium_download_directory" type="path" label="30048" help="30049">
           <default></default>
-          <control type="button" format="folder" />
+          <control type="button" format="path" />
         </setting>
         <setting id="image_download_directory" type="path" label="30050" help="30051">
           <default></default>
-          <control type="button" format="folder" />
+          <control type="button" format="path" />
         </setting>
       </group>
 
@@ -90,11 +95,13 @@
     <category id="features" label="30004">
 
       <group id="1" label="30005">
-        <setting id="extras.enable_extra_ratings" type="bool" label="30052" help="30053">
+        <setting id="extras.enable_extra_ratings" type="boolean" label="30052" help="30053">
           <default>false</default>
+          <control type="toggle" />
         </setting>
-        <setting id="extras.enable_scrollbars" type="bool" label="30054" help="30055">
+        <setting id="extras.enable_scrollbars" type="boolean" label="30054" help="30055">
           <default>false</default>
+          <control type="toggle" />
         </setting>
       </group>
 
@@ -137,11 +144,13 @@
           </constraints>
           <control type="spinner" format="integer" />
         </setting>
-        <setting id="paginate.jump_to" type="bool" label="30066" help="30067">
+        <setting id="paginate.jump_to" type="boolean" label="30066" help="30067">
           <default>false</default>
+          <control type="toggle" />
         </setting>
-        <setting id="ignore_articles" type="bool" label="30068" help="30069">
+        <setting id="ignore_articles" type="boolean" label="30068" help="30069">
           <default>true</default>
+          <control type="toggle" />
         </setting>
         <setting id="recommend_service" type="integer" label="30070" help="30071">
           <default>0</default>
@@ -155,41 +164,54 @@
           <default>0</default>
           <control type="spinner" format="integer" />
         </setting>
-        <setting id="show_specials" type="bool" label="30076" help="30077">
+        <setting id="show_specials" type="boolean" label="30076" help="30077">
           <default>false</default>
+          <control type="toggle" />
         </setting>
-        <setting id="use_season_name" type="bool" label="30078" help="30079">
+        <setting id="use_season_name" type="boolean" label="30078" help="30079">
           <default>false</default>
+          <control type="toggle" />
         </setting>
         <setting id="default_all_episodes" type="integer" label="30080" help="30081">
           <default>0</default>
           <control type="spinner" format="integer" />
         </setting>
-        <setting id="avoid_episode_spoilers" type="bool" label="30082" help="30083">
+        <setting id="avoid_episode_spoilers" type="boolean" label="30082" help="30083">
           <default>false</default>
+          <control type="toggle" />
         </setting>
-        <setting id="include_anime_tvshow" type="bool" label="30084" help="30085">
+        <setting id="include_anime_tvshow" type="boolean" label="30084" help="30085">
           <default>false</default>
+          <control type="toggle" />
         </setting>
-        <setting id="show_unaired_watchlist" type="bool" label="30086" help="30087">
+        <setting id="show_unaired_watchlist" type="boolean" label="30086" help="30087">
           <default>false</default>
+          <control type="toggle" />
         </setting>
-        <setting id="meta_filter" type="bool" label="30088" help="30089">
+        <setting id="meta_filter" type="boolean" label="30088" help="30089">
           <default>false</default>
+          <control type="toggle" />
         </setting>
-        <setting id="use_viewtypes" type="bool" label="30090" help="30091">
+        <setting id="use_viewtypes" type="boolean" label="30090" help="30091">
           <default>false</default>
+          <control type="toggle" />
         </setting>
-        <setting id="manual_viewtypes" type="bool" label="30092" help="30093" parent="use_viewtypes">
+        <setting id="manual_viewtypes" type="boolean" label="30092" help="30093"
+          parent="use_viewtypes">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="use_viewtypes">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="use_viewtypes">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
         <setting id="view.main" type="integer" label="30094" help="30095" parent="manual_viewtypes">
           <default>0</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="manual_viewtypes">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="manual_viewtypes">true</condition>
+            </dependency>
           </dependencies>
           <control type="spinner" format="integer" />
         </setting>
@@ -197,7 +219,9 @@
           parent="manual_viewtypes">
           <default>0</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="manual_viewtypes">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="manual_viewtypes">true</condition>
+            </dependency>
           </dependencies>
           <control type="spinner" format="integer" />
         </setting>
@@ -205,7 +229,9 @@
           parent="manual_viewtypes">
           <default>0</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="manual_viewtypes">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="manual_viewtypes">true</condition>
+            </dependency>
           </dependencies>
           <control type="spinner" format="integer" />
         </setting>
@@ -213,7 +239,9 @@
           parent="manual_viewtypes">
           <default>0</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="manual_viewtypes">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="manual_viewtypes">true</condition>
+            </dependency>
           </dependencies>
           <control type="spinner" format="integer" />
         </setting>
@@ -221,7 +249,9 @@
           parent="manual_viewtypes">
           <default>0</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="manual_viewtypes">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="manual_viewtypes">true</condition>
+            </dependency>
           </dependencies>
           <control type="spinner" format="integer" />
         </setting>
@@ -229,7 +259,9 @@
           parent="manual_viewtypes">
           <default>0</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="manual_viewtypes">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="manual_viewtypes">true</condition>
+            </dependency>
           </dependencies>
           <control type="spinner" format="integer" />
         </setting>
@@ -237,7 +269,9 @@
           parent="manual_viewtypes">
           <default>0</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="manual_viewtypes">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="manual_viewtypes">true</condition>
+            </dependency>
           </dependencies>
           <control type="spinner" format="integer" />
         </setting>
@@ -277,20 +311,25 @@
           <default>0</default>
           <control type="spinner" format="integer" />
         </setting>
-        <setting id="personal_list.show_author" type="bool" label="30124" help="30125">
+        <setting id="personal_list.show_author" type="boolean" label="30124" help="30125">
           <default>false</default>
+          <control type="toggle" />
         </setting>
-        <setting id="personal_list.sort_unseen_to_top" type="bool" label="30126" help="30127">
+        <setting id="personal_list.sort_unseen_to_top" type="boolean" label="30126" help="30127">
           <default>false</default>
+          <control type="toggle" />
         </setting>
-        <setting id="personal_list.highlight_unseen" type="bool" label="30128" help="30129">
+        <setting id="personal_list.highlight_unseen" type="boolean" label="30128" help="30129">
           <default>false</default>
+          <control type="toggle" />
         </setting>
         <setting id="personal_list.unseen_highlight" type="string" label="30130" help="30131"
           parent="personal_list.highlight_unseen">
           <default>FFFFFFFF</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="personal_list.highlight_unseen">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="personal_list.highlight_unseen">true</condition>
+            </dependency>
           </dependencies>
           <control type="colorbutton" />
         </setting>
@@ -301,15 +340,18 @@
           <default>0</default>
           <control type="spinner" format="integer" />
         </setting>
-        <setting id="widget_refresh_notification" type="bool" label="30135" help="30136"
+        <setting id="widget_refresh_notification" type="boolean" label="30135" help="30136"
           parent="widget_refresh_timer">
           <default>false</default>
+          <control type="toggle" />
         </setting>
-        <setting id="widget_hide_watched" type="bool" label="30137" help="30138">
+        <setting id="widget_hide_watched" type="boolean" label="30137" help="30138">
           <default>false</default>
+          <control type="toggle" />
         </setting>
-        <setting id="widget_hide_next_page" type="bool" label="30139" help="30140">
+        <setting id="widget_hide_next_page" type="boolean" label="30139" help="30140">
           <default>false</default>
+          <control type="toggle" />
         </setting>
       </group>
 
@@ -334,8 +376,9 @@
           <default>0</default>
           <control type="spinner" format="integer" />
         </setting>
-        <setting id="single_ep_unwatched_episodes" type="bool" label="30149" help="30150">
+        <setting id="single_ep_unwatched_episodes" type="boolean" label="30149" help="30150">
           <default>false</default>
+          <control type="toggle" />
         </setting>
       </group>
 
@@ -352,14 +395,17 @@
           <default>0</default>
           <control type="spinner" format="integer" />
         </setting>
-        <setting id="nextep.limit_history" type="bool" label="30158" help="30159">
+        <setting id="nextep.limit_history" type="boolean" label="30158" help="30159">
           <default>false</default>
+          <control type="toggle" />
         </setting>
         <setting id="nextep.limit" type="integer" label="30160" help="30161"
           parent="nextep.limit_history">
           <default>20</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="nextep.limit_history">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="nextep.limit_history">true</condition>
+            </dependency>
           </dependencies>
           <control type="spinner" format="integer" />
         </setting>
@@ -367,20 +413,24 @@
           <default>0</default>
           <control type="spinner" format="integer" />
         </setting>
-        <setting id="nextep.include_airdate" type="bool" label="30164" help="30165">
+        <setting id="nextep.include_airdate" type="boolean" label="30164" help="30165">
           <default>false</default>
+          <control type="toggle" />
         </setting>
-        <setting id="nextep.airing_today" type="bool" label="30166" help="30167">
+        <setting id="nextep.airing_today" type="boolean" label="30166" help="30167">
           <default>false</default>
+          <control type="toggle" />
         </setting>
-        <setting id="nextep.include_unaired" type="bool" label="30168" help="30169">
+        <setting id="nextep.include_unaired" type="boolean" label="30168" help="30169">
           <default>false</default>
+          <control type="toggle" />
         </setting>
       </group>
 
       <group id="3" label="30170">
-        <setting id="trakt.flatten_episodes" type="bool" label="30171" help="30172">
+        <setting id="trakt.flatten_episodes" type="boolean" label="30171" help="30172">
           <default>false</default>
+          <control type="toggle" />
         </setting>
         <setting id="trakt.calendar_sort_order" type="integer" label="30173" help="30174">
           <default>0</default>
@@ -421,10 +471,12 @@
         <setting id="trakt.token" type="string" label="30020">
           <default></default>
           <level>3</level>
+          <control type="edit" format="string" />
         </setting>
         <setting id="trakt.user" type="string" label="30020">
           <default></default>
           <level>3</level>
+          <control type="edit" format="string" />
         </setting>
       </group>
 
@@ -436,10 +488,12 @@
         <setting id="tmdb.token" type="string" label="30184">
           <default></default>
           <level>3</level>
+          <control type="edit" format="string" />
         </setting>
         <setting id="tmdb.account_id" type="string" label="30184">
           <default></default>
           <level>3</level>
+          <control type="edit" format="string" />
         </setting>
       </group>
 
@@ -477,30 +531,39 @@
     <category id="sources_accounts" label="30199">
 
       <group id="1" label="30200">
-        <setting id="provider.external" type="bool" label="30201" help="30202">
+        <setting id="provider.external" type="boolean" label="30201" help="30202">
           <default>false</default>
+          <control type="toggle" />
         </setting>
         <setting id="external_scraper.name" type="string" label="30203" help="30204"
           parent="provider.external">
           <default></default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="provider.external">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="provider.external">true</condition>
+            </dependency>
           </dependencies>
           <control type="edit" format="string" />
         </setting>
-        <setting id="external.cache_check" type="bool" label="30205" help="30206"
+        <setting id="external.cache_check" type="boolean" label="30205" help="30206"
           parent="provider.external">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="provider.external">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="provider.external">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
-        <setting id="external.filter_sources" type="bool" label="30207" help="30208"
+        <setting id="external.filter_sources" type="boolean" label="30207" help="30208"
           parent="provider.external">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="provider.external">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="provider.external">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
       </group>
 
@@ -508,55 +571,76 @@
         <setting id="rd.token" type="string" label="30209">
           <default></default>
           <level>3</level>
+          <control type="edit" format="string" />
         </setting>
         <setting id="rd.account_id" type="string" label="30209">
           <default></default>
           <level>3</level>
+          <control type="edit" format="string" />
         </setting>
-        <setting id="rd.enabled" type="bool" label="30210" help="30211">
+        <setting id="rd.enabled" type="boolean" label="30210" help="30211">
           <default>false</default>
+          <control type="toggle" />
         </setting>
         <setting id="store_resolved_to_cloud.real-debrid" type="integer" label="30212" help="30213"
           parent="rd.enabled">
           <default>0</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="rd.enabled">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="rd.enabled">true</condition>
+            </dependency>
           </dependencies>
           <control type="spinner" format="integer" />
         </setting>
-        <setting id="provider.rd_cloud" type="bool" label="30214" help="30215" parent="rd.enabled">
+        <setting id="provider.rd_cloud" type="boolean" label="30214" help="30215"
+          parent="rd.enabled">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="rd.enabled">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="rd.enabled">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
-        <setting id="rd_cloud.title_filter" type="bool" label="30216" help="30217"
+        <setting id="rd_cloud.title_filter" type="boolean" label="30216" help="30217"
           parent="provider.rd_cloud">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="provider.rd_cloud">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="provider.rd_cloud">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
-        <setting id="check.rd_cloud" type="bool" label="30218" help="30219"
+        <setting id="check.rd_cloud" type="boolean" label="30218" help="30219"
           parent="provider.rd_cloud">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="provider.rd_cloud">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="provider.rd_cloud">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
-        <setting id="autoplay.rd_cloud" type="bool" label="30220" help="30221"
+        <setting id="autoplay.rd_cloud" type="boolean" label="30220" help="30221"
           parent="check.rd_cloud">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="check.rd_cloud">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="check.rd_cloud">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
-        <setting id="results.sort_rdcloud_first" type="bool" label="30222" help="30223"
+        <setting id="results.sort_rdcloud_first" type="boolean" label="30222" help="30223"
           parent="provider.rd_cloud">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="provider.rd_cloud">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="provider.rd_cloud">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
         <setting id="rd.priority" type="integer" label="30224" help="30225" parent="rd.enabled">
           <default>1</default>
@@ -565,16 +649,21 @@
             <maximum>20</maximum>
           </constraints>
           <dependencies>
-            <dependency type="enable" operator="is" setting="rd.enabled">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="rd.enabled">true</condition>
+            </dependency>
           </dependencies>
           <control type="spinner" format="integer" />
         </setting>
-        <setting id="rd.alternate_base_url" type="bool" label="30226" help="30227"
+        <setting id="rd.alternate_base_url" type="boolean" label="30226" help="30227"
           parent="rd.enabled">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="rd.enabled">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="rd.enabled">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
       </group>
 
@@ -582,55 +671,76 @@
         <setting id="pm.token" type="string" label="30228">
           <default></default>
           <level>3</level>
+          <control type="edit" format="string" />
         </setting>
         <setting id="pm.account_id" type="string" label="30228">
           <default></default>
           <level>3</level>
+          <control type="edit" format="string" />
         </setting>
-        <setting id="pm.enabled" type="bool" label="30229" help="30230">
+        <setting id="pm.enabled" type="boolean" label="30229" help="30230">
           <default>false</default>
+          <control type="toggle" />
         </setting>
         <setting id="store_resolved_to_cloud.premiumize.me" type="integer" label="30212"
           help="30213" parent="pm.enabled">
           <default>0</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="pm.enabled">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="pm.enabled">true</condition>
+            </dependency>
           </dependencies>
           <control type="spinner" format="integer" />
         </setting>
-        <setting id="provider.pm_cloud" type="bool" label="30214" help="30215" parent="pm.enabled">
+        <setting id="provider.pm_cloud" type="boolean" label="30214" help="30215"
+          parent="pm.enabled">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="pm.enabled">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="pm.enabled">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
-        <setting id="pm_cloud.title_filter" type="bool" label="30216" help="30217"
+        <setting id="pm_cloud.title_filter" type="boolean" label="30216" help="30217"
           parent="provider.pm_cloud">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="provider.pm_cloud">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="provider.pm_cloud">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
-        <setting id="check.pm_cloud" type="bool" label="30218" help="30219"
+        <setting id="check.pm_cloud" type="boolean" label="30218" help="30219"
           parent="provider.pm_cloud">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="provider.pm_cloud">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="provider.pm_cloud">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
-        <setting id="autoplay.pm_cloud" type="bool" label="30220" help="30221"
+        <setting id="autoplay.pm_cloud" type="boolean" label="30220" help="30221"
           parent="check.pm_cloud">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="check.pm_cloud">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="check.pm_cloud">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
-        <setting id="results.sort_pmcloud_first" type="bool" label="30222" help="30223"
+        <setting id="results.sort_pmcloud_first" type="boolean" label="30222" help="30223"
           parent="provider.pm_cloud">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="provider.pm_cloud">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="provider.pm_cloud">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
         <setting id="pm.priority" type="integer" label="30224" help="30225" parent="pm.enabled">
           <default>2</default>
@@ -639,7 +749,9 @@
             <maximum>20</maximum>
           </constraints>
           <dependencies>
-            <dependency type="enable" operator="is" setting="pm.enabled">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="pm.enabled">true</condition>
+            </dependency>
           </dependencies>
           <control type="spinner" format="integer" />
         </setting>
@@ -649,55 +761,76 @@
         <setting id="ad.token" type="string" label="30231">
           <default></default>
           <level>3</level>
+          <control type="edit" format="string" />
         </setting>
         <setting id="ad.account_id" type="string" label="30231">
           <default></default>
           <level>3</level>
+          <control type="edit" format="string" />
         </setting>
-        <setting id="ad.enabled" type="bool" label="30232" help="30233">
+        <setting id="ad.enabled" type="boolean" label="30232" help="30233">
           <default>false</default>
+          <control type="toggle" />
         </setting>
         <setting id="store_resolved_to_cloud.alldebrid" type="integer" label="30212" help="30213"
           parent="ad.enabled">
           <default>0</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="ad.enabled">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="ad.enabled">true</condition>
+            </dependency>
           </dependencies>
           <control type="spinner" format="integer" />
         </setting>
-        <setting id="provider.ad_cloud" type="bool" label="30214" help="30215" parent="ad.enabled">
+        <setting id="provider.ad_cloud" type="boolean" label="30214" help="30215"
+          parent="ad.enabled">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="ad.enabled">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="ad.enabled">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
-        <setting id="ad_cloud.title_filter" type="bool" label="30216" help="30217"
+        <setting id="ad_cloud.title_filter" type="boolean" label="30216" help="30217"
           parent="provider.ad_cloud">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="provider.ad_cloud">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="provider.ad_cloud">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
-        <setting id="check.ad_cloud" type="bool" label="30218" help="30219"
+        <setting id="check.ad_cloud" type="boolean" label="30218" help="30219"
           parent="provider.ad_cloud">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="provider.ad_cloud">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="provider.ad_cloud">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
-        <setting id="autoplay.ad_cloud" type="bool" label="30220" help="30221"
+        <setting id="autoplay.ad_cloud" type="boolean" label="30220" help="30221"
           parent="check.ad_cloud">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="check.ad_cloud">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="check.ad_cloud">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
-        <setting id="results.sort_adcloud_first" type="bool" label="30222" help="30223"
+        <setting id="results.sort_adcloud_first" type="boolean" label="30222" help="30223"
           parent="provider.ad_cloud">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="provider.ad_cloud">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="provider.ad_cloud">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
         <setting id="ad.priority" type="integer" label="30224" help="30225" parent="ad.enabled">
           <default>3</default>
@@ -706,7 +839,9 @@
             <maximum>20</maximum>
           </constraints>
           <dependencies>
-            <dependency type="enable" operator="is" setting="ad.enabled">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="ad.enabled">true</condition>
+            </dependency>
           </dependencies>
           <control type="spinner" format="integer" />
         </setting>
@@ -716,9 +851,11 @@
         <setting id="ed.token" type="string" label="30234">
           <default></default>
           <level>3</level>
+          <control type="edit" format="string" />
         </setting>
-        <setting id="ed.enabled" type="bool" label="30235" help="30236">
+        <setting id="ed.enabled" type="boolean" label="30235" help="30236">
           <default>false</default>
+          <control type="toggle" />
         </setting>
         <setting id="ed.priority" type="integer" label="30224" help="30225" parent="ed.enabled">
           <default>4</default>
@@ -727,7 +864,9 @@
             <maximum>20</maximum>
           </constraints>
           <dependencies>
-            <dependency type="enable" operator="is" setting="ed.enabled">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="ed.enabled">true</condition>
+            </dependency>
           </dependencies>
           <control type="spinner" format="integer" />
         </setting>
@@ -737,51 +876,71 @@
         <setting id="tb.token" type="string" label="30237">
           <default></default>
           <level>3</level>
+          <control type="edit" format="string" />
         </setting>
-        <setting id="tb.enabled" type="bool" label="30238" help="30239">
+        <setting id="tb.enabled" type="boolean" label="30238" help="30239">
           <default>false</default>
+          <control type="toggle" />
         </setting>
         <setting id="store_resolved_to_cloud.torbox" type="integer" label="30212" help="30213"
           parent="tb.enabled">
           <default>0</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="tb.enabled">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="tb.enabled">true</condition>
+            </dependency>
           </dependencies>
           <control type="spinner" format="integer" />
         </setting>
-        <setting id="provider.tb_cloud" type="bool" label="30214" help="30215" parent="tb.enabled">
+        <setting id="provider.tb_cloud" type="boolean" label="30214" help="30215"
+          parent="tb.enabled">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="tb.enabled">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="tb.enabled">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
-        <setting id="tb_cloud.title_filter" type="bool" label="30216" help="30217"
+        <setting id="tb_cloud.title_filter" type="boolean" label="30216" help="30217"
           parent="provider.tb_cloud">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="provider.tb_cloud">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="provider.tb_cloud">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
-        <setting id="check.tb_cloud" type="bool" label="30218" help="30219"
+        <setting id="check.tb_cloud" type="boolean" label="30218" help="30219"
           parent="provider.tb_cloud">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="provider.tb_cloud">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="provider.tb_cloud">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
-        <setting id="autoplay.tb_cloud" type="bool" label="30220" help="30221"
+        <setting id="autoplay.tb_cloud" type="boolean" label="30220" help="30221"
           parent="check.tb_cloud">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="check.tb_cloud">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="check.tb_cloud">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
-        <setting id="results.sort_tbcloud_first" type="bool" label="30222" help="30223"
+        <setting id="results.sort_tbcloud_first" type="boolean" label="30222" help="30223"
           parent="provider.tb_cloud">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="provider.tb_cloud">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="provider.tb_cloud">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
         <setting id="tb.priority" type="integer" label="30224" help="30225" parent="tb.enabled">
           <default>5</default>
@@ -790,21 +949,26 @@
             <maximum>20</maximum>
           </constraints>
           <dependencies>
-            <dependency type="enable" operator="is" setting="tb.enabled">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="tb.enabled">true</condition>
+            </dependency>
           </dependencies>
           <control type="spinner" format="integer" />
         </setting>
       </group>
 
       <group id="7" label="30240">
-        <setting id="provider.easynews" type="bool" label="30241" help="30242">
+        <setting id="provider.easynews" type="boolean" label="30241" help="30242">
           <default>false</default>
+          <control type="toggle" />
         </setting>
         <setting id="easynews_user" type="string" label="30243" help="30244"
           parent="provider.easynews">
           <default></default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="provider.easynews">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="provider.easynews">true</condition>
+            </dependency>
           </dependencies>
           <control type="edit" format="string" />
         </setting>
@@ -812,45 +976,61 @@
           parent="provider.easynews">
           <default></default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="provider.easynews">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="provider.easynews">true</condition>
+            </dependency>
           </dependencies>
-          <control type="edit" format="string" hidden="true" />
+          <control type="edit" format="string" option="hidden" />
         </setting>
-        <setting id="easynews.title_filter" type="bool" label="30247" help="30248"
+        <setting id="easynews.title_filter" type="boolean" label="30247" help="30248"
           parent="provider.easynews">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="provider.easynews">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="provider.easynews">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
-        <setting id="easynews.filter_lang" type="bool" label="30249" help="30250"
+        <setting id="easynews.filter_lang" type="boolean" label="30249" help="30250"
           parent="provider.easynews">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="provider.easynews">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="provider.easynews">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
         <setting id="easynews.lang_filters" type="string" label="30251" help="30252"
           parent="easynews.filter_lang">
           <default></default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="easynews.filter_lang">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="easynews.filter_lang">true</condition>
+            </dependency>
           </dependencies>
           <control type="edit" format="string" />
         </setting>
-        <setting id="check.easynews" type="bool" label="30218" help="30219"
+        <setting id="check.easynews" type="boolean" label="30218" help="30219"
           parent="provider.easynews">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="provider.easynews">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="provider.easynews">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
-        <setting id="autoplay.easynews" type="bool" label="30253" help="30254"
+        <setting id="autoplay.easynews" type="boolean" label="30253" help="30254"
           parent="check.easynews">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="check.easynews">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="check.easynews">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
         <setting id="en.priority" type="integer" label="30224" help="30225"
           parent="provider.easynews">
@@ -860,48 +1040,68 @@
             <maximum>20</maximum>
           </constraints>
           <dependencies>
-            <dependency type="enable" operator="is" setting="provider.easynews">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="provider.easynews">true</condition>
+            </dependency>
           </dependencies>
           <control type="spinner" format="integer" />
         </setting>
       </group>
 
       <group id="8" label="30255">
-        <setting id="provider.folders" type="bool" label="30256" help="30257">
+        <setting id="provider.folders" type="boolean" label="30256" help="30257">
           <default>false</default>
+          <control type="toggle" />
         </setting>
-        <setting id="folders.title_filter" type="bool" label="30247" help="30259"
+        <setting id="folders.title_filter" type="boolean" label="30247" help="30259"
           parent="provider.folders">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="provider.folders">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="provider.folders">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
-        <setting id="check.folders" type="bool" label="30218" help="30219" parent="provider.folders">
-          <default>false</default>
-          <dependencies>
-            <dependency type="enable" operator="is" setting="provider.folders">true</dependency>
-          </dependencies>
-        </setting>
-        <setting id="autoplay.folders" type="bool" label="30253" help="30254" parent="check.folders">
-          <default>false</default>
-          <dependencies>
-            <dependency type="enable" operator="is" setting="check.folders">true</dependency>
-          </dependencies>
-        </setting>
-        <setting id="results.sort_folders_first" type="bool" label="30260" help="30261"
+        <setting id="check.folders" type="boolean" label="30218" help="30219"
           parent="provider.folders">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="provider.folders">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="provider.folders">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
-        <setting id="results.folders_ignore_filters" type="bool" label="30262" help="30263"
+        <setting id="autoplay.folders" type="boolean" label="30253" help="30254"
+          parent="check.folders">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable">
+              <condition operator="is" setting="check.folders">true</condition>
+            </dependency>
+          </dependencies>
+          <control type="toggle" />
+        </setting>
+        <setting id="results.sort_folders_first" type="boolean" label="30260" help="30261"
           parent="provider.folders">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="provider.folders">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="provider.folders">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
+        </setting>
+        <setting id="results.folders_ignore_filters" type="boolean" label="30262" help="30263"
+          parent="provider.folders">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable">
+              <condition operator="is" setting="provider.folders">true</condition>
+            </dependency>
+          </dependencies>
+          <control type="toggle" />
         </setting>
         <setting id="folders.priority" type="integer" label="30224" help="30225"
           parent="provider.folders">
@@ -911,7 +1111,9 @@
             <maximum>20</maximum>
           </constraints>
           <dependencies>
-            <dependency type="enable" operator="is" setting="provider.folders">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="provider.folders">true</condition>
+            </dependency>
           </dependencies>
           <control type="spinner" format="integer" />
         </setting>
@@ -1010,11 +1212,13 @@
           </constraints>
           <control type="spinner" format="integer" />
         </setting>
-        <setting id="results.size_unknown" type="bool" label="30291" help="30292">
+        <setting id="results.size_unknown" type="boolean" label="30291" help="30292">
           <default>true</default>
+          <control type="toggle" />
         </setting>
-        <setting id="results.size_sort_weighted" type="bool" label="30293" help="30294">
+        <setting id="results.size_sort_weighted" type="boolean" label="30293" help="30294">
           <default>false</default>
+          <control type="toggle" />
         </setting>
         <setting id="results.size_sort_direction" type="integer" label="30295" help="30296">
           <default>0</default>
@@ -1152,8 +1356,9 @@
     <category id="playback" label="30018">
 
       <group id="1" label="30011">
-        <setting id="auto_play_movie" type="bool" label="30342" help="30343">
+        <setting id="auto_play_movie" type="boolean" label="30342" help="30343">
           <default>false</default>
+          <control type="toggle" />
         </setting>
         <setting id="results_quality_movie" type="string" label="30344" help="30345"
           parent="auto_play_movie">
@@ -1169,8 +1374,9 @@
           <default>0</default>
           <control type="spinner" format="integer" />
         </setting>
-        <setting id="stinger_alert.show" type="bool" label="30350" help="30351">
+        <setting id="stinger_alert.show" type="boolean" label="30350" help="30351">
           <default>false</default>
+          <control type="toggle" />
         </setting>
         <setting id="stinger_alert.window_percentage" type="integer" label="30352" help="30353"
           parent="stinger_alert.show">
@@ -1180,22 +1386,28 @@
             <maximum>99</maximum>
           </constraints>
           <dependencies>
-            <dependency type="enable" operator="is" setting="stinger_alert.show">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="stinger_alert.show">true</condition>
+            </dependency>
           </dependencies>
           <control type="slider" format="integer" />
         </setting>
-        <setting id="stinger_alert.use_chapters" type="bool" label="30354" help="30355"
+        <setting id="stinger_alert.use_chapters" type="boolean" label="30354" help="30355"
           parent="stinger_alert.show">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="stinger_alert.show">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="stinger_alert.show">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
       </group>
 
       <group id="2" label="30021">
-        <setting id="auto_play_episode" type="bool" label="30356" help="30357">
+        <setting id="auto_play_episode" type="boolean" label="30356" help="30357">
           <default>false</default>
+          <control type="toggle" />
         </setting>
         <setting id="results_quality_episode" type="string" label="30344" help="30345"
           parent="auto_play_episode">
@@ -1207,18 +1419,23 @@
           <default></default>
           <control type="edit" format="string" />
         </setting>
-        <setting id="autoplay_next_episode" type="bool" label="30358" help="30359"
+        <setting id="autoplay_next_episode" type="boolean" label="30358" help="30359"
           parent="auto_play_episode">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="auto_play_episode">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="auto_play_episode">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
         <setting id="autoplay_alert_method" type="integer" label="30360" help="30361"
           parent="autoplay_next_episode">
           <default>0</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="autoplay_next_episode">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="autoplay_next_episode">true</condition>
+            </dependency>
           </dependencies>
           <control type="spinner" format="integer" />
         </setting>
@@ -1226,7 +1443,9 @@
           parent="autoplay_next_episode">
           <default>0</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="autoplay_next_episode">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="autoplay_next_episode">true</condition>
+            </dependency>
           </dependencies>
           <control type="spinner" format="integer" />
         </setting>
@@ -1238,16 +1457,21 @@
             <maximum>99</maximum>
           </constraints>
           <dependencies>
-            <dependency type="enable" operator="is" setting="autoplay_next_episode">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="autoplay_next_episode">true</condition>
+            </dependency>
           </dependencies>
           <control type="slider" format="integer" />
         </setting>
-        <setting id="autoplay_use_chapters" type="bool" label="30366" help="30367"
+        <setting id="autoplay_use_chapters" type="boolean" label="30366" help="30367"
           parent="autoplay_next_episode">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="autoplay_next_episode">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="autoplay_next_episode">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
         <setting id="autoplay_watching_check" type="integer" label="30368" help="30369"
           parent="autoplay_next_episode">
@@ -1257,13 +1481,16 @@
             <maximum>50</maximum>
           </constraints>
           <dependencies>
-            <dependency type="enable" operator="is" setting="autoplay_next_episode">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="autoplay_next_episode">true</condition>
+            </dependency>
           </dependencies>
           <control type="spinner" format="integer" />
         </setting>
-        <setting id="autoscrape_next_episode" type="bool" label="30370" help="30371"
+        <setting id="autoscrape_next_episode" type="boolean" label="30370" help="30371"
           parent="auto_play_episode">
           <default>false</default>
+          <control type="toggle" />
         </setting>
         <setting id="autoscrape_next_window_percentage" type="integer" label="30372" help="30373"
           parent="autoscrape_next_episode">
@@ -1273,16 +1500,21 @@
             <maximum>99</maximum>
           </constraints>
           <dependencies>
-            <dependency type="enable" operator="is" setting="autoscrape_next_episode">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="autoscrape_next_episode">true</condition>
+            </dependency>
           </dependencies>
           <control type="slider" format="integer" />
         </setting>
-        <setting id="autoscrape_use_chapters" type="bool" label="30374" help="30367"
+        <setting id="autoscrape_use_chapters" type="boolean" label="30374" help="30367"
           parent="autoscrape_next_episode">
           <default>false</default>
           <dependencies>
-            <dependency type="enable" operator="is" setting="autoscrape_next_episode">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="autoscrape_next_episode">true</condition>
+            </dependency>
           </dependencies>
+          <control type="toggle" />
         </setting>
         <setting id="auto_resume_episode" type="integer" label="30375" help="30376">
           <default>0</default>
@@ -1291,19 +1523,22 @@
       </group>
 
       <group id="3" label="30377">
-        <setting id="playback.limit_resolve" type="bool" label="30378" help="30379">
+        <setting id="playback.limit_resolve" type="boolean" label="30378" help="30379">
           <default>false</default>
+          <control type="toggle" />
         </setting>
         <setting id="easynews.playback_method" type="integer" label="30380" help="30381">
           <default>0</default>
           <control type="spinner" format="integer" />
         </setting>
-        <setting id="easynews.playback_method_limited" type="bool" label="30382" help="30383"
+        <setting id="easynews.playback_method_limited" type="boolean" label="30382" help="30383"
           parent="easynews.playback_method">
           <default>false</default>
+          <control type="toggle" />
         </setting>
-        <setting id="playback.volumecheck_enabled" type="bool" label="30384" help="30385">
+        <setting id="playback.volumecheck_enabled" type="boolean" label="30384" help="30385">
           <default>false</default>
+          <control type="toggle" />
         </setting>
         <setting id="playback.volumecheck_percent" type="integer" label="30386" help="30387"
           parent="playback.volumecheck_enabled">
@@ -1313,12 +1548,15 @@
             <maximum>100</maximum>
           </constraints>
           <dependencies>
-            <dependency type="enable" operator="is" setting="playback.volumecheck_enabled">true</dependency>
+            <dependency type="enable">
+              <condition operator="is" setting="playback.volumecheck_enabled">true</condition>
+            </dependency>
           </dependencies>
           <control type="slider" format="integer" />
         </setting>
-        <setting id="playback.auto_enable_subs" type="bool" label="30388" help="30389">
+        <setting id="playback.auto_enable_subs" type="boolean" label="30388" help="30389">
           <default>false</default>
+          <control type="toggle" />
         </setting>
       </group>
 
