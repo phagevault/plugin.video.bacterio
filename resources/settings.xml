@@ -1328,19 +1328,41 @@
           <default>0</default>
           <control type="spinner" format="integer" />
         </setting>
-        <setting id="filter.hevc" type="integer" label="30313" help="30314">
-          <default>0</default>
-          <control type="spinner" format="integer" />
+        <setting id="filter.hevc" type="boolean" label="30313" help="30314">
+          <default>false</default>
+          <control type="toggle" />
         </setting>
-        <setting id="filter.hevc.max_quality" type="integer" label="30315" help="30316"
+        <setting id="filter.hevc.max_quality" type="string" label="30315" help="30316"
           parent="filter.hevc">
-          <default>0</default>
-          <control type="spinner" format="integer" />
+          <default>4K</default>
+          <constraints>
+            <options>
+              <option label="4K">4K</option>
+              <option label="1080p">1080p</option>
+              <option label="720p">720p</option>
+              <option label="SD">SD</option>
+              <option label="SCR">SCR</option>
+              <option label="CAM">CAM</option>
+              <option label="TELE">TELE</option>
+            </options>
+          </constraints>
+          <control type="spinner" format="string" />
         </setting>
-        <setting id="filter.hevc.max_autoplay_quality" type="integer" label="30317" help="30318"
+        <setting id="filter.hevc.max_autoplay_quality" type="string" label="30317" help="30318"
           parent="filter.hevc">
-          <default>0</default>
-          <control type="spinner" format="integer" />
+          <default>4K</default>
+          <constraints>
+            <options>
+              <option label="4K">4K</option>
+              <option label="1080p">1080p</option>
+              <option label="720p">720p</option>
+              <option label="SD">SD</option>
+              <option label="SCR">SCR</option>
+              <option label="CAM">CAM</option>
+              <option label="TELE">TELE</option>
+            </options>
+          </constraints>
+          <control type="spinner" format="string" />
         </setting>
         <setting id="filter.sort_to_top" type="integer" label="30319" help="30320">
           <default>0</default>
