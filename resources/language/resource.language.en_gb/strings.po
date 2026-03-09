@@ -136,32 +136,1846 @@ msgctxt "#30023"
 msgid "Enable this and Bacterio will autostart after running its services upon Kodi start"
 msgstr ""
 
-#: /resource/settings.xml
+#: /resources/settings.xml
 msgctxt "#30024"
-msgid "Change Backgound Image"
+msgid "Background Image"
 msgstr ""
 
-#: /resource/settings.xml
+#: /resources/settings.xml
 msgctxt "#30025"
 msgid "Set a custom background to use within Bacterio"
 msgstr ""
 
-#: /resource/settings.xml
+#: /resources/settings.xml
 msgctxt "#30026"
-msgid "Restore Default Backgound"
+msgid "Restore Default Background"
 msgstr ""
 
-#: /resource/settings.xml
+#: /resources/settings.xml
 msgctxt "#30027"
 msgid "Revert background to Bacterio's default"
 msgstr ""
 
-#: /resource/settings.xml
+#: /resources/settings.xml
 msgctxt "#30028"
 msgid "Limit Concurrent Threads"
 msgstr ""
 
-#: /resource/settings.xml
+#: /resources/settings.xml
 msgctxt "#30029"
 msgid "Enable this and Bacterio will limit the threads enacted simultaneously. Best to leave this disabled unless you are having issues with your device not supporting high numbers of concurrent threads in python"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30030"
+msgid "Maximum Active Threads"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30031"
+msgid "Choose the maximum active concurrent threads Bacterio will be limited to"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30032"
+msgid "Watched Indicators"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30033"
+msgid "Watched Status Provider"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30034"
+msgid "Choose the provider that keeps track of the Movies and Episodes you have watched within Bacterio. Options are the built in method of Bacterio or your Trakt account"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30035"
+msgid "Trakt Cache"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30036"
+msgid "Resync Interval (mins)"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30037"
+msgid "Choose how often Bacterio polls your Trakt service for any changes"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30038"
+msgid "Refresh Widgets After Trakt Sync"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30039"
+msgid "Enable this and Bacterio will refresh widgets after performing a Trakt Sync if there were any changes"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30040"
+msgid "UTC Time Offset"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30041"
+msgid "UTC (+/-)"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30042"
+msgid "Choose the correct UTC offset based on your location"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30043"
+msgid "Downloads"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30044"
+msgid "Movies Directory"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30045"
+msgid "Choose your download location for Movies"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30046"
+msgid "TV Shows Directory"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30047"
+msgid "Choose your download location for TV Shows"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30048"
+msgid "Premium Files Directory"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30049"
+msgid "Choose your download location for Premium files. Includes downloads from debrid service caches or Easynews"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30050"
+msgid "Image Files Directory"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30051"
+msgid "Choose your download location for Images"
+msgstr ""
+
+# ---- FEATURES ----
+
+#: /resources/settings.xml
+msgctxt "#30052"
+msgid "Enable Extra Ratings"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30053"
+msgid "Enable this and the Extras menu will show ratings from more services than just TMDb. Must have a valid OMDb API assigned in the Accounts settings for this to show"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30054"
+msgid "Enable Scrollbars for Extras Lists"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30055"
+msgid "Choose this and the individual lists within the Extras window will each utilize a scrollbar when needed"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30056"
+msgid "Movies Open Action"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30057"
+msgid "Choose the Open Action when a Movie is selected in Bacterio. Choices are None, Open Extras, Open Movie Set, Both"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30058"
+msgid "TV Shows Open Action"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30059"
+msgid "Choose the Open Action when a TV Show is selected in Bacterio. Choices are None or Open Extras"
+msgstr ""
+
+# ---- CONTENT ----
+
+#: /resources/settings.xml
+msgctxt "#30060"
+msgid "Paginate Lists When Available"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30061"
+msgid "Enable this and Bacterio will attempt to paginate lists when possible. This is mainly applicable to personal lists"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30062"
+msgid "Addon Item Limit"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30063"
+msgid "Choose the limit of pagination when within Bacterio"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30064"
+msgid "Widgets Item Limit"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30065"
+msgid "Choose the limit of pagination for Bacterio widgets"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30066"
+msgid "Enable Jump To Navigation"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30067"
+msgid "Enable this and Bacterio will include a Jump To item at the end of each page of paginated personal lists"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30068"
+msgid "Ignore Articles when Sorting Lists"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30069"
+msgid "Enable this and Bacterio will ignore leading words like The or A when sorting lists"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30070"
+msgid "Service used for Because You Watched"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30071"
+msgid "Choose which service provides recommendations for the Because You Watched menus. Options are Recommended (TMDb), More Like This (IMDb) or AI Similar (AI)"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30072"
+msgid "Seeds used for Because You Watched Random"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30073"
+msgid "Choose how much previously watched media is used for recommendations for the Because You Watched Random menu"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30074"
+msgid "Watched (Still Airing) TV Shows Location"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30075"
+msgid "Choose where fully watched but still airing TV Shows are shown. Options are Watched, In Progress or Both"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30076"
+msgid "Show Special Episodes When Available"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30077"
+msgid "Enable this and Bacterio will show TV Show Special Episodes"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30078"
+msgid "Use Season Names When Available"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30079"
+msgid "Enable this and Bacterio will use the name of a season when available"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30080"
+msgid "Flatten TV Show Seasons"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30081"
+msgid "Choose the times when Bacterio will load all episodes of a TV Show when browsed into"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30082"
+msgid "Avoid Episode Spoilers"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30083"
+msgid "Enable this and Bacterio will hide episode thumb and episode synopsis within Bacterio"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30084"
+msgid "Include Anime in TV Show Watched Progress"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30085"
+msgid "Enable this and Bacterio will include Anime content in your Watched, Progress, Progress Episodes and Next Episodes menus in the main TV Show menu"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30086"
+msgid "Include Unaired Media in Trakt Watchlists"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30087"
+msgid "Enable this and Bacterio will display any unaired media in your Trakt Movie/TV Show Watchlists. Disable this and any unaired Media will be hidden"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30088"
+msgid "Include Adult Results from Media Searches"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30089"
+msgid "Enable this and Bacterio will attempt to filter out adult content from Movie, TV Show and People searches"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30090"
+msgid "Control Viewtypes within Addon"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30091"
+msgid "Enable this and Bacterio will control view types used within the addon"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30092"
+msgid "Manually Enter Viewtype Values"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30093"
+msgid "Enable this to manually enter values for the viewtypes used. Only do this if you know the viewtype values for the skin you are using"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30094"
+msgid "Menu View ID"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30095"
+msgid "Enter the Viewtype ID for Menu Content"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30096"
+msgid "Movies View ID"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30097"
+msgid "Enter the Viewtype ID for Movies Content"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30098"
+msgid "TV Shows View ID"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30099"
+msgid "Enter the Viewtype ID for TV Shows Content"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30100"
+msgid "Seasons View ID"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30101"
+msgid "Enter the Viewtype ID for Seasons Content"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30102"
+msgid "Episodes View ID"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30103"
+msgid "Enter the Viewtype ID for Episodes Content"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30104"
+msgid "Episode Lists View ID"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30105"
+msgid "Enter the Viewtype ID for Episode Lists Content"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30106"
+msgid "Premium Files View ID"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30107"
+msgid "Enter the Viewtype ID for Premium Files Content"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30108"
+msgid "Contents Sort Order For Watched Progress"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30109"
+msgid "In Progress Sort Order"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30110"
+msgid "Choose the sort order for your In Progress media"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30111"
+msgid "Watched Sort Order"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30112"
+msgid "Choose the sort order for your Watched media"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30113"
+msgid "Contents Sort Order For Trakt Lists"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30114"
+msgid "Trakt Collection Sort Order"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30115"
+msgid "Choose the sort order for your Trakt Collection media"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30116"
+msgid "Trakt Watchlist Sort Order"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30117"
+msgid "Choose the sort order for your Trakt Watchlist media"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30118"
+msgid "TMDb Lists"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30119"
+msgid "TMDb Lists Display Order"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30120"
+msgid "Choose the order in which your TMDb lists are presented"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30121"
+msgid "Personal Lists"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30122"
+msgid "Personal Lists Display Order"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30123"
+msgid "Choose the order in which your Personal lists are presented"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30124"
+msgid "Show List Author"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30125"
+msgid "Enable this and Bacterio will display the Author of the Personal List"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30126"
+msgid "Sort Unseen Lists to Top"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30127"
+msgid "Enable this and Bacterio will sort all unseen Personal Lists to the top"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30128"
+msgid "Highlight Unseen Lists"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30129"
+msgid "Enable this and Bacterio will highlight Unseen Personal Lists using the chosen highlight"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30130"
+msgid "Unseen Highlight Color"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30131"
+msgid "Choose the color used to highlight Unseen Personal Lists"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30132"
+msgid "Widgets"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30133"
+msgid "Refresh Widgets on Timer"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30134"
+msgid "Choose whether Bacterio refreshes widgets based on a set timer"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30135"
+msgid "Show Notification after Widget Refresh"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30136"
+msgid "Enable this and Bacterio will show a notification whenever widgets are refreshed by the timer"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30137"
+msgid "Hide Watched Items in Widgets"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30138"
+msgid "Enable this and watched items will be hidden in Bacterio widgets"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30139"
+msgid "Hide Next Page Item in Widgets"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30140"
+msgid "Enable this and the Next Page item will be hidden in Bacterio widgets"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30141"
+msgid "Ratings Posters"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30142"
+msgid "Use RPDb Ratings Posters For..."
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30143"
+msgid "Choose which media types utilize Rated Posters provided by RPDb. Choices are None, Movies, TV Shows or Both"
+msgstr ""
+
+# ---- SINGLE EPISODE LISTS ----
+
+#: /resources/settings.xml
+msgctxt "#30144"
+msgid "Single Episode Lists"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30145"
+msgid "Single Episode Display Format - Within Addon"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30146"
+msgid "Choose the display format Bacterio uses when naming single episodes within the addon"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30147"
+msgid "Single Episode Display Format - Widgets"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30148"
+msgid "Choose the display format Bacterio uses when naming single episodes for widgets"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30149"
+msgid "Provide Unwatched Episodes Info"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30150"
+msgid "Enable this to share with Kodi the number of unwatched episodes for the TV Show of each episode in single episode lists"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30151"
+msgid "Next Episodes"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30152"
+msgid "Calculate Content Based On"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30153"
+msgid "Choose the method used to determine the content of your Next Episodes list. Last Aired or Last Watched"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30154"
+msgid "Next Episodes Sort Type"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30155"
+msgid "Choose the sort type of Next Episodes list. Recently Watched, Airdate or Title"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30156"
+msgid "Next Episodes Sort Order"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30157"
+msgid "Choose the sort direction of Next Episodes list. Ascending or Descending"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30158"
+msgid "Limit Used Watched History"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30159"
+msgid "Enable this to limit the amount of watched history used to determine Next Episodes"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30160"
+msgid "History Limit"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30161"
+msgid "A setting of 20 will limit the history used based on the previous 20 watched episodes"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30162"
+msgid "Include Trakt Watchlist/Bacterio Favorites"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30163"
+msgid "Choose which lists are included within Bacterios Next Episodes"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30164"
+msgid "Include Airdate in Title"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30165"
+msgid "Enable this to include the airdate at the beginning of the list item label"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30166"
+msgid "Sort Airing Today to Top"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30167"
+msgid "Enable this to sort episodes airing today to the top of the Next Episodes list"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30168"
+msgid "Include Unaired Episodes When Within 7 Days"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30169"
+msgid "Enable this to include unaired episodes within Next Episodes. They will show with a red highlight and become visible within 7 days of their airdate"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30170"
+msgid "Trakt Calendar"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30171"
+msgid "Flatten TV Shows Airing on Same Day"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30172"
+msgid "Enable this to limit to the first instance of a TV Show episode when that TV Show has multiple episodes airing on the same day"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30173"
+msgid "Trakt Calendar Sort Order"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30174"
+msgid "Choose the sort direction of the Trakt Calendar list. Ascending or Descending"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30175"
+msgid "Show Previous Days"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30176"
+msgid "Choose how many previous days will be shown within the Trakt Calendar"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30177"
+msgid "Show Future Days"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30178"
+msgid "Choose how many future days will be shown within the Trakt Calendar"
+msgstr ""
+
+# ---- META ACCOUNTS ----
+
+#: /resources/settings.xml
+msgctxt "#30179"
+msgid "Meta Accounts"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30180"
+msgid "Trakt Client ID Key"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30181"
+msgid "Enter here your Trakt Client ID key"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30182"
+msgid "Trakt Client Secret Key"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30183"
+msgid "Enter here your Trakt Client Secret key"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30184"
+msgid "TMDb API"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30185"
+msgid "TMDb API Key"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30186"
+msgid "Enter here your TMDb API key"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30187"
+msgid "OMDb"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30188"
+msgid "OMDb API Key"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30189"
+msgid "Enter here your OMDb API key. This will allow you to utilize extra ratings information in Bacterios Extras window"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30190"
+msgid "RPDb (Ratings Posters)"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30191"
+msgid "RPDb API Key"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30192"
+msgid "Enter here your RPDb API key. This will allow you to utilize posters that include built in ratings information when available"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30193"
+msgid "Google (Gemini/Gemma) AI"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30194"
+msgid "Google AI API Key"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30195"
+msgid "Enter here your Gemini/Gemma AI API key. This will allow you to utilize the features within Bacterio that use AI, such as Browse AI Similar"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30196"
+msgid "Groq AI"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30197"
+msgid "Groq AI API Key"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30198"
+msgid "Enter here your Groq AI API key. This will allow you to utilize the features within Bacterio that use AI, such as Browse AI Similar"
+msgstr ""
+
+# ---- SOURCES ACCOUNTS ----
+
+#: /resources/settings.xml
+msgctxt "#30199"
+msgid "Sources Accounts"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30200"
+msgid "External Scrapers"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30201"
+msgid "Enable External Scrapers"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30202"
+msgid "Enable this to use external scrapers. No support is provided when you choose to use external scrapers within Bacterio"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30203"
+msgid "External Scrapers Module"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30204"
+msgid "Choose the external scraper module to use within Bacterio"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30205"
+msgid "Check for Cached Status of Results (RD and AD)"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30206"
+msgid "Enable this and Bacterio will get the cached status for Real Debrid and All Debrid results"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30207"
+msgid "Filter External Scrapers"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30208"
+msgid "Enable this and Bacterio will filter the external scrapers based on their priority determined by the scraper pack used"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30209"
+msgid "Real Debrid"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30210"
+msgid "Enable Real Debrid"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30211"
+msgid "Enable the use of your Real Debrid account"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30212"
+msgid "Add Resolved Debrid Cache to Cloud"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30213"
+msgid "Choose which resolved media is automatically added to your Real Debrid Cloud. All media or only show packs"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30214"
+msgid "Search Cloud Storage"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30215"
+msgid "Enable this and Bacterio will search your Real Debrid Cloud for media"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30216"
+msgid "Filter Cloud Results by Name"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30217"
+msgid "Enable this and Bacterio will perform extra name matching functions on your cloud results. Will help to limit incorrect results, but may also filter some relevant results"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30218"
+msgid "Check Before Full Search"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30219"
+msgid "Enable this and Bacterio will search for results in your cloud before checking other enabled scrapers"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30220"
+msgid "Autoplay Cloud Result"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30221"
+msgid "Enable this and Bacterio will Autoplay the top result found from the cloud"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30222"
+msgid "Show Cloud Results at Top"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30223"
+msgid "Enable this and Bacterio will sort cloud results to the top of all results"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30224"
+msgid "Priority (Lower Number Equals Higher Priority)"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30225"
+msgid "Choose the order in which results appear in relation to any other active accounts. The lower the number, the higher the sort order"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30226"
+msgid "Use Alternate URL"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30227"
+msgid "Enable this and Bacterio will use an alternate base url for RD. This may circumvent any blocks being performed"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30228"
+msgid "Premiumize"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30229"
+msgid "Enable Premiumize"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30230"
+msgid "Enable the use of your Premiumize account"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30231"
+msgid "All Debrid"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30232"
+msgid "Enable All Debrid"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30233"
+msgid "Enable the use of your All Debrid account"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30234"
+msgid "Easy Debrid"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30235"
+msgid "Enable Easy Debrid"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30236"
+msgid "Enable the use of your Easy Debrid account"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30237"
+msgid "TorBox"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30238"
+msgid "Enable TorBox"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30239"
+msgid "Enable the use of your TorBox account"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30240"
+msgid "Easynews"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30241"
+msgid "Enable Easynews"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30242"
+msgid "Enable the use of your Easynews account"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30243"
+msgid "Easynews Login"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30244"
+msgid "Enter the Login of your Easynews account"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30245"
+msgid "Easynews Password"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30246"
+msgid "Enter the Password of your Easynews account"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30247"
+msgid "Filter Results by Name"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30248"
+msgid "Enable this and Bacterio will perform extra name matching functions on your Easynews results"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30249"
+msgid "Filter Languages"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30250"
+msgid "Enable this and Bacterio will perform extra language filtering on your Easynews results"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30251"
+msgid "Languages To Include"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30252"
+msgid "Choose which languages you wish to include in Easynews results"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30253"
+msgid "Autoplay Result"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30254"
+msgid "Enable this and Bacterio will Autoplay the top result found"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30255"
+msgid "Local Media Folders"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30256"
+msgid "Enable Local Media Folders"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30257"
+msgid "Enable the use of any local media folder locations i.e. NAS drives, HDDs etc"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30258"
+msgid "Filter Local Folder Results by Name"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30259"
+msgid "Enable this and Bacterio will perform extra name matching functions on your local media folders results"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30260"
+msgid "Show Local Folder Results at Top"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30261"
+msgid "Enable this and Bacterio will sort the results from your local media folders to the top of all results"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30262"
+msgid "Ignore Quality and Size Filters"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30263"
+msgid "Enable this and Bacterio will ignore any Quality or Size filters when processing local media folders results"
+msgstr ""
+
+# ---- RESULTS ----
+
+#: /resources/settings.xml
+msgctxt "#30264"
+msgid "Scraper Timeout"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30265"
+msgid "Choose the amount of time Bacterio will allow all scrapers to search for results"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30266"
+msgid "Results Display Format"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30267"
+msgid "Choose the format in which Bacterio will display the results of a source search. Lists, Rows and WideList are provided"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30268"
+msgid "Retry With No Cache Check When No Results"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30269"
+msgid "Choose whether to rescrape with the external cache check ignored when there are no results. Choices are Off, Auto or Prompt"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30270"
+msgid "Retry With IMDb Year Data When No Results"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30271"
+msgid "Choose whether to rescrape with the IMDb Year Data when there are no results. Choices are Off, Auto or Prompt"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30272"
+msgid "Retry With All Scrapers When No Results"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30273"
+msgid "Choose whether to rescrape with all external scrapers when there are no results. Choices are Off, Auto or Prompt"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30274"
+msgid "Retry With Episode Group When No Results"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30275"
+msgid "Choose whether to rescrape with a custom episode grouping when there are no results. Choices are Off, Auto or Prompt"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30276"
+msgid "Retry with Filters Ignored When No Results"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30277"
+msgid "Choose whether to rescrape ignoring filters when there are no results. Choices are Off, Auto or Prompt"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30278"
+msgid "Sorting and Filtering"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30279"
+msgid "Filter Results by Size"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30280"
+msgid "Choose the method used to filter results by their size. Either by internet speed, or actual size of the result"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30281"
+msgid "Internet Speed (Mbit/s)"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30282"
+msgid "Enter here your internet line speed. Bacterio will reduce this value by 10% before filtering results by size"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30283"
+msgid "Movies Maximum Size (MB)"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30284"
+msgid "Enter here the Maximum size allowed for Movies playback"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30285"
+msgid "Episodes Maximum Size (MB)"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30286"
+msgid "Enter here the Maximum size allowed for Episodes playback"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30287"
+msgid "Movies Minimum Size (MB)"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30288"
+msgid "Enter here the Minimum size allowed for Movies"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30289"
+msgid "Episodes Minimum Size (MB)"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30290"
+msgid "Enter here the Minimum size allowed for Episodes"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30291"
+msgid "Include Results with Unknown Size"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30292"
+msgid "Enable this and Bacterio will include results where the size of the file is unknown"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30293"
+msgid "Use Weighted Value for Size Sorting"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30294"
+msgid "Enable this and Bacterio will weight HEVC file sizes as being equal to 2x a non-HEVC file size when sorting results"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30295"
+msgid "Results Size Sort Direction"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30296"
+msgid "Choose the sort direction with regards to results size"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30297"
+msgid "Limit Results Per Quality"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30298"
+msgid "Choose whether Bacterio limits the number of results shown per quality tier"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30299"
+msgid "Limit Results Total"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30300"
+msgid "Choose whether Bacterio limits the total number of results shown"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30301"
+msgid "Pre-Release Filter (CAM/SCR/TELE)"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30302"
+msgid "Choose how to handle Pre-Release source results. They can be INCLUDED or EXCLUDED"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30303"
+msgid "3D Files Filter"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30304"
+msgid "Choose how to handle 3D source results. They can be INCLUDED or EXCLUDED"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30305"
+msgid "HDR Files Filter"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30306"
+msgid "Choose how to handle HDR source results. They can be INCLUDED or EXCLUDED"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30307"
+msgid "Dolby Vision Files Filter"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30308"
+msgid "Choose how to handle Dolby Vision source results. They can be INCLUDED or EXCLUDED"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30309"
+msgid "AV1 Files Filter"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30310"
+msgid "Choose how to handle AV1 source results. They can be INCLUDED or EXCLUDED"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30311"
+msgid "AI Enhanced/Upscaled Files Filter"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30312"
+msgid "Choose how to handle AI Enhanced/Upscaled source results. They can be INCLUDED or EXCLUDED"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30313"
+msgid "HEVC Files Filter"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30314"
+msgid "Choose how to handle HEVC source results. They can be INCLUDED or EXCLUDED"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30315"
+msgid "Max HEVC Quality"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30316"
+msgid "Choose the maximum quality allowed for HEVC files when allowing source select"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30317"
+msgid "Max Autoplay HEVC Quality"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30318"
+msgid "Choose the maximum quality allowed for HEVC files being autoplayed"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30319"
+msgid "Custom Sort To Top"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30320"
+msgid "Choose when to sort certain results to the top. Options are NONE, SOURCE SELECT, AUTOPLAY or BOTH"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30321"
+msgid "Filters for Sort to Top"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30322"
+msgid "Choose video and audio properties that will be sorted to the top of the sources list. Choose up to 5 different parameters in order of importance"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30323"
+msgid "Audio Properties to Exclude"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30324"
+msgid "Choose audio properties that will be filtered out of source results"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30325"
+msgid "Results Color Highlights"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30326"
+msgid "Highlight Results Based On"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30327"
+msgid "Choose the method used to provide highlight colors to source results. PROVIDER, QUALITY, or SINGLE COLOR"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30328"
+msgid "Real Debrid Color"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30329"
+msgid "Premiumize Color"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30330"
+msgid "All Debrid Color"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30331"
+msgid "Off Cloud Color"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30332"
+msgid "Easy Debrid Color"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30333"
+msgid "TorBox Color"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30334"
+msgid "Easynews Color"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30335"
+msgid "Debrid Cloud Color"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30336"
+msgid "Local Media Folders Color"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30337"
+msgid "4K Results Color"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30338"
+msgid "1080P Results Color"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30339"
+msgid "720P Results Color"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30340"
+msgid "SD Results Color"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30341"
+msgid "Single Color For All Results"
+msgstr ""
+
+# ---- PLAYBACK ----
+
+#: /resources/settings.xml
+msgctxt "#30342"
+msgid "Auto Play Movies"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30343"
+msgid "Enable this for Movies to play automatically when selected"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30344"
+msgid "Limit Quality (Source Select)"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30345"
+msgid "Choose the Quality properties allowed for source select results"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30346"
+msgid "Limit Auto Play Quality"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30347"
+msgid "Choose the Quality properties allowed for autoplay results"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30348"
+msgid "Automatically Resume Movie Playback"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30349"
+msgid "Choose when Bacterio will automatically resume playback of an in-progress Movie"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30350"
+msgid "Show Credits Stinger Alert"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30351"
+msgid "Enable this and Bacterio will show an alert towards the end of a movie if the movie contains during or after credit stingers"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30352"
+msgid "Show Stinger Alert After (%) Playback"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30353"
+msgid "Choose when Bacterio will show the Credit Stingers Alert"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30354"
+msgid "Use Chapter Info For Stinger Alert When Available"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30355"
+msgid "Enable this and Bacterio will attempt to use video file Chapter information to ascertain when to show the Credit Stingers Alert"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30356"
+msgid "Auto Play Episodes"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30357"
+msgid "Enable this for Episodes to play automatically when selected"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30358"
+msgid "Autoplay Next Episode"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30359"
+msgid "Enable this and Bacterio will automatically play the next episode of a TV Show at the end of the episode currently being watched"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30360"
+msgid "Next Episode Alert Method"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30361"
+msgid "Choose the alert method when Next Episode is ready to be played. Choose Window or Notification"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30362"
+msgid "When No Interaction with Window"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30363"
+msgid "Choose the action performed when you fail to interact with the Next Episode alert"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30364"
+msgid "Show Next Episode Alert After (%) Playback"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30365"
+msgid "Choose when Bacterio will show the Next Episode Alert"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30366"
+msgid "Use Chapter Info For Next Episode Alert When Available"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30367"
+msgid "Enable this and Bacterio will attempt to use video file Chapter information to ascertain when to show the Next Episode alert"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30368"
+msgid "Check Still Watching After... (0=Off)"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30369"
+msgid "Choose after how many auto played episodes Bacterio will ask if you are still watching. Set to 0 to disable"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30370"
+msgid "Autoscrape Next Episode"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30371"
+msgid "Enable this and Bacterio will automatically search for sources for the next episode towards the end of the episode currently being watched"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30372"
+msgid "Show Autoscrape Notification After (%) Playback"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30373"
+msgid "Choose when Bacterio will show the autoscrape Next Episode notification"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30374"
+msgid "Use Chapter Info For Autoscrape Alert When Available"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30375"
+msgid "Automatically Resume Episode Playback"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30376"
+msgid "Choose when Bacterio will automatically resume playback of an in-progress Episode"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30377"
+msgid "Playback Utilities"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30378"
+msgid "Limit Resolve Attempts to Selected Result"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30379"
+msgid "Enable this and Bacterio will limit the playback attempts to only the source result chosen. If disabled, Bacterio will try up to 15 results of similar properties until it successfully resolves"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30380"
+msgid "Easynews Playback Method"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30381"
+msgid "Choose the method for Bacterio to use to attempt optimal Easynews playback. RETRY, NO SEEK, BOTH or NONE"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30382"
+msgid "Exclude NO SEEK for My Services Menu Playback"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30383"
+msgid "Enable this and Bacterio will not use the NO SEEK Easynews Playback Method when resolving regular files from the My Services Easynews location"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30384"
+msgid "Check Volume Before Start of Playback"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30385"
+msgid "Enable this and Bacterio will attempt to check the current level of volume within Kodi and adjust it downwards if it is exceeding a set level"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30386"
+msgid "Set Max Percent Starting Volume (0-100)"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30387"
+msgid "Choose the maximum allowed volume level at the start of playback"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30388"
+msgid "Auto Enable Subtitles"
+msgstr ""
+
+#: /resources/settings.xml
+msgctxt "#30389"
+msgid "Enable this and Bacterio will automatically enable subtitles when available"
 msgstr ""

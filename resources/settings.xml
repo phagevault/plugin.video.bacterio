@@ -1,120 +1,1328 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <settings version="1">
   <section id="plugin.video.bacterio">
-    <!-- General -->
+
+    <!-- ======================== GENERAL ======================== -->
     <category id="general" label="30001">
-      <group id="1" label="30002">
-        <setting id="open_settings" label="30003" type="action">
-          <level>0</level>
-          <data>RunPlugin(plugin://plugin.video.bacterio/?mode=open_settings)</data>
-          <control type="button" format="action" />
-          <close>true</close>
-        </setting>
-        <setting id="autostart" label="30022" type="boolean" help="30023">
-          <level>0</level>
+
+      <group id="1" label="30001">
+        <setting id="auto_start_bacterio" type="bool" label="30022" help="30023">
           <default>false</default>
-          <control type="toggle" />
         </setting>
-        <setting id="background_image" label="30024" type="action" help="30025">
-          <level>0</level>
-          <!-- use file browser from kodi-->
-          <data>
-            RunPlugin(plugin://plugin.video.bacterio/?mode=settings_manager.set_path&amp;setting_id=addon_fanart)</data>
-          <control type="button" format="action" />
-        </setting>
-        <setting id="default_background" label="30026" type="action" help="30027">
-          <level>0</level>
-          <data>
-            RunPlugin(plugin://plugin.video.bacterio/?mode=settings_manager.restore_setting_default&amp;setting_id=addon_fanart)</data>
-          <control type="button" format="action" />
-        </setting>
-        <setting id="limit_threads" label="30028" type="boolean" help="30029">
-          <level>2</level>
-          <default>false</default>
-          <control type="toggle" />
-        </setting>
-      </group>
-    </category>
-    <!-- Features -->
-    <category id="features" label="30004">
-      <group id="2" label="30005">
-        <setting id="extras_lists_choice" type="action" label="30006">
-          <level>0</level>
-          <data>
-            RunPlugin(plugin://plugin.video.bacterio/?mode=extras_lists_choice)
-          </data>
-          <control type="button" format="action" />
-        </setting>
-        <setting id="extras_buttons_choice" type="action" label="30007">
-          <level>0</level>
-          <data>
-            RunPlugin(plugin://plugin.video.bacterio/?mode=extras_buttons_choice)
-          </data>
-          <control type="button" format="action" />
-        </setting>
-        <setting id="enable_extra_ratings" type="action" label="30008">
-          <level>0</level>
-          <data>
-            RunPlugin(plugin://plugin.video.bacterio/?mode=settings_manager.set_boolean&amp;setting_id=extras.enable_extra_ratings)
-          </data>
-          <control type="button" format="action" />
-        </setting>
-        <setting id="enable_scrollbars" type="action" label="30009">
-          <level>0</level>
-          <data>
-            RunPlugin(plugin://plugin.video.bacterio/?mode=settings_manager.set_boolean&amp;setting_id=extras.enable_scrollbars)
-          </data>
-          <control type="button" format="action" />
-        </setting>
-      </group>
-      <group id="3" label="30010">
-        <setting id="media_open_action_movie" type="action" label="30011">
-          <level>0</level>
-          <data>
-            RunPlugin(plugin://plugin.video.bacterio/?mode=settings_manager.set_from_list&amp;setting_id=media_open_action_movie)
-          </data>
-          <control type="button" format="action" />
-        </setting>
-      </group>
-    </category>
-    <!-- Content -->
-    <category label="30012">
-      <group id="4" label=""></group>
-    </category>
-    <!-- Accounts -->
-    <category id="accounts" label="30019">
-      <group id="4" label="30020">
-        <setting id="authenticate_trakt" type="action" label="30014" help="">
-          <level>0</level>
-          <data>RunPlugin(plugin://plugin.video.bacterio/?mode=trakt.trakt_authenticate)</data>
+        <setting id="addon_fanart" type="path" label="30024" help="30025">
+          <default></default>
           <constraints>
             <allowempty>true</allowempty>
           </constraints>
-          <control type="button" format="action">
-            <close>true</close>
-          </control>
+          <control type="button" format="file" />
         </setting>
-        <setting id="revoke_trakt" type="action" label="30016" help="">
-          <level>0</level>
-          <data>RunPlugin(plugin://plugin.video.bacterio/?mode=trakt.trakt_revoke_authentication)</data>
+        <setting id="limit_concurrent_threads" type="bool" label="30028" help="30029">
+          <default>false</default>
+        </setting>
+        <setting id="max_threads" type="integer" label="30030" help="30031"
+          parent="limit_concurrent_threads">
+          <default>10</default>
           <constraints>
-            <allowempty>true</allowempty>
+            <minimum>1</minimum>
+            <maximum>50</maximum>
           </constraints>
           <dependencies>
-            <dependency type="visible">
-              <!-- TODO: Actual logic to show if trakt is authed-->
-              <condition operator="!is" setting="trakt.token" />
-            </dependency>
+            <dependency type="enable" operator="is" setting="limit_concurrent_threads">true</dependency>
           </dependencies>
-          <control type="button" format="action">
-            <close>true</close>
-          </control>
+          <control type="spinner" format="integer" />
         </setting>
       </group>
+
+      <group id="2" label="30032">
+        <setting id="watched_indicators" type="integer" label="30033" help="30034">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+      </group>
+
+      <group id="3" label="30035">
+        <setting id="trakt.sync_interval" type="integer" label="30036" help="30037">
+          <default>60</default>
+          <constraints>
+            <minimum>5</minimum>
+            <maximum>1440</maximum>
+          </constraints>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="trakt.refresh_widgets" type="bool" label="30038" help="30039">
+          <default>false</default>
+        </setting>
+      </group>
+
+      <group id="4" label="30040">
+        <setting id="datetime.offset" type="integer" label="30041" help="30042">
+          <default>0</default>
+          <constraints>
+            <minimum>-12</minimum>
+            <maximum>14</maximum>
+          </constraints>
+          <control type="spinner" format="integer" />
+        </setting>
+      </group>
+
+      <group id="5" label="30043">
+        <setting id="movie_download_directory" type="path" label="30044" help="30045">
+          <default></default>
+          <control type="button" format="folder" />
+        </setting>
+        <setting id="tvshow_download_directory" type="path" label="30046" help="30047">
+          <default></default>
+          <control type="button" format="folder" />
+        </setting>
+        <setting id="premium_download_directory" type="path" label="30048" help="30049">
+          <default></default>
+          <control type="button" format="folder" />
+        </setting>
+        <setting id="image_download_directory" type="path" label="30050" help="30051">
+          <default></default>
+          <control type="button" format="folder" />
+        </setting>
+      </group>
+
     </category>
-    <!-- Results -->
-    <category id="results" label="30017"></category>
-    <!-- Playback -->
-    <category id="playback" label="30018"></category>
+
+    <!-- ======================== FEATURES ======================== -->
+    <category id="features" label="30004">
+
+      <group id="1" label="30005">
+        <setting id="extras.enable_extra_ratings" type="bool" label="30052" help="30053">
+          <default>false</default>
+        </setting>
+        <setting id="extras.enable_scrollbars" type="bool" label="30054" help="30055">
+          <default>false</default>
+        </setting>
+      </group>
+
+      <group id="2" label="30010">
+        <setting id="media_open_action_movie" type="integer" label="30056" help="30057">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="media_open_action_tvshow" type="integer" label="30058" help="30059">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+      </group>
+
+    </category>
+
+    <!-- ======================== CONTENT ======================== -->
+    <category id="content" label="30012">
+
+      <group id="1" label="30001">
+        <setting id="paginate.lists" type="integer" label="30060" help="30061">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="paginate.limit_addon" type="integer" label="30062" help="30063"
+          parent="paginate.lists">
+          <default>20</default>
+          <constraints>
+            <minimum>1</minimum>
+            <maximum>500</maximum>
+          </constraints>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="paginate.limit_widgets" type="integer" label="30064" help="30065"
+          parent="paginate.lists">
+          <default>20</default>
+          <constraints>
+            <minimum>1</minimum>
+            <maximum>500</maximum>
+          </constraints>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="paginate.jump_to" type="bool" label="30066" help="30067">
+          <default>false</default>
+        </setting>
+        <setting id="ignore_articles" type="bool" label="30068" help="30069">
+          <default>true</default>
+        </setting>
+        <setting id="recommend_service" type="integer" label="30070" help="30071">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="recommend_seed" type="integer" label="30072" help="30073">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="tv_progress_location" type="integer" label="30074" help="30075">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="show_specials" type="bool" label="30076" help="30077">
+          <default>false</default>
+        </setting>
+        <setting id="use_season_name" type="bool" label="30078" help="30079">
+          <default>false</default>
+        </setting>
+        <setting id="default_all_episodes" type="integer" label="30080" help="30081">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="avoid_episode_spoilers" type="bool" label="30082" help="30083">
+          <default>false</default>
+        </setting>
+        <setting id="include_anime_tvshow" type="bool" label="30084" help="30085">
+          <default>false</default>
+        </setting>
+        <setting id="show_unaired_watchlist" type="bool" label="30086" help="30087">
+          <default>false</default>
+        </setting>
+        <setting id="meta_filter" type="bool" label="30088" help="30089">
+          <default>false</default>
+        </setting>
+        <setting id="use_viewtypes" type="bool" label="30090" help="30091">
+          <default>false</default>
+        </setting>
+        <setting id="manual_viewtypes" type="bool" label="30092" help="30093" parent="use_viewtypes">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="use_viewtypes">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="view.main" type="integer" label="30094" help="30095" parent="manual_viewtypes">
+          <default>0</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="manual_viewtypes">true</dependency>
+          </dependencies>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="view.movies" type="integer" label="30096" help="30097"
+          parent="manual_viewtypes">
+          <default>0</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="manual_viewtypes">true</dependency>
+          </dependencies>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="view.tvshows" type="integer" label="30098" help="30099"
+          parent="manual_viewtypes">
+          <default>0</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="manual_viewtypes">true</dependency>
+          </dependencies>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="view.seasons" type="integer" label="30100" help="30101"
+          parent="manual_viewtypes">
+          <default>0</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="manual_viewtypes">true</dependency>
+          </dependencies>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="view.episodes" type="integer" label="30102" help="30103"
+          parent="manual_viewtypes">
+          <default>0</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="manual_viewtypes">true</dependency>
+          </dependencies>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="view.episodes_single" type="integer" label="30104" help="30105"
+          parent="manual_viewtypes">
+          <default>0</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="manual_viewtypes">true</dependency>
+          </dependencies>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="view.premium" type="integer" label="30106" help="30107"
+          parent="manual_viewtypes">
+          <default>0</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="manual_viewtypes">true</dependency>
+          </dependencies>
+          <control type="spinner" format="integer" />
+        </setting>
+      </group>
+
+      <group id="2" label="30108">
+        <setting id="sort.progress" type="integer" label="30109" help="30110">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="sort.watched" type="integer" label="30111" help="30112">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+      </group>
+
+      <group id="3" label="30113">
+        <setting id="sort.collection" type="integer" label="30114" help="30115">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="sort.watchlist" type="integer" label="30116" help="30117">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+      </group>
+
+      <group id="4" label="30118">
+        <setting id="tmdblist.list_sort" type="integer" label="30119" help="30120">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+      </group>
+
+      <group id="5" label="30121">
+        <setting id="personal_list.list_sort" type="integer" label="30122" help="30123">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="personal_list.show_author" type="bool" label="30124" help="30125">
+          <default>false</default>
+        </setting>
+        <setting id="personal_list.sort_unseen_to_top" type="bool" label="30126" help="30127">
+          <default>false</default>
+        </setting>
+        <setting id="personal_list.highlight_unseen" type="bool" label="30128" help="30129">
+          <default>false</default>
+        </setting>
+        <setting id="personal_list.unseen_highlight" type="string" label="30130" help="30131"
+          parent="personal_list.highlight_unseen">
+          <default>FFFFFFFF</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="personal_list.highlight_unseen">true</dependency>
+          </dependencies>
+          <control type="colorbutton" />
+        </setting>
+      </group>
+
+      <group id="6" label="30132">
+        <setting id="widget_refresh_timer" type="integer" label="30133" help="30134">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="widget_refresh_notification" type="bool" label="30135" help="30136"
+          parent="widget_refresh_timer">
+          <default>false</default>
+        </setting>
+        <setting id="widget_hide_watched" type="bool" label="30137" help="30138">
+          <default>false</default>
+        </setting>
+        <setting id="widget_hide_next_page" type="bool" label="30139" help="30140">
+          <default>false</default>
+        </setting>
+      </group>
+
+      <group id="7" label="30141">
+        <setting id="rpdb_enabled" type="integer" label="30142" help="30143">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+      </group>
+
+    </category>
+
+    <!-- ======================== SINGLE EPISODE LISTS ======================== -->
+    <category id="single_episode_lists" label="30144">
+
+      <group id="1" label="30001">
+        <setting id="single_ep_display" type="integer" label="30145" help="30146">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="single_ep_display_widget" type="integer" label="30147" help="30148">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="single_ep_unwatched_episodes" type="bool" label="30149" help="30150">
+          <default>false</default>
+        </setting>
+      </group>
+
+      <group id="2" label="30151">
+        <setting id="nextep.method" type="integer" label="30152" help="30153">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="nextep.sort_type" type="integer" label="30154" help="30155">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="nextep.sort_order" type="integer" label="30156" help="30157">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="nextep.limit_history" type="bool" label="30158" help="30159">
+          <default>false</default>
+        </setting>
+        <setting id="nextep.limit" type="integer" label="30160" help="30161"
+          parent="nextep.limit_history">
+          <default>20</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="nextep.limit_history">true</dependency>
+          </dependencies>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="nextep.include_unwatched" type="integer" label="30162" help="30163">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="nextep.include_airdate" type="bool" label="30164" help="30165">
+          <default>false</default>
+        </setting>
+        <setting id="nextep.airing_today" type="bool" label="30166" help="30167">
+          <default>false</default>
+        </setting>
+        <setting id="nextep.include_unaired" type="bool" label="30168" help="30169">
+          <default>false</default>
+        </setting>
+      </group>
+
+      <group id="3" label="30170">
+        <setting id="trakt.flatten_episodes" type="bool" label="30171" help="30172">
+          <default>false</default>
+        </setting>
+        <setting id="trakt.calendar_sort_order" type="integer" label="30173" help="30174">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="trakt.calendar_previous_days" type="integer" label="30175" help="30176">
+          <default>7</default>
+          <constraints>
+            <minimum>0</minimum>
+            <maximum>30</maximum>
+          </constraints>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="trakt.calendar_future_days" type="integer" label="30177" help="30178">
+          <default>7</default>
+          <constraints>
+            <minimum>0</minimum>
+            <maximum>30</maximum>
+          </constraints>
+          <control type="spinner" format="integer" />
+        </setting>
+      </group>
+
+    </category>
+
+    <!-- ======================== META ACCOUNTS ======================== -->
+    <category id="meta_accounts" label="30179">
+
+      <group id="1" label="30020">
+        <setting id="trakt.client" type="string" label="30180" help="30181">
+          <default>1038ef327e86e7f6d39d80d2eb5479bff66dd8394e813c5e0e387af0f84d89fb</default>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="trakt.secret" type="string" label="30182" help="30183">
+          <default>8d27a92e1d17334dae4a0590083a4f26401cb8f721f477a79fd3f218f8534fd1</default>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="trakt.token" type="string" label="30020">
+          <default></default>
+          <level>3</level>
+        </setting>
+        <setting id="trakt.user" type="string" label="30020">
+          <default></default>
+          <level>3</level>
+        </setting>
+      </group>
+
+      <group id="2" label="30184">
+        <setting id="tmdb_api" type="string" label="30185" help="30186">
+          <default>b370b60447737762ca38457bd77579b3</default>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="tmdb.token" type="string" label="30184">
+          <default></default>
+          <level>3</level>
+        </setting>
+        <setting id="tmdb.account_id" type="string" label="30184">
+          <default></default>
+          <level>3</level>
+        </setting>
+      </group>
+
+      <group id="3" label="30187">
+        <setting id="omdb_api" type="string" label="30188" help="30189">
+          <default></default>
+          <control type="edit" format="string" />
+        </setting>
+      </group>
+
+      <group id="4" label="30190">
+        <setting id="rpdb_api" type="string" label="30191" help="30192">
+          <default></default>
+          <control type="edit" format="string" />
+        </setting>
+      </group>
+
+      <group id="5" label="30193">
+        <setting id="google_api" type="string" label="30194" help="30195">
+          <default></default>
+          <control type="edit" format="string" />
+        </setting>
+      </group>
+
+      <group id="6" label="30196">
+        <setting id="groq_api" type="string" label="30197" help="30198">
+          <default></default>
+          <control type="edit" format="string" />
+        </setting>
+      </group>
+
+    </category>
+
+    <!-- ======================== SOURCES ACCOUNTS ======================== -->
+    <category id="sources_accounts" label="30199">
+
+      <group id="1" label="30200">
+        <setting id="provider.external" type="bool" label="30201" help="30202">
+          <default>false</default>
+        </setting>
+        <setting id="external_scraper.name" type="string" label="30203" help="30204"
+          parent="provider.external">
+          <default></default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="provider.external">true</dependency>
+          </dependencies>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="external.cache_check" type="bool" label="30205" help="30206"
+          parent="provider.external">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="provider.external">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="external.filter_sources" type="bool" label="30207" help="30208"
+          parent="provider.external">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="provider.external">true</dependency>
+          </dependencies>
+        </setting>
+      </group>
+
+      <group id="2" label="30209">
+        <setting id="rd.token" type="string" label="30209">
+          <default></default>
+          <level>3</level>
+        </setting>
+        <setting id="rd.account_id" type="string" label="30209">
+          <default></default>
+          <level>3</level>
+        </setting>
+        <setting id="rd.enabled" type="bool" label="30210" help="30211">
+          <default>false</default>
+        </setting>
+        <setting id="store_resolved_to_cloud.real-debrid" type="integer" label="30212" help="30213"
+          parent="rd.enabled">
+          <default>0</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="rd.enabled">true</dependency>
+          </dependencies>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="provider.rd_cloud" type="bool" label="30214" help="30215" parent="rd.enabled">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="rd.enabled">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="rd_cloud.title_filter" type="bool" label="30216" help="30217"
+          parent="provider.rd_cloud">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="provider.rd_cloud">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="check.rd_cloud" type="bool" label="30218" help="30219"
+          parent="provider.rd_cloud">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="provider.rd_cloud">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="autoplay.rd_cloud" type="bool" label="30220" help="30221"
+          parent="check.rd_cloud">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="check.rd_cloud">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="results.sort_rdcloud_first" type="bool" label="30222" help="30223"
+          parent="provider.rd_cloud">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="provider.rd_cloud">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="rd.priority" type="integer" label="30224" help="30225" parent="rd.enabled">
+          <default>1</default>
+          <constraints>
+            <minimum>1</minimum>
+            <maximum>20</maximum>
+          </constraints>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="rd.enabled">true</dependency>
+          </dependencies>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="rd.alternate_base_url" type="bool" label="30226" help="30227"
+          parent="rd.enabled">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="rd.enabled">true</dependency>
+          </dependencies>
+        </setting>
+      </group>
+
+      <group id="3" label="30228">
+        <setting id="pm.token" type="string" label="30228">
+          <default></default>
+          <level>3</level>
+        </setting>
+        <setting id="pm.account_id" type="string" label="30228">
+          <default></default>
+          <level>3</level>
+        </setting>
+        <setting id="pm.enabled" type="bool" label="30229" help="30230">
+          <default>false</default>
+        </setting>
+        <setting id="store_resolved_to_cloud.premiumize.me" type="integer" label="30212"
+          help="30213" parent="pm.enabled">
+          <default>0</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="pm.enabled">true</dependency>
+          </dependencies>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="provider.pm_cloud" type="bool" label="30214" help="30215" parent="pm.enabled">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="pm.enabled">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="pm_cloud.title_filter" type="bool" label="30216" help="30217"
+          parent="provider.pm_cloud">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="provider.pm_cloud">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="check.pm_cloud" type="bool" label="30218" help="30219"
+          parent="provider.pm_cloud">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="provider.pm_cloud">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="autoplay.pm_cloud" type="bool" label="30220" help="30221"
+          parent="check.pm_cloud">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="check.pm_cloud">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="results.sort_pmcloud_first" type="bool" label="30222" help="30223"
+          parent="provider.pm_cloud">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="provider.pm_cloud">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="pm.priority" type="integer" label="30224" help="30225" parent="pm.enabled">
+          <default>2</default>
+          <constraints>
+            <minimum>1</minimum>
+            <maximum>20</maximum>
+          </constraints>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="pm.enabled">true</dependency>
+          </dependencies>
+          <control type="spinner" format="integer" />
+        </setting>
+      </group>
+
+      <group id="4" label="30231">
+        <setting id="ad.token" type="string" label="30231">
+          <default></default>
+          <level>3</level>
+        </setting>
+        <setting id="ad.account_id" type="string" label="30231">
+          <default></default>
+          <level>3</level>
+        </setting>
+        <setting id="ad.enabled" type="bool" label="30232" help="30233">
+          <default>false</default>
+        </setting>
+        <setting id="store_resolved_to_cloud.alldebrid" type="integer" label="30212" help="30213"
+          parent="ad.enabled">
+          <default>0</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="ad.enabled">true</dependency>
+          </dependencies>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="provider.ad_cloud" type="bool" label="30214" help="30215" parent="ad.enabled">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="ad.enabled">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="ad_cloud.title_filter" type="bool" label="30216" help="30217"
+          parent="provider.ad_cloud">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="provider.ad_cloud">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="check.ad_cloud" type="bool" label="30218" help="30219"
+          parent="provider.ad_cloud">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="provider.ad_cloud">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="autoplay.ad_cloud" type="bool" label="30220" help="30221"
+          parent="check.ad_cloud">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="check.ad_cloud">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="results.sort_adcloud_first" type="bool" label="30222" help="30223"
+          parent="provider.ad_cloud">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="provider.ad_cloud">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="ad.priority" type="integer" label="30224" help="30225" parent="ad.enabled">
+          <default>3</default>
+          <constraints>
+            <minimum>1</minimum>
+            <maximum>20</maximum>
+          </constraints>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="ad.enabled">true</dependency>
+          </dependencies>
+          <control type="spinner" format="integer" />
+        </setting>
+      </group>
+
+      <group id="5" label="30234">
+        <setting id="ed.token" type="string" label="30234">
+          <default></default>
+          <level>3</level>
+        </setting>
+        <setting id="ed.enabled" type="bool" label="30235" help="30236">
+          <default>false</default>
+        </setting>
+        <setting id="ed.priority" type="integer" label="30224" help="30225" parent="ed.enabled">
+          <default>4</default>
+          <constraints>
+            <minimum>1</minimum>
+            <maximum>20</maximum>
+          </constraints>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="ed.enabled">true</dependency>
+          </dependencies>
+          <control type="spinner" format="integer" />
+        </setting>
+      </group>
+
+      <group id="6" label="30237">
+        <setting id="tb.token" type="string" label="30237">
+          <default></default>
+          <level>3</level>
+        </setting>
+        <setting id="tb.enabled" type="bool" label="30238" help="30239">
+          <default>false</default>
+        </setting>
+        <setting id="store_resolved_to_cloud.torbox" type="integer" label="30212" help="30213"
+          parent="tb.enabled">
+          <default>0</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="tb.enabled">true</dependency>
+          </dependencies>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="provider.tb_cloud" type="bool" label="30214" help="30215" parent="tb.enabled">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="tb.enabled">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="tb_cloud.title_filter" type="bool" label="30216" help="30217"
+          parent="provider.tb_cloud">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="provider.tb_cloud">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="check.tb_cloud" type="bool" label="30218" help="30219"
+          parent="provider.tb_cloud">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="provider.tb_cloud">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="autoplay.tb_cloud" type="bool" label="30220" help="30221"
+          parent="check.tb_cloud">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="check.tb_cloud">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="results.sort_tbcloud_first" type="bool" label="30222" help="30223"
+          parent="provider.tb_cloud">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="provider.tb_cloud">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="tb.priority" type="integer" label="30224" help="30225" parent="tb.enabled">
+          <default>5</default>
+          <constraints>
+            <minimum>1</minimum>
+            <maximum>20</maximum>
+          </constraints>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="tb.enabled">true</dependency>
+          </dependencies>
+          <control type="spinner" format="integer" />
+        </setting>
+      </group>
+
+      <group id="7" label="30240">
+        <setting id="provider.easynews" type="bool" label="30241" help="30242">
+          <default>false</default>
+        </setting>
+        <setting id="easynews_user" type="string" label="30243" help="30244"
+          parent="provider.easynews">
+          <default></default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="provider.easynews">true</dependency>
+          </dependencies>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="easynews_password" type="string" label="30245" help="30246"
+          parent="provider.easynews">
+          <default></default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="provider.easynews">true</dependency>
+          </dependencies>
+          <control type="edit" format="string" hidden="true" />
+        </setting>
+        <setting id="easynews.title_filter" type="bool" label="30247" help="30248"
+          parent="provider.easynews">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="provider.easynews">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="easynews.filter_lang" type="bool" label="30249" help="30250"
+          parent="provider.easynews">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="provider.easynews">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="easynews.lang_filters" type="string" label="30251" help="30252"
+          parent="easynews.filter_lang">
+          <default></default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="easynews.filter_lang">true</dependency>
+          </dependencies>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="check.easynews" type="bool" label="30218" help="30219"
+          parent="provider.easynews">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="provider.easynews">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="autoplay.easynews" type="bool" label="30253" help="30254"
+          parent="check.easynews">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="check.easynews">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="en.priority" type="integer" label="30224" help="30225"
+          parent="provider.easynews">
+          <default>6</default>
+          <constraints>
+            <minimum>1</minimum>
+            <maximum>20</maximum>
+          </constraints>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="provider.easynews">true</dependency>
+          </dependencies>
+          <control type="spinner" format="integer" />
+        </setting>
+      </group>
+
+      <group id="8" label="30255">
+        <setting id="provider.folders" type="bool" label="30256" help="30257">
+          <default>false</default>
+        </setting>
+        <setting id="folders.title_filter" type="bool" label="30247" help="30259"
+          parent="provider.folders">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="provider.folders">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="check.folders" type="bool" label="30218" help="30219" parent="provider.folders">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="provider.folders">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="autoplay.folders" type="bool" label="30253" help="30254" parent="check.folders">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="check.folders">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="results.sort_folders_first" type="bool" label="30260" help="30261"
+          parent="provider.folders">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="provider.folders">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="results.folders_ignore_filters" type="bool" label="30262" help="30263"
+          parent="provider.folders">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="provider.folders">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="folders.priority" type="integer" label="30224" help="30225"
+          parent="provider.folders">
+          <default>7</default>
+          <constraints>
+            <minimum>1</minimum>
+            <maximum>20</maximum>
+          </constraints>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="provider.folders">true</dependency>
+          </dependencies>
+          <control type="spinner" format="integer" />
+        </setting>
+      </group>
+
+    </category>
+
+    <!-- ======================== RESULTS ======================== -->
+    <category id="results" label="30017">
+
+      <group id="1" label="30001">
+        <setting id="results.timeout" type="integer" label="30264" help="30265">
+          <default>30</default>
+          <constraints>
+            <minimum>5</minimum>
+            <maximum>120</maximum>
+          </constraints>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="results.list_format" type="integer" label="30266" help="30267">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+      </group>
+
+      <group id="2" label="30001">
+        <setting id="results.auto_rescrape_cache_ignored" type="integer" label="30268" help="30269">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="results.auto_rescrape_imdb_year" type="integer" label="30270" help="30271">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="results.auto_rescrape_with_all" type="integer" label="30272" help="30273">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="results.auto_episode_group" type="integer" label="30274" help="30275">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="results.ignore_filter" type="integer" label="30276" help="30277">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+      </group>
+
+      <group id="3" label="30278">
+        <setting id="results.filter_size_method" type="integer" label="30279" help="30280">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="results.line_speed" type="integer" label="30281" help="30282"
+          parent="results.filter_size_method">
+          <default>50</default>
+          <constraints>
+            <minimum>1</minimum>
+            <maximum>10000</maximum>
+          </constraints>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="results.movie_size_max" type="integer" label="30283" help="30284"
+          parent="results.filter_size_method">
+          <default>10000</default>
+          <constraints>
+            <minimum>0</minimum>
+            <maximum>100000</maximum>
+          </constraints>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="results.episode_size_max" type="integer" label="30285" help="30286"
+          parent="results.filter_size_method">
+          <default>4000</default>
+          <constraints>
+            <minimum>0</minimum>
+            <maximum>100000</maximum>
+          </constraints>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="results.movie_size_min" type="integer" label="30287" help="30288"
+          parent="results.filter_size_method">
+          <default>200</default>
+          <constraints>
+            <minimum>0</minimum>
+            <maximum>100000</maximum>
+          </constraints>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="results.episode_size_min" type="integer" label="30289" help="30290"
+          parent="results.filter_size_method">
+          <default>50</default>
+          <constraints>
+            <minimum>0</minimum>
+            <maximum>100000</maximum>
+          </constraints>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="results.size_unknown" type="bool" label="30291" help="30292">
+          <default>true</default>
+        </setting>
+        <setting id="results.size_sort_weighted" type="bool" label="30293" help="30294">
+          <default>false</default>
+        </setting>
+        <setting id="results.size_sort_direction" type="integer" label="30295" help="30296">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="results.limit_number_quality" type="integer" label="30297" help="30298">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="results.limit_number_total" type="integer" label="30299" help="30300">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="filter.include_prerelease" type="integer" label="30301" help="30302">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="filter.3d" type="integer" label="30303" help="30304">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="filter.hdr" type="integer" label="30305" help="30306">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="filter.dv" type="integer" label="30307" help="30308">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="filter.av1" type="integer" label="30309" help="30310">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="filter.enhanced_upscaled" type="integer" label="30311" help="30312">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="filter.hevc" type="integer" label="30313" help="30314">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="filter.hevc.max_quality" type="integer" label="30315" help="30316"
+          parent="filter.hevc">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="filter.hevc.max_autoplay_quality" type="integer" label="30317" help="30318"
+          parent="filter.hevc">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="filter.sort_to_top" type="integer" label="30319" help="30320">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="filter.preferred_filters" type="string" label="30321" help="30322"
+          parent="filter.sort_to_top">
+          <default></default>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="filter_audio" type="string" label="30323" help="30324">
+          <default></default>
+          <control type="edit" format="string" />
+        </setting>
+      </group>
+
+      <group id="4" label="30325">
+        <setting id="highlight.type" type="integer" label="30326" help="30327">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="provider.rd_highlight" type="string" label="30328" parent="highlight.type">
+          <default>FF00FF00</default>
+          <control type="colorbutton" />
+        </setting>
+        <setting id="provider.pm_highlight" type="string" label="30329" parent="highlight.type">
+          <default>FF00BFFF</default>
+          <control type="colorbutton" />
+        </setting>
+        <setting id="provider.ad_highlight" type="string" label="30330" parent="highlight.type">
+          <default>FFFF8C00</default>
+          <control type="colorbutton" />
+        </setting>
+        <setting id="provider.oc_highlight" type="string" label="30331" parent="highlight.type">
+          <default>FFFF0000</default>
+          <control type="colorbutton" />
+        </setting>
+        <setting id="provider.ed_highlight" type="string" label="30332" parent="highlight.type">
+          <default>FFFFFF00</default>
+          <control type="colorbutton" />
+        </setting>
+        <setting id="provider.tb_highlight" type="string" label="30333" parent="highlight.type">
+          <default>FFDA70D6</default>
+          <control type="colorbutton" />
+        </setting>
+        <setting id="provider.easynews_highlight" type="string" label="30334"
+          parent="highlight.type">
+          <default>FFADD8E6</default>
+          <control type="colorbutton" />
+        </setting>
+        <setting id="provider.debrid_cloud_highlight" type="string" label="30335"
+          parent="highlight.type">
+          <default>FF90EE90</default>
+          <control type="colorbutton" />
+        </setting>
+        <setting id="provider.folders_highlight" type="string" label="30336" parent="highlight.type">
+          <default>FFFFA500</default>
+          <control type="colorbutton" />
+        </setting>
+        <setting id="scraper_4k_highlight" type="string" label="30337" parent="highlight.type">
+          <default>FFFF00FF</default>
+          <control type="colorbutton" />
+        </setting>
+        <setting id="scraper_1080p_highlight" type="string" label="30338" parent="highlight.type">
+          <default>FF00FF00</default>
+          <control type="colorbutton" />
+        </setting>
+        <setting id="scraper_720p_highlight" type="string" label="30339" parent="highlight.type">
+          <default>FFFFFF00</default>
+          <control type="colorbutton" />
+        </setting>
+        <setting id="scraper_SD_highlight" type="string" label="30340" parent="highlight.type">
+          <default>FFCCCCCC</default>
+          <control type="colorbutton" />
+        </setting>
+        <setting id="scraper_single_highlight" type="string" label="30341" parent="highlight.type">
+          <default>FFCCCCCC</default>
+          <control type="colorbutton" />
+        </setting>
+      </group>
+
+    </category>
+
+    <!-- ======================== PLAYBACK ======================== -->
+    <category id="playback" label="30018">
+
+      <group id="1" label="30011">
+        <setting id="auto_play_movie" type="bool" label="30342" help="30343">
+          <default>false</default>
+        </setting>
+        <setting id="results_quality_movie" type="string" label="30344" help="30345"
+          parent="auto_play_movie">
+          <default></default>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="autoplay_quality_movie" type="string" label="30346" help="30347"
+          parent="auto_play_movie">
+          <default></default>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="auto_resume_movie" type="integer" label="30348" help="30349">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="stinger_alert.show" type="bool" label="30350" help="30351">
+          <default>false</default>
+        </setting>
+        <setting id="stinger_alert.window_percentage" type="integer" label="30352" help="30353"
+          parent="stinger_alert.show">
+          <default>85</default>
+          <constraints>
+            <minimum>1</minimum>
+            <maximum>99</maximum>
+          </constraints>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="stinger_alert.show">true</dependency>
+          </dependencies>
+          <control type="slider" format="integer" />
+        </setting>
+        <setting id="stinger_alert.use_chapters" type="bool" label="30354" help="30355"
+          parent="stinger_alert.show">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="stinger_alert.show">true</dependency>
+          </dependencies>
+        </setting>
+      </group>
+
+      <group id="2" label="30021">
+        <setting id="auto_play_episode" type="bool" label="30356" help="30357">
+          <default>false</default>
+        </setting>
+        <setting id="results_quality_episode" type="string" label="30344" help="30345"
+          parent="auto_play_episode">
+          <default></default>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="autoplay_quality_episode" type="string" label="30346" help="30347"
+          parent="auto_play_episode">
+          <default></default>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="autoplay_next_episode" type="bool" label="30358" help="30359"
+          parent="auto_play_episode">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="auto_play_episode">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="autoplay_alert_method" type="integer" label="30360" help="30361"
+          parent="autoplay_next_episode">
+          <default>0</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="autoplay_next_episode">true</dependency>
+          </dependencies>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="autoplay_default_action" type="integer" label="30362" help="30363"
+          parent="autoplay_next_episode">
+          <default>0</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="autoplay_next_episode">true</dependency>
+          </dependencies>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="autoplay_next_window_percentage" type="integer" label="30364" help="30365"
+          parent="autoplay_next_episode">
+          <default>85</default>
+          <constraints>
+            <minimum>1</minimum>
+            <maximum>99</maximum>
+          </constraints>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="autoplay_next_episode">true</dependency>
+          </dependencies>
+          <control type="slider" format="integer" />
+        </setting>
+        <setting id="autoplay_use_chapters" type="bool" label="30366" help="30367"
+          parent="autoplay_next_episode">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="autoplay_next_episode">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="autoplay_watching_check" type="integer" label="30368" help="30369"
+          parent="autoplay_next_episode">
+          <default>0</default>
+          <constraints>
+            <minimum>0</minimum>
+            <maximum>50</maximum>
+          </constraints>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="autoplay_next_episode">true</dependency>
+          </dependencies>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="autoscrape_next_episode" type="bool" label="30370" help="30371"
+          parent="auto_play_episode">
+          <default>false</default>
+        </setting>
+        <setting id="autoscrape_next_window_percentage" type="integer" label="30372" help="30373"
+          parent="autoscrape_next_episode">
+          <default>85</default>
+          <constraints>
+            <minimum>1</minimum>
+            <maximum>99</maximum>
+          </constraints>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="autoscrape_next_episode">true</dependency>
+          </dependencies>
+          <control type="slider" format="integer" />
+        </setting>
+        <setting id="autoscrape_use_chapters" type="bool" label="30374" help="30367"
+          parent="autoscrape_next_episode">
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="autoscrape_next_episode">true</dependency>
+          </dependencies>
+        </setting>
+        <setting id="auto_resume_episode" type="integer" label="30375" help="30376">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+      </group>
+
+      <group id="3" label="30377">
+        <setting id="playback.limit_resolve" type="bool" label="30378" help="30379">
+          <default>false</default>
+        </setting>
+        <setting id="easynews.playback_method" type="integer" label="30380" help="30381">
+          <default>0</default>
+          <control type="spinner" format="integer" />
+        </setting>
+        <setting id="easynews.playback_method_limited" type="bool" label="30382" help="30383"
+          parent="easynews.playback_method">
+          <default>false</default>
+        </setting>
+        <setting id="playback.volumecheck_enabled" type="bool" label="30384" help="30385">
+          <default>false</default>
+        </setting>
+        <setting id="playback.volumecheck_percent" type="integer" label="30386" help="30387"
+          parent="playback.volumecheck_enabled">
+          <default>100</default>
+          <constraints>
+            <minimum>0</minimum>
+            <maximum>100</maximum>
+          </constraints>
+          <dependencies>
+            <dependency type="enable" operator="is" setting="playback.volumecheck_enabled">true</dependency>
+          </dependencies>
+          <control type="slider" format="integer" />
+        </setting>
+        <setting id="playback.auto_enable_subs" type="bool" label="30388" help="30389">
+          <default>false</default>
+        </setting>
+      </group>
+
+    </category>
+
   </section>
 </settings>
