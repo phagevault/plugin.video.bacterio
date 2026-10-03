@@ -1,26 +1,24 @@
-import re
 import time
+from threading import Thread
 from typing import Any, Literal, NamedTuple
+
 import xbmc
 import xbmcgui
 import xbmcplugin
-from threading import Thread
-
-from services.tmdb import Tmdb
-from services.real_debrid import RealDebrid
-from services.torbox import TorBox
-from services import scraper
-from menu_items.movie import MovieItem
 from menu_items.episode import EpisodeItem
+from menu_items.movie import MovieItem
+from services import scraper
+from services.tmdb import Tmdb
+from services.torbox import TorBox
+from settings.settings import get_setting
+from utils.logger import debug, err, warn
+from utils.notifications import error
 from utils.types import (
     EpisodeScrapePayload,
     MovieScrapePayload,
     ScrapePayload,
     SourceResult,
 )
-from utils.notifications import error
-from utils.logger import debug, err, warn
-from settings.settings import get_setting
 
 _SCRAPE_TIMEOUT = 20
 _POLL_INTERVAL = 500  # ms
@@ -41,6 +39,7 @@ _LANG_RANK = {
     "PREFERRED": 0,
     "EN": 1,
 }
+
 
 class ScrapeCancelled(Exception):
     """Raised when the user cancels the progress dialog while sources are still coming in."""
@@ -271,7 +270,7 @@ def _try_sources(
     ep_episode = int(episode) if episode else None
 
     for i, src in enumerate(ordered):
-        progress.update(0, f"Trying source {i+1}/{len(ordered)}\n{src['name']}")
+        progress.update(0, f"Trying source {i + 1}/{len(ordered)}\n{src['name']}")
         h = src["hash"]
         magnet = src["url"]
         debug(str(src), "try_source")
@@ -373,8 +372,7 @@ def resolve_and_play(
             progress.close()
             xbmcplugin.setResolvedUrl(handle, False, xbmcgui.ListItem())
             return
-        others = [s for s in sorted_src if s is not source]
-        ordered = [source] + others
+        ordered = [source]
 
     outcome = _try_sources(
         ordered,
