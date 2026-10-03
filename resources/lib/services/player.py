@@ -1,12 +1,10 @@
 import time
-from collections.abc import Callable
 from threading import Thread
 from typing import Any, Literal, NamedTuple
 
 import xbmc
 import xbmcgui
 import xbmcplugin
-from _typeshed import SupportsRichComparison
 from menu_items.episode import EpisodeItem
 from menu_items.movie import MovieItem
 from services import scraper
@@ -21,7 +19,6 @@ from utils.types import (
     ScrapePayload,
     SourceResult,
 )
-from utils.utils import multisort
 
 _SCRAPE_TIMEOUT = 20
 _POLL_INTERVAL = 500  # ms
