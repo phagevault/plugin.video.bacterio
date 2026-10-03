@@ -220,7 +220,7 @@ class TorBoxAPI(Service):
         for h in data:
             hash = h.get("hash")
             if hash:
-                cached.add(hash)
+                cached.add(hash.lower())
         return cached
 
     def pick_video_file(

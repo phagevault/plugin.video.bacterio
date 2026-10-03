@@ -41,35 +41,9 @@ _LANG_RANK = {
     "PREFERRED": 0,
     "EN": 1,
 }
-_RD_ERROR_STATUSES = {"magnet_error", "error", "dead", "virus"}
-
 
 class ScrapeCancelled(Exception):
     """Raised when the user cancels the progress dialog while sources are still coming in."""
-
-
-def _match_episode_file(
-    files: list[dict[str, Any]], season: int, episode: int
-) -> int | None:
-    """Return the index into *files* that matches the requested season/episode, or None."""
-    patterns = [
-        rf"[Ss]{season:02d}[Ee]{episode:02d}",
-        rf"[Ss]{season}[Ee]{episode:02d}",
-        rf"\b{season}[xX]{episode:02d}\b",
-    ]
-    for i, f in enumerate(files):
-        name = f.get("path") or f.get("name") or ""
-        for pattern in patterns:
-            if re.search(pattern, name):
-                return i
-    return None
-
-
-# ── Internal helpers ──────────────────────────────────────────────────────────
-
-
-def _rd_ok() -> bool:
-    return RealDebrid.is_enabled and RealDebrid.is_authenticated
 
 
 def _tb_ok() -> bool:
@@ -77,31 +51,8 @@ def _tb_ok() -> bool:
 
 
 def _sort_sources(sources: list[SourceResult], cached: set[str]) -> list[SourceResult]:
-    prefer_cached = get_setting("playback.prefer_cached")
     quality_pref = get_setting("playback.preferred_quality")
     lang_pref = get_setting("playback.preferred_lang")
-    if prefer_cached == "0":
-        # best quality, ignore cache order
-        return sorted(
-            sources,
-            key=lambda s: (
-                _LANG_RANK.get(
-                    "PREFERRED"
-                    if s.get("language", "EN") == lang_pref
-                    else s.get("language", "EN"),
-                    2,
-                ),
-                _QUALITY_RANK.get(
-                    "PREFERRED"
-                    if s.get("quality", "SD") == quality_pref
-                    else s.get("quality", "SD"),
-                    9,
-                ),
-                0 if s.get("hash", "").lower() in cached else 1,
-                -int(s.get("seeders") or 0),
-            ),
-        )
-    # default: cached first, then quality
     return sorted(
         sources,
         key=lambda s: (
@@ -112,6 +63,7 @@ def _sort_sources(sources: list[SourceResult], cached: set[str]) -> list[SourceR
                 2,
             ),
             0 if s.get("hash", "").lower() in cached else 1,
+            -float(s.get("size", 0)),
             _QUALITY_RANK.get(
                 "PREFERRED"
                 if s.get("quality", "SD") == quality_pref
@@ -459,7 +411,7 @@ def _select_source(
             tag += "[Pack] "
         quality = s.get("quality", "?")
         size = s.get("size")
-        size_str = f"  {size:.1f} GB" if isinstance(size, (int, float)) else ""
+        size_str = f"  {size:.1f} GB"
         seeders = s.get("seeders")
         seed_str = f"  Seeders: {seeders}" if seeders and not is_cached else ""
         name = (s.get("name") or "")[:55]

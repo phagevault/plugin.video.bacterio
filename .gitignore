@@ -4,3 +4,4 @@ memory/
 /CONTEXT.md
 /docs/adr
 .DS_Store
+.venv
