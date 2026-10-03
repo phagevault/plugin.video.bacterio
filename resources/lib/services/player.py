@@ -1,10 +1,12 @@
 import time
+from collections.abc import Callable
 from threading import Thread
 from typing import Any, Literal, NamedTuple
 
 import xbmc
 import xbmcgui
 import xbmcplugin
+from _typeshed import SupportsRichComparison
 from menu_items.episode import EpisodeItem
 from menu_items.movie import MovieItem
 from services import scraper
@@ -19,11 +21,13 @@ from utils.types import (
     ScrapePayload,
     SourceResult,
 )
+from utils.utils import multisort
 
 _SCRAPE_TIMEOUT = 20
 _POLL_INTERVAL = 500  # ms
 _TB_DOWNLOAD_WAIT = 60  # seconds to wait for TorBox download
 _TB_ERROR_STATES = {"error", "failed", "dead"}
+
 
 _QUALITY_RANK = {
     "PREFERRED": 0,
@@ -51,16 +55,9 @@ def _tb_ok() -> bool:
 
 def _sort_sources(sources: list[SourceResult], cached: set[str]) -> list[SourceResult]:
     quality_pref = get_setting("playback.preferred_quality")
-    lang_pref = get_setting("playback.preferred_lang")
     return sorted(
         sources,
         key=lambda s: (
-            _LANG_RANK.get(
-                "PREFERRED"
-                if s.get("language", "EN") == lang_pref
-                else s.get("language", "EN"),
-                2,
-            ),
             0 if s.get("hash", "").lower() in cached else 1,
             -float(s.get("size", 0)),
             _QUALITY_RANK.get(
@@ -125,12 +122,12 @@ def _add_to_torbox(
         files: list[dict[str, Any]] = status_data.get("files") or []
         target = TorBox.pick_video_file(files, season=season, episode=episode)
         if not target:
-            warn(f"Target not found", "target")
+            warn("Target not found", "target")
             return ""
 
         file_id: int | None = target.get("id")
         if file_id is None:
-            warn(f"FileId not found", "file_id")
+            warn("FileId not found", "file_id")
             warn(f"{target}", "file_id")
             return ""
 
