@@ -3,3 +3,4 @@ memory/
 /.log/kodi.log
 /CONTEXT.md
 /docs/adr
+.DS_Store

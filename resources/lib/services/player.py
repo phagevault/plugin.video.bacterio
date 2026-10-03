@@ -138,6 +138,7 @@ def _add_to_torbox(
         debug(f"{result}", "add_magnet")
         if not result.get("success"):
             warn(f"TorBox add_magnet failed: {result}", "_add_to_torbox")
+            warn(f"{magnet}", "_add_to_torbox")
             return ""
 
         data = result.get("data")
@@ -173,14 +174,18 @@ def _add_to_torbox(
         files: list[dict[str, Any]] = status_data.get("files") or []
         target = TorBox.pick_video_file(files, season=season, episode=episode)
         if not target:
+            warn(f"Target not found", "target")
             return ""
 
         file_id: int | None = target.get("id")
-        if not file_id:
+        if file_id is None:
+            warn(f"FileId not found", "file_id")
+            warn(f"{target}", "file_id")
             return ""
 
         dl_result = TorBox.request_download(torrent_id, file_id)
         if not dl_result.get("success"):
+            warn(f"{dl_result.get('error')}", "dl_result")
             return ""
         url = dl_result.get("data", "")
         return url if isinstance(url, str) else ""
@@ -314,7 +319,7 @@ def _try_sources(
     ep_episode = int(episode) if episode else None
 
     for i, src in enumerate(ordered):
-        progress.update(0, f"Trying source {i+1}/{len(ordered)}")
+        progress.update(0, f"Trying source {i+1}/{len(ordered)}\n{src['name']}")
         h = src["hash"]
         magnet = src["url"]
         debug(str(src), "try_source")
@@ -458,7 +463,7 @@ def _select_source(
         seeders = s.get("seeders")
         seed_str = f"  Seeders: {seeders}" if seeders and not is_cached else ""
         name = (s.get("name") or "")[:55]
-        labels.append(f"{tag}{quality}{size_str}{seed_str}  {name}")
+        labels.append(f"{quality}{size_str}{seed_str}  {name} - {tag}")
 
     idx = xbmcgui.Dialog().select(f"Sources - {title}", list(labels))
     if idx < 0:
